@@ -1,15 +1,15 @@
 const config = {
-  siteTitle: "gatsby tfs starter", // Site title.
-  siteTitleShort: "tfs starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "gatsbyJS tfs starter", // Alternative site title for SEO.
+  siteTitle: "junpeko5 Tech Blog", // Site title.
+  siteTitleShort: "junpeko5 Blog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleAlt: "junpeko5 Tech Blog", // Alternative site title for SEO.
   siteLogo: "", // Logo used for SEO and manifest.
-  siteUrl: "https://gatsby-tfs-starter.netlify.com/", // Domain of your website without pathPrefix.
+  siteUrl: "https://junpeko.tech/", // Domain of your website without pathPrefix.
   pathPrefix: "/gatsby-tfs-starter", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
     "A GatsbyJS stater with Advanced design in mind and with theme-ui", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
-  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
+  siteGTMID: "UA-98630536-3", // GA tracking ID.
   disqusShortname: "", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
@@ -24,16 +24,16 @@ const config = {
   avatar: {
     description:
       "I am learning to code ReactJS (from scratch) and I have built this starter to learn how Gatsby works and to build by blog!",
-    photo: "https://avatars1.githubusercontent.com/u/11288873?s=400&v=4"
+    photo: "/images/profileIcon.jpg"
   },
   userLinks: [
     {
       label: "github",
-      url: "https://github.com/tiagofsanchez/tfs-starter"
+      url: "https://github.com/junpeko5/"
     },
     {
       label: "linkedin",
-      url: "https://www.linkedin.com/in/tiago-formosinho-sanchez-3764225/"
+      url: "https://twitter.com/junpeko516/"
     },
     {
       label: "email",
@@ -42,11 +42,11 @@ const config = {
   ],
   menuLinks: [
     {
-      name: "Me",
+      name: "プロフィール",
       url: "/about"
     },
     {
-      name: "Articles",
+      name: "記事一覧",
       url: "/blog"
     }
   ],
