@@ -14,7 +14,7 @@ const BigAvatar = props => {
       <div sx={{ textAlign: `center` }}>
         <img src={avatar.photo} sx={{ width: 100, borderRadius: 999 }} />
         <Styled.h1 sx={{ color: `text` }}>
-          Ola, I'm{" "}
+          Hello World!!{" "}
           <Styled
             as={Link}
             to={"/about"}
@@ -31,7 +31,7 @@ const BigAvatar = props => {
               }
             }}
           >
-            Tiago
+            小西 純平（30）
           </Styled>
         </Styled.h1>
       </div>

@@ -1,13 +1,14 @@
 import React from "react";
 import github from "../../images/github.svg";
 import twitter from "../../images/twitter.svg";
+import linkedin from "../../images/linkedin.svg";
 import mail from "../../images/mail.svg";
 import siteConfig from "../../../data/SiteConfig";
 /** @jsx jsx */
 import { Styled, jsx } from "theme-ui";
 
 const icons = [
-  { label: "twitter", icon: twitter },
+  { label: "linkedin", icon: linkedin },
   { label: "github", icon: github },
   { label: "email", icon: mail }
 ];

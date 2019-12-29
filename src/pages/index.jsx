@@ -28,7 +28,7 @@ class Index extends React.Component {
           <AllCategories />
         </section>
         <section sx={{ my: `40px` }}>
-          <Styled.h1>Check out my latest posts</Styled.h1>
+          <Styled.h1>最近の投稿</Styled.h1>
           <SimplePostListing postEdges={postEdges} />
         </section>
         <section>

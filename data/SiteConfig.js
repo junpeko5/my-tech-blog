@@ -23,7 +23,7 @@ const config = {
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   avatar: {
     description:
-      "I am learning to code ReactJS (from scratch) and I have built this starter to learn how Gatsby works and to build by blog!",
+      "1989年生まれ大阪府岸和田市在住、フリーランスのプログラマー。PHPでのバックエンド開発が得意。テニス、だんじり、ケツメイシ、競馬、プログラミングが好き！",
     photo: "/images/profileIcon.jpg"
   },
   userLinks: [
@@ -38,6 +38,10 @@ const config = {
     {
       label: "email",
       url: "mailto:tiagofsanchez@gmail.com"
+    },
+    {
+      label: "twitter",
+      url: "https://twitter.com/junpeko516/"
     }
   ],
   menuLinks: [
