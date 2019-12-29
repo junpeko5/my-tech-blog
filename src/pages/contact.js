@@ -1,5 +1,8 @@
 import React from "react";
 import { navigateTo } from "gatsby-link";
+import Recaptcha from "react-google-recaptcha";
+
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
   return Object.keys(data)
@@ -15,6 +18,10 @@ export default class Contact extends React.Component {
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleRecaptcha = value => {
+    this.setState({ "g-recaptcha-response": value });
   };
 
   handleSubmit = e => {
@@ -42,10 +49,14 @@ export default class Contact extends React.Component {
           action="/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
           onSubmit={this.handleSubmit}
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
           <input type="hidden" name="form-name" value="contact" />
+          <noscript>
+            <p>This form won’t work with Javascript disabled</p>
+          </noscript>
           <p hidden>
             <label>
               Don’t fill this out:{" "}
@@ -73,6 +84,11 @@ export default class Contact extends React.Component {
               <textarea name="message" onChange={this.handleChange} />
             </label>
           </p>
+          <Recaptcha
+            ref="recaptcha"
+            sitekey={RECAPTCHA_KEY}
+            onChange={this.handleRecaptcha}
+          />
           <p>
             <button type="submit">Send</button>
           </p>

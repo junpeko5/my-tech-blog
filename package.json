@@ -39,6 +39,7 @@
     "react": "^16.11.0",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.11.0",
+    "react-google-recaptcha": "^2.0.1",
     "react-helmet": "^5.2.1",
     "react-share": "^3.0.1",
     "react-twitter-widgets": "^1.7.1",
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "cli-glob": "^0.1.0",
+    "dotenv": "^8.2.0",
     "eslint": "^6.5.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
