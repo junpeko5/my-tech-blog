@@ -31,7 +31,6 @@ const BigAvatar = props => {
               }
             }}
           >
-            小西 純平（30）
           </Styled>
         </Styled.h1>
       </div>

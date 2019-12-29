@@ -8,7 +8,7 @@ import siteConfig from "../../../data/SiteConfig";
 import { Styled, jsx } from "theme-ui";
 
 const icons = [
-  { label: "linkedin", icon: linkedin },
+  { label: "twitter", icon: twitter },
   { label: "github", icon: github },
   { label: "email", icon: mail }
 ];

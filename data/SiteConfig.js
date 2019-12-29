@@ -33,11 +33,11 @@ const config = {
     },
     {
       label: "linkedin",
-      url: "https://twitter.com/junpeko516/"
+      url: ""
     },
     {
       label: "email",
-      url: "mailto:tiagofsanchez@gmail.com"
+      url: "/contact"
     },
     {
       label: "twitter",
