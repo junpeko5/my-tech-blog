@@ -1,6 +1,6 @@
 import React from "react";
 import { navigateTo } from "gatsby-link";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import Recaptcha from "react-google-recaptcha";
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
@@ -84,9 +84,9 @@ export default class Contact extends React.Component {
               <textarea name="message" onChange={this.handleChange} />
             </label>
           </p>
-          <GoogleReCaptchaProvider
+          <Recaptcha
             ref="recaptcha"
-            reCaptchaKey={RECAPTCHA_KEY}
+            sitekey={RECAPTCHA_KEY}
             onChange={this.handleRecaptcha}
           />
           <p>
