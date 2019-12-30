@@ -1,5 +1,4 @@
 import prism from "@theme-ui/prism/presets/oceanic-next";
-import { black } from "../../node_modules/ansi-colors/types/index";
 
 const grey90 = `#232129`;
 const black80 = `#1B1F23`;
@@ -131,11 +130,11 @@ export default {
       fontStyle: `italic`
     },
     label: {
-      fontWeight: 'bold',
+      fontWeight: "bold"
     },
     button: {
-      color: 'black',
-      marginBottom: '3',
+      color: black80,
+      marginBottom: "3"
     }
   },
   // Colors
