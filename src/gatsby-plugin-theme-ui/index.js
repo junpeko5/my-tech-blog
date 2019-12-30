@@ -133,7 +133,6 @@ export default {
       fontWeight: "bold"
     },
     button: {
-      color: black80,
       marginBottom: "3"
     }
   },

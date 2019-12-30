@@ -5,7 +5,6 @@ import Helmet from "react-helmet";
 import Layout from "../layout";
 import config from "../../data/SiteConfig";
 import AvatarLinks from "../components/Avatar/AvatarLinks";
-import { Styled } from 'theme-ui';
 import {
   Input,
   Label,
@@ -13,6 +12,9 @@ import {
   Button,
   Box
 } from "@theme-ui/components";
+
+/** @jsx jsx */
+import { Styled, jsx } from "theme-ui";
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
@@ -107,7 +109,14 @@ export default class Contact extends React.Component {
               sitekey={RECAPTCHA_KEY}
               onChange={this.handleRecaptcha}
             />
-            <Button type="submit" mr={2}>
+            <Button
+              type="submit"
+              mr={2}
+              color="black"
+              sx={{
+                fontSize: 4,
+                color: 'primary',
+              }}>
               送信
             </Button>
           </Box>
