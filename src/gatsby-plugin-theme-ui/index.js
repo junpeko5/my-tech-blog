@@ -1,4 +1,5 @@
 import prism from "@theme-ui/prism/presets/oceanic-next";
+import { black } from "../../node_modules/ansi-colors/types/index";
 
 const grey90 = `#232129`;
 const black80 = `#1B1F23`;
@@ -14,7 +15,7 @@ const lightGray = "#eee";
 const gray = `#CCCCCC`;
 
 export default {
-  //theme
+  // theme
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
     container: 710
@@ -37,7 +38,42 @@ export default {
     body: "normal",
     caps: "0.2em"
   },
-  //styles
+  forms: {
+    label: {
+      fontSize: 1,
+      fontWeight: "bold"
+    },
+    input: {
+      borderColor: "gray",
+      bg: "primary",
+      "&:focus": {
+        borderColor: "primary",
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none"
+      }
+    },
+    select: {
+      borderColor: "gray",
+      "&:focus": {
+        borderColor: "primary",
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none"
+      }
+    },
+    textarea: {
+      borderColor: "gray",
+      bg: "white",
+      "&:focus": {
+        borderColor: "primary",
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none"
+      }
+    },
+    slider: {
+      bg: "muted"
+    }
+  },
+  // styles
   styles: {
     root: {
       fontFamily: `body`
@@ -93,9 +129,16 @@ export default {
       borderColor: `primary`,
       opacity: 0.8,
       fontStyle: `italic`
+    },
+    label: {
+      fontWeight: 'bold',
+    },
+    button: {
+      color: 'black',
+      marginBottom: '3',
     }
   },
-  //Colors
+  // Colors
   colors: {
     text: blueGray,
     background: lightGray,

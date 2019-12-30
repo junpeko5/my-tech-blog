@@ -23,7 +23,7 @@ const config = {
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   avatar: {
     description:
-      "1989年生まれ大阪府岸和田市在住、フリーランスのプログラマー。PHPでのバックエンド開発が得意。テニス、だんじり、ケツメイシ、競馬、プログラミングが好き！",
+      "1989年生まれ大阪府岸和田市在住、フリーランスのプログラマー。PHP、バックエンド開発が得意。テニス、だんじり、ケツメイシ、競馬、プログラミングが好き！",
     photo: "/images/profileIcon.jpg"
   },
   userLinks: [
@@ -54,7 +54,7 @@ const config = {
       url: "/blog"
     }
   ],
-  copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2019. junpeko5", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };
