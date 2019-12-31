@@ -52,7 +52,7 @@ const config = {
     {
       name: "記事一覧",
       url: "/blog"
-    }
+    },
   ],
   copyright: "Copyright © 2019. junpeko5", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
