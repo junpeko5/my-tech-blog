@@ -1,14 +1,14 @@
+import { Component,  } from "react";
 import { navigateTo } from "gatsby-link";
 import Recaptcha from "react-google-recaptcha";
-import React, { Component } from "react";
 import Helmet from "react-helmet";
-import Layout from "../layout";
-import config from "../../data/SiteConfig";
-import AvatarLinks from "../components/Avatar/AvatarLinks";
 import {
   Label,
   Box
 } from "@theme-ui/components";
+import Layout from "../layout";
+import config from "../../data/SiteConfig";
+import AvatarLinks from "../components/Avatar/AvatarLinks";
 
 /** @jsx jsx */
 import { Styled, jsx } from "theme-ui";
@@ -91,6 +91,7 @@ export default class Contact extends Component {
               }}
               type="text"
               name="name"
+              value={this.state.name}
               onChange={this.handleChange}
             />
             <Label
@@ -107,6 +108,7 @@ export default class Contact extends Component {
               }}
               type="email"
               name="email"
+              value={this.state.email}
               onChange={this.handleChange}
             />
             <Label
@@ -122,9 +124,10 @@ export default class Contact extends Component {
                 variant: "forms.textarea"
               }}
               name="message"
+              value={this.state.message}
               onChange={this.handleChange}
               rows="6"
-            ></textarea>
+            />
             <Recaptcha
               ref="recaptcha"
               sitekey={RECAPTCHA_KEY}
