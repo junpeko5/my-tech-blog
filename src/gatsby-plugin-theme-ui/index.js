@@ -201,5 +201,11 @@ export default {
     slider: {
       bg: "muted"
     }
+  },
+  images: {
+    eyecatch: {
+      width: `1280px`,
+      height: `720px`,
+    }
   }
 };

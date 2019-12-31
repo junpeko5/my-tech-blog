@@ -10,6 +10,7 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import SmallAvatar from "../components/Avatar/SmallAvatar";
+import { Image, Box } from "@theme-ui/components";
 
 //if you want to use Discus
 import UserInfo from "../components/UserInfo/UserInfo";
@@ -49,8 +50,14 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Styled.h1 sx={{ mb: 0, fontSize: 60 }}>{post.title}</Styled.h1>
+          <Styled.h1 sx={{ mb: 0, fontSize: 32 }}>{post.title}</Styled.h1>
           <PostHeader post={postWip[0]} />
+          <Box>
+            <Image
+              src={post.cover}
+              valiant="eyecatch"
+            />
+          </Box>
           <MDXRenderer>{postNode.body}</MDXRenderer>
           <div sx={{ mt: "40px" }}>
             <SmallAvatar />

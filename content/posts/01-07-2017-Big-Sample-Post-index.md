@@ -1,6 +1,6 @@
 ---
 title: "Gitの管理対象から特定のファイルまたはディレクトリを除外したい場合の対処法"
-cover: "https://unsplash.it/400/300/?random?TheFallenTime"
+cover: "/images/posts/Tips.png"
 date: 2019-11-24
 slug: "git-rm-cached"
 category: "another one"
@@ -10,7 +10,6 @@ tags:
     - tagging
 publish: "yes"
 ---
-# Gitの管理対象から特定のファイルまたはディレクトリを除外したい場合の対処法
 
 git管理したくないファイルは.gitignoreに書きますが、対象ファイルをコミット後に管理対象から外したい場合は、.gitignoreに書くだけではリポジトリからファイルを消すことができません。キャッシュが残っており、.gitignoreの内容が反映されないのです。
 
