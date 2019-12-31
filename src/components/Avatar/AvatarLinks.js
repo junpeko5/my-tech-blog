@@ -42,7 +42,7 @@ const AvatarLinks = props => {
       {newUserLinks.map(element => {
         return (
           <div key={element.url} sx={{ mx: 2 }}>
-            <a href={element.url} target="_blank">
+            <a href={element.url}>
               <img
                 src={element.icon}
                 sx={{

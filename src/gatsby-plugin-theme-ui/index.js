@@ -161,9 +161,8 @@ export default {
       padding: `8px`,
       fontSize: `inherit`,
       lineHeight: `inherit`,
-      border: `1px, solid`,
+      border: `blue 1px solid`,
       borderRadius: `4px`,
-      borderColor: "blue",
       color: `inherit`,
       bg: "formBackground",
       "&:focus": {
@@ -181,7 +180,7 @@ export default {
       }
     },
     textarea: {
-      loxSizing: "border-box",
+      boxSizing: "border-box",
       margin: `0 0 16px 0`,
       minWidth: 0,
       display: "block",
@@ -189,9 +188,8 @@ export default {
       padding: `8px`,
       fontSize: `inherit`,
       lineHeight: `inherit`,
-      border: `1px, solid`,
+      border: `blue 1px solid`,
       borderRadius: `4px`,
-      borderColor: "blue",
       color: `inherit`,
       bg: "formBackground",
       "&:focus": {

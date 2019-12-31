@@ -29,19 +29,19 @@ const config = {
   userLinks: [
     {
       label: "github",
-      url: "https://github.com/junpeko5/"
+      url: "https://github.com/junpeko5/",
     },
     {
       label: "linkedin",
-      url: ""
+      url: "",
     },
     {
       label: "email",
-      url: "/contact"
+      url: "/contact",
     },
     {
       label: "twitter",
-      url: "https://twitter.com/junpeko516/"
+      url: "https://twitter.com/junpeko516/",
     }
   ],
   menuLinks: [

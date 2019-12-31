@@ -6,10 +6,7 @@ import Layout from "../layout";
 import config from "../../data/SiteConfig";
 import AvatarLinks from "../components/Avatar/AvatarLinks";
 import {
-  Input,
   Label,
-  Textarea,
-  Button,
   Box
 } from "@theme-ui/components";
 
@@ -24,7 +21,7 @@ function encode(data) {
     .join("&");
 }
 
-export default class Contact extends React.Component {
+export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {};
