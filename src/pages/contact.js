@@ -80,45 +80,67 @@ export default class Contact extends React.Component {
                 <input name="bot-field" onChange={this.handleChange} />
               </label>
             </p>
-            <Label>名前</Label>
-            <Input
+            <Label
+              htmlFor="name"
+              sx={{
+                color: "text"
+              }}
+            >
+              名前
+            </Label>
+            <input
+              sx={{
+                variant: "forms.input"
+              }}
               type="text"
               name="name"
               onChange={this.handleChange}
-              mb={3}
-              bg="white"
             />
-            <Label>メールアドレス</Label>
-            <Input
+            <Label
+              htmlFor="email"
+              sx={{
+                color: "text"
+              }}
+            >
+              メールアドレス
+            </Label>
+            <input
+              sx={{
+                variant: "forms.input"
+              }}
               type="email"
               name="email"
               onChange={this.handleChange}
-              mb={3}
-              bg="white"
             />
-            <Label>お問い合わせ内容</Label>
-            <Textarea
+            <Label
+              htmlFor="message"
+              sx={{
+                color: "text"
+              }}
+            >
+              お問い合わせ内容
+            </Label>
+            <textarea
+              sx={{
+                variant: "forms.textarea"
+              }}
               name="message"
               onChange={this.handleChange}
               rows="6"
-              mb={3}
-              bg="white"
-            />
+            ></textarea>
             <Recaptcha
               ref="recaptcha"
               sitekey={RECAPTCHA_KEY}
               onChange={this.handleRecaptcha}
             />
-            <Button
+            <button
               type="submit"
-              mr={2}
-              color="black"
               sx={{
-                fontSize: 4,
-                color: 'primary',
-              }}>
+                variant: "buttons.primary"
+              }}
+            >
               送信
-            </Button>
+            </button>
           </Box>
         </div>
         <AvatarLinks />

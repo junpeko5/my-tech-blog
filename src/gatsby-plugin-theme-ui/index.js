@@ -12,6 +12,7 @@ const blueGray = `#282c35`;
 const lightblue = `#a5a4a6`;
 const lightGray = "#eee";
 const gray = `#CCCCCC`;
+const darkGray = `#3e3c42`;
 
 export default {
   // theme
@@ -36,41 +37,6 @@ export default {
   letterSpacing: {
     body: "normal",
     caps: "0.2em"
-  },
-  forms: {
-    label: {
-      fontSize: 1,
-      fontWeight: "bold"
-    },
-    input: {
-      borderColor: "gray",
-      bg: "primary",
-      "&:focus": {
-        borderColor: "primary",
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: "none"
-      }
-    },
-    select: {
-      borderColor: "gray",
-      "&:focus": {
-        borderColor: "primary",
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: "none"
-      }
-    },
-    textarea: {
-      borderColor: "gray",
-      bg: "white",
-      "&:focus": {
-        borderColor: "primary",
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: "none"
-      }
-    },
-    slider: {
-      bg: "muted"
-    }
   },
   // styles
   styles: {
@@ -131,9 +97,6 @@ export default {
     },
     label: {
       fontWeight: "bold"
-    },
-    button: {
-      marginBottom: "3"
     }
   },
   // Colors
@@ -145,6 +108,7 @@ export default {
     muted: gray,
     highlight: opaqueLightYellow,
     heading: grey90,
+    formBackground: white,
     prism: {
       background: `#011627`
     },
@@ -156,9 +120,88 @@ export default {
         secondary: lightWhite,
         muted: opaqueLightWhite,
         highlight: lightblue,
-        heading: white
+        heading: white,
+        formBackground: darkGray
       }
     }
   },
-  prism
+  prism,
+  buttons: {
+    primary: {
+      appearance: "none",
+      display: "inline-block",
+      textAlign: "center",
+      lineHeight: "inherit",
+      textDecoration: "none",
+      fontSize: "inherit",
+      fontWeight: "bold",
+      m: 2,
+      px: 3,
+      py: 2,
+      border: 0,
+      borderRadius: 4,
+      color: "text",
+      bg: "muted",
+      "&:hover": {
+        bg: `pink`
+      }
+    }
+  },
+  forms: {
+    label: {
+      fontSize: 1,
+      fontWeight: "bold"
+    },
+    input: {
+      boxSizing: "border-box",
+      margin: `0 0 16px 0`,
+      minWidth: 0,
+      display: "block",
+      width: "100%",
+      padding: `8px`,
+      fontSize: `inherit`,
+      lineHeight: `inherit`,
+      border: `1px, solid`,
+      borderRadius: `4px`,
+      borderColor: "blue",
+      color: `inherit`,
+      bg: "formBackground",
+      "&:focus": {
+        borderColor: "primary",
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none"
+      }
+    },
+    select: {
+      borderColor: "gray",
+      "&:focus": {
+        borderColor: "primary",
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none"
+      }
+    },
+    textarea: {
+      loxSizing: "border-box",
+      margin: `0 0 16px 0`,
+      minWidth: 0,
+      display: "block",
+      width: "100%",
+      padding: `8px`,
+      fontSize: `inherit`,
+      lineHeight: `inherit`,
+      border: `1px, solid`,
+      borderRadius: `4px`,
+      borderColor: "blue",
+      color: `inherit`,
+      bg: "formBackground",
+      "&:focus": {
+        borderColor: "primary",
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: "none"
+      }
+    },
+    slider: {
+      bg: "muted"
+    }
+  }
 };
