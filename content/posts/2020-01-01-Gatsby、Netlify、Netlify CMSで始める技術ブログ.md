@@ -102,7 +102,7 @@ Reactができる人はもっと短い時間で出来ると思います。
 
 ### 爆速
 
-lighthouseで計測すると💯が出ました。
+Lighthouseで計測すると💯が出ました。
 
 <img src="/images/lighthouse.png" alt="lighthouse" class="css-9taffg" />
 
@@ -116,7 +116,7 @@ Netlifyについても、同様で今の所非常に使いやすいイメージ�
 
 結構未知の領域でしたが、Qiitaの記事にも助けられ、思ったようにカスタマイズすることが出来ました。
 
-QraphQLは知らなくてもなんとかなりました。
+GraphQLは知らなくてもなんとかなりました。
 
 ### Gatsby流行る気がした
 
