@@ -10,6 +10,7 @@ class SEO extends Component {
     let description;
     let image;
     let postURL;
+
     if (postSEO) {
       const postMeta = postNode.frontmatter;
       ({ title } = postMeta);
@@ -23,7 +24,7 @@ class SEO extends Component {
       description = config.siteDescription;
       image = config.siteLogo;
     }
-
+console.log(image);
     if (
       !image.match(
         `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
@@ -104,6 +105,8 @@ class SEO extends Component {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
+
+        <link rel="icon" href="/images/favicon/favicon.ico" />
       </Helmet>
     );
   }
