@@ -9,7 +9,6 @@ tags:
     - test
     - something
     - tagging
-publish: "yes"
 ---
 
 git管理したくないファイルは.gitignoreに書きますが、対象ファイルをコミット後に管理対象から外したい場合は、.gitignoreに書くだけではリポジトリからファイルを消すことができません。キャッシュが残っており、.gitignoreの内容が反映されないのです。
