@@ -1,6 +1,4 @@
 import React from "react";
-import AvatarLinks from "./AvatarLinks";
-import { Link } from "gatsby";
 import siteConfig from "../../../data/SiteConfig";
 
 /** @jsx jsx */
@@ -15,26 +13,8 @@ const BigAvatar = props => {
         <img src={avatar.photo} sx={{ width: 100, borderRadius: 999 }} />
         <Styled.h1 sx={{ color: `text` }}>
           Hello World!!{" "}
-          <Styled
-            as={Link}
-            to={"/about"}
-            sx={{
-              display: `inline`,
-              borderBottom: `solid 4px`,
-              fontSize: 32,
-              color: `primary`,
-              textDecoration: `none`,
-              ":hover": {
-                bg: `muted`,
-                p: 1,
-                borderRadius: `5px`
-              }
-            }}
-          >
-          </Styled>
         </Styled.h1>
       </div>
-      <AvatarLinks />
       <Styled.p>{avatar.description}</Styled.p>
     </>
   );

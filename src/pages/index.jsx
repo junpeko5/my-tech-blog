@@ -5,6 +5,7 @@ import Layout from "../layout";
 import SimplePostListing from "../components/SimplePostListing";
 import SEO from "../components/SEO/SEO";
 import BigAvatar from "../components/Avatar/BigAvatar";
+import AvatarLinks from "../components/Avatar/AvatarLinks";
 import config from "../../data/SiteConfig";
 import AllCategories from "../components/AllCategories";
 
@@ -22,6 +23,7 @@ class Index extends React.Component {
         <SEO />
         <section>
           <BigAvatar />
+          <AvatarLinks />
         </section>
         <section sx={{ mt: `60px` }}>
           <Styled.h1>I write about</Styled.h1>
