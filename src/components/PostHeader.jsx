@@ -1,11 +1,11 @@
 import React from 'react';
 import _ from "lodash";
 import { Link } from 'gatsby'
-import PostTages from './PostTags';
 
 /** @jsx jsx */
 import { Styled, jsx } from 'theme-ui'
 
+import PostTages from "./PostTags";
 
 
 const PostHeader = (props) => {
@@ -15,7 +15,7 @@ const PostHeader = (props) => {
     <div sx={{ mb: `-1px` }}>
       <div sx={{ display: `flex`, flexDirection: `column` }}>
         <small>
-          {post.date} / {post.timeToRead} minute(s) reading time
+          {post.date}
         </small>
         <div
           sx={{
