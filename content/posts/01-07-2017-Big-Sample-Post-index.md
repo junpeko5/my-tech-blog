@@ -1,9 +1,10 @@
 ---
 title: "Gitの管理対象から特定のファイルまたはディレクトリを除外したい場合の対処法"
 cover: "/images/posts/Tips.png"
+category: "Git"
 date: 2019-11-24
 slug: "git-rm-cached"
-category: "another one"
+description: "git管理"
 tags:
     - test
     - something

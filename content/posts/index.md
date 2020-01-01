@@ -1,8 +1,10 @@
 ---
 title: "The Fallen Time"
 cover: "https://unsplash.it/400/300/?random?TheFallenTime"
-date: 2019-08-27
 category: "another one"
+date: 2019-11-24
+slug: "ssss"
+description: "ssssssss"
 tags:
     - test
     - something

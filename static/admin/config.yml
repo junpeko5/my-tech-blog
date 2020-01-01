@@ -1,0 +1,28 @@
+backend:
+  name: github
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+  repo: junpeko5/my-tech-blog
+media_folder: static/images
+public_folder: /images
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "アイキャッチ", name: "cover", widget: image}
+      - {label: "カテゴリー", name: "category", widget: "string"}
+      - {label: "タグ", name: "tags", widget: "list"}
+      - {label: "slug", name: "slug", widget: "string"}
+      - {label: "本文", name: "body", widget: "markdown"}

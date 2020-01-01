@@ -62,9 +62,7 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: config.siteGTMID,
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
+        includeInDevelopment: false
       }
     },
     {
@@ -102,6 +100,9 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+    },
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-feed",
@@ -137,8 +138,8 @@ module.exports = {
                 date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.excerpt,
-                url: rssMetadata.site_url + edge.node.fields.slug,
-                guid: rssMetadata.site_url + edge.node.fields.slug,
+                url: rssMetadata.site_url + edge.node.frontmatter.slug,
+                guid: rssMetadata.site_url + edge.node.frontmatter.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
                   { author: config.userEmail }
