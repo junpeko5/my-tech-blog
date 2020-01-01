@@ -104,7 +104,7 @@ Reactができる人はもっと短い時間で出来ると思います。
 
 lighthouseで計測すると💯が出ました。
 
-<img src="/images/lighthouse.png" alt="lighthouse"/>
+<img src="/images/lighthouse.png" alt="lighthouse" class="css-9taffg" />
 
 さすがGatsbyです。
 
