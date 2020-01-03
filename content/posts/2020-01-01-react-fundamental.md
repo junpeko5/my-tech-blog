@@ -56,6 +56,10 @@ JSXの記法を使うと、JavascriptでHTMLのような記法ができます。
 
 例えば、以下の２つの構文は同じ挙動となります。
 
+src/App.jsを編集します。
+
+src/App.js
+
 ```js
 import React, {Component} from 'react';
 
@@ -71,6 +75,8 @@ class App extends Component {
 
 export default App;
 ```
+
+src/App.js
 
 ```js
 
@@ -96,6 +102,9 @@ import React from 'react';
 ```
 
 また、HTMLの中にJavascriptの処理を書くことも出来ます。
+
+
+src/App.js
 
 ```js
 import React, {Component} from 'react';
@@ -125,6 +134,9 @@ Reactのコンポーネントをパーツごとに適切に分けることで、
 
 例えば、以下のようにDogコンポーネントを作成すると、繰り返しDogコンポーネントを利用出来ます。
 
+
+src/App.js
+
 ```js
 import React from 'react';
 
@@ -146,6 +158,8 @@ export default App;
 ## Props
 
 子コンポーネントに値を渡したい場合はpropsを使います。
+
+src/App.js
 
 ```js
 import React from 'react';
@@ -202,7 +216,9 @@ propsはstateと異なり、不変な値（イミュータブル）である点�
 
 Stateを利用することで、コンポーネント内で、状態の変化を察知し、再レンダリングすることが出来るようになります。
 
-+1ボタンを押すと数値が+1、-1ボタンを押すと、数値が-1され表示されるプログラムで説明します。
++1ボタンを
+
+src/App.js
 
 ```js
 import React, { Component } from 'react';
@@ -249,6 +265,7 @@ class Counter extends Component {
 
 export default App;
 ```
+
 初期表示時、render()が呼ばれ、コンストラクタで設定されたStateの値`0`が表示されます。
 
 その後+1ボタンが押下した場合、handlePlusButton関数がコールされ、関数内でsetState関数が呼ばれます。
