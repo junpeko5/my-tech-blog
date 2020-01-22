@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Preztoでzshのプロンプトの見た目を変更する
-date: 2020-01-22T12:34:15.945Z
+date: 2020-01-23T12:34:15.945Z
 description: Preztoは、zshの設定のためのフレームワークです。Preztoを利用することで簡単にターミナル環境の見た目をいい感じに変更出来ます。
 cover: /images/prezto-install.png
 category: Shell Script
@@ -73,6 +73,7 @@ $ mv ~/.zshrc ~/.zshrc.backup
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
 ```
 
 ターミナルを再起動すると、反映されます。
@@ -121,18 +122,41 @@ $ prompt -p agnoster
 例
 ```sh
 $ prompt -s skwp
+Set and save not yet implemented.  Please ensure your ~/.zshrc
+contains something similar to the following:
+
+  autoload -Uz promptinit
+  promptinit
+  prompt skwp
 ```
-とやると変更されますが、シェルを起動し直すと、デフォルトに戻ってしまいました。
 
-まだ原因がはっきりとはわかっていないのですが、コマンドではうまく切り替えられませんでした。
-
-`.zpreztorc`というファイルがあるのでコチラを編集していきます。
+> 以下の設定を`.zshrc`に追加する必要があるようです。
 
 ```sh
-zstyle ':prezto:module:prompt' theme 'powerline'
+autoload -Uz promptinit
+promptinit
+prompt skwp
 ```
 
-themeを設定している行で、powerlineという名前に変更するとテーマが反映されました。
+また、他の設定は、
+`.zpreztorc`というファイルがあるのでコチラを編集していけば良いようです。
+例えば、`'git' \`という行を追加するとプロンプトにgitの情報が表示されるようになります。
+
+
+```sh
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'git' \
+  'completion' \
+  'prompt'
+```
+<img src="/images/prompt.png" alt="prompt" class="css-9taffg" />
 
 
 
