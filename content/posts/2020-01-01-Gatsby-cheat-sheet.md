@@ -4,9 +4,10 @@ title: Gatsby CLI チートシート
 date: 2020-01-02T12:34:15.945Z
 description: 新規記事をCMSから投稿テストです。
 cover: /images/gatsbyBlack.png
-category: Gatsby
+category: JavaScript
 tags:
-  - Gatsby CLI
+  - Gatsby
+  - React
 slug: gatsby/cheat-sheet
 ---
 

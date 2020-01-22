@@ -2,9 +2,9 @@
 templateKey: blog-post
 title: Reduxの基礎
 date: 2020-01-04T12:34:15.945Z
-description: 
+description: 前回の記事の続きとなります。Reduxに必要なライブラリのインストールを行います。
 cover: /images/redux.png
-category: React
+category: JavaScript
 tags:
   - Redux
 slug: redux-fundamental
