@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Macおすすめアプリケーション16選
-date: 2020-01-05T12:34:15.945Z
+date: 2020-01-22T12:34:15.945Z
 description: Macでおすすめアプリケーションを紹介します。
 cover: /images/apple-logo.png
 category: Mac
