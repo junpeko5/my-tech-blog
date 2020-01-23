@@ -11,7 +11,7 @@ tags:
   - homebrew
 slug: install-go
 ---
-go gophers by Renee French CC BY 3.0
+> 引用：go gophers by Renee French CC BY 3.0
 
 
 anyenv経由でGoをインストールしていきます。

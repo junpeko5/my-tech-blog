@@ -42,16 +42,3 @@ echo $SHELL
 ```
 
 以上です。
-
-
-
-
-
-
-
-
-
-
-saikido
-
-echo $SHELL

@@ -4,9 +4,10 @@ title: Preztoでzshのプロンプトの見た目を変更する
 date: 2020-01-23T12:34:15.945Z
 description: Preztoは、zshの設定のためのフレームワークです。Preztoを利用することで簡単にターミナル環境の見た目をいい感じに変更出来ます。
 cover: /images/prezto-install.png
-category: Shell Script
+category: Mac
 tags:
   - zsh
+  - Prezto
 slug: zsh-prezto-install
 ---
 
@@ -66,13 +67,11 @@ done
 $ mv ~/.zshrc ~/.zshrc.backup
 ```
 
-また`.zshrc`に以下のスクリプトを追加し、ターミナル起動時に読み込むようにします。
+ただ、以下の設定を`.zshrc`に追加することでも対応可能とのことです。
 
 ```sh
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# Preztoの読み込み
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 ```
 
@@ -130,13 +129,21 @@ contains something similar to the following:
   prompt skwp
 ```
 
-> 以下の設定を`.zshrc`に追加する必要があるようです。
+以下の設定を`.zshrc`に追加する必要があるとのことなので、.zshrcの上部に追記しました。
 
 ```sh
+# Preztoの読み込み
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+# Preztoのテーマ設定
 autoload -Uz promptinit
-promptinit
-prompt skwp
+  promptinit
+  prompt cloud
 ```
+
+Preztoの読み込みのあとにテーマ設定を行わなければ、上手くいかなかったので気を付けてください。
+
+
 
 また、他の設定は、
 `.zpreztorc`というファイルがあるのでコチラを編集していけば良いようです。

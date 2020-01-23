@@ -78,15 +78,3 @@ gettext	git	pcre2
 $ which git
 /usr/local/bin/git
 ```
-
-
-
-
-
-
-
-
-
-saikido
-
-echo $SHELL
