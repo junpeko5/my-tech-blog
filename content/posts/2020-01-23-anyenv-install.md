@@ -25,24 +25,33 @@ $ brew install anyenv
 $ anyenv init
 ```
 
-ターミナルを再起動すると、マニフェストディレクトリがないとの警告が出る場合、以下を実行します。
+ターミナルを再起動すると、マニフェストディレクトリがないとの警告が出ます。
+```
+ANYENV_DEFINITION_ROOT(/Users/riywo/.config/anyenv/anyenv-install) doesn't exist. You can initialize it by:
+> anyenv install --init
+```
+
+言われた通り以下を実行します。
 ```sh
 $ anyenv install --init
+Manifest directory doesn't exist: /Users/jun/.config/anyenv/anyenv-install
+Do you want to checkout ? [y/N]: y
 ```
+yを選択。
 
-## パスを追加
-
-`~/.anyenv/bin`をパスを追加します。
+以上でインストール完了です。
 
 ```sh
-$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.zshrc
+$ anyenv -v
+anyenv 1.1.1
 ```
 
-
-## 使い方
+## 使い方の例
 ```sh
-$ anyenv install rbenv
-$ anyenv install pyenv
 $ anyenv install nodenv
 $ exec $SHELL -l
+$ nodenv install 13.7.0
+$ exec $SHELL -l
+$ node -v
+v13.7.0
 ```
