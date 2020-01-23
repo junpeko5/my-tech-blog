@@ -38,7 +38,7 @@ $ git config --global alias.st status
 $ git config --global alias.co commit
 $ git config --global alias.br branch
 $ git config --global alias.ch checkout
-$ git config --global alias.graph log --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s':
+$ git config --global alias.graph "log --graph --date-order --all --pretty=format:'%h %C(green)%ad%C(cyan reverse)%cn%C(reset) %C(white bold)%s %C(red reverse)%w(80)%d' --date=short"
 $ git config --global alias.lol "log --graph --decorate --pretty=oneline --all --abbrev-commit"
 ```
 
