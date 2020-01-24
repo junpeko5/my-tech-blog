@@ -7,6 +7,7 @@ cover: /images/apple-logo.png
 category: Mac
 tags:
   - zsh
+  - Homebrew
 slug: change-mac-zsh
 ---
 
