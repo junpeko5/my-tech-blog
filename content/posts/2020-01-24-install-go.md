@@ -13,12 +13,11 @@ slug: install-go
 ---
 > 引用：go gophers by Renee French CC BY 3.0
 
-
 anyenv経由でGoをインストールしていきます。
 
 homebrewでanyenvをインストールしていない場合は、以下の記事を参考にしてください。
 
-https://junpeko.tech/install-anyenv
+<https://junpeko.tech/install-anyenv>
 
 ## goenvでGoをインストール
 
@@ -43,7 +42,7 @@ $ echo $GOPATH
 /Users/username/go/1.13.6
 ```
 
-.zshrcにGOPATHを追加しておきます。
+`.zshrc`にGOPATHを追加しておきます。
 
 僕の場合は、~/dev以下にプロジェクトを置いてくというルールで運用していますが、ここは任意の場所で構いません。
 
@@ -51,7 +50,7 @@ $ echo $GOPATH
 export GOPATH=$HOME/dev
 ```
 
-> https://github.com/golang/go/wiki/SettingGOPATH#zsh
+> <https://github.com/golang/go/wiki/SettingGOPATH#zsh>
 
 シェルを再起動して、確認します。
 ```sh

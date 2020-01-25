@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: httpで接続時、NET::ERR_CERT_AUTHORITY_INVALIDとなった時の対処法
+title: httpで接続時、`NET::ERR_CERT_AUTHORITY_INVALID`となった時の対処法
 date: 2020-01-25T12:34:15.945Z
 description: 
 cover: /images/homestead.png
@@ -8,7 +8,7 @@ category: PHP
 tags:
   - Vagrant
   - Homestead
-slug: install-phpbrew
+slug: err-cert-authority-invalid
 ---
 
 .devや.foo、.appなどで終わるTLD(Top Level Domain)ドメインは、
@@ -17,7 +17,13 @@ slug: install-phpbrew
 
 つまり、hostsファイルにhomestead.appと書いて、ブラウザでアクセスすると、
 
-http://homestead.appにアクセスするつもりが、https://homestead.appにリダイレクトされてしまうということです。
+<http://homestead.app>
+
+にアクセスするつもりが、
+
+<https://homestead.app> 
+
+にリダイレクトされてしまうということです。
 
 (.devはgoogleが購入したらしい)
 

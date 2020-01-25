@@ -3,10 +3,10 @@ templateKey: blog-post
 title: HomesteadにおけるDBクライアントの設定方法
 date: 2020-01-25T12:34:15.945Z
 description: 
-cover: 
+cover: /images/homestead.png
 category: PHP
 tags:
-  - a
+  - Homestead
 slug: homestead-db-client-setting
 ---
 
