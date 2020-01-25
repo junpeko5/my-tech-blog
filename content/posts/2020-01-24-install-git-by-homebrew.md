@@ -1,13 +1,13 @@
 ---
 templateKey: blog-post
-title: MacにHomebrewをインストールする方法
+title: HomebrewでGitをインストールする方法
 date: 2020-01-24T12:34:15.945Z
 description: 
 cover: /images/homebrew.png
-category: Mac
+category: Git
 tags:
-  - homebrew
-slug: install-homebrew
+  - Homebrew
+slug: install-git-by-homebrew
 ---
 
 Macにデフォルトでgitは入っていますが、最新のバージョンに追随していきたいため、

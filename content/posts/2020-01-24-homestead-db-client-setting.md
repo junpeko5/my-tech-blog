@@ -12,15 +12,15 @@ slug: homestead-db-client-setting
 
 Homesteadでは、以下のPortがデフォルトでポートフォワードされています。
 
-> SSH: 2222 → フォワード先 22
-> ngrok UI: 4040 → フォワード先 4040
-> HTTP: 8000 → フォワード先 80
-> HTTPS: 44300 → フォワード先 443
-> MySQL: 33060 → フォワード先 3306
-> PostgreSQL: 54320 → フォワード先 5432
-> MongoDB: 27017 → フォワード先 27017
-> Mailhog: 8025 → フォワード先 8025
-> Minio: 9600 → フォワード先 9600
+- SSH: 2222 → フォワード先 22
+- ngrok UI: 4040 → フォワード先 4040
+- HTTP: 8000 → フォワード先 80
+- HTTPS: 44300 → フォワード先 443
+- MySQL: 33060 → フォワード先 3306
+- PostgreSQL: 54320 → フォワード先 5432
+- MongoDB: 27017 → フォワード先 27017
+- Mailhog: 8025 → フォワード先 8025
+- Minio: 9600 → フォワード先 9600
 
 引用:<https://readouble.com/laravel/6.x/ja/homestead.html>
 

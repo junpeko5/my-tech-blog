@@ -8,7 +8,7 @@ category: Mac
 tags:
   - zsh
   - Homebrew
-slug: change-mac-zsh
+slug: install-homebrew
 ---
 
 手順は３ステップです。
@@ -24,9 +24,11 @@ slug: change-mac-zsh
 ## XCode Command Line Toolsをインストール
 
 App StoreでXcodeをインストールした後に以下を実行します。
+
 ```sh
 $ xcode-select --install
 ```
+
 ## Homebrewをインストール
 
 https://brew.sh/index_ja
