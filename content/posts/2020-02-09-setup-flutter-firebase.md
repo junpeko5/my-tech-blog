@@ -41,7 +41,11 @@ dependencies:
 ~ flutter packages get
 ```
 
+dartファイルでfirestoreのパッケージを上記のようにimportできるようになります。
 
+```dart
+import 'package:cloud_firestore/cloud_firestore.dart';
+```
 
 ## Firebase プロジェクトを作成する
 
@@ -67,7 +71,7 @@ iOSの設定には、`iOS bundle ID`が必要です。
 
 設定画面で`GoogleService-Info.plist`をダウンロードできるので、
 
-Xcodeの`Runner/Runner`の配下にダウンロードしてきた`GoogleService-Info.plist`を設置します。
+Xcodeのプロジェクトのツリー上に`Runner/Runner`の配下にダウンロードしてきた`GoogleService-Info.plist`をドラッグアンドドロップで設置します。
 
 ## Androidの設定
 
@@ -95,6 +99,20 @@ apply plugin: 'com.google.gms.google-services' // 追記
 
 また、64Kを超えるメソッドを使用するアプリ向けにmultidexを有効化しておく必要があります。
 
+`android/app/build.gradle`に追記します。
+
+```gradle
+  defaultConfig {
+    applicationId "habit.com.junpeko.flutter_habit"
+    minSdkVersion 16
+    targetSdkVersion 28
+    multiDexEnabled true    // 追記
+    versionCode flutterVersionCode.toInteger()
+    versionName flutterVersionName
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+```
+
 参考: <https://developer.android.com/studio/build/multidex?hl=ja>
 
 ### android/build.gradleの設定
@@ -117,6 +135,7 @@ buildscript {
 build.gradleファイルに追記したら、設定項目を反映させるために再ビルドする必要があります。
 
 ここで僕ははまりました。
+
 
 ## 終わりに
 
