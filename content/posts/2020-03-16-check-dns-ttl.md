@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: dig、nslookupコマンドでDNSのTTLを確認する
-date: 2020-02-15
+date: 2020-03-16
 description: 例えば、お名前ドットコムなどで新しくドメインを取得して、お名前ドットコムのNS（ネームサーバー）にRoute53などで作成したNSレコードを登録してもすぐには反映されません。
 cover: /images/java.png
 category: Tips
