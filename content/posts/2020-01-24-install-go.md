@@ -23,6 +23,9 @@ homebrewでanyenvをインストールしていない場合は、以下の記事
 
 ```sh
 $ anyenv install goenv
+$ goenv install -l
+$ goenv install 1.13.6
+$ goenv global 1.13.6
 ```
 
 インストールに成功したら、シェルを再起動します。

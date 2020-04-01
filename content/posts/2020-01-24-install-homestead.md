@@ -8,7 +8,7 @@ category: PHP
 tags:
   - Homestead
   - Homebrew
-slug: install-phpbrew
+slug: install-homebrew
 ---
 
 VagrantとVirtualBoxのインストールが必要です。
