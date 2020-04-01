@@ -4,10 +4,10 @@ title: Gatsby、Netlify、Netlify CMSで始める技術ブログ
 date: 2020-01-01T04:34:15.945Z
 description: 新規記事をCMSから投稿テストです。
 cover: /images/happy-new-year.png
-category: JavaScript
+category: Gatsby
 tags:
   - Netlify
-  - Gatsby
+  - JavaScript
   - React
 slug: start-blog
 ---

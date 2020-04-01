@@ -4,10 +4,10 @@ title: phpbrewでPHP7.4をインストールする
 date: 2020-01-24T12:34:15.945Z
 description: 
 cover: /images/php.png
-category: PHP
+category: Mac 
 tags: 
   - zsh
-  - Homebrew
+  - phpbrew
 slug: install-phpbrew
 ---
 

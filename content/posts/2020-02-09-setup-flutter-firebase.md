@@ -4,9 +4,9 @@ title: FlutterでFirebaseに接続する際に考慮する点
 date: 2020-02-09T12:34:15.945Z
 description: 
 cover: /images/flutter.png
-category: Dart
+category: Flutter
 tags: 
-  - Flutter
+  - Dart
   - Firebase
 slug: setup-flutter-firebase
 ---

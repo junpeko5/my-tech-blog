@@ -4,9 +4,10 @@ title: HomesteadにおけるDBクライアントの設定方法
 date: 2020-01-25T12:34:15.945Z
 description: 
 cover: /images/homestead.png
-category: PHP
+category: Laravel
 tags:
   - Homestead
+  - PHP
 slug: homestead-db-client-setting
 ---
 

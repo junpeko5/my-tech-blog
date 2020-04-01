@@ -4,10 +4,10 @@ title: anyenvでjenvをインストールする
 date: 2020-02-15
 description: 
 cover: /images/java.png
-category: Java
+category: anyenv
 tags: 
   - jenv
-  - anyenv
+  - Java
 slug: install-jenv-anyenv
 ---
 

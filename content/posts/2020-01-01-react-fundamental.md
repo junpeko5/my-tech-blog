@@ -4,9 +4,9 @@ title: Reactの基礎
 date: 2020-01-03T12:34:15.945Z
 description: Reactの基礎をおさらいしていきます。今回はyarn、create-react-appを利用し、環境を作成していきます。
 cover: /images/React.png
-category: JavaScript
+category: React
 tags:
-  - React
+  - JavaScript
   - Yarn
 slug: react-fundamental
 ---

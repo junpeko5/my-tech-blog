@@ -4,9 +4,9 @@ title: 【Flutter】StreamBuilderをザックリ理解する。
 date: 2020-02-13T12:34:15.945Z
 description: 
 cover: /images/flutter.png
-category: Dart
+category: Flutter
 tags: 
-  - Flutter
+  - Dart
   - Firebase
 slug: flutter-widget-streambuilder
 ---

@@ -4,9 +4,9 @@ title: 正規表現でエスケープが必要となる記号一覧
 date: 2020-02-14T12:34:15.945Z
 description: 
 cover: /images/php.png
-category: PHP
+category: Regex
 tags: 
-  - 正規表現
+  - PHP
 slug: regular-expression
 ---
 

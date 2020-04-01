@@ -4,9 +4,8 @@ title: Preztoでzshのプロンプトの見た目を変更する
 date: 2020-01-23T12:34:15.945Z
 description: Preztoは、zshの設定のためのフレームワークです。Preztoを利用することで簡単にターミナル環境の見た目をいい感じに変更出来ます。
 cover: /images/prezto-install.png
-category: Mac
+category: zsh 
 tags:
-  - zsh
   - Prezto
 slug: zsh-prezto-install
 ---

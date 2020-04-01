@@ -7,6 +7,7 @@ cover: /images/homebrew.png
 category: Mac
 tags:
   - Homebrew
+  - anyenv
 slug: anyenv-install-list
 ---
 

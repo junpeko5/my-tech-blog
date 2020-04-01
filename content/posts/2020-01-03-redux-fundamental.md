@@ -4,9 +4,10 @@ title: Reduxの基礎
 date: 2020-01-04T12:34:15.945Z
 description: 前回の記事の続きとなります。Reduxに必要なライブラリのインストールを行います。
 cover: /images/redux.png
-category: JavaScript
+category: React
 tags:
   - Redux
+  - JavaScript
 slug: redux-fundamental
 ---
 前回の記事の続きとなります。

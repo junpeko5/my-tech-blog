@@ -4,9 +4,9 @@ title: Reactでコンポーネントに関数を渡す際に注意すること
 date: 2020-01-05T12:34:15.945Z
 description: Reactでは、一般的に他のコンポーネントに渡すメソッドについてはバインドする必要があります。
 cover: /images/React.png
-category: JavaScript
+category: React
 tags:
-  - React
+  - JavaScript
 slug: react-bind
 ---
 
