@@ -3,18 +3,18 @@ templateKey: blog-post
 title: SchemaSpyでER図を自動生成してみる[チュートリアル]
 date: 2020-04-06
 description: SchemaSpyはJava製のER図自動生成ツールです。リッチなUIでER図をリバースエンジニアリングできるので非常に重宝しています。
-cover: /images/apple-logo.png
+cover: /images/java.png
 category: Git
-tags: 
+tags:
 - Tips
-slug: git-change-gitconfig
+slug: schemaspy-tutorial
 ---
 
 SchemaSpyはJava製のER図自動生成ツールです。リッチなUIでER図をリバースエンジニアリングできるので非常に重宝しています。
 
 今回は、Mac環境でこちらのツールを使ってEC-CUBE4のER図を自動生成してみたいと思います。
 
-また、DBはmysqlを利用していきます。
+また、DBはpostgresを利用していきます。
 
 <http://schemaspy.org/>
 
@@ -38,7 +38,7 @@ Javaのバージョンは8である必要があります。
 
 ```bash
 mkdir ~/schemaspy
-ls
+mv ~/Downloads/schemaspy-6.1.0.jar .
 ```
 
 ## Java8のインストール
@@ -71,3 +71,40 @@ PostgreSQLであれば、<https://jdbc.postgresql.org/download.html>
 
 `schemaspy.properties`という名前で、SchemaSpyを実行する際に指定する設定ファイルを作成していきます。
 
+```bash
+schemaspy.t=pgsql
+schemaspy.dp=postgresql-42.2.12.jar
+schemaspy.host=localhost
+schemaspy.port=5432
+schemaspy.db=eccube4
+schemaspy.u=docker
+schemaspy.p=docker
+schemaspy.o=output
+schemaspy.s=public
+```
+
+## SchemaSpyの実行
+
+> Mac環境で動作させる場合、READMEにはGraphvizをインストールする必要がありましたが、
+> バージョン6.1.0以降、Graphvizは不要とのことです。
+> コマンドライン引数`-vizjs`を指定するとOKです。
+
+```bash
+java -jar schemaspy-6.1.0.jar -configFile schemaspy.properties -vizjs
+```
+
+実行には2分程度かかります。
+
+`output/`にファイルが生成されます。
+
+```bash
+open output/index.html
+```
+
+以下は、ER図のページです。
+
+<img src="/images/eccube4-er.png" alt="eccube4-er" class="css-9taffg" />
+
+今回はMac環境でしたが、dockerを利用した方法もあるようなので、試してみたいですね。
+
+おしまい。

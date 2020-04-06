@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: EC-CUBEでプラグインインストール時のエラーについて
+title: gitconfigを会社用、個人用の設定で使い分けたい場合の設定方法
 date: 2020-04-03
-description: .gitconfigを会社用、個人用の設定で使い分けたい場合の設定方法
-cover: /images/apple-logo.png
+description: .gitconfigで、user.nameとuser.emailを会社と個人で使い分けたい場合の例を紹介します。
+cover: /images/git.png
 category: Git
-tags: 
+tags:
   - Tips
 slug: git-change-gitconfig
 ---
