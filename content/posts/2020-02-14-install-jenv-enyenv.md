@@ -2,10 +2,10 @@
 templateKey: blog-post
 title: anyenvでjenvをインストールする
 date: 2020-02-15
-description: 
+description:
 cover: /images/java.png
 category: anyenv
-tags: 
+tags:
   - jenv
   - Java
 slug: install-jenv-anyenv
@@ -54,5 +54,10 @@ $ jenv versions
 ```
 
 `jenv versions`で追加されていればOKです。
+
+```bash
+$ jenv global 11.0.6
+$ java -version
+```
 
 おしまい。

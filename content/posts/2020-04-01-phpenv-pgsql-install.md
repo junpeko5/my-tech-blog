@@ -2,10 +2,10 @@
 templateKey: blog-post
 title: phpenvでpgsql・pdo-pgsqlを有効にする方法
 date: 2020-04-02
-description: phpenvでPHPをインストールする際には、プラグインとして内部でphp-buildを利用しています 
-cover: /images/apple-logo.png
+description: phpenvでPHPをインストールする際には、プラグインとして内部でphp-buildを利用しています
+cover: /images/php.png
 category: Mac
-tags: 
+tags:
   - PHP
   - phpenv
   - anyenv
