@@ -150,6 +150,11 @@ https://www.getpostman.com/
 
 デザイナーのスキルがなくても問題なく使えます。
 
+## Rectangle
+
+Windowのサイズをショートカットキーで調節できるアプリです。
+
+https://rectangleapp.com/
 
 ## おわりに
 
