@@ -7,7 +7,7 @@ cover: /images/postgres.png
 category: PostgreSQL
 tags:
   - Tips
-slug:
+slug: postgres-sequence
 ---
 
 PostgreSQLでデータをCSVインポートを行う際、id列のデータ型にserial型の場合、シーケンスについても考慮する必要があります。

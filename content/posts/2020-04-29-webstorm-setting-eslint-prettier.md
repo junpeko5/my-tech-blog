@@ -28,15 +28,21 @@ npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-confi
 Preferences > Tools > FileWatcher を開き + ボタンを押します。
 
 Name: に適当な名前を入れます。
+
 File Type: はお好みでOKです。僕は、`Any` or `JavaScript`を入れます。
-Scope: についてもお好みです。｀ProjectFiles` を選んでおきます。
+
+Scope: についてもお好みです。`ProjectFiles` を選んでおきます。
 
 Program: には、`$ProjectFileDir$/node_modules/.bin/prettier`
+
 Arguments: に `--write $FilePathRelativeToProjectRoot$`を入れます。
+
 Output paths to refresh: に、`$FilePathRelativeToProjectRoot$`を設定します。
+
 Working directory: に、`$ProjectFileDir$`を入れます。
 
 Advanced Options の Trigger the watcher on external changesのみにチェックを入れます。
+
 この設定で、`⌘S`を入力時にコードフォーマットされるようになります。
 
 ### 設定ファイル
@@ -62,15 +68,21 @@ Preferences > Languages & Frameworks > JavaScript > Code Quality Tools > ESLint 
 Preferences > Tools > FileWatcher を開き + ボタンを押します。
 
 Name: に適当な名前を入れます。
+
 File Type: はお好みでOKです。僕は、`Any` or `JavaScript`を入れます。
+
 Scope: についてもお好みです。｀ProjectFiles` を選んでおきます。
 
 Program: には、`$ProjectFileDir$/node_modules/.bin/eslint`を入れます。
+
 Arguments: に `--fix $FilePath$`を入れます。
+
 Output paths to refresh: に、`$FilePath$`を設定します。
+
 Working directory: に、`$ProjectFileDir$`を入れます。
 
 Advanced Options の Trigger the watcher on external changesのみにチェックを入れます。
+
 この設定で、`⌘S`を入力時にコードフォーマットされるようになります。
 
 ### 設定ファイル
