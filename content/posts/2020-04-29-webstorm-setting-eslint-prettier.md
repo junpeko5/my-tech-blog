@@ -109,7 +109,12 @@ Advanced Options の Trigger the watcher on external changesのみにチェッ�
     "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
   }
 }
+
+```bash
+./node_modules/.bin/eslint --init
 ```
+
+上記のコマンドでも生成できます。
 
 ## 参考
 
