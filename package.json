@@ -10,6 +10,7 @@
     "@theme-ui/components": "^0.2.50",
     "@theme-ui/prism": "^0.2.46",
     "gatsby": "^2.17.10",
+    "gatsby-cli": "^2.18.0",
     "gatsby-image": "^2.2.23",
     "gatsby-plugin-catch-links": "^2.1.12",
     "gatsby-plugin-feed": "^2.3.15",
