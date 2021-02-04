@@ -23,7 +23,10 @@ git push --delete origin branch-name
 git push -d origin branch-name
 ```
 
-###
+以上で本題は終了。
+
+### ローカルブランチの削除
+
 ちなみに、ローカルのブランチを削除する場合は、以下の2種類のコマンドがある。
 
 ```bash
@@ -31,3 +34,8 @@ git branch -D branch-name
 git branch -d branch-name # マージされていないブランチは削除できない
 ```
 
+### ブランチが残っていないか確認
+
+```bash
+git branch -a
+```
