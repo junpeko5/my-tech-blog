@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: eccube4をWindows環境に構築
+title: Windows環境にeccube4のローカル開発を構築する
 date: 2021-02-02
 description: 
 cover: /images/eccube.png
@@ -13,15 +13,23 @@ tags:
 slug: eccube-windows-develop
 ---
 
-Windows環境にeccube4系の環境を作ってみた際の構築メモを残します。
-VagrantとかDockerを使わずに、すべてのパッケージはローカルにインストールしました。
-（WindowsはSymfonyとの相性が悪く動作が重くなってしまうことを恐れ）
-また、symfony/cliを利用してssl証明書を発行しており、
-httpsでローカル環境の動作確認ができる方法となっています。
+Windows環境にeccube4系の環境を作ってみました。
+
+その際の構築メモとなります。
+
+WindowsはSymfonyとの相性が悪く、動作が重くなってしまう印象を持っています。
+
+できるだけ快適に開発が出来るように、VagrantとかDockerを使わずに構築しました。
+
+メモリ8GBでしたが、なんとか開発は出来る感じにはなりました。
+（おすすめはしません。Macでローカル環境を作るほうが高速に動作します。 ）
+
+また、symfony/cliを利用してssl証明書を発行しており、 httpsでローカル環境の動作確認ができる方法となっています。
 
 ## 前提条件
 
 VirtualBoxを利用し、仮想マシンMSEdge on Win10を使用してWindows環境を作成しました。
+
 参考: <https://do-wp.com/build-a-windows-operating-environment-on-mac-with-virtualbox/>
 
 また、phpは7.3.26、MySQLは5.7.18です。
@@ -31,6 +39,7 @@ VirtualBoxを利用し、仮想マシンMSEdge on Win10を使用してWindows環
 ### Chocolateyのインストール
 
 Chocolateyを利用してパッケージをWindows環境にインストールします。
+
 まずは、`Chocolatey`をインストールしましょう。
 
 PowerShellを管理者権限で起動します。
@@ -51,11 +60,15 @@ Chocolatey v0.10.15
 ### パッケージのインストール
 
 `choco`を実行するとバージョンが確認できます。
+
 また、`choco list -lo`でインストールしたパッケージを確認できます。
 
 それでは必要なパッケージをインストールしていきます。
+
 `--version`でバージョン指定ができます。
+
 `-y`はすべてYesで答えることができるオプションです。
+
 `vcredist2013`は、C++ アプリケーションを実行するために必要なランタイムコンポーネントで、MySQLを実行時に必要なためインストールしています。
 
 ```PowerShell
@@ -70,7 +83,9 @@ choco install mysql --version=5.7.18
 
 Git bashを管理者として実行します。
 
-ここでは、eccubeで必要な拡張モジュールを有効化します。（Windowsでは`.dll`という拡張子がモジュールのファイルです。）
+ここでは、eccubeで必要な拡張モジュールを有効化します。
+
+（Windowsでは`.dll`という拡張子がモジュールのファイルです。）
 
 また、初期設定値もいくつか変更します。
 
@@ -82,10 +97,10 @@ Git bashを管理者として実行します。
 cd ~
 echo 'exec winpty bash' >> ~/.bash_profile
 ```
+
 参考: <https://qiita.com/amanoese/items/7b237e8703c3b4c7f001>
 
 ### xdebug拡張のダウンロード
-
 
 <https://xdebug.org/wizard>
 でphp -iの出力を貼り付けると、必要なxdebugのファイルがを教えてくれます。
@@ -228,6 +243,7 @@ Server起動後、`localhost:8000`にアクセスするとインストール画�
 - smtpのport: 1025
   
 また、symfony/cliでローカルサーバーを使用した場合、index.phpに上記の修正が必要となります。
+ 
   参考: <https://qiita.com/nanasess/items/de9f5450717cc8ede51a>
 
 ```index.php
