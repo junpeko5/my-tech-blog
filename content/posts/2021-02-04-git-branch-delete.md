@@ -1,0 +1,33 @@
+---
+templateKey: blog-post
+title: Gitでリモートブランチを削除する
+date: 2021-02-04
+description: Github等に不要なブランチがあって、コマンドで削除したい場合に利用します。
+cover: /images/git.png
+category: Git
+tags:
+  - Cli
+  - Git
+slug: git-remote-branch-delete
+---
+
+## ブランチの削除
+
+Github等に不要なブランチがあって、コマンドで削除したい場合に利用します。
+
+### リモートブランチの削除
+
+```bash
+git push --delete origin branch-name
+# or
+git push -d origin branch-name
+```
+
+###
+ちなみに、ローカルのブランチを削除する場合は、以下の2種類のコマンドがある。
+
+```bash
+git branch -D branch-name
+git branch -d branch-name # マージされていないブランチは削除できない
+```
+
