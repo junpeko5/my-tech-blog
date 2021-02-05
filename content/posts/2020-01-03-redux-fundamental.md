@@ -6,6 +6,7 @@ description: 前回の記事の続きとなります。Reduxに必要なライ�
 cover: /images/redux.png
 category: React
 tags:
+  - React
   - Redux
   - JavaScript
 slug: redux-fundamental

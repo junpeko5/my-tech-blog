@@ -6,7 +6,9 @@ description: CSVファイルをPostgreSQLにインポートする方法です。
 cover: /images/postgres.png
 category: PostgreSQL
 tags: 
-  - Tips
+  - csv
+  - PostgreSQL
+  - Docker
 slug: import-csv-postgres
 ---
 

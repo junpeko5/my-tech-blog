@@ -4,10 +4,11 @@ title: Node.jsアプリ開発に便利なツール、nodemonのインストー�
 date: 2020-05-16
 description: Node.jsの開発環境で、ファイルに変更があったときに自動でサーバーを再起動してくれるツールです。
 cover: /images/nodejs.png
-category: WebStorm
+category: Node.js
 tags:
-  - Tips
+  - Node.js
   - JavaScript
+  - nodemon
 slug: install-nodemon
 ---
 

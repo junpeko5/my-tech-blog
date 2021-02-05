@@ -2,11 +2,12 @@
 templateKey: blog-post
 title: Gatsby、Netlify、Netlify CMSで始める技術ブログ
 date: 2020-01-01T04:34:15.945Z
-description: 新規記事をCMSから投稿テストです。
+description: 小西純平といいます。今回新たに技術ブログを始めることにしました。
 cover: /images/happy-new-year.png
 category: Gatsby
 tags:
   - Netlify
+  - Gatsby
   - JavaScript
   - React
 slug: start-blog

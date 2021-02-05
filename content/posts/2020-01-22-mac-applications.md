@@ -4,7 +4,9 @@ title: Macおすすめアプリケーション16選
 date: 2020-01-22T12:34:15.945Z
 description: Macでおすすめアプリケーションを紹介します。
 cover: /images/apple-logo.png
-category: Mac
+category: macOS
+tags:
+  - macOs
 slug: mac-applications
 ---
 

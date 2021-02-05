@@ -4,9 +4,11 @@ title: WebStormにESLintとPrettierのFileWatchersを設定する
 date: 2020-04-29
 description: WebStormを利用している時の、ESLintとPrettierの設定メモです。
 cover: /images/webstorm.png
-category: WebStorm
+category: Prettier
 tags:
-  - Tips
+  - WebStorm
+  - Prettier
+  - ESLint
   - JavaScript
 slug: webstorm-setting-eslint-prettier
 ---

@@ -6,7 +6,8 @@ description: 新規記事をCMSから投稿テストです。
 cover: /images/gatsbyBlack.png
 category: Gatsby
 tags:
-  - JavaScripts
+  - Gatsby
+  - JavaScript
   - React
 slug: gatsby/cheat-sheet
 ---
@@ -164,7 +165,7 @@ Gatsbyアプリケーションのルートで実行し、
 $ gatsby info
 
   System:
-    OS: macOS 10.15.2
+    OS: macOs 10.15.2
     CPU: (12) x64 Intel(R) Core(TM) i9-8950HK CPU @ 2.90GHz
     Shell: 5.7.1 - /bin/zsh
   Binaries:

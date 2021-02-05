@@ -6,6 +6,8 @@ description: Reactの基礎をおさらいしていきます。今回はyarn、c
 cover: /images/React.png
 category: React
 tags:
+  - Homebrew
+  - React
   - JavaScript
   - Yarn
 slug: react-fundamental

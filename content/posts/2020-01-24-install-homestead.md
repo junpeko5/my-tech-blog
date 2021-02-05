@@ -4,10 +4,14 @@ title: HomesteadでLaravelをインストールする
 date: 2020-01-25T12:34:15.945Z
 description: VagrantとVirtualBoxのインストールが必要です。また、composerも事前にインストールしておきましょう。
 cover: /images/homestead.png
-category: PHP
+category: Laravel
 tags:
+  - PHP
+  - Laravel
   - Homestead
   - Homebrew
+  - composer
+  - vagrant
 slug: install-homebrew
 ---
 

@@ -6,6 +6,7 @@ description:
 cover: /images/flutter.png
 category: Flutter
 tags: 
+  - Flutter
   - Dart
   - Firebase
 slug: flutter-widget-streambuilder
@@ -31,7 +32,7 @@ StreamBuilderのコンストラクタに、streamを与えます。
 
 FireStoreからデータを取得する際の実装例が以下です。
 
-```js
+```dart
 Widget _buildBody(BuildContext context) {
   return StreamBuilder<QuerySnapshot>(
 

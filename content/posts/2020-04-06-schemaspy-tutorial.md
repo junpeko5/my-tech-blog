@@ -4,9 +4,10 @@ title: SchemaSpyでER図を自動生成してみる[チュートリアル]
 date: 2020-04-06
 description: SchemaSpyはJava製のER図自動生成ツールです。リッチなUIでER図をリバースエンジニアリングできるので非常に重宝しています。
 cover: /images/java.png
-category: Git
+category: schemaspy
 tags:
-- Tips
+  - schemaspy
+  - Java
 slug: schemaspy-tutorial
 ---
 
@@ -20,7 +21,7 @@ SchemaSpyはJava製のER図自動生成ツールです。リッチなUIでER図�
 
 ## 必須要件
 
-必須要件として、今回はMac環境で実施するため、Mac環境で行う様にしてください。
+必須要件として、今回はmacOS環境で実施するため、Mac環境で行う様にしてください。
 
 Javaのバージョンは8である必要があります。
 
@@ -52,6 +53,7 @@ mv ~/Downloads/schemaspy-6.1.0.jar .
 > ※ jenvでJava8をいれる手順は、<https://junpeko.tech/install-jenv-anyenv>を参照してください。
 
 その後、JavaのバージョンがJava8のものに変更されたことを確認してください。
+
 ```bash
 java -version
 openjdk version "1.8.0_242"

@@ -4,12 +4,12 @@ title: EC-CUBEでプラグインインストール時のエラーについて
 date: 2020-04-03
 description: EC-CUBE4のプラグインをインストールする際に、Xdebugをoffにしないとシステムエラーとなるので注意したいです。
 cover: /images/eccube.png
-category: Mac
+category: ec-cube
 tags:
+  - Xdebug
+  - ec-cube
   - PHP
-  - phpenv
-  - anyenv
-slug: eccubee-plugin-install-error
+slug: eccube-plugin-install-error
 ---
 
 EC-CUBE4のプラグインをインストールする際に、Xdebugをoffにしないとシステムエラーとなるので注意したいです。

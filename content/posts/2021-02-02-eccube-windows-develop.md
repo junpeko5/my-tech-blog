@@ -4,12 +4,13 @@ title: Windows環境にeccube4のローカル開発を構築する
 date: 2021-02-02
 description: 
 cover: /images/eccube.png
-category: PHP
+category: ec-cube
 tags:
-  - php
+  - PHP
   - composer
-  - eccube
+  - ec-cube
   - Windows
+  - Xdebug
 slug: eccube-windows-develop
 ---
 

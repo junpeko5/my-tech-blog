@@ -4,8 +4,9 @@ title: MacにHomebrewをインストールする方法
 date: 2020-01-24T12:34:15.945Z
 description: 
 cover: /images/apple-logo.png
-category: Mac
+category: macOS
 tags:
+  - macOS
   - zsh
   - Homebrew
 slug: install-homebrew

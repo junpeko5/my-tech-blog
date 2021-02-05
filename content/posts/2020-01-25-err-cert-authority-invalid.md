@@ -4,8 +4,9 @@ title: httpで接続時、`NET::ERR_CERT_AUTHORITY_INVALID`となった時の対
 date: 2020-01-25T12:34:15.945Z
 description: 
 cover: /images/homestead.png
-category: DNS
+category: Homestead
 tags:
+  - DNS
   - Vagrant
   - Homestead
 slug: err-cert-authority-invalid

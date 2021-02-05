@@ -7,6 +7,7 @@ cover: /images/homebrew.png
 category: Git
 tags:
   - Homebrew
+  - Git
 slug: install-git-by-homebrew
 ---
 

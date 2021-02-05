@@ -6,6 +6,7 @@ description:
 cover: /images/aws-cli.png
 category: AWS
 tags:
+  - AWS
   - aws-cli
 slug: install-aws-cli-and-setting
 ---

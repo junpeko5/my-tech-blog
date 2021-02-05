@@ -6,6 +6,7 @@ description:
 cover: /images/php.png
 category: Regex
 tags: 
+  - Regex
   - PHP
 slug: regular-expression
 ---

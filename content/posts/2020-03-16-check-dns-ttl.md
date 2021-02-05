@@ -6,6 +6,7 @@ description: 例えば、お名前ドットコムなどで新しくドメイン�
 cover: /images/java.png
 category: DNS
 tags: 
+  - DNS
   - dig
   - nslookup
 slug: check-dns-ttl

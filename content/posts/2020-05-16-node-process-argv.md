@@ -4,9 +4,9 @@ title: Node.js環境でコマンドの引数を取得する方法
 date: 2020-05-16
 description: Node環境でターミナルからnodeコマンドでファイルを実行する際に、argvで取得できます。
 cover: /images/nodejs.png
-category: WebStorm
+category: Node.js
 tags:
-  - Tips
+  - Node.js
   - JavaScript
 slug: node-process-argv
 ---

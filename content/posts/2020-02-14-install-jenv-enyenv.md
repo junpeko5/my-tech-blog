@@ -6,6 +6,7 @@ description:
 cover: /images/java.png
 category: anyenv
 tags:
+  - anyenv
   - jenv
   - Java
 slug: install-jenv-anyenv

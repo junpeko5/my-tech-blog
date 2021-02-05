@@ -1,11 +1,13 @@
 ---
 templateKey: blog-post
-title: dockerでSchemaspy
+title: dockerでSchemaSpyを利用する
 date: 2020-07-27
 description: 
 cover: /images/postgres.png
-category: PostgreSQL
-tags: 
+category: Schemaspy
+tags:
+  - Docker
+  - PostgreSQL
   - Schemaspy
 slug: docker-schemaspy
 ---

@@ -4,8 +4,9 @@ title: curlでグローバルIPを確認する方法
 date: 2020-03-15
 description: curlコマンドでグローバルIPを確認することができます。
 cover: /images/java.png
-category: Tips
-tags: 
+category: IP
+tags:
+  - IP
   - curl
 slug: check-global-ip
 ---

@@ -6,6 +6,7 @@ description:
 cover: /images/flutter.png
 category: Flutter
 tags: 
+  - Flutter
   - Dart
   - Firebase
 slug: setup-flutter-firebase

@@ -6,6 +6,7 @@ description: Reactでは、一般的に他のコンポーネントに渡すメ�
 cover: /images/React.png
 category: React
 tags:
+  - React
   - JavaScript
 slug: react-bind
 ---

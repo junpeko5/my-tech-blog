@@ -1,12 +1,13 @@
 ---
 templateKey: blog-post
-title: Macでzshに切り替える方法
+title: macOSでbashからでzshに切り替える方法
 date: 2020-01-25T12:34:15.945Z
 description: Macはデフォルトでzshが入っているので、設定変更自体は簡単にできます。
 cover: /images/apple-logo.png
-category: Mac
+category: macOS
 tags:
   - zsh
+  - macOS
 slug: change-mac-zsh
 ---
 
@@ -22,8 +23,8 @@ $ /bin/zsh --version
 zsh 5.7.1 (x86_64-apple-darwin19.0)
 ```
 
-
 現在のシェルを確認するとbashでしたので、zshに切り替えます。
+
 ```sh
 echo $SHELL
 /bin/bash

@@ -4,8 +4,9 @@ title: anyenvでインストールできる言語
 date: 2020-01-23T12:34:15.945Z
 description: anyenvでインストールできる言語を調べてみました。
 cover: /images/homebrew.png
-category: Mac
+category: macOS
 tags:
+  - macOs
   - Homebrew
   - anyenv
 slug: anyenv-install-list

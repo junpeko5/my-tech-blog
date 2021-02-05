@@ -85,6 +85,6 @@ mysql> CREATE USER takuya@localhost IDENTIFIED BY 'asdfghjkL1$';
 削除したいアカウント名を指定します。
 
 ```bash
-DROP USER junpeko;
-DROP USER takuya@localhost;
+mysql> DROP USER junpeko;
+mysql> DROP USER takuya@localhost;
 ```

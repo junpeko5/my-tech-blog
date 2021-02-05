@@ -4,10 +4,12 @@ title: Laravel Homestead環境をプロジェクトごとに構築
 date: 2021-01-01
 description:
 cover: /images/laravel.png
-category: PHP
+category: Laravel
 tags:
-  - php
-  - laravel
+  - PHP
+  - Laravel
+  - Homestead
+  - Vagrant
 slug: laravel-homestead
 ---
 

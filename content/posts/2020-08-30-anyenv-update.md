@@ -4,14 +4,14 @@ title: anyenvをupdateする
 date: 2020-08-30
 description:
 cover: /images/apple-logo.png
-category: Mac
+category: anyenv
 tags:
   - anyenv
+  - macOS
 slug: anyenv-update
 ---
 
-
-node.jsのLTS版である12.18.3を入れたかったのでanyenvをアップデートしました。
+Node.jsのLTS版である12.18.3を入れたかったのでanyenvをアップデートしました。
 その際のanyenvのアップデート手順となります。
 
 ## 現状のインストール可能なバージョンを確認

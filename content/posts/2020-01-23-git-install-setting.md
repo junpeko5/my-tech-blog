@@ -1,11 +1,13 @@
 ---
 templateKey: blog-post
-title: gitをインストール時の初期設定
+title: Gitを初期インストールした際の設定メモ
 date: 2020-01-23T12:34:15.945Z
-description: gitをインストールしたときの初期設定のメモです。`git config --global` コマンドで`~/.gitconfig`に設定を追加していきます。
+description: Gitをインストールしたときの初期設定のメモです。`git config --global` コマンドで`~/.gitconfig`に設定を追加していきます。
 cover: /images/git.png
 category: Git
 tags:
+  - macOS
+  - Git
   - zsh
 slug: git-install-setting
 ---

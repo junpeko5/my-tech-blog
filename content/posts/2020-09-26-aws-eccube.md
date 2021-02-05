@@ -4,9 +4,11 @@ title: AWSのEC2環境にeccube4を構築した際のメモ
 date: 2021-01-01
 description:
 cover: /images/eccube.png
-category: AWS
+category: ec-cube
 tags:
+  - AWS
   - aws-cli
+  - ec-cube
 slug: aws-eccube
 ---
 

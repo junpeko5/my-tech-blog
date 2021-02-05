@@ -6,8 +6,10 @@ description:
 cover: /images/homestead.png
 category: Laravel
 tags:
+  - Laravel
   - Homestead
   - PHP
+  - MySQL
 slug: homestead-db-client-setting
 ---
 

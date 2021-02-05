@@ -4,9 +4,10 @@ title: Windows環境PhpStormのターミナル機能でGitbashを使う
 date: 2021-02-05
 description: 
 cover: /images/phpstorm.png
-category: PhpStorm
+category: Git
 tags:
-  - git
+  - Git
+  - PhpStorm
   - Windows
 slug: windows-phpstorm-gitbash-setting
 ---

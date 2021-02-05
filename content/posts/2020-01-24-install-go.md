@@ -2,24 +2,25 @@
 templateKey: blog-post
 title: MacにGoをインストールする方法(anyenv,goenv)
 date: 2020-01-24T13:34:15.945Z
-description: anyenv経由でGoをインストールしていきます。homebrewでanyenvをインストールしていない場合は、以下の記事を参考にしてください。
+description: anyenv経由でGoをインストールしていきます。Homebrewでanyenvをインストールしていない場合は、以下の記事を参考にしてください。
 cover: /images/gopher.png
-category: Go
+category: Golang
 tags:
   - goenv
+  - Golang
   - anyenv
-  - homebrew
+  - Homebrew
 slug: install-go
 ---
 > 引用：go gophers by Renee French CC BY 3.0
 
 anyenv経由でGoをインストールしていきます。
 
-homebrewでanyenvをインストールしていない場合は、以下の記事を参考にしてください。
+Homebrewでanyenvをインストールしていない場合は、以下の記事を参考にしてください。
 
 <https://junpeko.tech/install-anyenv>
 
-## goenvでGoをインストール
+## goenvでGolangをインストール
 
 ```sh
 $ anyenv install goenv
@@ -53,9 +54,10 @@ $ echo $GOPATH
 export GOPATH=$HOME/dev
 ```
 
-> <https://github.com/golang/go/wiki/SettingGOPATH#zsh>
+<https://github.com/golang/go/wiki/SettingGOPATH#zsh>
 
 シェルを再起動して、確認します。
+
 ```sh
 $ echo $GOPATH
 /Users/jun/dev

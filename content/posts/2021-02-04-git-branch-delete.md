@@ -6,7 +6,6 @@ description: Github等に不要なブランチがあって、コマンドで削�
 cover: /images/git.png
 category: Git
 tags:
-  - Cli
   - Git
 slug: git-remote-branch-delete
 ---

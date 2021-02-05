@@ -6,7 +6,7 @@ description: .gitconfigで、user.nameとuser.emailを会社と個人で使い�
 cover: /images/git.png
 category: Git
 tags:
-  - Tips
+  - Git
 slug: git-change-gitconfig
 ---
 

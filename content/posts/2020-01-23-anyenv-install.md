@@ -4,8 +4,10 @@ title: anyenvをHomebrewでインストールする方法
 date: 2020-01-23T22:34:15.945Z
 description: anyenvをインストールすると、.phpenv、.rbenv、.nodenvなど環境ごとに新たにパッケージをインストールする必要がなくなります。
 cover: /images/homebrew.png
-category: Mac
+category: macOS
 tags:
+  - anyenv
+  - macOs
   - Homebrew
   - zsh
 slug: install-anyenv
