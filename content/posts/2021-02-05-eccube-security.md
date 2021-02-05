@@ -157,6 +157,8 @@ eccube4ではサイト運営者用の管理画面、と会員マイページの�
 
 eccube4の場合、`src/Eccube/DependencyInjection/EccubeExtension.php`の実装がそれに当たります。
 
+（もちろん`Security.yaml`に記載することもできます。）
+
 ログインしていない状態の場合、`IS_AUTHENTICATED_ANONYMOUSLY`が設定されています。
 
 たとえば`/admin`のpathと`ROLE_ADMIN`のRoleが設定されている場合、
@@ -186,7 +188,7 @@ $accessControl = [
 
 マイページの会員情報の編集（/mypage/change）のロールに`IS_AUTHENTICATED_FULLY`の指定があります。
 
-Securityの機能で以下の特別な属性があるようです。
+Securityの機能で以下の特別な属性（ロールに近いもの）があるようです。
 
 - `IS_AUTHENTICATED_REMEMBERED`
 - `IS_AUTHENTICATED_FULLY`
