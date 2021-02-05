@@ -11,7 +11,7 @@ tags:
 slug: eccube-security
 ---
 
-eccube4系の管理画面やマイページのログイン画面は、SymfonyのSecurityをもとに構築されています。
+eccube4系の管理画面やマイページのログイン機能は、SymfonyのSecurityをもとに構築されています。
 
 このSecurityのシステムが強力で、`security.yaml`に設定を書いておけば、特定の特定のURLには、ログインが必要といった実装がかなり楽に実装できます。
 
@@ -19,7 +19,8 @@ eccube4系の管理画面やマイページのログイン画面は、Symfonyの
 
 ## 設定ファイルの場所
 
-eccube4の場合は、`app/config/eccube/packages/security.yaml`にあります。
+eccube4の場合`security.yaml`のパスは、`app/config/eccube/packages/security.yaml`にあります。
+またアクセスコントロールの設定は別ファイル`src/Eccube/DependencyInjection/EccubeExtension.php`に書かれています。
 
 ```yaml
 security:
@@ -94,6 +95,7 @@ security:
 `security.yaml`に書けば、設定を`security.yaml`のみに集約できるため読みやすいですが、
 
 あえてこちらに書かれているのは、動的に設定値を設定したい機能があるためと思われます。
+↓`src/Eccube/DependencyInjection/EccubeExtension.php`
 
 ```injectablephp
 $accessControl = [
@@ -121,6 +123,8 @@ eccube4ではサイト運営者用の管理画面、と会員マイページの�
 管理画面の`MemberProvider`と会員マイページの`CustomerProvider`のクラスには、
 `Core/User/UserProviderInterface.php`のインターフェースが定義されています。
 
+例えばですが、`Providers`と`firewalls`下の値を増やせば、管理画面・マイページ以外の認証機能も追加していくことが可能です。
+
 ## ログイン・ログアウト、フォーム周りの設定
 
 ログインフォームのパスを指定している部分が`form_login`下の`login_path`と`check_path`です。
@@ -129,13 +133,23 @@ eccube4ではサイト運営者用の管理画面、と会員マイページの�
 
 ログイン時のフォームのリダイレクト設定をいい感じにしてくれます。
 
-また、管理画面、マイページともに、`anonymous: true`と設定されています。このanonymousユーザーはログイン前のユーザーとして扱います。
-
 `firewalls`を設定しても、これだけでは、ログイン後の画面はセキュアではありません。
 
-次の`access_control`で認証アカウントの制御が可能となります。
+後ほど解説するアクセスコントロールの設定と合わせることで認証の制御が可能となります。
 
 参考: <https://symfony.com/doc/3.4/security/form_login_setup.html#create-the-correct-routes>
+
+## anonymous（匿名）
+
+アクセスコントロールの解説の前に、anonymous（匿名）について軽く説明します。
+
+管理画面、マイページともに`firewalls`の中で、`anonymous: true`と設定されています。
+
+`anonymous: true`とすることで、匿名のユーザーを作り出します。
+
+また、この匿名ユーザーはログイン前のロールとして使用されます。
+
+（Symfonyのプロファイラーでも`anonymous`は確認できます。
 
 ## アクセスコントロール
 
@@ -143,7 +157,11 @@ eccube4ではサイト運営者用の管理画面、と会員マイページの�
 
 eccube4の場合、`src/Eccube/DependencyInjection/EccubeExtension.php`の実装がそれに当たります。
 
-ログインページには、`IS_AUTHENTICATED_ANONYMOUSLY`（匿名ユーザー）つまり誰でも閲覧できますが、
+ログインしていない状態の場合、`IS_AUTHENTICATED_ANONYMOUSLY`が設定されています。
+
+たとえば`/admin`のpathと`ROLE_ADMIN`のRoleが設定されている場合、
+
+匿名ユーザーの場合、アクセスコントロールで設定されたURLはロール閲覧できません。
 
 管理画面のURLには、`ROLE_ADMIN`つまり管理者としてログインしていないと閲覧できないといった設定をしています。
 
@@ -193,3 +211,18 @@ Securityの機能で以下の特別な属性があるようです。
 > 参考: <https://symfony.com/doc/3.4/security/remember_me.html>
 
 > 参考: <https://symfony.com/doc/3.4/security.html#checking-to-see-if-a-user-is-logged-in-is-authenticated-fully>
+
+## まとめ
+
+すべての設定値を解説できていないので、eccube4のSecurity.yamlを完全に理解したとまでは言えないですが、
+
+Securityの主要な部分について解説できたかなと思います。
+
+eccube4はSymfonyに則って実装されているので、ドキュメントが豊富です。
+
+本記事はこれで終了ですが、詳しく知りたい方はぜひドキュメントを確認してみてください。（Google翻訳さえあればなんとかなります。）
+
+eccube4の開発は、実装でも迷ったら最悪ドキュメント当たりつつ本体のソースコードを読めばだいたい解決するので、安心感がありますねー。
+
+
+
