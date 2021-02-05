@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: eccube4のSecurity.ymlを完全に理解する
+title: eccube4のSecurity.yamlを完全に理解する
 date: 2021-02-05
 description: 
 cover: /images/eccube.png
