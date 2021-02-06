@@ -14,7 +14,9 @@ slug: windows-phpstorm-gitbash-setting
 
 Windows環境でGit Bashを使ってみましたが、コピペなどがやりにくいです。
 
-PhpStormのターミナル機能のデフォルトは`cmd.exe`ですが、Gitbashを利用するように設定変更します。
+PhpStormのターミナル機能を使えばいい感じにターミナルを操作できるので、（macOSと同じ感じ）その方針でいきます。
+
+また、PhpStormのデフォルトは`cmd.exe`となっているので、Gitbashを利用するように設定変更する必要があります。
 
 ## 設定
 
@@ -22,3 +24,4 @@ Setting > Tools > Terminal にあるShell pathに`bash.exe`のpathを設定し�
 
 （gitbash.exeではないので注意）
 
+以上でした。Windows辛い。。

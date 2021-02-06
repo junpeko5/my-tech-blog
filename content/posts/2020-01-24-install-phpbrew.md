@@ -15,7 +15,7 @@ slug: install-phpbrew
 
 phpbrewのインストールを行います。
 
-## Macの環境
+## macOSの環境
 
 動作条件が以下のページにまとめられています。
 

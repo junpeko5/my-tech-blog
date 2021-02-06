@@ -7,7 +7,7 @@ cover: /images/homebrew.png
 category: macOS
 tags:
   - anyenv
-  - macOs
+  - macOS
   - Homebrew
   - zsh
 slug: install-anyenv

@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: MacにGoをインストールする方法(anyenv,goenv)
+title: macOSにGoをインストールする方法(anyenv,goenv)
 date: 2020-01-24T13:34:15.945Z
 description: anyenv経由でGoをインストールしていきます。Homebrewでanyenvをインストールしていない場合は、以下の記事を参考にしてください。
 cover: /images/gopher.png

@@ -16,7 +16,7 @@ slug: laravel-homestead
 ## 前提条件
 
 - VirtualBoxとVagrantがインストールされていること。
-- Mac環境
+- macOS環境
 
 ## HomesteadのVagrant Boxを追加
 

@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: MacにHomebrewをインストールする方法
+title: macOSにHomebrewをインストールする方法
 date: 2020-01-24T12:34:15.945Z
 description: 
 cover: /images/apple-logo.png

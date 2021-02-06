@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: macOsのCatalinaにMongodbをインストールする手順
+title: macOSのCatalinaにMongodbをインストールする手順
 date: 2020-04-29
-description: macOsのCatalinaにMongodbをインストールする方法のメモです。
+description: macOSのCatalinaにMongodbをインストールする方法のメモです。
 cover: /images/mongodb.png
 category: MongoDB
 tags:
@@ -10,7 +10,7 @@ tags:
 slug: install-mongodb
 ---
 
-macOsのCatalinaにMongodbをインストールする方法のメモです。
+macOSのCatalinaにMongodbをインストールする方法のメモです。
 
 
 ## 前提条件
@@ -34,7 +34,7 @@ sudo chown -R `id -un` /System/Volumes/Data/data/db
 
 MongoDBの公式ドキュメントでは、`/data/db`にデータを置くためのディレクトリを作成するように書かれていますが、
 
-macOs(Catalina)では、`Read-only file system`というメッセージが出てしまい、作成できませんでした。
+macOS(Catalina)では、`Read-only file system`というメッセージが出てしまい、作成できませんでした。
 
 Catalinaでは、セキュリティの観点から、`/data/db`を`System/Volumes/Data`に作成する良いそうです。
 

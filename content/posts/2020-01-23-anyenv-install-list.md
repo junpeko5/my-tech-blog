@@ -6,7 +6,7 @@ description: anyenvでインストールできる言語を調べてみました�
 cover: /images/homebrew.png
 category: macOS
 tags:
-  - macOs
+  - macOS
   - Homebrew
   - anyenv
 slug: anyenv-install-list

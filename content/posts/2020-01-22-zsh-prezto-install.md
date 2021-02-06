@@ -6,7 +6,7 @@ description: Preztoは、zshの設定のためのフレームワークです。P
 cover: /images/prezto-install.png
 category: macOS 
 tags:
-  - macOs
+  - macOS
   - zsh
   - Prezto
 slug: zsh-prezto-install
@@ -18,7 +18,7 @@ Preztoは、zshの設定のためのフレームワークです。Preztoを利�
 
 デフォルトシェルはzshである必要があります。
 
-（2020年現在macのデフォルトのシェルはzshのようです）
+（2020年現在macOSのデフォルトのシェルはzshのようです）
 
 デフォルトシェルを「zsh」であるか確認する方法は以下。
 

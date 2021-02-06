@@ -1,16 +1,16 @@
 ---
 templateKey: blog-post
-title: Macおすすめアプリケーション16選
+title: macOSおすすめアプリケーション16選
 date: 2020-01-22T12:34:15.945Z
-description: Macでおすすめアプリケーションを紹介します。
+description: macOSでおすすめアプリケーションを紹介します。
 cover: /images/apple-logo.png
 category: macOS
 tags:
-  - macOs
+  - macOS
 slug: mac-applications
 ---
 
-Macでおすすめアプリケーションを紹介します。
+macOSでおすすめアプリケーションを紹介します。
 
 ## Google Chrome
 
@@ -24,11 +24,11 @@ Google翻訳の拡張機能にはいつもお世話になっています。
 
 本は紙より電子書籍派です。
 
-基本的にはipadで読んでいますが、Macでも読みたいときがありますよね。
+基本的にはipadで読んでいますが、macOSでも読みたいときがありますよね。
 
 ## Alfred
 
-Macのアプリケーションを起動するときに使っています。
+macOSのアプリケーションを起動するときに使っています。
 
 ランチャーアプリというのですかね。
 
@@ -38,7 +38,7 @@ https://www.alfredapp.com/
 
 ## iTerm2
 
-Macのターミナルアプリで一番ユーザー数が多いのではないでしょうか？
+macOSのターミナルアプリで一番ユーザー数が多いのではないでしょうか？
 
 コチラも細かな設定が出来る点が魅力です。
 
@@ -50,18 +50,18 @@ https://iterm2.com/
 
 ## Docker Desktop for Mac
 
-dockerをmacで使うときに必須です。
+dockerをmacOSで使うときに必須です。
 
 
 ## Tweetduck
 
-TwitterをMacで確認したいときに利用しています。
+TwitterをmacOSで確認したいときに利用しています。
 
 https://tweetduck.chylex.com/
 
 ## Karabinder elements
 
-KarabinderはMacのキーバインドを設定する際に便利なアプリです。
+KarabinderはmacOSのキーバインドを設定する際に便利なアプリです。
 
 以下の記事で設定方法については詳しく書いています。
 

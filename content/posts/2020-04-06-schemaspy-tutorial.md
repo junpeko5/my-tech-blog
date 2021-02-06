@@ -13,7 +13,7 @@ slug: schemaspy-tutorial
 
 SchemaSpyはJava製のER図自動生成ツールです。リッチなUIでER図をリバースエンジニアリングできるので非常に重宝しています。
 
-今回は、Mac環境でこちらのツールを使ってEC-CUBE4のER図を自動生成してみたいと思います。
+今回は、macOS環境でこちらのツールを使ってEC-CUBE4のER図を自動生成してみたいと思います。
 
 また、DBはpostgresを利用していきます。
 
@@ -107,6 +107,6 @@ open output/index.html
 
 <img src="/images/eccube4-er.png" alt="eccube4-er" class="css-9taffg" />
 
-今回はMac環境でしたが、dockerを利用した方法もあるようなので、試してみたいですね。
+今回はmacOS環境でしたが、dockerを利用した方法もあるようなので、試してみたいですね。
 
 おしまい。
