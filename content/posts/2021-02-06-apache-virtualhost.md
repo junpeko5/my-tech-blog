@@ -54,23 +54,23 @@ example.comのDNSのゾーン設定に`CNAME`レコードを2つ追加しまし�
 Listen 80
 
 <VirtualHost *:80>
-  ServerAdmin root@junpeko.work
+  ServerAdmin root@example.com
   DocumentRoot /var/www/html/laravel/public
-  ServerName laravel.junpeko.work
+  ServerName laravel.example.com
   ErrorLog logs/laravel-error_log
   CustomLog logs/laravel-access_log common
   RewriteEngine on
-  RewriteCond %{SERVER_NAME} =laravel.junpeko.work
+  RewriteCond %{SERVER_NAME} =laravel.example.com
   RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 <VirtualHost *:80>
-  ServerAdmin root@junpeko.work
+  ServerAdmin root@example.com
   DocumentRoot /var/www/html/eccube4
-  ServerName eccube4.junpeko.work
+  ServerName eccube4.example.com
   ErrorLog logs/eccube4-error_log
   CustomLog logs/eccube4-access_log common
   RewriteEngine on
-  RewriteCond %{SERVER_NAME} =eccube4.junpeko.work
+  RewriteCond %{SERVER_NAME} =eccube4.example.com
   RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 ```
