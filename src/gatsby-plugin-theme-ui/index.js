@@ -1,4 +1,4 @@
-import prism from "@theme-ui/prism/presets/oceanic-next";
+import prism from "@theme-ui/prism/presets/prism-okaidia";
 
 const grey90 = `#232129`;
 const black80 = `#1B1F23`;

@@ -1,5 +1,7 @@
 # Building a new Starter
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f312e2c-b247-4b9c-aca3-0406e68e20a1/deploy-status)](https://app.netlify.com/sites/blog-junpeko-com/deploys)
+
 Created this Repo to build a new started based on the [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
 
 Styled with `theme-ui` inspired on [Dan Abramov's](https://overreacted.io/) blog, but slightly different. 

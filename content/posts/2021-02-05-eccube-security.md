@@ -25,22 +25,15 @@ eccube4の場合`security.yaml`のパスは、`app/config/eccube/packages/securi
 ```yaml
 security:
     encoders:
-        # Our user class and the algorithm we'll use to encode passwords
-        # https://symfony.com/doc/current/security.html#c-encoding-the-user-s-password
         Eccube\Entity\Member:
           id: Eccube\Security\Core\Encoder\PasswordEncoder
         Eccube\Entity\Customer:
           id: Eccube\Security\Core\Encoder\PasswordEncoder
     providers:
-        # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
-        # In this example, users are stored via Doctrine in the database
-        # To see the users at src/App/DataFixtures/ORM/LoadFixtures.php
-        # To load users from somewhere else: https://symfony.com/doc/current/security/custom_provider.html
         member_provider:
             id: Eccube\Security\Core\User\MemberProvider
         customer_provider:
             id: Eccube\Security\Core\User\CustomerProvider
-    # https://symfony.com/doc/current/security.html#initial-security-yml-setup-authentication
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
