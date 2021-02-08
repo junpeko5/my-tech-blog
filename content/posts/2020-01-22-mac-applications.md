@@ -65,7 +65,7 @@ KarabinderはmacOSのキーバインドを設定する際に便利なアプリ�
 
 以下の記事で設定方法については詳しく書いています。
 
-https://junpeko.tech/karabinder
+https://blog.junpeko.com/karabinder
 
 
 ## Visual Studio Code

@@ -112,7 +112,7 @@ serviceWorker.unregister();
 
 ## 前回の実装をreduxに置き換える
 
-前回の記事[Reactの基礎](https://junpeko.tech/react-fundamental)で実装したファイルをsrc/componentsフォルダに移動し、
+前回の記事[Reactの基礎](https://blog.junpeko.com/react-fundamental)で実装したファイルをsrc/componentsフォルダに移動し、
 stateの状態管理をReduxに置き換えていきます。
 
 src/components/App.js
