@@ -18,7 +18,7 @@ anyenv経由でGoをインストールしていきます。
 
 Homebrewでanyenvをインストールしていない場合は、以下の記事を参考にしてください。
 
-<https://junpeko.tech/install-anyenv>
+<https://blog.junpeko.com/install-anyenv>
 
 ## goenvでGolangをインストール
 

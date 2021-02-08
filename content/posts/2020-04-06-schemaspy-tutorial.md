@@ -50,7 +50,7 @@ mv ~/Downloads/schemaspy-6.1.0.jar .
 
 その後、jenvでJava8環境を利用できる様にしていきます。
 
-> ※ jenvでJava8をいれる手順は、<https://junpeko.tech/install-jenv-anyenv>を参照してください。
+> ※ jenvでJava8をいれる手順は、<https://blog.junpeko.com/install-jenv-anyenv>を参照してください。
 
 その後、JavaのバージョンがJava8のものに変更されたことを確認してください。
 
