@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: CentOS7、yumコマンドチートシート
 date: 2021-02-09
-description: ssh鍵をリモートサーバーに設置し、ローカルから作成した一般ユーザーでログインしたい。
+description: yumコマンドのまとめです。
 cover: /images/centos.png
 category: CentOS7
 tags:
@@ -10,6 +10,8 @@ tags:
   - yum
 slug: centos7-yum-cheat-sheet
 ---
+
+yumコマンドのまとめです。
 
 ## パッケージ一覧を表示する
 
@@ -20,7 +22,20 @@ yum list
 ### インストール済みパッケージを表示する
 
 ```bash
-yum installl installd
+yum list installed
+yum list installed | grep php
+```
+
+## インストール
+
+```bash
+yum install <packagename>
+```
+
+### リポジトリを有効化する（複数指定可能）
+
+```bash
+yum install --enablerepo=epel,remi,remi-php73
 ```
 
 ### アップデート可能なパッケージ一覧を表示
@@ -65,4 +80,10 @@ yum history undo 19
 ```bash
 yum remove <packagename>-<version>
 yum remove php-7.1.3
+```
+
+## リポジトリの確認
+
+```bash
+yum repolist
 ```
