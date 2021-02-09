@@ -47,7 +47,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 オプションメモ
 - `-U`: パッケージをアップグレードします。
 - `-v`: より詳細な出力を提供します。
-- `h`: パッケージをインストール時の進捗を`#`で表現します。
+- `-h`: パッケージをインストール時の進捗を`#`で表現します。
 
 ## インストール
 ```bash
@@ -56,3 +56,21 @@ yum install --enablerepo=epel,remi,remi-php73 php php-cli php-common php-devel p
 
 オプションメモ
 - `--enablerepo`: リポジトリを有効化する（複数指定可能）
+
+## php.iniを編集
+
+```bash
+cd /etc
+cp php.ini php.ini.old
+vim /etc/php.ini
+```
+
+```ini
+upload_max_filesize = 10M
+post_max_size = 128M
+memory_limit = 512M
+```
+
+- `upload_max_filesize`は、アップロードするファイルの最大サイズ。
+- `post_max_size`は、POSTデータの最大サイズ。
+- `memory_limit`は、PHP スクリプトが利用可能なメモリの最大容量
