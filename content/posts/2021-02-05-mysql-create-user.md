@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: MySQLでのアカウントの作成、確認、削除
+title: MySQLでのアカウントの作成、確認、編集、削除
 date: 2021-02-05
 description: 
 cover: /images/mysql.png
@@ -46,6 +46,16 @@ Query OK, 0 rows affected (0.03 sec)
 
 OK!
 
+## アカウントの変更
+
+`ALTER USER`でアカウントの変更が可能です。
+
+以下は、パスワードの認証方式とパスワードを変更する場合のSQLです。
+
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'fs3$******';
+```
+
 ## アカウントの確認
 
 ```bash
@@ -75,7 +85,7 @@ mysql> SELECT user, host FROM mysql.user;
 アカウント作成時接続を指定する場合は以下となります。
 
 ```bash
-mysql> CREATE USER takuya@localhost IDENTIFIED BY 'asdfghjkL1$';
+CREATE USER takuya@localhost IDENTIFIED BY 'asdfghjkL1$';
 ```
 
 ## アカウント削除

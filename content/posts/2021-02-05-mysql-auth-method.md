@@ -35,8 +35,24 @@ Laravelはこれにしないとマイグレーションで失敗しますね。
 
 ## auth_socket
 
-後ほど追記します。
+`auth_socket`を使用すると、OSのユーザー名と同じ名前のMySQLアカウントでパスワードを
+入力せずにログインできます。
+
+例えば`vpsuser`というOSの一般ユーザーがある場合にMySQLで以下の様にユーザーを作成したとします。
 
 ```mysql
+INSTALL PLUGIN auth_socket SONAME 'auth_socket.so';
+CREATE USER vpsuser@localhost IDENTIFIED WITH auth_socket;
+```
 
+この場合に、`vpsuser`からは、
+パスワードもホスト名も指定することなしに、mysqlにログイン出来る様になります。
+
+※ UNIXソケットを使用した接続でのみ有効なので、
+`mysqld`とクライアントが同じサーバー内でのみ接続できます。
+
+## 設定の確認
+
+```mysql
+SELECT user, host, plugin from mysql.user;
 ```
