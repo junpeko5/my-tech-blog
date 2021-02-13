@@ -10,6 +10,7 @@ tags:
   - PHP
   - Sail
   - Jetstream
+  - inertiajs
 slug: laravel-jetstream-inertia
 ---
 
