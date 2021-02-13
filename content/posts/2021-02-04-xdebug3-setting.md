@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Xdebug3系の設定例
 date: 2021-02-04
-description: 
+description:
 cover: /images/xdebug.png
 category: Xdebug
 tags:
@@ -40,7 +40,6 @@ html_errors=on
 xdebug.mode=debug
 xdebug.client_host=localhost
 xdebug.start_with_request=yes
-xdebug.client_host=localhost
 xdebug.client_port=9003
 ```
 
@@ -75,6 +74,3 @@ Xdebugがデバッグ接続を試みる際のport番号です。
 その他設定等たくさんありますが、以下で確認できます。
 
 参考: <https://xdebug.org/docs/all_settings#start_with_request>
-
-
-

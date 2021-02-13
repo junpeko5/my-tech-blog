@@ -10,7 +10,7 @@ tags:
   - PHP
   - Sail
   - Jetstream
-slug: laravel-sail
+slug: laravel-jetstream-inertia
 ---
 
 ```bash
