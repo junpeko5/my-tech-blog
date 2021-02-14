@@ -87,6 +87,8 @@ RUN apt-get update \
        php-xdebug \
 ```
 
+参考: <https://xdebug.org/docs/install>
+
 ## コンテナを再構築
 
 変更を反映させるため、コンテナを再構築します。
