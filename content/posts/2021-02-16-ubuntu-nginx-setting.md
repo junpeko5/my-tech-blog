@@ -62,6 +62,65 @@ server_name test.example.com;
 
 追記します。
 
+### snapdのインストール
+
+snapdをインストールし、クラシックスナップサポートを有効にする必要がある。
+（snap install --classic certbot）を実行するために、`snapd`をインストールする
+
+> snapとは、Ubuntuではディストリビューションをまたいで利用できるユニバーサルパッケージシステム
+
+```bash
+sudo apt update
+sudo apt install snapd
+```
+
+### snapdのバージョンが最新であることを確認
+```bash
+sudo snap install core; sudo snap refresh core
+```
+
+### 
+
+※ すでに、certbot-auto等のCertbot OSパッケージをインストールしている場合は削除してください。
+
+```bash
+apt remove パッケージ名
+```
+
+以下のコマンドで`Certbot`がインストールされます。
+
+```bash
+sudo snap install --classic certbot
+```
+
+### certbotコマンドを利用しやすくするため、シンボリックリンクを作成
+
+```bash
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+
+### Certbotの実行
+
+```bash
+sudo certbot --nginx
+sudo certbot certonly --nginx
+```
+
+```bash
+Challenge failed for domain stg.kta1984.com
+http-01 challenge for stg.kta1984.com
+Cleaning up challenges
+Some challenges have failed.
+
+IMPORTANT NOTES:
+ - The following errors were reported by the server:
+
+   Domain: stg.example.com
+   Type:   dns
+   Detail: DNS problem: NXDOMAIN looking up A for test.example.com -
+   check that a DNS record exists for this domain
+```
+
 ## PHPの設定
 
 追記します。
