@@ -103,29 +103,31 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 ```bash
 sudo certbot --nginx
-sudo certbot certonly --nginx
 ```
 
 ```bash
-Challenge failed for domain stg.kta1984.com
-http-01 challenge for stg.kta1984.com
-Cleaning up challenges
-Some challenges have failed.
-
-IMPORTANT NOTES:
- - The following errors were reported by the server:
-
-   Domain: stg.example.com
-   Type:   dns
-   Detail: DNS problem: NXDOMAIN looking up A for test.example.com -
-   check that a DNS record exists for this domain
+   /etc/letsencrypt/live/junpeko.tech/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/junpeko.tech/privkey.pem
 ```
 
-## PHPの設定
+`/etc/letsencrypt/live/junpeko.tech/fullchain.pem`
+と
+`/etc/letsencrypt/live/junpeko.tech/privkey.pem`
+が設置されます。
 
-追記します。
-
-
+```bash
+sudo vim /etc/nginx/sites-available/default
+```
+Certbotにより、以下が追記されていました。
+```
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/junpeko.tech/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/junpeko.tech/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+```
 
 
 
