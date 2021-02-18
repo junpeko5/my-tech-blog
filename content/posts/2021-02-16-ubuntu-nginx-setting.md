@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Ubuntu環境でNginx、PHP環境の設定
+title: Ubuntu環境でNginx、SSLの設定
 date: 2021-02-16
 description:
 cover: /images/nginx.png
@@ -10,6 +10,7 @@ tags:
   - Ubuntu
   - nginx
   - DNS
+  - SSL/TLS
 slug: ubuntu-nginx-setting
 ---
 
