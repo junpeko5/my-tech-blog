@@ -43,7 +43,7 @@ server {
        listen 80;
        listen [::]:80;
 
-       server_name example.com
+       server_name example.com;
 
        root /var/www/stg.kta1984;
        index index.html;
@@ -57,7 +57,15 @@ server {
 ## シンボリックリンクの作成
 
 ```bash
+cd /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/example.com example.com
+```
+
+## 確認と設定反映
+
+```bash
+sudo nginx -t
+sudo systemctl restart nginx
 ```
 
 ## 補足
