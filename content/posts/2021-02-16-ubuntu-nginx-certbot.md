@@ -1,17 +1,16 @@
 ---
 templateKey: blog-post
-title: Ubuntu環境でNginx、SSLの設定
+title: Ubuntu環境CertBotでLet's Encryptを利用しSSL化する
 date: 2021-02-16
 description:
 cover: /images/nginx.png
 category: nginx
 tags:
-  - PHP
   - Ubuntu
   - nginx
-  - DNS
+  - Certbot
   - SSL/TLS
-slug: ubuntu-nginx-setting
+slug: ubuntu-nginx-certbot
 ---
 
 ## 前提
@@ -24,22 +23,15 @@ dig test.example.com
 test.example.com.	3600	IN	A	xxx.xxx.xxx.xxx
 ```
 
-- serverディレクトリでバーチャルホストの設定をしている
+- serverディレクトリでバーチャルホストの設定をしている（以下URL参考）
+
 <https://blog.junpeko.com/ubuntu-nginx-virtualhost>
 
-
-
 ## バーチャルホストの設定
-
-
 
 <https://blog.junpeko.com/ubuntu-nginx-virtualhost>
 
 （この設定により、<http://test.example.com>でアクセスできるようになります。）
-
-## SSL設定
-
-追記します。
 
 ### snapdのインストール
 
@@ -58,13 +50,11 @@ sudo apt install snapd
 sudo snap install core; sudo snap refresh core
 ```
 
-### 
+## Certbotのインストール 
 
 ※ すでに、certbot-auto等のCertbot OSパッケージをインストールしている場合は削除してください。
 
-```bash
-apt remove パッケージ名
-```
+> apt remove パッケージ名
 
 以下のコマンドで`Certbot`がインストールされます。
 
@@ -72,13 +62,13 @@ apt remove パッケージ名
 sudo snap install --classic certbot
 ```
 
-### certbotコマンドを利用しやすくするため、シンボリックリンクを作成
+## certbotコマンドを利用しやすくするため、シンボリックリンクを作成
 
 ```bash
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
-### Certbotの実行
+## Certbotの実行
 
 ```bash
 sudo certbot --nginx
@@ -95,17 +85,47 @@ sudo certbot --nginx
 `/etc/letsencrypt/live/junpeko.tech/privkey.pem`
 が設置されます。
 
+## 確認
+
+URLをブラウザで確認してSSL化されているか確認します。
+
+httpで接続したときに、httpsにリダイレクトする処理も入れてくれているようです。
+
+## 補足
+
 ```bash
-sudo vim /etc/nginx/sites-available/default
+sudo vim /etc/nginx/sites-available/test.example.com
 ```
-Certbotにより、以下が追記されていました。
-```
+
+Certbotにより、追加された行には、`# managed by Certbot`のコメントが追記されていました。
+```test
+server {
+       server_name test.example.com;
+       root /var/www/html/test.example.com;
+       index index.html;
+       location / {
+               try_files $uri $uri/ =404;
+       }
+
     listen [::]:443 ssl ipv6only=on; # managed by Certbot
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/junpeko.tech/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/junpeko.tech/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/test.example.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/test.example.com/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = test.example.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+       listen 80;
+       listen [::]:80;
+       server_name test.example.com;
+    return 404; # managed by Certbot
+}
 ```
 
 
