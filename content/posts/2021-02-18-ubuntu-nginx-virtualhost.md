@@ -9,7 +9,7 @@ tags:
   - PHP
   - Ubuntu
   - nginx
-slug: ubuntu-nginx-virtual
+slug: ubuntu-nginx-virtualhost
 ---
 
 nginxでは、apacheのVirtualhostと同じ様に、
@@ -19,6 +19,62 @@ nginxでは、apacheのVirtualhostと同じ様に、
 
 複数のサイト管理する際には、サイトごとにファイルを分けたほうがよいです。
 
+## デフォルトのserverディレクティブ設定について
+
+Nginxをインストールした際、デフォルトでserverディレクティブの設定が行われています。
+
+Nginxのメイン設定ファイルは`/etc/nginx/nginx.conf`です。
+
+この`nginx.conf`内では、httpブロック内で`include/etc/nginx/sitesenabled/*;`
+をインクルードしています。
+
+この`sitesenabled`は、`sites-available/default`のシンボリックリンクとなっています。
+
+```bash
+ls -li /etc/nginx/sites-enabled/
+total 0
+773067 lrwxrwxrwx 1 root root 34 Feb 14 13:59 default -> /etc/nginx/sites-available/default
+```
+
+`/etc/nginx/sites-available/default`内に`server`ブロックの設定が記載されています。
+
+```bash
+sudo vim /etc/nginx/sites-available/default
+```
+
+```text
+root /var/www/html;
+index index.html index.htm index.nginx-debian.html;
+server_name _;
+```
+
+ここの`server_name`の箇所に追記することもできますが、
+
+serverディレクティブに記載する場合、
+`default`バーチャルホストを設定する別ファイルに追記するほうが管理が楽なため、
+
+`default`は利用しません。
+
+## 公開ディレクトリの作成
+
+`/var/www/html/`の下に公開するディレクトリを作成していきます。
+
+```bash
+cd /var/www/html/
+sudo mkdir test.example.com
+sudo chown www-data:www-data test.example.com/
+sudo chmod 775 test.example.com/
+cd test.example.com/
+sudo vim index.html
+```
+
+`index.html`には適当に文字を記述します。
+
+```bash
+sudo chown www-data:www-data index.html
+```
+
+## serverディレクティブの記述場所
 
 インストール時の設定でデフォルトで読み込まれる
 `/etc/nginx/sites-available/default`
@@ -35,7 +91,7 @@ nginxでは、apacheのVirtualhostと同じ様に、
 `sites-enabled/`の下にシンボリックリンクを作成しましょう。
 
 ```bash
-sudo vim /etc/nginx/sites-available/example.com
+sudo vim /etc/nginx/sites-available/test.example.com
 ```
 
 ```text
@@ -43,9 +99,9 @@ server {
        listen 80;
        listen [::]:80;
 
-       server_name example.com;
+       server_name test.example.com;
 
-       root /var/www/stg.kta1984;
+       root /var/www/html/test.example.com;
        index index.html;
 
        location / {
@@ -58,7 +114,7 @@ server {
 
 ```bash
 cd /etc/nginx/sites-enabled/
-sudo ln -s /etc/nginx/sites-available/example.com example.com
+sudo ln -s /etc/nginx/sites-available/test.eexample.com test.eexample.com
 ```
 
 ## 確認と設定反映
