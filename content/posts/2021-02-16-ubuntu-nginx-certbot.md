@@ -16,6 +16,7 @@ slug: ubuntu-nginx-certbot
 ## 前提
 
 - nginxがインストール済み
+- ポート番号の443が開放されている
 - test.example.com（ドメイン）のAレコードがサーバーのIPに設定されている
 
 ```bash
@@ -27,11 +28,7 @@ test.example.com.	3600	IN	A	xxx.xxx.xxx.xxx
 
 <https://blog.junpeko.com/ubuntu-nginx-virtualhost>
 
-## バーチャルホストの設定
-
-<https://blog.junpeko.com/ubuntu-nginx-virtualhost>
-
-（この設定により、<http://test.example.com>でアクセスできるようになります。）
+（こちらの記事で行っている設定により、<http://test.example.com>でアクセスできるようになります。）
 
 ### snapdのインストール
 
@@ -90,6 +87,10 @@ sudo certbot --nginx
 URLをブラウザで確認してSSL化されているか確認します。
 
 httpで接続したときに、httpsにリダイレクトする処理も入れてくれているようです。
+
+## 証明書更新の自動化
+
+
 
 ## 補足
 
