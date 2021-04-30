@@ -39,12 +39,9 @@ server {
        }
 
        location ~ \.php$ {
-           fastcgi_split_path_info ^(.+\.php)(/.+)$;
-           include fastcgi_params;
-           fastcgi_index index.php;
-           fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-           fastcgi_intercept_errors on;
            fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+           fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+           include fastcgi_params;
        }
 }
 ```

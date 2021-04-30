@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: wordpress、nginx環境で403エラーとなった場合の対処法まとめ
-date: 2021-03-15
+date: 2021-04-29
 description:
 cover: /images/php.png
 category: WordPress
