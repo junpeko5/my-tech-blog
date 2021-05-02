@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: wordpress、nginx環境で403エラーとなった場合の対処法まとめ
 date: 2021-04-29
-description:
+description: 403 Forbiddenエラーとは、ウェブサイトが閲覧禁止となっている状態を表すHTTPステータスコードです。403 Forbiddenエラーとは、ウェブサイトが閲覧禁止となっている状態を表すHTTPステータスコードです。
 cover: /images/php.png
 category: WordPress
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: PHPのファイルアップロードサイズを変更する方法
 date: 2021-05-02
-description:
+description: php.iniのファイルアップロードサイズを変更する場合は、 以下の３つの設定値を設定するとよいです。
 cover: /images/php.png
 category: PHP
 tags:
@@ -11,8 +11,7 @@ tags:
 slug: php-change-upload-filesize
 ---
 
-php.iniのファイルアップロードサイズを変更する場合は、
-以下の３つの設定値を設定するとよいです。
+php.iniのファイルアップロードサイズを変更する場合は、 以下の３つの設定値を設定するとよいです。
 
 - post_max_size（POSTデータに許可される最大サイズ）
 - upload_max_filesize（アップロードされるファイルの最大サイズ）
