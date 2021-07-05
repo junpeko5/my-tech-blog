@@ -3,7 +3,7 @@ templateKey: blog-post
 title: php-cs-fixerのインストールとオススメの設定
 date: 2021-07-05
 description: 
-cover: /images/php-cs-fixer.png
+cover: /images/php.png
 category: PHP
 tags:
   - PHP
