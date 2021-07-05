@@ -90,3 +90,13 @@ return $config->setRules([
 # すべてのファイルに対して実行
 ./vendor/bin/php-cs-fixer fix
 ```
+
+## .gitignoreの設定
+
+`.gitignore`に以下を追記する
+
+```bash
+.php-cs-fixer.cache
+```
+
+その他プロジェクトごとにgit管理対象外のファイルは追加しておく。
