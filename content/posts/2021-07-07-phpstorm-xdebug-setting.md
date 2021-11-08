@@ -62,6 +62,14 @@ php -i | grep xdebug.client_port
 xdebug.client_port => 9003 => 9003
 ```
 
+## xdebug.mode がdebugになっていない
+
+デフォルトはdevelopなので、php.ini等に設定を記載する必要があります。
+
+```
+xdebug.mode = debug
+```
+
 ## CLI Interpreterが設定されていない
 
 CLI Interpreterを設定しないと、PhpStormのXdebugは正しく動きません。
@@ -82,7 +90,7 @@ localのPHPとリモートのPHP（DockerやVagrant）では若干設定方法�
 
 Local PathとRemote Pathが共に設定されているか確認しましょう。
 
-設定例
+設定例（Laravelのプロジェクトが置かれている絶対パスを記載する）
 ```
 Local Path
 /Users/testuser/dev/src/junpeko5/laravel
