@@ -13,8 +13,6 @@ tags:
 slug: laravel-sail-xdebug
 ---
 
-Laravel/Sailで構築した環境では、デフォルトでXdebugが有効ではなかったので、
-カスタマイズしてみました。
 
 ## Sailのカスタマイズ
 
@@ -28,64 +26,101 @@ sail artisan sail:publish
 これで、プロジェクトのルートに`docker`ディレクトリが作成され、
 `./vendor/laravel/sail/runtimes/`以下のディレクトリがコピーされます。
 
+※ バージョンが最新出ない場合は注意が必要です。
+
+<https://github.com/laravel/sail/tree/1.x/runtimes> の内容に変更すれば、問題ないはずです。
+
 ## docker-compose.ymlの編集
 
 ```yaml
 services:
-    laravel.test:
-        build:
-            context: ./docker/7.4
-            dockerfile: Dockerfile
-            args:
-                WWWGROUP: '${WWWGROUP}'
+  laravel.test:
+    build:
+      context: ./vendor/laravel/sail/runtimes/8.0
+      dockerfile: Dockerfile
+      args:
+        WWWGROUP: '${WWWGROUP}'
+    image: sail-8.0/app
 ```
 
-`context:`のパスを書き換えましょう。
+`context:`のパスを書き換えることで、PHPのバージョンが変更可能です。
 
 利用しているPHPのバージョンのディレクトリを指定します。
 
-## php.iniの編集
+## php.iniの編集について
 
-`docker/7.4/php.ini`にXdebugの設定を追記します。
+`docker/8.0/php.ini`にXdebugの設定を追記しても反映されません。
 
-```ini
-[PHP]
-post_max_size = 100M
-upload_max_filesize = 100M
-variables_order = EGPCS
-
-[XDebug]
-xdebug.mode = debug
-xdebug.start_with_request = yes
-xdebug.client_host = host.docker.internal
-```
-
-## Dockerfileの変更
-
-`docker/7.4/Dockerfile`でxdebugをインストールするように変更します。
-
-`php-xdebug`を追記しています。
+`xdebug.mode`と`xdebug.client_host`は環境変数で設定可能なため、`docker-compose.yml`のenvironmentに設定します。
 
 ```bash
-RUN apt-get update \
-    && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor sqlite3 libcap2-bin libpng-dev python2 \
-    && mkdir -p ~/.gnupg \
-    && chmod 600 ~/.gnupg \
-    && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf \
-    && apt-key adv --homedir ~/.gnupg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E5267A6C \
-    && apt-key adv --homedir ~/.gnupg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C300EE8C \
-    && echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
-    && apt-get update \
-    && apt-get install -y php7.4-cli php7.4-dev \
-       php7.4-pgsql php7.4-sqlite3 php7.4-gd \
-       php7.4-curl php7.4-memcached \
-       php7.4-imap php7.4-mysql php7.4-mbstring \
-       php7.4-xml php7.4-zip php7.4-bcmath php7.4-soap \
-       php7.4-intl php7.4-readline php7.4-pcov \
-       php7.4-msgpack php7.4-igbinary php7.4-ldap \
-       php7.4-redis \
-       php-xdebug \
+# For more information: https://laravel.com/docs/sail
+version: '3'
+services:
+    laravel.test:
+        build:
+            context: ./vendor/laravel/sail/runtimes/8.0
+            dockerfile: Dockerfile
+            args:
+                WWWGROUP: '${WWWGROUP}'
+        image: sail-8.0/app
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+        ports:
+            - '${APP_PORT:-80}:80'
+        environment:
+            WWWUSER: '${WWWUSER}'
+            LARAVEL_SAIL: 1
+            XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
+            XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
+        volumes:
+            - '.:/var/www/html'
+        networks:
+            - sail
+        depends_on:
+            - mysql
+    mysql:
+        image: mysql:5.7
+        ports:
+            - '${FORWARD_DB_PORT:-3306}:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        volumes:
+            - 'sailmysql:/var/lib/mysql'
+        networks:
+            - sail
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+            retries: 3
+            timeout: 5s
+    mailhog:
+        image: 'mailhog/mailhog:latest'
+        ports:
+            - '${FORWARD_MAILHOG_PORT:-1025}:1025'
+            - '${FORWARD_MAILHOG_DASHBOARD_PORT:-8025}:8025'
+        networks:
+            - sail
+networks:
+    sail:
+        driver: bridge
+volumes:
+    sailmysql:
+        driver: local
+
 ```
+
+
+## dockerディレクトリの確認
+
+<https://github.com/laravel/sail/tree/1.x/runtimes/8.0> のデフォルトの内容に合わせておきます。
+
+最新のsailではxdebugがデフォルトで有効になるようになってあります。
+
+（php8.0-xdebugが含まれる）
 
 参考: <https://xdebug.org/docs/install>
 
@@ -95,6 +130,7 @@ RUN apt-get update \
 
 ```bash
 sail build --no-cache
+sail up -d
 ```
 
 ## 確認
@@ -102,5 +138,4 @@ sail build --no-cache
 ```bash
 sail shell
 sail@414d0d2b4215:/var/www/html$ php -m | grep xdebug
-xdebug
 ```
