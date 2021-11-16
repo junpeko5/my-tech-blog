@@ -153,4 +153,8 @@ sail@414d0d2b4215:/var/www/html$ php -m | grep xdebug
 
 <https://www.jetbrains.com/help/phpstorm/browser-debugging-extensions.html>
 
+### PhpStormの設定
 
+Preferences > PHP > Server の Use path mappingsが有効になっている必要があります。
+
+また、Absolute path on the server の値を`/var/www/html`に設定します。
