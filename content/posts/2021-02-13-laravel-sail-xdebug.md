@@ -26,9 +26,9 @@ sail artisan sail:publish
 これで、プロジェクトのルートに`docker`ディレクトリが作成され、
 `./vendor/laravel/sail/runtimes/`以下のディレクトリがコピーされます。
 
-※ バージョンが最新出ない場合は注意が必要です。
+※ バージョンが最新ではない場合、注意が必要です。
 
-<https://github.com/laravel/sail/tree/1.x/runtimes> の内容に変更すれば、問題ないはずです。
+<https://github.com/laravel/sail/tree/1.x/runtimes> の内容を確認し、適宜反映してください。
 
 ## docker-compose.ymlの編集
 
@@ -48,8 +48,6 @@ services:
 利用しているPHPのバージョンのディレクトリを指定します。
 
 ## php.iniの編集について
-
-`docker/8.0/php.ini`にXdebugの設定を追記しても反映されません。
 
 `xdebug.mode`と`xdebug.client_host`は環境変数で設定可能なため、`docker-compose.yml`のenvironmentに設定します。
 
@@ -113,6 +111,12 @@ volumes:
 
 ```
 
+`.env`に以下を追記します。
+
+```dotenv
+SAIL_XDEBUG_MODE=develop,debug
+```
+
 
 ## dockerディレクトリの確認
 
@@ -129,6 +133,7 @@ volumes:
 変更を反映させるため、コンテナを再構築します。
 
 ```bash
+sail down
 sail build --no-cache
 sail up -d
 ```
@@ -139,3 +144,13 @@ sail up -d
 sail shell
 sail@414d0d2b4215:/var/www/html$ php -m | grep xdebug
 ```
+
+### ブラウザでデバッグする場合
+
+`xdebug.start_with_request`の値が`yes`ではないので、
+
+ブラウザからデバッグする場合は、xdebug用の各種ブラウザの拡張を入れる必要があります。
+
+<https://www.jetbrains.com/help/phpstorm/browser-debugging-extensions.html>
+
+
