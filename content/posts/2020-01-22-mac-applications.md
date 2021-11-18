@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: macOSおすすめアプリケーション16選
+title: macOSでインストールするアプリまとめ
 date: 2020-01-22T12:34:15.945Z
-description: macOSでおすすめアプリケーションを紹介します。
+description: macOSで個人的にインストールすべきおすすめアプリケーションを紹介します。
 cover: /images/apple-logo.png
 category: macOS
 tags:
@@ -10,65 +10,74 @@ tags:
 slug: mac-applications
 ---
 
-macOSでおすすめアプリケーションを紹介します。
+macOSで個人的にインストールすべきおすすめアプリケーションを紹介します。
 
-## Google Chrome
+アプリは常に最新のものを利用したいため、基本的に`brew cask`は使いません。
 
-WebブラウザはChromeがやはり使いやすい印象。
+## まず入れるやつ
 
-Chrome拡張機能で自由にカスタマイズ出来る点が魅力です。
+### Karabinder elements
 
-Google翻訳の拡張機能にはいつもお世話になっています。
-
-## Kindle
-
-本は紙より電子書籍派です。
-
-基本的にはipadで読んでいますが、macOSでも読みたいときがありますよね。
-
-## Alfred
-
-macOSのアプリケーションを起動するときに使っています。
-
-ランチャーアプリというのですかね。
-
-標準で入っているspotlightでも良いといえばよいのですが、色々設定可能な点が気に入っています。
-
-https://www.alfredapp.com/
-
-## iTerm2
-
-macOSのターミナルアプリで一番ユーザー数が多いのではないでしょうか？
-
-コチラも細かな設定が出来る点が魅力です。
-
-`コマンド + d` で画面分割する機能は本当に便利です。
-
-ちなみに、やたらとアップデート多いです。
-
-https://iterm2.com/
-
-## Docker Desktop for Mac
-
-dockerをmacOSで使うときに必須です。
-
-
-## Tweetduck
-
-TwitterをmacOSで確認したいときに利用しています。
-
-https://tweetduck.chylex.com/
-
-## Karabinder elements
+US配列でコマンドボタンでかな切り替えを行うのに必要としています。
 
 KarabinderはmacOSのキーバインドを設定する際に便利なアプリです。
 
 以下の記事で設定方法については詳しく書いています。
 
-https://blog.junpeko.com/karabinder
+<https://blog.junpeko.com/karabinder/>
+
+これがなくては生きていけません。
+
+### iTerm2
+
+macOSのターミナルアプリで一番ユーザー数が多い（個人的観測）
+
+細かな設定が出来る点が魅力です。
+
+`コマンド + d` で画面分割する機能は本当に便利です。
+
+ちなみに、アップデートの頻度はかなり多いのが信頼できる。
+
+<https://iterm2.com/>
+
+### Alfred
+
+macOSのアプリケーションを起動するときに使うランチャーアプリ。
+
+標準で入っているspotlightでも良いといえばよいのですが、色々設定可能な点が気に入っています。
+
+<https://www.alfredapp.com/>
+
+### Google日本語入力
+
+こちらも個人的に必須です。
+
+<https://www.google.co.jp/ime/>
+
+### LastPass
+
+パスワードマネージャー（有料）。
+
+1passwordよりも個人的には好き。
+
+## ブラウザ
+
+### Google Chrome
+
+MacOSのWebブラウザは、SafariよりもChromeがやはり使いやすい印象（主に開発において）。
+
+Chrome拡張機能で自由にカスタマイズ出来る点が魅力です。
+
+Google翻訳の拡張機能にはいつもお世話になっています。
+
+### FireFox
+
+Webブラウザ。開発用途でつかう時があります。
 
 
-## Visual Studio Code
+## エディタ・IDE
+
+### Visual Studio Code
 
 通称VScode。
 
@@ -84,13 +93,27 @@ PHPのプロジェクトを開くときはPhpStormを利用しますが、それ
 
 ちなみにこの記事もVScodeで書いています。
 
-## PhpStorm
+<https://code.visualstudio.com/download>
+
+### ToolBox(JetBrains)
 
 PHPの開発環境を整えるなら、今のところやはりPhpStormが鉄板です。
 
+All Products Packを購入しており、JetBrains製の全てのアプリToolboxで管理できます。
+
+<https://www.jetbrains.com/ja-jp/>
+
 有料ですが、購入する価値アリです。
 
-## Final Cut Pro
+### Xcode
+
+iOSの開発はやったことがないです。
+
+Homebrewを入れるのに必須なので入れます。
+
+## 動画編集
+
+### Final Cut Pro
 
 動画編集で利用します。
 
@@ -102,47 +125,63 @@ PHPの開発環境を整えるなら、今のところやはりPhpStormが鉄板
 
 有料ですが、買い切りのためコスパも良いですね。
 
-## Dropbox
+<https://www.apple.com/jp/final-cut-pro/>
+
+AppStoreから購入できます。
+
+## クラウドストレージ
+
+### Dropbox
 
 2ギガまでの無用枠で利用しています。
 
-## Cyberduck
+<https://www.dropbox.com/>
+
+### GoogleDrive
+
+<https://www.google.com/intl/ja_jp/drive/download/>
+
+## チャットツール
+
+とりあえず、何かしら使うので、主要なものは全部インストールします。
+
+### Slack
+
+### ChatWork
+
+### Messenger
+
+### LINE
+
+### Discord
+
+### Microsoft Teams
+
+### Skype
+
+### Zoom
+
+## タスク管理
+
+### ClickUp
+
+日本語対応されていないけど全然イケる。多機能で使いやすい。
+
+### Focus To-Do
+
+ポモドーロテクニックを使うならこちらが良さげ。（有料）
+
+### Trello
+
+## FTP
+
+### FileZilla
 
 FTPクライアントツールの中では一番使いやすい印象です。
 
-https://cyberduck.softonic.jp/mac
+<https://ja.osdn.net/projects/filezilla/>
 
-## ImageOptim
-
-画質を劣化させずにファイルサイズを最適化してくれる神ツール（無料）です。
-
-ブログに画像をアップする前にかならずこのツールを使っています。
-
-https://imageoptim.com/mac
-
-
-## Adobe XD
-
-ただ、今の所使いこなせてはいませんが、便利そうな印象。
-
-サイトのプロトタイプを作る際に便利なツールですが、画像加工などに
-も使えるようです。
-
-使えるようになりたい。
-
-## Mobster
-
-モブプログラミングするときに便利です。
-
-http://mobster.cc/
-
-## Postman
-
-APIを叩いてテストする際に、curlコマンドで叩くのも良いですが、Postmanを使うとアプリで設定項目を入力してhttpリクエストを送信出来ます。
-
-UIが良い感じです。
-
-https://www.getpostman.com/
+## 画像編集
 
 ## Skitch
 
@@ -152,11 +191,68 @@ https://www.getpostman.com/
 
 デザイナーのスキルがなくても問題なく使えます。
 
-## Rectangle
+AppStoreから入手できます。
+
+
+### ImageOptim
+
+画質を劣化させずにファイルサイズを最適化してくれる神ツール（無料）です。
+
+ブログに画像をアップする前にかならずこのツールを使っています。
+
+<https://imageoptim.com/mac>
+
+## 開発用途
+## Docker Desktop for Mac
+
+dockerをmacOSで使うときに必須です。
+
+<https://www.docker.com/products/docker-desktop>
+
+### Mobster
+
+モブプログラミングするときに便利です。
+
+<http://mobster.cc/>
+
+### Postman
+
+APIを叩いてテストする際に、curlコマンドで叩くのも良いですが、Postmanを使うとアプリで設定項目を入力してhttpリクエストを送信出来ます。
+
+UIが良い感じです。
+
+<https://www.getpostman.com/>
+
+### Draw.io
+
+ドキュメント作成に便利
+
+
+### Figma
+
+使えるようになりたい。
+
+##その他
+
+### Kindle
+
+本は紙より電子書籍派です。
+
+基本的にはipadで読んでいますが、macOSでも読みたいときがあります。
+
+### Rectangle
 
 Windowのサイズをショートカットキーで調節できるアプリです。
 
-https://rectangleapp.com/
+<https://rectangleapp.com/>
+
+### Logicool G Hub
+
+ロジクールのマウスの設定ができます。
+
+### MindNode
+
+マインドマップをかけるやつ。
 
 ## おわりに
 
