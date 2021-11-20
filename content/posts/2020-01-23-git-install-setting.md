@@ -18,8 +18,8 @@ gitをインストールしたときの初期設定のメモです。
 ## ユーザー情報の設定
 
 ```sh
-$ git config --global user.name "junpeko5"
-$ git config --global user.email "junpeko@example.com"
+git config --global user.name "junpeko5"
+git config --global user.email "junpeko@example.com"
 ```
 
 ## 改行設定
@@ -31,23 +31,23 @@ git config --global core.autocrlf input
 ## デフォルトのエディターはVim
 
 ```sh
-$ git config --global core.editor 'vim -c "set fenc=utf-8"'
+git config --global core.editor 'vim -c "set fenc=utf-8"'
 ```
 
 ## カラーを設定
 ```sh
-$ git config --global color.ui true
+git config --global color.ui true
 ```
 
 ## エイリアス設定
 
 ```sh
-$ git config --global alias.st status
-$ git config --global alias.co commit
-$ git config --global alias.br branch
-$ git config --global alias.ch checkout
-$ git config --global alias.graph "log --graph --date-order --all --pretty=format:'%h %C(green)%ad%C(cyan reverse)%cn%C(reset) %C(white bold)%s %C(red reverse)%w(80)%d' --date=short"
-$ git config --global alias.lol "log --graph --decorate --pretty=oneline --all --abbrev-commit"
+git config --global alias.st status
+git config --global alias.co commit
+git config --global alias.br branch
+git config --global alias.ch checkout
+git config --global alias.graph "log --graph --date-order --all --pretty=format:'%h %C(green)%ad%C(cyan reverse)%cn%C(reset) %C(white bold)%s %C(red reverse)%w(80)%d' --date=short"
+git config --global alias.lol "log --graph --decorate --pretty=oneline --all --abbrev-commit"
 ```
 
 ## merge、pullの設定
