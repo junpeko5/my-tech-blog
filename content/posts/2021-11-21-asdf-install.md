@@ -32,9 +32,13 @@ asdf version
 v0.8.1
 ```
 
-## NodeJSをインストールする例
+以上でインストール完了です。
 
-### 依存関係のあるファイルをインストール
+## チュートリアル
+
+### NodeJSをインストールする例
+
+#### 依存関係のあるファイルをインストール
 
 事前に、依存関係にあるパッケージをインストールする必要がある。
 
@@ -46,7 +50,7 @@ v0.8.1
 brew install gpg gawk
 ```
 
-### プラグイン`asdf-nodejs`を追加する。
+#### プラグイン`asdf-nodejs`を追加する。
 
 ```bash
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -54,13 +58,13 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 `~/.asdf/plugins/nodejs/`に追加されます。
 
-### インストール
+#### インストール
 
 ```bash
 asdf install nodejs latest
 ```
 
-### 有効化
+#### 有効化
 
 ```bash
 asdf global nodejs latest
@@ -81,7 +85,7 @@ v17.1.0
 使えるようになりました。
 
 
-## 別のバージョンをインストール
+#### 別のバージョンをインストール
 
 ```bash
 asdf list all nodejs
@@ -109,7 +113,7 @@ asdf list nodejs
   17.1.0
 ```
 
-## Rubyのインストール
+### Rubyのインストール
 
 ```bash
 ## プラグインをインストール
@@ -130,10 +134,10 @@ ruby -v
 ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [arm64-darwin21]
 ```
 
-### 参考
+#### 参考
 <https://github.com/asdf-vm/asdf-ruby>
 
-#PHPのインストール
+### PHPのインストール
 
 PHPはApple Siliconの場合問題が残っているみたい。
 
@@ -154,11 +158,11 @@ PHP_WITHOUT_PDO_PGSQL=yes PGSQL_INCLUDE="/opt/homebrew/opt/postgres" PHP_CONFIGU
 
 とりあえず、PHPは`brew install php`で一旦いきます。
 
-### 参考
+#### 参考
 
 <https://github.com/asdf-community/asdf-php>
 
-## Goのインストール
+### Goのインストール
 
 ```bash
 brew install coreutils
@@ -167,6 +171,21 @@ asdf install golang 1.17.3
 asdf global golang 1.17.3
 ```
 
+## グローバルにバージョン指定する
+
+```bash
+asdf global nodejs 16.11.0
+```
+
+## プロジェクトごとにバージョン指定する
+
+```bash
+asdf local nodejs 16.11.0
+```
+
+`.node-version`ファイルが作成されます。
+
+git管理の対象とします。
 
 ## 参考
 
