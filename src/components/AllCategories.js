@@ -1,10 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import _ from "lodash";
-import { Link } from 'gatsby'
 
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 
 
 
@@ -40,7 +39,7 @@ const AllCategories = () => {
     })
     const renderCategories = array.map(cat => {
         return (
-          <Styled
+          <Themed
             key={cat}
             as={Link}
             to={`/categories/${_.kebabCase(cat)}/`}
@@ -58,15 +57,15 @@ const AllCategories = () => {
             }}
           >
             {cat}
-          </Styled>
+          </Themed>
         );
     })
 
     return (
       <>
-        <Styled sx={{ display: `flex`, flexWrap: `wrap`, justifyContent:`center` }}>
+        <Themed sx={{ display: `flex`, flexWrap: `wrap`, justifyContent:`center` }}>
           {renderCategories}
-        </Styled>
+        </Themed>
       </>
     );
 }

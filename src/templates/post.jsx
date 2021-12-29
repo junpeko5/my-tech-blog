@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layout";
 import PostHeader from "../components/PostHeader";
@@ -50,7 +50,7 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Styled.h1 sx={{ mb: 0, fontSize: 32 }}>{post.title}</Styled.h1>
+          <Themed.h1 sx={{ mb: 0, fontSize: 32 }}>{post.title}</Themed.h1>
           <PostHeader post={postWip[0]} />
           <Box>
             <Image

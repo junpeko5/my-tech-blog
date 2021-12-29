@@ -3,7 +3,7 @@ import _ from "lodash";
 import { Link } from 'gatsby'
 
 /** @jsx jsx */
-import { Styled, jsx } from 'theme-ui'
+import { Themed, jsx } from 'theme-ui'
 
 import PostTages from "./PostTags";
 
@@ -25,7 +25,7 @@ const PostHeader = (props) => {
             alignItems: `baseline`
           }}
         >
-          <Styled.p
+          <Themed.p
             as={Link}
             sx={{
               color: `primary`,
@@ -42,7 +42,7 @@ const PostHeader = (props) => {
             to={`/categories/${_.kebabCase(post.category)}/`}
           >
             {post.category}
-          </Styled.p>
+          </Themed.p>
           <PostTages tags={post.tags} />
         </div>
       </div>

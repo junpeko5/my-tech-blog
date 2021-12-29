@@ -1,7 +1,6 @@
 import { Component } from "react";
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
-import { Box } from "@theme-ui/components";
+import { jsx } from "theme-ui";
 
 class Thanks extends Component {
   render() {

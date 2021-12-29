@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import _ from "lodash";
 import { Link } from "gatsby";
 /** @jsx jsx */
-import { Styled , jsx } from 'theme-ui';
+import { Themed , jsx } from 'theme-ui';
 
 class PostTags extends Component {
   render() {
@@ -11,7 +11,7 @@ class PostTags extends Component {
       <div>
         {tags &&
           tags.map(tag => (
-            <Styled
+            <Themed
               as={Link}
               key={tag}
               to={`/tags/${_.kebabCase(tag)}`}
@@ -29,7 +29,7 @@ class PostTags extends Component {
               >
                 {tag}
               </small>
-            </Styled>
+            </Themed>
           ))}
       </div>
     );

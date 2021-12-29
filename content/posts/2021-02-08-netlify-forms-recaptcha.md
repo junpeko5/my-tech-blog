@@ -82,7 +82,7 @@ export default class Contact extends Component {
     return (
       <Layout>
         <div>
-          <Styled.h1>お問い合わせ</Styled.h1>
+          <Themed.h1>お問い合わせ</Themed.h1>
           <Box
             as="form"
             name="contact"

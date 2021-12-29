@@ -4,7 +4,7 @@ import twitter from "../../images/twitter.svg";
 import mail from "../../images/mail.svg";
 import siteConfig from "../../../data/SiteConfig";
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { jsx } from "theme-ui";
 
 const icons = [
   { label: "twitter", icon: twitter },

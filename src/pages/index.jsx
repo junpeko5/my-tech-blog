@@ -10,7 +10,7 @@ import config from "../../data/SiteConfig";
 import AllCategories from "../components/AllCategories";
 
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 
 class Index extends React.Component {
   render() {
@@ -26,15 +26,15 @@ class Index extends React.Component {
           <AvatarLinks />
         </section>
         <section sx={{ mt: `60px` }}>
-          <Styled.h1>I write about</Styled.h1>
+          <Themed.h1>I write about</Themed.h1>
           <AllCategories />
         </section>
         <section sx={{ my: `40px` }}>
-          <Styled.h1>最近の投稿</Styled.h1>
+          <Themed.h1>最近の投稿</Themed.h1>
           <SimplePostListing postEdges={postEdges} />
         </section>
         <section>
-          <Styled
+          <Themed
             as={Link}
             to={"/blog"}
             sx={{
@@ -52,7 +52,7 @@ class Index extends React.Component {
             }}
           >
             More posts...
-          </Styled>
+          </Themed>
         </section>
       </Layout>
     );

@@ -42,9 +42,7 @@ const ToogleMode = () => {
   );
 
    
-  //quick, but not the best way to get the button in the right color
-  //I need to check if theme-ui as a Styled.button or something like that
-  let color = `#eee`; 
+  let color = `#eee`;
   if (isDark) {
     color = `#282c35`
   }

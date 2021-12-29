@@ -1,8 +1,8 @@
-/** @jsx jsx */
-import { Styled, jsx } from 'theme-ui';
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import PostHeader from './PostHeader';
+/** @jsx jsx */
+import { Themed , jsx} from 'theme-ui'
 
 
 class PostListing extends React.Component {
@@ -27,26 +27,26 @@ class PostListing extends React.Component {
   render() {
 
     const postList = this.getPostList();
- 
+
     return (
       <div>
         {/* Your post list here. */
           postList.map(post => (
-            <Styled key={post.title} sx={{ mb: "40px" }}>
-              <Styled.h1 sx={{ mb: `-0.1px` }}>
-                <Styled.a
+            <Themed key={post.title} sx={{ mb: "40px" }}>
+              <Themed.h1 sx={{ mb: `-0.1px` }}>
+                <Themed.a
                   as={Link}
                   to={post.path}
                   sx={{ textDecoration: `none` }}
                 >
                   {post.title}
-                </Styled.a>
-              </Styled.h1>
+                </Themed.a>
+              </Themed.h1>
               <PostHeader post={post} />
-              <Styled.p sx={{mt:-1}}>
+              <Themed.p sx={{mt:-1}}>
                 {post.excerpt}
-              </Styled.p>
-            </Styled>
+              </Themed.p>
+            </Themed>
           ))}
       </div>
     );

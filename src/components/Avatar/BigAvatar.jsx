@@ -1,6 +1,6 @@
 import React from 'react';
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 
 import siteConfig from "../../../data/SiteConfig";
 
@@ -15,11 +15,11 @@ const BigAvatar = () => {
           alt="profileImage"
           sx={{ width: 100, borderRadius: 999 }}
         />
-        <Styled.h1 sx={{ color: `text` }}>
+        <Themed.h1 sx={{ color: `text` }}>
           Hello World!!
-        </Styled.h1>
+        </Themed.h1>
       </div>
-      <Styled.p>{avatar.description}</Styled.p>
+      <Themed.p>{avatar.description}</Themed.p>
     </>
   );
 };

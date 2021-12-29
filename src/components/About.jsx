@@ -1,7 +1,7 @@
 import { Component } from "react";
 import BigAvatar from "./Avatar/BigAvatar";
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { jsx } from "theme-ui";
 
 class About extends Component {
   render() {

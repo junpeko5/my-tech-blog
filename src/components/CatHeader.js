@@ -1,11 +1,11 @@
 import React from "react";
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 
 const CatHeader = props => {
   const { category } = props;
   return (
-    <Styled
+    <Themed
       sx={{
         display: `flex`,
         textAlign: `center`,
@@ -14,10 +14,10 @@ const CatHeader = props => {
         color: `primary`
       }}
     >
-      <Styled.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
+      <Themed.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
         Post(s) category as
-      </Styled.h2>
-      <Styled.h3
+      </Themed.h2>
+      <Themed.h3
         sx={{
           color: `primary`,
           textDecoration: `none`,
@@ -31,8 +31,8 @@ const CatHeader = props => {
         }}
       >
         {category}
-      </Styled.h3>
-    </Styled>
+      </Themed.h3>
+    </Themed>
   );
 };
 

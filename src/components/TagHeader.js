@@ -1,11 +1,11 @@
 import React from "react";
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 
 const TagHeader = props => {
   const { tag } = props;
   return (
-    <Styled
+    <Themed
       sx={{
         display: `flex`,
         textAlign: `center`,
@@ -14,10 +14,10 @@ const TagHeader = props => {
         color: `primary`
       }}
     >
-      <Styled.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
+      <Themed.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
         Post(s) tagged as
-      </Styled.h2>
-      <Styled.h3
+      </Themed.h2>
+      <Themed.h3
         sx={{
           color: `text`,
           mr: 1,
@@ -28,8 +28,8 @@ const TagHeader = props => {
         }}
       >
         {tag}
-      </Styled.h3>
-    </Styled>
+      </Themed.h3>
+    </Themed>
   );
 };
 

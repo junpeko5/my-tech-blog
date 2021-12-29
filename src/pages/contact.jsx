@@ -1,5 +1,5 @@
 import { Component,  } from "react";
-import { navigateTo } from "gatsby-link";
+import { navigate } from "gatsby"
 import Recaptcha from "react-google-recaptcha";
 import Helmet from "react-helmet";
 import {
@@ -11,7 +11,7 @@ import config from "../../data/SiteConfig";
 import AvatarLinks from "../components/Avatar/AvatarLinks";
 
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
@@ -46,7 +46,7 @@ export default class Contact extends Component {
         ...this.state
       })
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
   };
 
@@ -55,7 +55,7 @@ export default class Contact extends Component {
       <Layout>
         <Helmet title={`Contact | ${config.siteTitle}`} />
         <div>
-          <Styled.h1>お問い合わせ</Styled.h1>
+          <Themed.h1>お問い合わせ</Themed.h1>
           <Box
             as="form"
             name="contact"

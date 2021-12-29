@@ -4,14 +4,14 @@ import config from "../../data/SiteConfig";
 import NavMenu from "../components/NavMenu";
 
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui";
+import { Themed, jsx } from "theme-ui";
 
 export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
 
     return (
-      <Styled
+      <Themed
         sx={{
           fontFamily: `body`,
           m: `auto`,
@@ -27,7 +27,7 @@ export default class MainLayout extends React.Component {
         <div style={{ marginTop: `120px`, marginBottom: `50px` }}>
           {children}
         </div>
-      </Styled>
+      </Themed>
     );
   }
 }

@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import siteConfig from "../../data/SiteConfig";
 
 /** @jsx jsx */
-import { Styled , jsx} from 'theme-ui'
+import { Themed , jsx} from 'theme-ui'
 
 class NavMenu extends React.Component {
 
@@ -42,7 +42,7 @@ class NavMenu extends React.Component {
 
     return (
       <nav>
-        <Styled
+        <Themed
           sx={{
             position: `fixed`,
             width: "100%",
@@ -72,20 +72,20 @@ class NavMenu extends React.Component {
             <div style={{ display: `flex`, alignItems: `center` }}>
               {menuLinks.map(link => {
                 return (
-                  <Styled.h3
+                  <Themed.h3
                     key={link.url}
                     as={Link}
                     to={link.url}
                     sx={{ mr: "10px", textDecoration: `none`, color: `primary` }}
                   >
                     {link.name}
-                  </Styled.h3>
+                  </Themed.h3>
                 );
               })}
               <ToogleMode />
             </div>
           </div>
-        </Styled>
+        </Themed>
       </nav>
     );
   }
