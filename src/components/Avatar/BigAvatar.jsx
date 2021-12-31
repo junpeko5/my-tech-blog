@@ -1,6 +1,5 @@
 import React from 'react';
-/** @jsx jsx */
-import { Themed, jsx } from "theme-ui";
+import { Themed } from "theme-ui";
 
 import siteConfig from "../../../data/SiteConfig";
 

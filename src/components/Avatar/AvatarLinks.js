@@ -37,32 +37,29 @@ const AvatarLinks = props => {
     iconSize = "20px";
   }
 
-  const iconsAndLinks = (
-    <div sx={{ display: `flex` }}>
-      {newUserLinks.map(element => {
-        return (
-          <div key={element.url} sx={{ mx: 2 }}>
-            <a href={element.url}>
-              <img
-                src={element.icon}
-                sx={{
-                  width: iconSize,
-                  bg: `muted`,
-                  borderRadius: "10px",
-                  p: 1,
-                  ":hover": { bg: `pink` }
-                }}
-              />
-            </a>
-          </div>
-        );
-      })}
-    </div>
-  );
-
   return (
     <div sx={{ margin: `auto`, textAlign: `center`, display: `table` }}>
-      {iconsAndLinks}
+      <div sx={{ display: `flex` }}>
+        {newUserLinks.map(element => {
+          return (
+            <div key={element.url} sx={{ mx: 2 }}>
+              <a href={element.url}>
+                <img
+                  alt="avatar"
+                  src={element.icon}
+                  sx={{
+                    width: iconSize,
+                    bg: `muted`,
+                    borderRadius: "10px",
+                    p: 1,
+                    ":hover": { bg: `pink` }
+                  }}
+                />
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

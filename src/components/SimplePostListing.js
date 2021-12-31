@@ -2,7 +2,7 @@
 import { Themed, jsx } from "theme-ui";
 import React, { Fragment } from "react";
 import { Link } from "gatsby";
-import PostHeader from "./PostHeader";
+import PostHeader from "./PostHeader.jsx";
 
 class PostListing extends React.Component {
   getPostList() {

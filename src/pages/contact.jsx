@@ -1,4 +1,4 @@
-import { Component,  } from "react";
+import { Component } from "react";
 import { navigate } from "gatsby"
 import Recaptcha from "react-google-recaptcha";
 import Helmet from "react-helmet";
@@ -6,7 +6,7 @@ import {
   Label,
   Box
 } from "@theme-ui/components";
-import Layout from "../layout";
+import Layout from "../layout/index.jsx";
 import config from "../../data/SiteConfig";
 import AvatarLinks from "../components/Avatar/AvatarLinks";
 
@@ -51,6 +51,7 @@ export default class Contact extends Component {
   };
 
   render() {
+
     return (
       <Layout>
         <Helmet title={`Contact | ${config.siteTitle}`} />
@@ -129,7 +130,6 @@ export default class Contact extends Component {
               rows="6"
             />
             <Recaptcha
-              ref="recaptcha"
               sitekey={RECAPTCHA_KEY}
               onChange={this.handleRecaptcha}
             />

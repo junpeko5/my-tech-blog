@@ -4,17 +4,17 @@ import { graphql } from "gatsby";
 /** @jsx jsx */
 import { Themed, jsx } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import Layout from "../layout";
-import PostHeader from "../components/PostHeader";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
+import Layout from "../layout/index.jsx";
+import PostHeader from "../components/PostHeader.jsx";
+import SocialLinks from "../components/SocialLinks/SocialLinks.jsx";
+import SEO from "../components/SEO/SEO.jsx";
 import config from "../../data/SiteConfig";
 import SmallAvatar from "../components/Avatar/SmallAvatar";
 import { Image, Box } from "@theme-ui/components";
 
 //if you want to use Discus
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
+import UserInfo from "../components/UserInfo/UserInfo.jsx";
+import Disqus from "../components/Disqus/Disqus.jsx";
 
 export default class PostTemplate extends React.Component {
   render() {

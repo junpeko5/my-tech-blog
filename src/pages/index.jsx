@@ -1,13 +1,13 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
-import Layout from "../layout";
+import Layout from "../layout/index.jsx";
 import SimplePostListing from "../components/SimplePostListing";
-import SEO from "../components/SEO/SEO";
-import BigAvatar from "../components/Avatar/BigAvatar";
+import SEO from "../components/SEO/SEO.jsx";
+import BigAvatar from "../components/Avatar/BigAvatar.jsx";
 import AvatarLinks from "../components/Avatar/AvatarLinks";
 import config from "../../data/SiteConfig";
-import AllCategories from "../components/AllCategories";
+import AllCategories from "../components/AllCategories.jsx";
 
 /** @jsx jsx */
 import { Themed, jsx } from "theme-ui";

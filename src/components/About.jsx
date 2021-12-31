@@ -1,5 +1,5 @@
 import { Component } from "react";
-import BigAvatar from "./Avatar/BigAvatar";
+import BigAvatar from "./Avatar/BigAvatar.jsx";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 

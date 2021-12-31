@@ -27,6 +27,7 @@ const SmallAvatar = props => {
       <div sx={{ display: `flex`, alignItems: `center`, mb: 2, mt: 2 }}>
         <div>
           <img
+            alt="small avatar"
             src={avatar.photo}
             sx={{ width: 70, height: 70, borderRadius: 999, mr: `15px` }}
           />

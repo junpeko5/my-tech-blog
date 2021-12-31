@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import PostHeader from './PostHeader';
+import PostHeader from './PostHeader.jsx';
 /** @jsx jsx */
 import { Themed , jsx} from 'theme-ui'
 
