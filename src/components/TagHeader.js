@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui";
+import { Themed, jsx } from 'theme-ui';
 
-const TagHeader = props => {
+const TagHeader = (props) => {
   const { tag } = props;
   return (
     <Themed
@@ -11,7 +11,7 @@ const TagHeader = props => {
         textAlign: `center`,
         alignItems: `baseline`,
         borderBottom: `1px solid`,
-        color: `primary`
+        color: `primary`,
       }}
     >
       <Themed.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
@@ -24,7 +24,7 @@ const TagHeader = props => {
           boxShadow: `0px 1px 5px rgba(0, 0, 0, 0.5)`,
           p: `5px`,
           borderRadius: `4px`,
-          boxSizing: `content-box`
+          boxSizing: `content-box`,
         }}
       >
         {tag}

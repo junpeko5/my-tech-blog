@@ -1,10 +1,10 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../layout/index.jsx";
-import PostListing from "../components/PostListing";
-import TagHeader from "../components/TagHeader";
-import config from "../../data/SiteConfig";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../layout/index.jsx';
+import PostListing from '../components/PostListing';
+import TagHeader from '../components/TagHeader';
+import config from '../../data/SiteConfig';
 
 export default class TagTemplate extends React.Component {
   render() {
@@ -33,7 +33,7 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
-            date (formatString: "YYYY-MM-DD")
+            date(formatString: "YYYY-MM-DD")
           }
           excerpt
           timeToRead

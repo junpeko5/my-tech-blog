@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui";
+import { Themed, jsx } from 'theme-ui';
 
-const CatHeader = props => {
+const CatHeader = (props) => {
   const { category } = props;
   return (
     <Themed
@@ -11,7 +11,7 @@ const CatHeader = props => {
         textAlign: `center`,
         alignItems: `baseline`,
         borderBottom: `1px solid`,
-        color: `primary`
+        color: `primary`,
       }}
     >
       <Themed.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
@@ -27,7 +27,7 @@ const CatHeader = props => {
           px: `4px`,
           borderRadius: `5px`,
           p: 1,
-          mr: 2
+          mr: 2,
         }}
       >
         {category}

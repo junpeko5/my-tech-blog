@@ -1,7 +1,7 @@
 import React from 'react';
-import { Themed } from "theme-ui";
+import { Themed } from 'theme-ui';
 
-import siteConfig from "../../../data/SiteConfig";
+import siteConfig from '../../../data/SiteConfig';
 
 const BigAvatar = () => {
   const { avatar } = siteConfig;
@@ -14,9 +14,7 @@ const BigAvatar = () => {
           alt="profileImage"
           sx={{ width: 100, borderRadius: 999 }}
         />
-        <Themed.h1 sx={{ color: `text` }}>
-          Hello World!!
-        </Themed.h1>
+        <Themed.h1 sx={{ color: `text` }}>Hello World!!</Themed.h1>
       </div>
       <Themed.p>{avatar.description}</Themed.p>
     </>

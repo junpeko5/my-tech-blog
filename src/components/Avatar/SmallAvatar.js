@@ -1,11 +1,11 @@
-import React from "react";
-import siteConfig from "../../../data/SiteConfig";
-import AvatarLinks from "./AvatarLinks";
+import React from 'react';
+import siteConfig from '../../../data/SiteConfig';
+import AvatarLinks from './AvatarLinks';
 
 /** @jsx jsx */
-import { jsx, Themed } from "theme-ui";
+import { jsx, Themed } from 'theme-ui';
 
-const SmallAvatar = props => {
+const SmallAvatar = (props) => {
   const { avatar } = siteConfig;
   const { siteTitle } = siteConfig;
 
@@ -17,8 +17,8 @@ const SmallAvatar = props => {
           color: `primary`,
           mb: 0,
           borderTop: `1px solid`,
-          pt: "15px",
-          textAlign: `center`
+          pt: '15px',
+          textAlign: `center`,
         }}
       >
         {siteTitle}
@@ -35,7 +35,7 @@ const SmallAvatar = props => {
         <Themed.p>{avatar.description}</Themed.p>
       </div>
       <div sx={{ textAlign: `left` }}>
-        <AvatarLinks size={"small"} />
+        <AvatarLinks size={'small'} />
       </div>
     </>
   );

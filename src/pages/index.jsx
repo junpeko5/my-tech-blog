@@ -1,16 +1,16 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../layout/index.jsx";
-import SimplePostListing from "../components/SimplePostListing";
-import SEO from "../components/SEO/SEO.jsx";
-import BigAvatar from "../components/Avatar/BigAvatar.jsx";
-import AvatarLinks from "../components/Avatar/AvatarLinks";
-import config from "../../data/SiteConfig";
-import AllCategories from "../components/AllCategories.jsx";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../layout/index.jsx';
+import SimplePostListing from '../components/SimplePostListing';
+import SEO from '../components/SEO/SEO.jsx';
+import BigAvatar from '../components/Avatar/BigAvatar.jsx';
+import AvatarLinks from '../components/Avatar/AvatarLinks';
+import config from '../../data/SiteConfig';
+import AllCategories from '../components/AllCategories.jsx';
 
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui";
+import { Themed, jsx } from 'theme-ui';
 
 class Index extends React.Component {
   render() {
@@ -36,7 +36,7 @@ class Index extends React.Component {
         <section>
           <Themed
             as={Link}
-            to={"/blog"}
+            to={'/blog'}
             sx={{
               margin: `auto`,
               textAlign: `center`,
@@ -44,11 +44,11 @@ class Index extends React.Component {
               borderBottom: `solid 3px`,
               textDecoration: `none`,
               fontSize: 26,
-              ":hover": {
+              ':hover': {
                 bg: `muted`,
                 p: 1,
-                borderRadius: `5px`
-              }
+                borderRadius: `5px`,
+              },
             }}
           >
             More posts...
@@ -64,10 +64,7 @@ export default Index;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
-    allMdx(
-      limit: 5
-      sort: { fields: [fields___date], order: DESC }
-    ) {
+    allMdx(limit: 5, sort: { fields: [fields___date], order: DESC }) {
       edges {
         node {
           fields {

@@ -1,24 +1,21 @@
-import { Component } from "react";
-import { navigate } from "gatsby"
-import Recaptcha from "react-google-recaptcha";
-import Helmet from "react-helmet";
-import {
-  Label,
-  Box
-} from "@theme-ui/components";
-import Layout from "../layout/index.jsx";
-import config from "../../data/SiteConfig";
-import AvatarLinks from "../components/Avatar/AvatarLinks";
+import { Component } from 'react';
+import { navigate } from 'gatsby';
+import Recaptcha from 'react-google-recaptcha';
+import Helmet from 'react-helmet';
+import { Label, Box } from '@theme-ui/components';
+import Layout from '../layout/index.jsx';
+import config from '../../data/SiteConfig';
+import AvatarLinks from '../components/Avatar/AvatarLinks';
 
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui";
+import { Themed, jsx } from 'theme-ui';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
 }
 
 export default class Contact extends Component {
@@ -27,31 +24,30 @@ export default class Contact extends Component {
     this.state = {};
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleRecaptcha = value => {
-    this.setState({ "g-recaptcha-response": value });
+  handleRecaptcha = (value) => {
+    this.setState({ 'g-recaptcha-response': value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state
-      })
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error));
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error));
   };
 
   render() {
-
     return (
       <Layout>
         <Helmet title={`Contact | ${config.siteTitle}`} />
@@ -74,21 +70,21 @@ export default class Contact extends Component {
             </noscript>
             <p hidden>
               <label>
-                Don’t fill this out:{" "}
+                Don’t fill this out:{' '}
                 <input name="bot-field" onChange={this.handleChange} />
               </label>
             </p>
             <Label
               htmlFor="name"
               sx={{
-                color: "text"
+                color: 'text',
               }}
             >
               名前
             </Label>
             <input
               sx={{
-                variant: "forms.input"
+                variant: 'forms.input',
               }}
               type="text"
               name="name"
@@ -98,14 +94,14 @@ export default class Contact extends Component {
             <Label
               htmlFor="email"
               sx={{
-                color: "text"
+                color: 'text',
               }}
             >
               メールアドレス
             </Label>
             <input
               sx={{
-                variant: "forms.input"
+                variant: 'forms.input',
               }}
               type="email"
               name="email"
@@ -115,14 +111,14 @@ export default class Contact extends Component {
             <Label
               htmlFor="message"
               sx={{
-                color: "text"
+                color: 'text',
               }}
             >
               お問い合わせ内容
             </Label>
             <textarea
               sx={{
-                variant: "forms.textarea"
+                variant: 'forms.textarea',
               }}
               name="message"
               value={this.state.message}
@@ -136,7 +132,7 @@ export default class Contact extends Component {
             <button
               type="submit"
               sx={{
-                variant: "buttons.primary"
+                variant: 'buttons.primary',
               }}
             >
               送信

@@ -1,4 +1,4 @@
-import prism from "@theme-ui/prism/presets/prism-okaidia";
+import prism from '@theme-ui/prism/presets/prism-okaidia';
 
 const grey90 = `#232129`;
 const black80 = `#1B1F23`;
@@ -10,7 +10,7 @@ const darkPink = `#d23669`;
 const pink = `pink`;
 const blueGray = `#282c35`;
 const lightblue = `#a5a4a6`;
-const lightGray = "#eee";
+const lightGray = '#eee';
 const gray = `#CCCCCC`;
 const darkGray = `#3e3c42`;
 
@@ -18,30 +18,30 @@ export default {
   // theme
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
-    container: 710
+    container: 710,
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    monospace: '"Roboto Mono", Menlo, monospace'
+    body: 'system-ui, sans-serif',
+    monospace: '"Roboto Mono", Menlo, monospace',
   },
   lineHeights: {
     body: 1.625,
-    heading: 1.25
+    heading: 1.25,
   },
   fontWeights: {
     body: 400,
     heading: 800,
-    bold: 700
+    bold: 700,
   },
   fontSizes: [14, 16, 18, 20, 24, 32, 48, 64, 72, 96],
   letterSpacing: {
-    body: "normal",
-    caps: "0.2em"
+    body: 'normal',
+    caps: '0.2em',
   },
   // styles
   styles: {
     root: {
-      fontFamily: `body`
+      fontFamily: `body`,
     },
     pre: {
       variant: `prism`,
@@ -54,38 +54,38 @@ export default {
       overflow: `auto`,
       borderRadius: 5,
       p: 3,
-      boxShadow: `1px 2px 10px rgba(0, 0, 0, 0.5)`
+      boxShadow: `1px 2px 10px rgba(0, 0, 0, 0.5)`,
     },
     code: {
-      fontFamily: `monospace`
+      fontFamily: `monospace`,
     },
     inlineCode: {
       borderRadius: `0.3em`,
       bg: `muted`,
-      p: `0.3em`
+      p: `0.3em`,
     },
     // from typography overrideThemeStyles
     h1: {
       fontSize: 32,
-      fontFamily: "heading",
-      fontWeight: "heading",
-      color: "primary",
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      color: 'primary',
       mt: 4,
-      mb: 4
+      mb: 4,
     },
     a: {
-      color: `primary`
+      color: `primary`,
     },
     p: {
       fontWeight: `body`,
       lineHeight: `body`,
-      letterSpacing: `body`
+      letterSpacing: `body`,
     },
     li: {
       fontSize: `body`,
       fontWeight: `body`,
       lineHeight: `body`,
-      letterSpacing: `body`
+      letterSpacing: `body`,
     },
     blockquote: {
       color: `inherit`,
@@ -93,11 +93,11 @@ export default {
       paddingLeft: `10px`,
       borderColor: `primary`,
       opacity: 0.8,
-      fontStyle: `italic`
+      fontStyle: `italic`,
     },
     label: {
-      fontWeight: "bold"
-    }
+      fontWeight: 'bold',
+    },
   },
   // Colors
   colors: {
@@ -110,7 +110,7 @@ export default {
     heading: grey90,
     formBackground: white,
     prism: {
-      background: `#011627`
+      background: `#011627`,
     },
     modes: {
       dark: {
@@ -121,91 +121,91 @@ export default {
         muted: opaqueLightWhite,
         highlight: lightblue,
         heading: white,
-        formBackground: darkGray
-      }
-    }
+        formBackground: darkGray,
+      },
+    },
   },
   prism,
   buttons: {
     primary: {
-      appearance: "none",
-      display: "inline-block",
-      textAlign: "center",
-      lineHeight: "inherit",
-      textDecoration: "none",
-      fontSize: "inherit",
-      fontWeight: "bold",
+      appearance: 'none',
+      display: 'inline-block',
+      textAlign: 'center',
+      lineHeight: 'inherit',
+      textDecoration: 'none',
+      fontSize: 'inherit',
+      fontWeight: 'bold',
       m: 2,
       px: 3,
       py: 2,
       border: 0,
       borderRadius: 4,
-      color: "text",
-      bg: "muted",
-      "&:hover": {
-        bg: `pink`
-      }
-    }
+      color: 'text',
+      bg: 'muted',
+      '&:hover': {
+        bg: `pink`,
+      },
+    },
   },
   forms: {
     label: {
       fontSize: 1,
-      fontWeight: "bold"
+      fontWeight: 'bold',
     },
     input: {
-      boxSizing: "border-box",
+      boxSizing: 'border-box',
       margin: `0 0 16px 0`,
       minWidth: 0,
-      display: "block",
-      width: "100%",
+      display: 'block',
+      width: '100%',
       padding: `8px`,
       fontSize: `inherit`,
       lineHeight: `inherit`,
       border: `blue 1px solid`,
       borderRadius: `4px`,
       color: `inherit`,
-      bg: "formBackground",
-      "&:focus": {
-        borderColor: "primary",
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: "none"
-      }
+      bg: 'formBackground',
+      '&:focus': {
+        borderColor: 'primary',
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none',
+      },
     },
     select: {
-      borderColor: "gray",
-      "&:focus": {
-        borderColor: "primary",
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: "none"
-      }
+      borderColor: 'gray',
+      '&:focus': {
+        borderColor: 'primary',
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none',
+      },
     },
     textarea: {
-      boxSizing: "border-box",
+      boxSizing: 'border-box',
       margin: `0 0 16px 0`,
       minWidth: 0,
-      display: "block",
-      width: "100%",
+      display: 'block',
+      width: '100%',
       padding: `8px`,
       fontSize: `inherit`,
       lineHeight: `inherit`,
       border: `blue 1px solid`,
       borderRadius: `4px`,
       color: `inherit`,
-      bg: "formBackground",
-      "&:focus": {
-        borderColor: "primary",
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: "none"
-      }
+      bg: 'formBackground',
+      '&:focus': {
+        borderColor: 'primary',
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none',
+      },
     },
     slider: {
-      bg: "muted"
-    }
+      bg: 'muted',
+    },
   },
   images: {
     eyecatch: {
       width: `1280px`,
       height: `720px`,
-    }
-  }
+    },
+  },
 };

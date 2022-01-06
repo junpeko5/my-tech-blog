@@ -1,7 +1,7 @@
-import { Component } from "react";
-import BigAvatar from "./Avatar/BigAvatar.jsx";
+import { Component } from 'react';
+import BigAvatar from './Avatar/BigAvatar.jsx';
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx } from 'theme-ui';
 
 class About extends Component {
   render() {
@@ -9,8 +9,8 @@ class About extends Component {
       <div>
         <h1
           sx={{
-            color: "primary",
-            fontFamily: "heading"
+            color: 'primary',
+            fontFamily: 'heading',
           }}
         >
           プロフィール

@@ -1,20 +1,20 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import Layout from "../layout/index.jsx";
-import PostHeader from "../components/PostHeader.jsx";
-import SocialLinks from "../components/SocialLinks/SocialLinks.jsx";
-import SEO from "../components/SEO/SEO.jsx";
-import config from "../../data/SiteConfig";
-import SmallAvatar from "../components/Avatar/SmallAvatar";
-import { Image, Box } from "@theme-ui/components";
+import { Themed, jsx } from 'theme-ui';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Layout from '../layout/index.jsx';
+import PostHeader from '../components/PostHeader.jsx';
+import SocialLinks from '../components/SocialLinks/SocialLinks.jsx';
+import SEO from '../components/SEO/SEO.jsx';
+import config from '../../data/SiteConfig';
+import SmallAvatar from '../components/Avatar/SmallAvatar';
+import { Image, Box } from '@theme-ui/components';
 
 //if you want to use Discus
-import UserInfo from "../components/UserInfo/UserInfo.jsx";
-import Disqus from "../components/Disqus/Disqus.jsx";
+import UserInfo from '../components/UserInfo/UserInfo.jsx';
+import Disqus from '../components/Disqus/Disqus.jsx';
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -34,12 +34,12 @@ export default class PostTemplate extends React.Component {
     postNodeWip.push(postNode);
 
     const postWip = [];
-    postNodeWip.forEach(post => {
+    postNodeWip.forEach((post) => {
       postWip.push({
         category: post.frontmatter.category,
         timeToRead: post.timeToRead,
         tags: post.frontmatter.tags,
-        date: post.fields.date
+        date: post.fields.date,
       });
     });
 
@@ -53,13 +53,10 @@ export default class PostTemplate extends React.Component {
           <Themed.h1 sx={{ mb: 0, fontSize: 32 }}>{post.title}</Themed.h1>
           <PostHeader post={postWip[0]} />
           <Box>
-            <Image
-              src={post.cover}
-              valiant="eyecatch"
-            />
+            <Image src={post.cover} valiant="eyecatch" />
           </Box>
           <MDXRenderer>{postNode.body}</MDXRenderer>
-          <div sx={{ mt: "40px" }}>
+          <div sx={{ mt: '40px' }}>
             <SmallAvatar />
           </div>
           {/* <SocialLinks postPath={slug} postNode={postNode} /> */}

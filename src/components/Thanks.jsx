@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { Component } from 'react';
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx } from 'theme-ui';
 
 class Thanks extends Component {
   render() {
@@ -8,8 +8,8 @@ class Thanks extends Component {
       <div>
         <h2
           sx={{
-            color: "primary",
-            fontFamily: "heading"
+            color: 'primary',
+            fontFamily: 'heading',
           }}
         >
           お問い合わせが送信されました。

@@ -1,46 +1,46 @@
-import React from "react";
-import github from "../../images/github.svg";
-import twitter from "../../images/twitter.svg";
-import mail from "../../images/mail.svg";
-import siteConfig from "../../../data/SiteConfig";
+import React from 'react';
+import github from '../../images/github.svg';
+import twitter from '../../images/twitter.svg';
+import mail from '../../images/mail.svg';
+import siteConfig from '../../../data/SiteConfig';
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx } from 'theme-ui';
 
 const icons = [
-  { label: "twitter", icon: twitter },
-  { label: "github", icon: github },
-  { label: "email", icon: mail }
+  { label: 'twitter', icon: twitter },
+  { label: 'github', icon: github },
+  { label: 'email', icon: mail },
 ];
 
-const AvatarLinks = props => {
+const AvatarLinks = (props) => {
   const { userLinks } = siteConfig;
   const { size } = props;
 
   const newUserLinks = [];
-  icons.forEach(element => {
+  icons.forEach((element) => {
     const { icon } = element;
-    userLinks.forEach(link => {
+    userLinks.forEach((link) => {
       const { label } = link;
       const { url } = link;
       if (label === element.label) {
         newUserLinks.push({
           label: label,
           url: url,
-          icon: icon
+          icon: icon,
         });
       }
     });
   });
 
-  let iconSize = "30px";
-  if (size === "small") {
-    iconSize = "20px";
+  let iconSize = '30px';
+  if (size === 'small') {
+    iconSize = '20px';
   }
 
   return (
     <div sx={{ margin: `auto`, textAlign: `center`, display: `table` }}>
       <div sx={{ display: `flex` }}>
-        {newUserLinks.map(element => {
+        {newUserLinks.map((element) => {
           return (
             <div key={element.url} sx={{ mx: 2 }}>
               <a href={element.url}>
@@ -50,9 +50,9 @@ const AvatarLinks = props => {
                   sx={{
                     width: iconSize,
                     bg: `muted`,
-                    borderRadius: "10px",
+                    borderRadius: '10px',
                     p: 1,
-                    ":hover": { bg: `pink` }
+                    ':hover': { bg: `pink` },
                   }}
                 />
               </a>

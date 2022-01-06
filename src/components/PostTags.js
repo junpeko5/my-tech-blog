@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import _ from "lodash";
-import { Link } from "gatsby";
+import React, { Component } from 'react';
+import _ from 'lodash';
+import { Link } from 'gatsby';
 /** @jsx jsx */
-import { Themed , jsx } from 'theme-ui';
+import { Themed, jsx } from 'theme-ui';
 
 class PostTags extends Component {
   render() {
@@ -10,7 +10,7 @@ class PostTags extends Component {
     return (
       <div>
         {tags &&
-          tags.map(tag => (
+          tags.map((tag) => (
             <Themed
               as={Link}
               key={tag}

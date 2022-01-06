@@ -1,17 +1,17 @@
-import React from "react";
-import { useColorMode, css } from "theme-ui";
-import sun from "../images/sun.svg";
-import moon from "../images/moon.svg";
+import React from 'react';
+import { useColorMode, css } from 'theme-ui';
+import sun from '../images/sun.svg';
+import moon from '../images/moon.svg';
 
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx } from 'theme-ui';
 
 const ToogleMode = () => {
   const [colorMode, setColorMode] = useColorMode();
-  const isDark = colorMode === `dark`
-  const toggleColorMode = e => {
-    setColorMode(isDark ? `light` : `dark`)
-  }
+  const isDark = colorMode === `dark`;
+  const toggleColorMode = (e) => {
+    setColorMode(isDark ? `light` : `dark`);
+  };
 
   const nigthMode = (
     <img
@@ -22,7 +22,7 @@ const ToogleMode = () => {
       role="presentation"
       style={{
         pointerEvents: `none`,
-        margin: 4
+        margin: 4,
       }}
     />
   );
@@ -36,15 +36,14 @@ const ToogleMode = () => {
       role="presentation"
       style={{
         pointerEvents: `none`,
-        margin: 4
+        margin: 4,
       }}
     />
   );
 
-   
   let color = `#eee`;
   if (isDark) {
-    color = `#282c35`
+    color = `#282c35`;
   }
 
   return (
@@ -54,11 +53,11 @@ const ToogleMode = () => {
         bg: color,
         cursor: `pointer`,
         border: `none`,
-        outline: `none`
+        outline: `none`,
       }}
       title="Toggle Dark Mode"
     >
-      {" "}
+      {' '}
       {isDark ? <div>{nigthMode}</div> : <div>{dayMode}</div>}
     </button>
   );

@@ -1,12 +1,11 @@
 import React from 'react';
-import _ from "lodash";
-import { Link } from 'gatsby'
+import _ from 'lodash';
+import { Link } from 'gatsby';
 
 /** @jsx jsx */
-import { Themed, jsx } from 'theme-ui'
+import { Themed, jsx } from 'theme-ui';
 
-import PostTages from "./PostTags";
-
+import PostTages from './PostTags';
 
 const PostHeader = (props) => {
   const { post } = props;
@@ -14,15 +13,13 @@ const PostHeader = (props) => {
   return (
     <div sx={{ mb: `-1px` }}>
       <div sx={{ display: `flex`, flexDirection: `column` }}>
-        <small>
-          {post.date}
-        </small>
+        <small>{post.date}</small>
         <div
           sx={{
             display: `flex`,
             flexWrap: `wrap`,
             mt: 2,
-            alignItems: `baseline`
+            alignItems: `baseline`,
           }}
         >
           <Themed.p
@@ -37,7 +34,7 @@ const PostHeader = (props) => {
               borderRadius: `5px`,
               p: 1,
               mb: `10px`,
-              mr: 2
+              mr: 2,
             }}
             to={`/categories/${_.kebabCase(post.category)}/`}
           >
@@ -48,8 +45,6 @@ const PostHeader = (props) => {
       </div>
     </div>
   );
-
-}
+};
 
 export default PostHeader;
-

@@ -1,10 +1,10 @@
-import React from "react";
-import Helmet from "react-helmet";
-import config from "../../data/SiteConfig";
-import NavMenu from "../components/NavMenu";
+import React from 'react';
+import Helmet from 'react-helmet';
+import config from '../../data/SiteConfig';
+import NavMenu from '../components/NavMenu';
 
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui";
+import { Themed, jsx } from 'theme-ui';
 
 export default class MainLayout extends React.Component {
   render() {
@@ -16,7 +16,7 @@ export default class MainLayout extends React.Component {
           fontFamily: `body`,
           m: `auto`,
           maxWidth: `container`,
-          width: ["90%", "100%", "100%"]
+          width: ['90%', '100%', '100%'],
         }}
       >
         <Helmet>

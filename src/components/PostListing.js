@@ -1,14 +1,13 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 import PostHeader from './PostHeader.jsx';
 /** @jsx jsx */
-import { Themed , jsx} from 'theme-ui'
-
+import { Themed, jsx } from 'theme-ui';
 
 class PostListing extends React.Component {
   getPostList() {
     const postList = [];
-    this.props.postEdges.forEach(postEdge => {
+    this.props.postEdges.forEach((postEdge) => {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
@@ -17,22 +16,21 @@ class PostListing extends React.Component {
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead,
-        category: postEdge.node.frontmatter.category
+        category: postEdge.node.frontmatter.category,
       });
     });
     return postList;
   }
 
-
   render() {
-
     const postList = this.getPostList();
 
     return (
       <div>
-        {/* Your post list here. */
-          postList.map(post => (
-            <Themed key={post.title} sx={{ mb: "40px" }}>
+        {
+          /* Your post list here. */
+          postList.map((post) => (
+            <Themed key={post.title} sx={{ mb: '40px' }}>
               <Themed.h1 sx={{ mb: `-0.1px` }}>
                 <Themed.a
                   as={Link}
@@ -43,11 +41,10 @@ class PostListing extends React.Component {
                 </Themed.a>
               </Themed.h1>
               <PostHeader post={post} />
-              <Themed.p sx={{mt:-1}}>
-                {post.excerpt}
-              </Themed.p>
+              <Themed.p sx={{ mt: -1 }}>{post.excerpt}</Themed.p>
             </Themed>
-          ))}
+          ))
+        }
       </div>
     );
   }
