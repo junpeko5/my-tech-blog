@@ -2,14 +2,14 @@
 templateKey: blog-post
 title: asdfのインストールとチュートリアル
 date: 2021-11-21
-description: 
+description:
 cover: /images/apple-logo.png
 category: Git
 tags:
   - Git
 slug: asdf-install
 ---
-  
+
 ## 前提条件
 
 Apple SiliconのmacOS環境にインストールしました。
@@ -50,7 +50,7 @@ v0.8.1
 brew install gpg gawk
 ```
 
-#### プラグイン`asdf-nodejs`を追加する。
+#### プラグイン`asdf-nodejs`を追加する
 
 ```bash
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -71,19 +71,20 @@ asdf global nodejs latest
 ```
 
 `.tool-versions`というファイルにバージョンが記載されます。
+
 ```bash
 cat .tool-versions
 nodejs 17.1.0
 ```
 
 ターミナルを再起動すると。。
+
 ```bash
 node -v
 v17.1.0
 ```
 
 使えるようになりました。
-
 
 #### 別のバージョンをインストール
 
@@ -105,7 +106,6 @@ lts
 ```bash
 asdf install nodejs 16.11.0
 ```
-
 
 ```bash
 asdf list nodejs
@@ -134,7 +134,6 @@ ruby -v
 ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [arm64-darwin21]
 ```
 
-#### 参考
 <https://github.com/asdf-vm/asdf-ruby>
 
 ### PHPのインストール
@@ -158,18 +157,7 @@ PHP_WITHOUT_PDO_PGSQL=yes PGSQL_INCLUDE="/opt/homebrew/opt/postgres" PHP_CONFIGU
 
 とりあえず、PHPは`brew install php`で一旦いきます。
 
-#### 参考
-
 <https://github.com/asdf-community/asdf-php>
-
-### Goのインストール
-
-```bash
-brew install coreutils
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-asdf install golang 1.17.3
-asdf global golang 1.17.3
-```
 
 ## グローバルにバージョン指定する
 
