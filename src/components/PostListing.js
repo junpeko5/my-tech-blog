@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import PostHeader from './PostHeader.jsx';
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
+import PostHeader from './PostHeader.js';
+import { Box, Heading } from '@chakra-ui/react';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -30,19 +29,17 @@ class PostListing extends React.Component {
         {
           /* Your post list here. */
           postList.map((post) => (
-            <Themed key={post.title} sx={{ mb: '40px' }}>
-              <Themed.h1 sx={{ mb: `-0.1px` }}>
-                <Themed.a
-                  as={Link}
-                  to={post.path}
-                  sx={{ textDecoration: `none` }}
-                >
+            <Box key={post.title} size="md" mt="30">
+              <Link as={Link} to={post.path} sx={{ textDecoration: `none` }}>
+                <Heading sx={{ mb: `-0.1px` }} fontSize="24px" color="pink.600">
                   {post.title}
-                </Themed.a>
-              </Themed.h1>
+                </Heading>
+              </Link>
               <PostHeader post={post} />
-              <Themed.p sx={{ mt: -1 }}>{post.excerpt}</Themed.p>
-            </Themed>
+              <Box as="p" mt="4">
+                {post.excerpt}
+              </Box>
+            </Box>
           ))
         }
       </div>

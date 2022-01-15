@@ -1,8 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Box } from '@chakra-ui/react';
 import _ from 'lodash';
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
 
 const AllCategories = () => {
   const { allMdx } = useStaticQuery(
@@ -37,34 +36,27 @@ const AllCategories = () => {
     array.push(cat);
   });
   const renderCategories = array.map((cat) => (
-    <Themed
+    <Box
       key={cat}
+      border="solid 3px"
+      borderRadius="5"
+      color="pink.500"
+      fontSize="24"
+      paddingX="2"
+      paddingY="1"
       as={Link}
       to={`/categories/${_.kebabCase(cat)}/`}
-      sx={{
-        m: 2,
-        color: `primary`,
-        border: `solid 3px`,
-        borderRadius: `5px`,
-        textDecoration: `none`,
-        fontSize: 26,
-        p: 2,
-        ':hover': {
-          bg: `muted`,
-        },
-      }}
+      m="2"
     >
       {cat}
-    </Themed>
+    </Box>
   ));
 
   return (
     <>
-      <Themed
-        sx={{ display: `flex`, flexWrap: `wrap`, justifyContent: `center` }}
-      >
+      <Box sx={{ display: `flex`, flexWrap: `wrap`, justifyContent: `center` }}>
         {renderCategories}
-      </Themed>
+      </Box>
     </>
   );
 };

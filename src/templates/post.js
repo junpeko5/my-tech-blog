@@ -1,20 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import Layout from '../layout/index.jsx';
-import PostHeader from '../components/PostHeader.jsx';
-import SocialLinks from '../components/SocialLinks/SocialLinks.jsx';
-import SEO from '../components/SEO/SEO.jsx';
+import Layout from '../layout';
+import PostHeader from '../components/PostHeader.js';
+import SEO from '../components/SEO/SEO.js';
 import config from '../../data/SiteConfig';
 import SmallAvatar from '../components/Avatar/SmallAvatar';
-import { Image, Box } from '@theme-ui/components';
-
-//if you want to use Discus
-import UserInfo from '../components/UserInfo/UserInfo.jsx';
-import Disqus from '../components/Disqus/Disqus.jsx';
+import { Heading, Box, Image } from '@chakra-ui/react';
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -50,7 +43,7 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Themed.h1 sx={{ mb: 0, fontSize: 32 }}>{post.title}</Themed.h1>
+          <Heading sx={{ mb: 0, fontSize: 32 }}>{post.title}</Heading>
           <PostHeader post={postWip[0]} />
           <Box>
             <Image src={post.cover} valiant="eyecatch" />

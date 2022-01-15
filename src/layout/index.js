@@ -2,32 +2,26 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 import NavMenu from '../components/NavMenu';
-
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
+import { Container } from '@chakra-ui/react';
+import { ColorModeScript, Box } from '@chakra-ui/react';
+import theme from './../@chakra-ui/gatsby-plugin/theme';
 
 export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
 
     return (
-      <Themed
-        sx={{
-          fontFamily: `body`,
-          m: `auto`,
-          maxWidth: `container`,
-          width: ['90%', '100%', '100%'],
-        }}
-      >
+      <Box backgroundColor="gray.50">
         <Helmet>
           <meta name="description" content={config.siteDescription} />
           <html lang="en" />
         </Helmet>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <NavMenu menuLinks={config.menuLinks} />
-        <div style={{ marginTop: `120px`, marginBottom: `50px` }}>
-          {children}
-        </div>
-      </Themed>
+        <Container maxWidth="container.md">
+          <Box flex="1">{children}</Box>
+        </Container>
+      </Box>
     );
   }
 }

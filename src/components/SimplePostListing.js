@@ -1,8 +1,7 @@
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
 import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
-import PostHeader from './PostHeader.jsx';
+import PostHeader from './PostHeader.js';
+import { Box, Heading } from '@chakra-ui/react';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -30,18 +29,14 @@ class PostListing extends React.Component {
           /* Your post list here. */
           postList.map((post) => (
             <Fragment key={post.title}>
-              <Themed>
-                <Themed.h2 sx={{ mb: `-1px` }}>
-                  <Themed.a
-                    as={Link}
-                    to={post.path}
-                    sx={{ textDecoration: `none` }}
-                  >
+              <Box>
+                <Heading as="h3" size="md" color="pink.600">
+                  <Link as={Link} to={post.path}>
                     {post.title}
-                  </Themed.a>
-                </Themed.h2>
+                  </Link>
+                </Heading>
                 <PostHeader post={post} />
-              </Themed>
+              </Box>
             </Fragment>
           ))
         }

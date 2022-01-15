@@ -1,11 +1,10 @@
 import React from 'react';
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
+import { Box, Heading } from '@chakra-ui/react';
 
 const CatHeader = (props) => {
   const { category } = props;
   return (
-    <Themed
+    <Box
       sx={{
         display: `flex`,
         textAlign: `center`,
@@ -14,10 +13,11 @@ const CatHeader = (props) => {
         color: `primary`,
       }}
     >
-      <Themed.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
+      <Heading as="h2" sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
         Post(s) category as
-      </Themed.h2>
-      <Themed.h3
+      </Heading>
+      <Heading
+        as="h3"
         sx={{
           color: `primary`,
           textDecoration: `none`,
@@ -31,8 +31,8 @@ const CatHeader = (props) => {
         }}
       >
         {category}
-      </Themed.h3>
-    </Themed>
+      </Heading>
+    </Box>
   );
 };
 

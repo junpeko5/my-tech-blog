@@ -1,19 +1,19 @@
-import { Component } from 'react';
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+import React, { Component } from 'react';
+import { Heading } from '@chakra-ui/react';
 
 class Thanks extends Component {
   render() {
     return (
       <div>
-        <h2
+        <Heading
+          as="h2"
           sx={{
             color: 'primary',
             fontFamily: 'heading',
           }}
         >
           お問い合わせが送信されました。
-        </h2>
+        </Heading>
       </div>
     );
   }

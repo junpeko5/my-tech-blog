@@ -1,19 +1,13 @@
 import React from 'react';
-import { useColorMode, css } from 'theme-ui';
 import sun from '../images/sun.svg';
 import moon from '../images/moon.svg';
+import { useColorMode } from '@chakra-ui/react';
 
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+const ToggleMode = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === `Dark`;
 
-const ToogleMode = () => {
-  const [colorMode, setColorMode] = useColorMode();
-  const isDark = colorMode === `dark`;
-  const toggleColorMode = (e) => {
-    setColorMode(isDark ? `light` : `dark`);
-  };
-
-  const nigthMode = (
+  const nightMode = (
     <img
       alt="moon indicating dark mode"
       src={moon}
@@ -58,9 +52,9 @@ const ToogleMode = () => {
       title="Toggle Dark Mode"
     >
       {' '}
-      {isDark ? <div>{nigthMode}</div> : <div>{dayMode}</div>}
+      {isDark ? <div>{nightMode}</div> : <div>{dayMode}</div>}
     </button>
   );
 };
 
-export default ToogleMode;
+export default ToggleMode;

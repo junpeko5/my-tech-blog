@@ -1,14 +1,11 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { navigate } from 'gatsby';
 import Recaptcha from 'react-google-recaptcha';
 import Helmet from 'react-helmet';
-import { Label, Box } from '@theme-ui/components';
-import Layout from '../layout/index.jsx';
+import Layout from '../layout';
 import config from '../../data/SiteConfig';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
-
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
+import { Box, Heading, Input, Textarea, Button } from '@chakra-ui/react';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
@@ -52,7 +49,7 @@ export default class Contact extends Component {
       <Layout>
         <Helmet title={`Contact | ${config.siteTitle}`} />
         <div>
-          <Themed.h1>お問い合わせ</Themed.h1>
+          <Heading as="h1">お問い合わせ</Heading>
           <Box
             as="form"
             name="contact"
@@ -74,15 +71,17 @@ export default class Contact extends Component {
                 <input name="bot-field" onChange={this.handleChange} />
               </label>
             </p>
-            <Label
+            <Box
+              fontWeight="bold"
+              as="label"
               htmlFor="name"
               sx={{
                 color: 'text',
               }}
             >
               名前
-            </Label>
-            <input
+            </Box>
+            <Input
               sx={{
                 variant: 'forms.input',
               }}
@@ -90,16 +89,19 @@ export default class Contact extends Component {
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
+              mb="4"
             />
-            <Label
+            <Box
+              fontWeight="bold"
+              as="label"
               htmlFor="email"
               sx={{
                 color: 'text',
               }}
             >
               メールアドレス
-            </Label>
-            <input
+            </Box>
+            <Input
               sx={{
                 variant: 'forms.input',
               }}
@@ -107,16 +109,19 @@ export default class Contact extends Component {
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
+              mb="4"
             />
-            <Label
+            <Box
+              fontWeight="bold"
+              as="label"
               htmlFor="message"
               sx={{
                 color: 'text',
               }}
             >
               お問い合わせ内容
-            </Label>
-            <textarea
+            </Box>
+            <Textarea
               sx={{
                 variant: 'forms.textarea',
               }}
@@ -124,19 +129,15 @@ export default class Contact extends Component {
               value={this.state.message}
               onChange={this.handleChange}
               rows="6"
+              mb="4"
             />
             <Recaptcha
               sitekey={RECAPTCHA_KEY}
               onChange={this.handleRecaptcha}
             />
-            <button
-              type="submit"
-              sx={{
-                variant: 'buttons.primary',
-              }}
-            >
+            <Button type="submit" colorScheme="blue" my="4">
               送信
-            </button>
+            </Button>
           </Box>
         </div>
         <AvatarLinks />

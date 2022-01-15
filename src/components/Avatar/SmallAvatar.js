@@ -1,9 +1,7 @@
 import React from 'react';
 import siteConfig from '../../../data/SiteConfig';
 import AvatarLinks from './AvatarLinks';
-
-/** @jsx jsx */
-import { jsx, Themed } from 'theme-ui';
+import { Heading, Box } from '@chakra-ui/react';
 
 const SmallAvatar = (props) => {
   const { avatar } = siteConfig;
@@ -11,7 +9,8 @@ const SmallAvatar = (props) => {
 
   return (
     <>
-      <Themed.h2
+      <Heading
+        as="h2"
         sx={{
           mt: 5,
           color: `primary`,
@@ -22,7 +21,7 @@ const SmallAvatar = (props) => {
         }}
       >
         {siteTitle}
-      </Themed.h2>
+      </Heading>
 
       <div sx={{ display: `flex`, alignItems: `center`, mb: 2, mt: 2 }}>
         <div>
@@ -32,7 +31,7 @@ const SmallAvatar = (props) => {
             sx={{ width: 70, height: 70, borderRadius: 999, mr: `15px` }}
           />
         </div>
-        <Themed.p>{avatar.description}</Themed.p>
+        <Box as="p">{avatar.description}</Box>
       </div>
       <div sx={{ textAlign: `left` }}>
         <AvatarLinks size={'small'} />

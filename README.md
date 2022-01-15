@@ -4,8 +4,6 @@
 
 Created this Repo to build a new started based on the [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
 
-Styled with `theme-ui` inspired on [Dan Abramov's](https://overreacted.io/) blog, but slightly different. 
-
 [Demo website](https://gatsby-tfs-starter.netlify.com/), in case you would like to check it out first
 
 
@@ -30,11 +28,6 @@ npm install # or yarn install
 npm run develop # or gatsby develop
 ```
 
-## Styling
-
-For anything style related you can change it `/gatsby-plugin-theme-ui/index.js` and consult [theme-ui documentation](https://theme-ui.com/)
-
-
 ## Configuration
 
 Edit the export object in `data/SiteConfig`:
@@ -48,7 +41,7 @@ const config = {
   siteUrl: "https://gatsby-tfs-starter.netlify.com/", // Domain of your website without pathPrefix.
   pathPrefix: "/gatsby-tfs-starter", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
-    "A GatsbyJS stater with Advanced design in mind and with theme-ui", // Website description used for RSS feeds/meta description tag.
+    "Junpeko5's Tech Blog", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.

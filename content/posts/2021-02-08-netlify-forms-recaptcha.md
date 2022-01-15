@@ -55,7 +55,7 @@ emailの設定方法は特に迷うことはないです。
 
 ## Gatsbyのソースコードを修正
 
-`.env.production`と`contact.jsx`を修正します。
+`.env.production`と`contact.js`を修正します。
 
 ### .env.production
 
@@ -65,7 +65,7 @@ emailの設定方法は特に迷うことはないです。
 SITE_RECAPTCHA_KEY=<reCAPTCHAのサイトキー>
 ```
 
-## contact.jsx
+## contact.js
 
 ```jsx
 import Recaptcha from "react-google-recaptcha";
@@ -82,7 +82,7 @@ export default class Contact extends Component {
     return (
       <Layout>
         <div>
-          <Themed.h1>お問い合わせ</Themed.h1>
+          <Heading as="h1">お問い合わせ</Heading>
           <Box
             as="form"
             name="contact"
@@ -111,5 +111,5 @@ export default class Contact extends Component {
 
 reCAPTCHAの設定部だけ抜き出しています。
 
-実装の詳細は、<https://github.com/junpeko5/my-tech-blog/blob/master/src/pages/contact.jsx>を確認ください。
+実装の詳細は、<https://github.com/junpeko5/my-tech-blog/blob/master/src/pages/contact.js>を確認ください。
 

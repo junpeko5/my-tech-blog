@@ -20,7 +20,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
-    'gatsby-plugin-theme-ui',
+    '@chakra-ui/gatsby-plugin',
+    // {
+    //   resolve: 'gatsby-plugin-chakra-ui',
+    //   options: {
+    //     isResettingCSS: true, // optional, default to true
+    //     isUsingColorMode: true, // optional, default to true
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

@@ -1,11 +1,10 @@
 import React from 'react';
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
+import { Box, Heading } from '@chakra-ui/react';
 
 const TagHeader = (props) => {
   const { tag } = props;
   return (
-    <Themed
+    <Box
       sx={{
         display: `flex`,
         textAlign: `center`,
@@ -14,10 +13,11 @@ const TagHeader = (props) => {
         color: `primary`,
       }}
     >
-      <Themed.h2 sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
+      <Heading as="h2" sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
         Post(s) tagged as
-      </Themed.h2>
-      <Themed.h3
+      </Heading>
+      <Heading
+        as="h2"
         sx={{
           color: `text`,
           mr: 1,
@@ -28,8 +28,8 @@ const TagHeader = (props) => {
         }}
       >
         {tag}
-      </Themed.h3>
-    </Themed>
+      </Heading>
+    </Box>
   );
 };
 

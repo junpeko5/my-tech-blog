@@ -1,16 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import Layout from '../layout/index.jsx';
+import Layout from '../layout';
 import SimplePostListing from '../components/SimplePostListing';
-import SEO from '../components/SEO/SEO.jsx';
-import BigAvatar from '../components/Avatar/BigAvatar.jsx';
+import SEO from '../components/SEO/SEO.js';
+import BigAvatar from '../components/Avatar/BigAvatar.js';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
 import config from '../../data/SiteConfig';
-import AllCategories from '../components/AllCategories.jsx';
-
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
+import AllCategories from '../components/AllCategories.js';
+import { Heading, Box } from '@chakra-ui/react';
 
 class Index extends React.Component {
   render() {
@@ -25,16 +23,17 @@ class Index extends React.Component {
           <BigAvatar />
           <AvatarLinks />
         </section>
-        <section sx={{ mt: `60px` }}>
-          <Themed.h1>I write about</Themed.h1>
+        <section>
           <AllCategories />
         </section>
-        <section sx={{ my: `40px` }}>
-          <Themed.h1>最近の投稿</Themed.h1>
+        <section>
+          <Heading as="h2" size="lg" my="30" color="pink.600">
+            最近の投稿
+          </Heading>
           <SimplePostListing postEdges={postEdges} />
         </section>
-        <section>
-          <Themed
+        <Box size="md" color="pink.600" mt="30">
+          <Link
             as={Link}
             to={'/blog'}
             sx={{
@@ -42,8 +41,6 @@ class Index extends React.Component {
               textAlign: `center`,
               color: `primary`,
               borderBottom: `solid 3px`,
-              textDecoration: `none`,
-              fontSize: 26,
               ':hover': {
                 bg: `muted`,
                 p: 1,
@@ -51,9 +48,9 @@ class Index extends React.Component {
               },
             }}
           >
-            More posts...
-          </Themed>
-        </section>
+            記事をもっと見る →
+          </Link>
+        </Box>
       </Layout>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import Layout from '../layout/index.jsx';
-import About from '../components/About.jsx';
+import Layout from '../layout';
+import About from '../components/About.js';
 import config from '../../data/SiteConfig';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
 

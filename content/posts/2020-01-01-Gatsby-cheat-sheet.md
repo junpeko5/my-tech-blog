@@ -194,7 +194,6 @@ $ gatsby info
     gatsby-plugin-react-helmet: ^3.1.10 => 3.1.18 
     gatsby-plugin-sharp: ^2.3.10 => 2.3.10 
     gatsby-plugin-sitemap: ^2.2.16 => 2.2.24 
-    gatsby-plugin-theme-ui: ^0.2.43 => 0.2.53 
     gatsby-plugin-twitter: ^2.1.9 => 2.1.17 
     gatsby-remark-autolink-headers: ^2.1.13 => 2.1.21 
     gatsby-remark-copy-linked-files: ^2.1.23 => 2.1.33 

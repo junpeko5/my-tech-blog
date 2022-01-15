@@ -1,10 +1,8 @@
 import React from 'react';
-import ToogleMode from './ToogleMode';
+import ToggleMode from './ToggleMode';
 import { Link } from 'gatsby';
 import siteConfig from '../../data/SiteConfig';
-
-/** @jsx jsx */
-import { Themed, jsx } from 'theme-ui';
+import { Heading, Flex, Text, Box } from '@chakra-ui/react';
 
 class NavMenu extends React.Component {
   state = {
@@ -38,56 +36,37 @@ class NavMenu extends React.Component {
     }
 
     return (
-      <nav>
-        <Themed
-          sx={{
-            position: `fixed`,
-            width: '100%',
-            top: 0,
-            left: 0,
-            height: `60px`,
-            backgroundColor: `background`,
-            boxShadow: shadow,
-            m: `auto`,
-            zIndex: 100,
-          }}
-        >
-          <div
-            sx={{
-              display: `flex`,
-              justifyContent: `space-between`,
-              alignItems: `center`,
-              maxWidth: `container`,
-              m: 'auto',
-              mt: `18px`,
-              px: 2,
-            }}
-          >
-            <Link to="/" sx={{ textDecoration: `none`, color: `primary` }}>
-              <div>{siteTitle}</div>
-            </Link>
-            <div style={{ display: `flex`, alignItems: `center` }}>
-              {menuLinks.map((link) => {
-                return (
-                  <Themed.h3
-                    key={link.url}
-                    as={Link}
-                    to={link.url}
-                    sx={{
-                      mr: '10px',
-                      textDecoration: `none`,
-                      color: `primary`,
-                    }}
-                  >
-                    {link.name}
-                  </Themed.h3>
-                );
-              })}
-              <ToogleMode />
-            </div>
-          </div>
-        </Themed>
-      </nav>
+      <Flex
+        height="60px"
+        px="2"
+        justifyContent="space-between"
+        alignItems="center"
+        boxShadow={shadow}
+        position="sticky"
+        top="0"
+        zIndex="10000"
+        backgroundColor="gray.50"
+      >
+        <Link to="/">
+          <Text color="pink.600">{siteTitle}</Text>
+        </Link>
+        <div style={{ display: `flex`, alignItems: `center` }}>
+          {menuLinks.map((link) => {
+            return (
+              <Box
+                mr="4"
+                color="pink.600"
+                key={link.url}
+                as={Link}
+                to={link.url}
+              >
+                {link.name}
+              </Box>
+            );
+          })}
+          <ToggleMode />
+        </div>
+      </Flex>
     );
   }
 }

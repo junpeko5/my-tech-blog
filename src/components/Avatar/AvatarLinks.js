@@ -3,8 +3,7 @@ import github from '../../images/github.svg';
 import twitter from '../../images/twitter.svg';
 import mail from '../../images/mail.svg';
 import siteConfig from '../../../data/SiteConfig';
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { Image, Box, Flex, Center } from '@chakra-ui/react';
 
 const icons = [
   { label: 'twitter', icon: twitter },
@@ -38,13 +37,13 @@ const AvatarLinks = (props) => {
   }
 
   return (
-    <div sx={{ margin: `auto`, textAlign: `center`, display: `table` }}>
-      <div sx={{ display: `flex` }}>
+    <Flex>
+      <Center>
         {newUserLinks.map((element) => {
           return (
             <div key={element.url} sx={{ mx: 2 }}>
               <a href={element.url}>
-                <img
+                <Image
                   alt="avatar"
                   src={element.icon}
                   sx={{
@@ -59,8 +58,8 @@ const AvatarLinks = (props) => {
             </div>
           );
         })}
-      </div>
-    </div>
+      </Center>
+    </Flex>
   );
 };
 export default AvatarLinks;
