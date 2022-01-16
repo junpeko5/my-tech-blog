@@ -26,22 +26,19 @@ class PostListing extends React.Component {
 
     return (
       <div>
-        {
-          /* Your post list here. */
-          postList.map((post) => (
-            <Box key={post.title} size="md" mt="30">
-              <Link as={Link} to={post.path}>
-                <Heading sx={{ mb: `-0.1px` }} fontSize="24px" color="pink.600">
-                  {post.title}
-                </Heading>
-              </Link>
-              <PostHeader post={post} />
-              <Box as="p" mt="4">
-                {post.excerpt}
-              </Box>
+        {postList.map((post) => (
+          <Box key={post.title} size="md" mt="30">
+            <Link as={Link} to={post.path}>
+              <Heading sx={{ mb: `-0.1px` }} fontSize="24px" color="pink.600">
+                {post.title}
+              </Heading>
+            </Link>
+            <PostHeader post={post} />
+            <Box as="p" mt="4">
+              {post.excerpt}
             </Box>
-          ))
-        }
+          </Box>
+        ))}
       </div>
     );
   }

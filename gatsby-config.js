@@ -61,16 +61,6 @@ module.exports = {
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-copy-linked-files' },
           'gatsby-remark-autolink-headers',
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: false,
-            },
-          },
         ],
       },
     },

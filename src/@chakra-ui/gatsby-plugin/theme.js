@@ -40,7 +40,8 @@ const config = {
           marginY: 2,
           code: {
             borderRadius: 4,
-            backgroundColor: 'gray.300',
+            color: 'yellow.200',
+            backgroundColor: 'black',
             marginX: 1,
             paddingX: 1,
           },
@@ -48,7 +49,7 @@ const config = {
         a: {
           color: 'blue',
         },
-        'code[class*="language-"]': {
+        code: {
           color: 'yellow.200',
           fontFamily: 'font-family: Monaco, monospace',
           fontSize: 'sm',
