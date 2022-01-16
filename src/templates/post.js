@@ -8,7 +8,6 @@ import SEO from '../components/SEO/SEO.js';
 import config from '../../data/SiteConfig';
 import SmallAvatar from '../components/Avatar/SmallAvatar';
 import { Heading, Box, Image } from '@chakra-ui/react';
-import './post.css';
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -37,6 +36,8 @@ export default class PostTemplate extends React.Component {
       });
     });
 
+    const MDXWrapper = (props) => <div className="mdx-prose" {...props} />;
+
     return (
       <Layout>
         <Helmet>
@@ -51,7 +52,9 @@ export default class PostTemplate extends React.Component {
           <Box>
             <Image src={post.cover} valiant="eyecatch" />
           </Box>
-          <MDXRenderer>{postNode.body}</MDXRenderer>
+          <MDXWrapper>
+            <MDXRenderer>{postNode.body}</MDXRenderer>
+          </MDXWrapper>
           <Box mt="40">
             <SmallAvatar />
           </Box>
