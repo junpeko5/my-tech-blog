@@ -8,11 +8,11 @@ import theme from './../@chakra-ui/gatsby-plugin/theme';
 
 const MainLayout = (props) => {
   const { children } = props;
-  const bg = useColorModeValue('gray.50', 'black');
-  const color = useColorModeValue('black', 'white');
+  const bg = useColorModeValue('gray.50', 'gray.700');
+  const color = useColorModeValue('gray.900', 'white');
 
   return (
-    <Box backgroundColor={bg} color={color}>
+    <Box bg={bg} color={color}>
       <Helmet>
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />

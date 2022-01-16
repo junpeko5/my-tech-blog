@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ToggleMode from './ToggleMode';
 import { Link } from 'gatsby';
 import { siteTitle } from '../../data/SiteConfig';
-import { Flex, Text, Box } from '@chakra-ui/react';
+import { Flex, Text, Box, useColorModeValue } from '@chakra-ui/react';
 
 const NavMenu = ({ menuLinks }) => {
   const [isScroll, setIsScroll] = useState(false);
+  const bg = useColorModeValue('gray.50', 'gray.700');
 
   useEffect(() => {
     window.addEventListener('scroll', navOnScroll);
@@ -33,7 +34,7 @@ const NavMenu = ({ menuLinks }) => {
       position="sticky"
       top="0"
       zIndex="10000"
-      backgroundColor="gray.50"
+      bg={bg}
     >
       <Box>
         <Link to="/">
