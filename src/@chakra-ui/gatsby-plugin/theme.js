@@ -44,6 +44,7 @@ const config = {
             backgroundColor: 'black',
             marginX: 1,
             paddingX: 1,
+            paddingY: 1,
           },
         },
         a: {
@@ -57,7 +58,9 @@ const config = {
         pre: {
           backgroundColor: 'black',
           borderRadius: 4,
-          padding: 2,
+          paddingY: 2,
+          paddingX: 4,
+          marginY: 2,
         },
       },
     },
