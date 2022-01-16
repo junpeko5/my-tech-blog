@@ -30,7 +30,7 @@ class PostListing extends React.Component {
           /* Your post list here. */
           postList.map((post) => (
             <Box key={post.title} size="md" mt="30">
-              <Link as={Link} to={post.path} sx={{ textDecoration: `none` }}>
+              <Link as={Link} to={post.path}>
                 <Heading sx={{ mb: `-0.1px` }} fontSize="24px" color="pink.600">
                   {post.title}
                 </Heading>

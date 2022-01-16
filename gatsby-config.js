@@ -21,13 +21,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
     '@chakra-ui/gatsby-plugin',
-    // {
-    //   resolve: 'gatsby-plugin-chakra-ui',
-    //   options: {
-    //     isResettingCSS: true, // optional, default to true
-    //     isUsingColorMode: true, // optional, default to true
-    //   },
-    // },
+    {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        isResettingCSS: true,
+        isUsingColorMode: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -55,13 +55,22 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 690,
+              maxWidth: 736,
             },
           },
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-copy-linked-files' },
           'gatsby-remark-autolink-headers',
-          { resolve: 'gatsby-remark-prismjs' },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
+            },
+          },
         ],
       },
     },

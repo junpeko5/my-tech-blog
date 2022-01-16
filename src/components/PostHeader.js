@@ -11,7 +11,7 @@ const PostHeader = (props) => {
   return (
     <div>
       <small>{post.date}</small>
-      <Flex alignItems="center">
+      <Flex alignItems="center" mb="2">
         <Box
           as={Link}
           color="pink.600"
@@ -19,7 +19,6 @@ const PostHeader = (props) => {
           px="2"
           mr="2"
           sx={{
-            textDecoration: `none`,
             border: `solid 1px`,
             boxSizing: `content-box`,
             display: `inline-block`,

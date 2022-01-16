@@ -19,13 +19,13 @@ class Index extends React.Component {
       <Layout>
         <Helmet title={config.siteTitle} />
         <SEO />
-        <section>
+        <Box my="30px">
           <BigAvatar />
           <AvatarLinks />
-        </section>
-        <section>
+        </Box>
+        <Box my="30px">
           <AllCategories />
-        </section>
+        </Box>
         <section>
           <Heading as="h2" size="lg" my="30" color="pink.600">
             最近の投稿

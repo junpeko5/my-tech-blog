@@ -1,7 +1,7 @@
 import React from 'react';
 import siteConfig from '../../../data/SiteConfig';
 import AvatarLinks from './AvatarLinks';
-import { Heading, Box } from '@chakra-ui/react';
+import { Heading, Box, Flex, Image, Text } from '@chakra-ui/react';
 
 const SmallAvatar = (props) => {
   const { avatar } = siteConfig;
@@ -11,30 +11,31 @@ const SmallAvatar = (props) => {
     <>
       <Heading
         as="h2"
-        sx={{
-          mt: 5,
-          color: `primary`,
-          mb: 0,
-          borderTop: `1px solid`,
-          pt: '15px',
-          textAlign: `center`,
-        }}
+        my="4"
+        pt="4"
+        color="pink.600"
+        borderTop="1px solid"
+        textAlign="center"
+        size="md"
       >
         {siteTitle}
       </Heading>
 
-      <div sx={{ display: `flex`, alignItems: `center`, mb: 2, mt: 2 }}>
-        <div>
-          <img
+      <Flex alignItems="center" my="4">
+        <Box mr="4">
+          <Image
             alt="small avatar"
             src={avatar.photo}
-            sx={{ width: 70, height: 70, borderRadius: 999, mr: `15px` }}
+            width="70px"
+            borderRadius="50%"
           />
-        </div>
-        <Box as="p">{avatar.description}</Box>
-      </div>
+        </Box>
+        <Text as="p" fontSize="sm">
+          {avatar.description}
+        </Text>
+      </Flex>
       <div sx={{ textAlign: `left` }}>
-        <AvatarLinks size={'small'} />
+        <AvatarLinks />
       </div>
     </>
   );

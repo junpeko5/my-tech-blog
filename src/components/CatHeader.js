@@ -1,38 +1,22 @@
 import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 
 const CatHeader = (props) => {
   const { category } = props;
   return (
-    <Box
-      sx={{
-        display: `flex`,
-        textAlign: `center`,
-        alignItems: `baseline`,
-        borderBottom: `1px solid`,
-        color: `primary`,
-      }}
-    >
-      <Heading as="h2" sx={{ color: `primary`, fontSize: `10`, mr: 2 }}>
-        Post(s) category as
-      </Heading>
-      <Heading
-        as="h3"
-        sx={{
-          color: `primary`,
-          textDecoration: `none`,
-          border: `solid 1px`,
-          boxSizing: `content-box`,
-          display: `inline-block`,
-          px: `4px`,
-          borderRadius: `5px`,
-          p: 1,
-          mr: 2,
-        }}
+    <Flex textAlign="center" alignItems="baseline">
+      <Box mr="1">Post(s) category as</Box>
+      <Box
+        py="1px"
+        px="2px"
+        color="pink.600"
+        borderRadius="4px"
+        boxShadow="0px 1px 5px rgba(0, 0, 0, 0.5)"
+        fontWeight="bold"
       >
         {category}
-      </Heading>
-    </Box>
+      </Box>
+    </Flex>
   );
 };
 

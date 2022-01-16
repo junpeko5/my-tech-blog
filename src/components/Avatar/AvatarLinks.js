@@ -3,6 +3,7 @@ import github from '../../images/github.svg';
 import twitter from '../../images/twitter.svg';
 import mail from '../../images/mail.svg';
 import siteConfig from '../../../data/SiteConfig';
+import { Link } from 'gatsby';
 import { Image, Box, Flex, Center } from '@chakra-ui/react';
 
 const icons = [
@@ -37,29 +38,27 @@ const AvatarLinks = (props) => {
   }
 
   return (
-    <Flex>
-      <Center>
-        {newUserLinks.map((element) => {
-          return (
-            <div key={element.url} sx={{ mx: 2 }}>
-              <a href={element.url}>
-                <Image
-                  alt="avatar"
-                  src={element.icon}
-                  sx={{
-                    width: iconSize,
-                    bg: `muted`,
-                    borderRadius: '10px',
-                    p: 1,
-                    ':hover': { bg: `pink` },
-                  }}
-                />
-              </a>
-            </div>
-          );
-        })}
-      </Center>
-    </Flex>
+    <Center>
+      {newUserLinks.map((element) => {
+        return (
+          <Flex key={element.url} mx="2">
+            <Link to={element.url}>
+              <Image
+                alt="avatar"
+                src={element.icon}
+                width={iconSize}
+                sx={{
+                  bg: `muted`,
+                  borderRadius: '10px',
+                  p: 1,
+                  ':hover': { bg: `pink` },
+                }}
+              />
+            </Link>
+          </Flex>
+        );
+      })}
+    </Center>
   );
 };
 export default AvatarLinks;
