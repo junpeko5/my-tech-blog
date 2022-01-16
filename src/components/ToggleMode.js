@@ -5,9 +5,9 @@ import { useColorMode } from '@chakra-ui/react';
 
 const ToggleMode = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === `Dark`;
+  const isDarkMode = colorMode === `dark`;
 
-  const nightMode = (
+  const darkModeIcon = (
     <img
       alt="moon indicating dark mode"
       src={moon}
@@ -21,7 +21,7 @@ const ToggleMode = () => {
     />
   );
 
-  const dayMode = (
+  const lightModeIcon = (
     <img
       alt="sun indicating light mode"
       src={sun}
@@ -36,23 +36,13 @@ const ToggleMode = () => {
   );
 
   let color = `#eee`;
-  if (isDark) {
+  if (isDarkMode) {
     color = `#282c35`;
   }
 
   return (
-    <button
-      onClick={toggleColorMode}
-      sx={{
-        bg: color,
-        cursor: `pointer`,
-        border: `none`,
-        outline: `none`,
-      }}
-      title="Toggle Dark Mode"
-    >
-      {' '}
-      {isDark ? <div>{nightMode}</div> : <div>{dayMode}</div>}
+    <button onClick={toggleColorMode} title="Toggle Dark Mode">
+      {isDarkMode ? <div>{darkModeIcon}</div> : <div>{lightModeIcon}</div>}
     </button>
   );
 };
