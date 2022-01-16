@@ -2,7 +2,7 @@ import React from 'react';
 import ToggleMode from './ToggleMode';
 import { Link } from 'gatsby';
 import siteConfig from '../../data/SiteConfig';
-import { Heading, Flex, Text, Box } from '@chakra-ui/react';
+import { Flex, Text, Box } from '@chakra-ui/react';
 
 class NavMenu extends React.Component {
   state = {
@@ -38,7 +38,7 @@ class NavMenu extends React.Component {
     return (
       <Flex
         height="60px"
-        px="2"
+        px="4"
         justifyContent="space-between"
         alignItems="center"
         boxShadow={shadow}
@@ -47,10 +47,12 @@ class NavMenu extends React.Component {
         zIndex="10000"
         backgroundColor="gray.50"
       >
-        <Link to="/">
-          <Text color="pink.600">{siteTitle}</Text>
-        </Link>
-        <div style={{ display: `flex`, alignItems: `center` }}>
+        <Box>
+          <Link to="/">
+            <Text color="pink.600">{siteTitle}</Text>
+          </Link>
+        </Box>
+        <Flex alignItems="center">
           {menuLinks.map((link) => {
             return (
               <Box
@@ -65,7 +67,7 @@ class NavMenu extends React.Component {
             );
           })}
           <ToggleMode />
-        </div>
+        </Flex>
       </Flex>
     );
   }
