@@ -5,7 +5,6 @@ import Layout from '../layout';
 import PostListing from '../components/PostListing';
 import SEO from '../components/SEO/SEO.js';
 import config from '../../data/SiteConfig';
-import AvatarLinks from '../components/Avatar/AvatarLinks';
 
 class Blog extends React.Component {
   render() {
@@ -22,7 +21,6 @@ class Blog extends React.Component {
 
 export default Blog;
 
-/* eslint no-undef: "off" */
 export const blogQuery = graphql`
   query BlogQuery {
     allMdx(limit: 2000, sort: { fields: [fields___date], order: DESC }) {
