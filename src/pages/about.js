@@ -4,15 +4,13 @@ import Layout from '../layout';
 import About from '../components/About.js';
 import config from '../../data/SiteConfig';
 
-class AboutPage extends Component {
-  render() {
-    return (
-      <Layout>
-        <Helmet title={`About | ${config.siteTitle}`} />
-        <About />
-      </Layout>
-    );
-  }
-}
+const AboutPage = () => {
+  return (
+    <Layout>
+      <Helmet title={`About | ${config.siteTitle}`} />
+      <About />
+    </Layout>
+  );
+};
 
 export default AboutPage;

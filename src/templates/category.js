@@ -6,23 +6,20 @@ import PostListing from '../components/PostListing';
 import CatHeader from '../components/CatHeader';
 import config from '../../data/SiteConfig';
 
-export default class CategoryTemplate extends React.Component {
-  render() {
-    const { category } = this.props.pageContext;
-    const postEdges = this.props.data.allMdx.edges;
-    return (
-      <Layout>
-        <Helmet
-          title={`Posts in category "${category}" | ${config.siteTitle}`}
-        />
-        <CatHeader category={category} />
-        <PostListing postEdges={postEdges} />
-      </Layout>
-    );
-  }
-}
+const CategoryTemplate = (props) => {
+  const { category } = props.pageContext;
+  const postEdges = props.data.allMdx.edges;
+  return (
+    <Layout>
+      <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
+      <CatHeader category={category} />
+      <PostListing postEdges={postEdges} />
+    </Layout>
+  );
+};
 
-/* eslint no-undef: "off" */
+export default CategoryTemplate;
+
 export const pageQuery = graphql`
   query CategoryPage($category: String) {
     allMdx(

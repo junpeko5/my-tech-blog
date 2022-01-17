@@ -3,10 +3,10 @@ import { Link } from 'gatsby';
 import PostHeader from './PostHeader.js';
 import { Box, Heading } from '@chakra-ui/react';
 
-class PostListing extends React.Component {
-  getPostList() {
+const PostListing = (props) => {
+  const getPostList = () => {
     const postList = [];
-    this.props.postEdges.forEach((postEdge) => {
+    props.postEdges.forEach((postEdge) => {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
@@ -19,29 +19,27 @@ class PostListing extends React.Component {
       });
     });
     return postList;
-  }
+  };
 
-  render() {
-    const postList = this.getPostList();
+  const postList = getPostList();
 
-    return (
-      <div>
-        {postList.map((post) => (
-          <Box key={post.title} size="md" mt="30">
-            <Link as={Link} to={post.path}>
-              <Heading sx={{ mb: `-0.1px` }} fontSize="24px" color="pink.600">
-                {post.title}
-              </Heading>
-            </Link>
-            <PostHeader post={post} />
-            <Box as="p" mt="4">
-              {post.excerpt}
-            </Box>
+  return (
+    <div>
+      {postList.map((post) => (
+        <Box key={post.title} size="md" mt="30">
+          <Link as={Link} to={post.path}>
+            <Heading sx={{ mb: `-0.1px` }} fontSize="24px" color="pink.600">
+              {post.title}
+            </Heading>
+          </Link>
+          <PostHeader post={post} />
+          <Box as="p" mt="4">
+            {post.excerpt}
           </Box>
-        ))}
-      </div>
-    );
-  }
-}
+        </Box>
+      ))}
+    </div>
+  );
+};
 
 export default PostListing;

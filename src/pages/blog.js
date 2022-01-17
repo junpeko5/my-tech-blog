@@ -6,18 +6,16 @@ import PostListing from '../components/PostListing';
 import SEO from '../components/SEO/SEO.js';
 import config from '../../data/SiteConfig';
 
-class Blog extends React.Component {
-  render() {
-    const postEdges = this.props.data.allMdx.edges;
-    return (
-      <Layout>
-        <Helmet title={config.siteTitle} />
-        <SEO />
-        <PostListing postEdges={postEdges} />
-      </Layout>
-    );
-  }
-}
+const Blog = (props) => {
+  const postEdges = props.data.allMdx.edges;
+  return (
+    <Layout>
+      <Helmet title={config.siteTitle} />
+      <SEO />
+      <PostListing postEdges={postEdges} />
+    </Layout>
+  );
+};
 
 export default Blog;
 
