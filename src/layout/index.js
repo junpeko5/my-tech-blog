@@ -21,8 +21,8 @@ const MainLayout = (props) => {
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Flex flex="1" width="100vw" minH="100vh" flexDirection="column">
         <NavMenu menuLinks={config.menuLinks} />
-        <Container maxWidth="container.md">
-          <Box flexGrow="1">{children}</Box>
+        <Container maxWidth="container.md" flex="1">
+          {children}
         </Container>
         <Footer />
       </Flex>
