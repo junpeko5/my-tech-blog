@@ -2,9 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 import NavMenu from '../components/NavMenu';
-import { Container, useColorModeValue } from '@chakra-ui/react';
+import { Container, useColorModeValue, Flex } from '@chakra-ui/react';
 import { ColorModeScript, Box } from '@chakra-ui/react';
 import theme from './../@chakra-ui/gatsby-plugin/theme';
+import Footer from '../components/Footer';
 
 const MainLayout = (props) => {
   const { children } = props;
@@ -18,10 +19,13 @@ const MainLayout = (props) => {
         <html lang="en" />
       </Helmet>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <NavMenu menuLinks={config.menuLinks} />
-      <Container maxWidth="container.md">
-        <Box flex="1">{children}</Box>
-      </Container>
+      <Flex flex="1" width="100vw" minH="100vh" flexDirection="column">
+        <NavMenu menuLinks={config.menuLinks} />
+        <Container maxWidth="container.md">
+          <Box flexGrow="1">{children}</Box>
+        </Container>
+        <Footer />
+      </Flex>
     </Box>
   );
 };

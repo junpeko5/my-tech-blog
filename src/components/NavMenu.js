@@ -25,33 +25,41 @@ const NavMenu = ({ menuLinks }) => {
   }
 
   return (
-    <Flex
-      height="60px"
-      px="4"
-      justifyContent="space-between"
-      alignItems="center"
-      boxShadow={shadow}
-      position="sticky"
-      top="0"
-      zIndex="10000"
-      bg={bg}
-    >
-      <Box>
-        <Link to="/">
-          <Text color="pink.600">{siteTitle}</Text>
-        </Link>
-      </Box>
-      <Flex alignItems="center">
-        {menuLinks.map((link) => {
-          return (
-            <Box mr="4" color="pink.600" key={link.url} as={Link} to={link.url}>
-              {link.name}
-            </Box>
-          );
-        })}
-        <ToggleMode />
+    <>
+      <Flex
+        px="8"
+        justifyContent="space-between"
+        alignItems="center"
+        boxShadow={shadow}
+        position="sticky"
+        top="0"
+        height="60px"
+        zIndex="10000"
+        bg={bg}
+      >
+        <Box>
+          <Link to="/">
+            <Text color="pink.600">{siteTitle}</Text>
+          </Link>
+        </Box>
+        <Flex alignItems="center">
+          {menuLinks.map((link) => {
+            return (
+              <Box
+                mr="4"
+                color="pink.600"
+                key={link.url}
+                as={Link}
+                to={link.url}
+              >
+                {link.name}
+              </Box>
+            );
+          })}
+          <ToggleMode />
+        </Flex>
       </Flex>
-    </Flex>
+    </>
   );
 };
 

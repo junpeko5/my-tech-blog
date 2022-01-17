@@ -1,6 +1,8 @@
+const date = new Date();
+const dateFullYear = date.getFullYear();
 const config = {
-  siteTitle: 'junpeko5 Tech Blog', // Site title.
-  siteTitleShort: 'junpeko5 Blog', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitle: 'Tech Blog', // Site title.
+  siteTitleShort: 'Blog', // Short site title for home screen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'junpeko5 Tech Blog', // Alternative site title for SEO.
   siteLogo: '/images/site_image/siteImage.png', // Logo used for SEO and manifest.
   siteUrl: 'https://blog.junpeko.com/', // Domain of your website without pathPrefix.
@@ -14,7 +16,7 @@ const config = {
   postDefaultCategoryID: '未分類', // Default category for posts.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'DD/MM/YYYY', // Date format for display.
-  userName: 'Jumpei konishi', // Username to display in the author segment.
+  userName: 'Jumpei Konishi', // Username to display in the author segment.
   userEmail: 'junpeko5@gmail.com', // Email used for RSS feed's author segment
   userTwitter: '@junpeko516', // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: '', // User location to display in the author segment.
@@ -54,7 +56,7 @@ const config = {
       url: '/blog',
     },
   ],
-  copyright: 'Copyright © 2021. junpeko5', // Copyright string for the footer of the website and RSS feed.
+  copyright: `Copyright © ${dateFullYear}. junpeko5`, // Copyright string for the footer of the website and RSS feed.
   themeColor: '#c62828', // Used for setting manifest and progress theme colors.
   backgroundColor: '#e0e0e0', // Used for setting manifest background color.
 };

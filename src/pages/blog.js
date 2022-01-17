@@ -15,7 +15,6 @@ class Blog extends React.Component {
         <Helmet title={config.siteTitle} />
         <SEO />
         <PostListing postEdges={postEdges} />
-        <AvatarLinks />
       </Layout>
     );
   }

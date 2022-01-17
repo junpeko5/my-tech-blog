@@ -4,7 +4,6 @@ import Recaptcha from 'react-google-recaptcha';
 import Helmet from 'react-helmet';
 import Layout from '../layout';
 import config from '../../data/SiteConfig';
-import AvatarLinks from '../components/Avatar/AvatarLinks';
 import { Box, Heading, Input, Textarea, Button } from '@chakra-ui/react';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
@@ -140,7 +139,6 @@ export default class Contact extends Component {
             </Button>
           </Box>
         </div>
-        <AvatarLinks />
       </Layout>
     );
   }

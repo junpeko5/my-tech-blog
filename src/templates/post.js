@@ -6,7 +6,6 @@ import Layout from '../layout';
 import PostHeader from '../components/PostHeader.js';
 import SEO from '../components/SEO/SEO.js';
 import config from '../../data/SiteConfig';
-import SmallAvatar from '../components/Avatar/SmallAvatar';
 import { Heading, Box, Image } from '@chakra-ui/react';
 
 export default class PostTemplate extends React.Component {
@@ -55,9 +54,6 @@ export default class PostTemplate extends React.Component {
           <MDXWrapper>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </MDXWrapper>
-          <Box mt="40">
-            <SmallAvatar />
-          </Box>
         </div>
       </Layout>
     );

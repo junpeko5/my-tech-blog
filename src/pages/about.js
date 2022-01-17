@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import Layout from '../layout';
 import About from '../components/About.js';
 import config from '../../data/SiteConfig';
-import AvatarLinks from '../components/Avatar/AvatarLinks';
 
 class AboutPage extends Component {
   render() {
@@ -11,7 +10,6 @@ class AboutPage extends Component {
       <Layout>
         <Helmet title={`About | ${config.siteTitle}`} />
         <About />
-        <AvatarLinks />
       </Layout>
     );
   }
