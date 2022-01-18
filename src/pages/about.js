@@ -7,7 +7,7 @@ import config from '../../data/SiteConfig';
 const AboutPage = () => {
   return (
     <Layout>
-      <Helmet title={`About | ${config.siteTitle}`} />
+      <Helmet title={`プロフィール | ${config.siteTitle}`} />
       <About />
     </Layout>
   );
