@@ -41,8 +41,9 @@ const config = {
           marginY: 4,
           paddingY: 2,
           paddingX: 4,
+          bg: 'orange.100',
           borderLeftWidth: 5,
-          borderLeftColor: 'pink.600',
+          borderLeftColor: 'orange.500',
         },
         p: {
           marginY: 2,
@@ -72,6 +73,11 @@ const config = {
           code: {
             boxSizing: 'border-box',
           },
+        },
+      },
+      '.chakra-ui-dark': {
+        blockquote: {
+          color: 'black',
         },
       },
     },
