@@ -12,7 +12,7 @@ const PostTags = ({ tags }) => {
             as={Link}
             key={tag}
             to={`/tags/${_.kebabCase(tag)}`}
-            sx={{ textDecoration: `none` }}
+            textDecoration="none"
             shadow="0px 1px 5px rgba(0, 0, 0, 0.5)"
             p="1"
             borderRadius="4px"

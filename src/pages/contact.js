@@ -45,7 +45,9 @@ const Contact = (props) => {
         <title>{`お問い合わせ | ${config.siteTitle}`}</title>
       </Helmet>
       <div>
-        <Heading as="h1">お問い合わせ</Heading>
+        <Heading as="h1" mb="8">
+          お問い合わせ
+        </Heading>
         <Box
           as="form"
           name="contact"
@@ -67,60 +69,30 @@ const Contact = (props) => {
               <input name="bot-field" onChange={handleChange} />
             </label>
           </p>
-          <Box
-            fontWeight="bold"
-            as="label"
-            htmlFor="name"
-            sx={{
-              color: 'text',
-            }}
-          >
+          <Box fontWeight="bold" as="label" htmlFor="name">
             名前
           </Box>
           <Input
-            sx={{
-              variant: 'forms.input',
-            }}
             type="text"
             name="name"
             value={state.name}
             onChange={handleChange}
             mb="4"
           />
-          <Box
-            fontWeight="bold"
-            as="label"
-            htmlFor="email"
-            sx={{
-              color: 'text',
-            }}
-          >
+          <Box fontWeight="bold" as="label" htmlFor="email">
             メールアドレス
           </Box>
           <Input
-            sx={{
-              variant: 'forms.input',
-            }}
             type="email"
             name="email"
             value={state.email}
             onChange={handleChange}
             mb="4"
           />
-          <Box
-            fontWeight="bold"
-            as="label"
-            htmlFor="message"
-            sx={{
-              color: 'text',
-            }}
-          >
+          <Box fontWeight="bold" as="label" htmlFor="message">
             お問い合わせ内容
           </Box>
           <Textarea
-            sx={{
-              variant: 'forms.textarea',
-            }}
             name="message"
             value={state.message}
             onChange={handleChange}

@@ -33,21 +33,7 @@ const Index = (props) => {
         <SimplePostListing postEdges={postEdges} />
       </section>
       <Box size="md" color="pink.600" mt="30">
-        <Link
-          as={Link}
-          to={'/blog'}
-          sx={{
-            margin: `auto`,
-            textAlign: `center`,
-            color: `primary`,
-            borderBottom: `solid 3px`,
-            ':hover': {
-              bg: `muted`,
-              p: 1,
-              borderRadius: `5px`,
-            },
-          }}
-        >
+        <Link as={Link} to={'/blog'} margin="auto">
           記事をもっと見る →
         </Link>
       </Box>

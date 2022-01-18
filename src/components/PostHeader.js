@@ -18,13 +18,10 @@ const PostHeader = (props) => {
           py="1"
           px="2"
           mr="2"
-          sx={{
-            border: `solid 1px`,
-            boxSizing: `content-box`,
-            display: `inline-block`,
-            px: `4px`,
-            borderRadius: `5px`,
-          }}
+          border="solid 1px"
+          borderRadius="5px"
+          boxSizing="content-box"
+          display="inline-block"
           to={`/categories/${_.kebabCase(post.category)}/`}
         >
           {post.category}

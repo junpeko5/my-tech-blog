@@ -47,12 +47,9 @@ const AvatarLinks = (props) => {
                 alt="avatar"
                 src={element.icon}
                 width={iconSize}
-                sx={{
-                  bg: `muted`,
-                  borderRadius: '10px',
-                  p: 1,
-                  ':hover': { bg: `pink` },
-                }}
+                bg="muted"
+                borderRadius="10px"
+                p="1"
               />
             </a>
           </Flex>

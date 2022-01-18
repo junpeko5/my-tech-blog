@@ -26,7 +26,7 @@ const PostListing = (props) => {
     <div>
       {postList.map((post) => (
         <Fragment key={post.title}>
-          <Box>
+          <Box mb="6">
             <Heading as="h3" size="md" color="pink.600">
               <Link as={Link} to={post.path}>
                 {post.title}

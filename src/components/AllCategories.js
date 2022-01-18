@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import _ from 'lodash';
 
 const AllCategories = () => {
@@ -54,9 +54,9 @@ const AllCategories = () => {
 
   return (
     <>
-      <Box sx={{ display: `flex`, flexWrap: `wrap`, justifyContent: `center` }}>
+      <Flex flexWrap="wrap" justifyContent="center">
         {renderCategories}
-      </Box>
+      </Flex>
     </>
   );
 };
