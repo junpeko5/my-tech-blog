@@ -42,7 +42,7 @@ const AvatarLinks = (props) => {
       {newUserLinks.map((element) => {
         return (
           <Flex key={element.url} mx="2">
-            <Link to={element.url}>
+            <a href={element.url}>
               <Image
                 alt="avatar"
                 src={element.icon}
@@ -54,7 +54,7 @@ const AvatarLinks = (props) => {
                   ':hover': { bg: `pink` },
                 }}
               />
-            </Link>
+            </a>
           </Flex>
         );
       })}
