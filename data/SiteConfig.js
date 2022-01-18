@@ -25,7 +25,7 @@ const config = {
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   avatar: {
     description:
-      '1989年生まれ大阪府岸和田市在住、フリーランスのプログラマー。PHP、バックエンド開発が得意。テニス、だんじり、ケツメイシ、競馬、プログラミングが好き！',
+      'ソフトウェアエンジニア。1989年生まれ大阪府岸和田市在住のフリーランス。PHP、バックエンド開発が得意。テニス、フットサル、だんじり、ケツメイシ、競馬、プログラミングが好き！最近はWebフロントエンド沼にハマってます！',
     photo: '/images/profileIcon.jpg',
   },
   userLinks: [
