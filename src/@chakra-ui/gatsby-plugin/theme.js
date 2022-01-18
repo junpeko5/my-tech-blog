@@ -25,6 +25,14 @@ const config = {
           borderBottomWidth: 5,
           borderBottomColor: 'pink.100',
         },
+        h3: {
+          fontWeight: 'bold',
+          fontSize: 'lg',
+        },
+        h4: {
+          fontWeight: 'bold',
+          fontSize: 'md',
+        },
         ul: {
           marginY: 4,
           paddingLeft: 5,
@@ -40,8 +48,7 @@ const config = {
           marginY: 2,
           code: {
             borderRadius: 4,
-            color: 'yellow.200',
-            backgroundColor: 'black',
+            color: 'pink.600',
             marginX: 1,
             paddingX: 1,
             paddingY: 1,
@@ -51,7 +58,7 @@ const config = {
           color: 'blue',
         },
         code: {
-          color: 'yellow.200',
+          color: 'white',
           fontFamily: 'font-family: Monaco, monospace',
           fontSize: 'sm',
         },
@@ -61,6 +68,10 @@ const config = {
           paddingY: 2,
           paddingX: 4,
           marginY: 2,
+          overflow: 'auto',
+          code: {
+            boxSizing: 'border-box',
+          },
         },
       },
     },
