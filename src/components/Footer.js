@@ -34,13 +34,13 @@ const Footer = (props) => {
           <Flex alignItems="center" my="4">
             <Box mr="4">
               <Image
-                alt="small avatar"
+                alt="avatar"
                 src={avatar.photo}
-                width="70px"
+                width="140px"
                 borderRadius="50%"
               />
             </Box>
-            <Text as="p" fontSize="sm">
+            <Text as="p" fontSize="xs">
               {avatar.description}
             </Text>
           </Flex>
