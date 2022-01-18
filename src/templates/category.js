@@ -11,7 +11,9 @@ const CategoryTemplate = (props) => {
   const postEdges = props.data.allMdx.edges;
   return (
     <Layout>
-      <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
+      <Helmet>
+        <title>{`Posts in category "${category}" | ${config.siteTitle}`}</title>
+      </Helmet>
       <CatHeader category={category} />
       <PostListing postEdges={postEdges} />
     </Layout>

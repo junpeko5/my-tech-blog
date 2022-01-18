@@ -41,7 +41,9 @@ const Contact = (props) => {
 
   return (
     <Layout>
-      <Helmet title={`お問い合わせ | ${config.siteTitle}`} />
+      <Helmet>
+        <title>{`お問い合わせ | ${config.siteTitle}`}</title>
+      </Helmet>
       <div>
         <Heading as="h1">お問い合わせ</Heading>
         <Box

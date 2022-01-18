@@ -11,7 +11,9 @@ const TagTemplate = (props) => {
   const postEdges = props.data.allMdx.edges;
   return (
     <Layout>
-      <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
+      <Helmet>
+        <title>{`Posts tagged as "${tag}" | ${config.siteTitle}`}</title>
+      </Helmet>
       <TagHeader tag={tag} />
       <PostListing postEdges={postEdges} />
     </Layout>

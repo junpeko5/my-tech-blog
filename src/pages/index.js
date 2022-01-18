@@ -15,7 +15,9 @@ const Index = (props) => {
 
   return (
     <Layout>
-      <Helmet title={config.siteTitle} />
+      <Helmet>
+        <title>{config.siteTitle}</title>
+      </Helmet>
       <SEO />
       <Box my="30px">
         <BigAvatar />
