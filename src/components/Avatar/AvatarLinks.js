@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconContext } from 'react-icons';
 import { Flex, Center, useColorModeValue } from '@chakra-ui/react';
-import { AiFillGithub, AiFillTwitterCircle, AiFillMail } from 'react-icons/all';
+import { AiFillGithub, AiFillTwitterCircle, AiFillMail } from 'react-icons/ai';
 import { Link } from 'gatsby';
 
 const AvatarLinks = () => {
