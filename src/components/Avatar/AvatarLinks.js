@@ -1,60 +1,26 @@
 import React from 'react';
-import github from '../../images/github.svg';
-import twitter from '../../images/twitter.svg';
-import mail from '../../images/mail.svg';
-import siteConfig from '../../../data/SiteConfig';
+import { IconContext } from 'react-icons';
+import { Flex, Center, useColorModeValue } from '@chakra-ui/react';
+import { AiFillGithub, AiFillTwitterCircle, AiFillMail } from 'react-icons/all';
 import { Link } from 'gatsby';
-import { Image, Box, Flex, Center } from '@chakra-ui/react';
 
-const icons = [
-  { label: 'twitter', icon: twitter },
-  { label: 'github', icon: github },
-  { label: 'email', icon: mail },
-];
-
-const AvatarLinks = (props) => {
-  const { userLinks } = siteConfig;
-  const { size } = props;
-
-  const newUserLinks = [];
-  icons.forEach((element) => {
-    const { icon } = element;
-    userLinks.forEach((link) => {
-      const { label } = link;
-      const { url } = link;
-      if (label === element.label) {
-        newUserLinks.push({
-          label: label,
-          url: url,
-          icon: icon,
-        });
-      }
-    });
-  });
-
-  let iconSize = '30px';
-  if (size === 'small') {
-    iconSize = '20px';
-  }
-
+const AvatarLinks = () => {
+  const color = useColorModeValue('gray.700', 'gray.50');
   return (
     <Center>
-      {newUserLinks.map((element) => {
-        return (
-          <Flex key={element.url} mx="2">
-            <a href={element.url}>
-              <Image
-                alt="avatar"
-                src={element.icon}
-                width={iconSize}
-                bg="muted"
-                borderRadius="10px"
-                p="1"
-              />
-            </a>
-          </Flex>
-        );
-      })}
+      <IconContext.Provider value={{ color: color, size: '30px' }}>
+        <Flex mx="2" gap="6">
+          <a href={'https://github.com/junpeko5/'}>
+            <AiFillGithub />
+          </a>
+          <a href={'https://twitter.com/junpeko516/'}>
+            <AiFillTwitterCircle />
+          </a>
+          <Link to={'/contact'}>
+            <AiFillMail />
+          </Link>
+        </Flex>
+      </IconContext.Provider>
     </Center>
   );
 };

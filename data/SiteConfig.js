@@ -27,24 +27,6 @@ const config = {
       'ソフトウェアエンジニア。1989年生まれ大阪府岸和田市在住のフリーランス。PHP、バックエンド開発が得意。テニス、フットサル、だんじり、ケツメイシ、競馬、プログラミングが好き！最近はWebフロントエンド沼にハマってます！',
     photo: '/images/profileIcon.jpg',
   },
-  userLinks: [
-    {
-      label: 'github',
-      url: 'https://github.com/junpeko5/',
-    },
-    {
-      label: 'linkedin',
-      url: '',
-    },
-    {
-      label: 'email',
-      url: '/contact',
-    },
-    {
-      label: 'twitter',
-      url: 'https://twitter.com/junpeko516/',
-    },
-  ],
   menuLinks: [
     {
       name: 'プロフィール',
