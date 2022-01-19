@@ -26,7 +26,7 @@ export const pageQuery = graphql`
   query CategoryPage($category: String) {
     allMdx(
       limit: 1000
-      sort: { fields: [fields___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { eq: $category } } }
     ) {
       totalCount

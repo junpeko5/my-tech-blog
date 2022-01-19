@@ -23,7 +23,7 @@ export default Blog;
 
 export const blogQuery = graphql`
   query BlogQuery {
-    allMdx(limit: 2000, sort: { fields: [fields___date], order: DESC }) {
+    allMdx(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
