@@ -12,7 +12,6 @@ const config = {
   siteRss: '/rss.xml', // Path to the RSS file.
   siteFBAppID: '1825356251115265', // FB Application ID for using app insights
   siteGTMID: 'GTM-MVZ85MD', // GA tracking ID.
-  disqusShortname: '', // Disqus shortname.
   postDefaultCategoryID: '未分類', // Default category for posts.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'DD/MM/YYYY', // Date format for display.
