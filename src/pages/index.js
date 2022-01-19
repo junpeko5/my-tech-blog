@@ -43,10 +43,9 @@ const Index = (props) => {
 
 export default Index;
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
-    allMdx(limit: 5, sort: { fields: [fields___date], order: DESC }) {
+    allMdx(limit: 5, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
