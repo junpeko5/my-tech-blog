@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';
 import config from '../../../data/SiteConfig';
@@ -17,25 +17,26 @@ const SEO = (props) => {
       ? postMeta.description
       : postNode.excerpt;
     image = postMeta.cover;
-    postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
+    postURL = urljoin(config.siteUrl, postPath, '/');
   } else {
     title = config.siteTitle;
     description = config.siteDescription;
     image = config.siteLogo;
   }
+
   if (
     !image.match(
       `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
     )
-  )
-    image = urljoin(config.siteUrl, config.pathPrefix, image);
+  ) {
+    image = urljoin(config.siteUrl, image);
+  }
 
-  const blogURL = urljoin(config.siteUrl, config.pathPrefix);
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
-      url: blogURL,
+      url: config.siteUrl,
       name: title,
       alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
     },
@@ -60,7 +61,7 @@ const SEO = (props) => {
       {
         '@context': 'http://schema.org',
         '@type': 'BlogPosting',
-        url: blogURL,
+        url: config.siteUrl,
         name: title,
         alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
         headline: title,
@@ -84,7 +85,7 @@ const SEO = (props) => {
       </script>
 
       {/* OpenGraph tags */}
-      <meta property="og:url" content={postSEO ? postURL : blogURL} />
+      <meta property="og:url" content={postSEO ? postURL : config.siteUrl} />
       {postSEO ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

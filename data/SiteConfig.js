@@ -5,7 +5,7 @@ const config = {
   siteTitleShort: 'Blog', // Short site title for home screen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'junpeko5 Tech Blog', // Alternative site title for SEO.
   siteLogo: '/images/site_image/siteImage.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://blog.junpeko.com/', // Domain of your website without pathPrefix.
+  siteUrl: 'https://blog.junpeko.com', // Domain of your website without pathPrefix.
   pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
     '学んだ技術をアウトプットするためのブログです。興味ある技術に関して書いていきます。', // Website description used for RSS feeds/meta description tag.
