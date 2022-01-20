@@ -15,7 +15,7 @@ function encode(data) {
 }
 
 const Contact = (props) => {
-  const [state, setState] = useState({});
+  const [state, setState] = useState({ name: '', email: '', message: '' });
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
@@ -24,19 +24,34 @@ const Contact = (props) => {
     setState({ ...state, 'g-recaptcha-response': value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error));
+    if (state.name === '') {
+      alert('お名前を入力してください。');
+      return;
+    }
+    if (state.email === '') {
+      alert('メールアドレスを入力してください。');
+      return;
+    }
+    if (state.message === '') {
+      alert('お問い合わせ内容を入力してください。');
+      return;
+    }
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...state,
+        }),
+      });
+      await navigate(form.getAttribute('action'));
+    } catch (e) {
+      alert(e);
+    }
   };
 
   return (
@@ -70,7 +85,7 @@ const Contact = (props) => {
             </label>
           </p>
           <Box fontWeight="bold" as="label" htmlFor="name">
-            名前
+            お名前
           </Box>
           <Input
             type="text"
