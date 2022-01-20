@@ -11,7 +11,7 @@ const default404 = () => {
       <Helmet>
         <title>{`ページが見つかりません | ${config.siteTitle}`}</title>
       </Helmet>
-      <Heading as="h1" paddingY="20px">
+      <Heading as="h1" paddingY="20px" color="pink.600">
         ページが見つかりません
       </Heading>
       <Text color="blue">
