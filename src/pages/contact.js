@@ -15,7 +15,12 @@ function encode(data) {
 }
 
 const Contact = (props) => {
-  const [state, setState] = useState({ name: '', email: '', message: '' });
+  const [state, setState] = useState({
+    name: '',
+    email: '',
+    message: '',
+    'g-recaptcha-response': '',
+  });
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
@@ -37,6 +42,12 @@ const Contact = (props) => {
     }
     if (state.message === '') {
       alert('お問い合わせ内容を入力してください。');
+      return;
+    }
+    if (state['g-recaptcha-response'] === '') {
+      alert(
+        '「私はロボットではありません」のチェックボックスにチェックを入れてください。'
+      );
       return;
     }
     try {
