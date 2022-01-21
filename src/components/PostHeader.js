@@ -10,7 +10,9 @@ const PostHeader = (props) => {
 
   return (
     <>
-      <small>{post.date}</small>
+      <Box fontSize="md" my="1">
+        {post.date}
+      </Box>
       <Flex alignItems="center" mb="2">
         <Link to={`/categories/${_.kebabCase(post.category)}/`}>
           <Box
@@ -26,7 +28,6 @@ const PostHeader = (props) => {
             {post.category}
           </Box>
         </Link>
-
         <PostTags tags={post.tags} />
       </Flex>
     </>
