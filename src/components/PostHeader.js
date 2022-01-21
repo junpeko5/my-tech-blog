@@ -12,20 +12,21 @@ const PostHeader = (props) => {
     <>
       <small>{post.date}</small>
       <Flex alignItems="center" mb="2">
-        <Box
-          as={Link}
-          color="pink.600"
-          py="1"
-          px="2"
-          mr="2"
-          border="solid 1px"
-          borderRadius="5px"
-          boxSizing="content-box"
-          display="inline-block"
-          to={`/categories/${_.kebabCase(post.category)}/`}
-        >
-          {post.category}
-        </Box>
+        <Link to={`/categories/${_.kebabCase(post.category)}/`}>
+          <Box
+            color="pink.600"
+            py="1"
+            px="2"
+            mr="2"
+            border="solid 1px"
+            borderRadius="5px"
+            boxSizing="content-box"
+            display="inline-block"
+          >
+            {post.category}
+          </Box>
+        </Link>
+
         <PostTags tags={post.tags} />
       </Flex>
     </>

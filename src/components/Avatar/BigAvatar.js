@@ -8,7 +8,7 @@ const BigAvatar = () => {
     <>
       <Box>
         <Image src={avatar.photo} alt="profile image" />
-        <Heading as="h2" color="pink.500" my="32px">
+        <Heading as="h2" color="pink.600" my="32px">
           Hello World!!
         </Heading>
       </Box>

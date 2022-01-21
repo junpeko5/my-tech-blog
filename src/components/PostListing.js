@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PostHeader from './PostHeader.js';
 import { Box, Heading } from '@chakra-ui/react';
+import TagHeader from './TagHeader';
 
 const PostListing = (props) => {
   const getPostList = () => {
@@ -25,9 +26,12 @@ const PostListing = (props) => {
 
   return (
     <>
+      <Heading as="h1" size="xl" color={'pink.600'} my="32px">
+        記事一覧
+      </Heading>
       {postList.map((post) => (
         <Box key={post.title} size="md" mt="30">
-          <Link as={Link} to={post.path}>
+          <Link to={post.path}>
             <Heading mb="-0.1px" fontSize="24px" color="pink.600">
               {post.title}
             </Heading>

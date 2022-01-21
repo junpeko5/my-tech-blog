@@ -1,8 +1,7 @@
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 
-const TagHeader = (props) => {
-  const { tag } = props;
+const TagHeader = ({ tag }) => {
   return (
     <>
       <Flex textAlign="center" alignItems="baseline">

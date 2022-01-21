@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import PostHeader from './PostHeader.js';
 import { Box, Heading } from '@chakra-ui/react';
@@ -25,16 +25,14 @@ const PostListing = (props) => {
   return (
     <>
       {postList.map((post) => (
-        <Fragment key={post.title}>
-          <Box mb="6">
+        <>
+          <Box mb="6" key={post.title}>
             <Heading as="h3" size="md" color="pink.600">
-              <Link as={Link} to={post.path}>
-                {post.title}
-              </Link>
+              <Link to={post.path}>{post.title}</Link>
             </Heading>
             <PostHeader post={post} />
           </Box>
-        </Fragment>
+        </>
       ))}
     </>
   );

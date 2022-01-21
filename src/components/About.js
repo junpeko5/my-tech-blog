@@ -5,7 +5,7 @@ import { Heading } from '@chakra-ui/react';
 const About = () => {
   return (
     <>
-      <Heading as="h1" size="xl" color={'pink.500'} my="32px">
+      <Heading as="h1" size="xl" color={'pink.600'} my="32px">
         プロフィール
       </Heading>
       <section>

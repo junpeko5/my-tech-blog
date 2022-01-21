@@ -1,8 +1,7 @@
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 
-const CatHeader = (props) => {
-  const { category } = props;
+const CatHeader = ({ category }) => {
   return (
     <>
       <Flex textAlign="center" alignItems="baseline">

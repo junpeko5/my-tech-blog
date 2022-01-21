@@ -72,8 +72,8 @@ const Contact = (props) => {
           <title>{`お問い合わせ | ${config.siteTitle}`}</title>
         </Helmet>
         <Box>
-          <Heading as="h1" mb="8">
-            お問い合わせ
+          <Heading as="h1" size="xl" color={'pink.600'} my="32px">
+            お問い合わせフォーム
           </Heading>
           <Box
             as="form"

@@ -48,15 +48,11 @@ const NavMenu = ({ menuLinks }) => {
         <Flex alignItems="center">
           {menuLinks.map((link) => {
             return (
-              <Box
-                mr="4"
-                color="pink.600"
-                key={link.url}
-                as={Link}
-                to={link.url}
-              >
-                {link.name}
-              </Box>
+              <Link key={link.url} to={link.url}>
+                <Box mr="4" color="pink.600">
+                  {link.name}
+                </Box>
+              </Link>
             );
           })}
           <ToggleMode />

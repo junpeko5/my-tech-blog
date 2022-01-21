@@ -36,20 +36,19 @@ const AllCategories = () => {
     array.push(cat);
   });
   const renderCategories = array.map((cat) => (
-    <Box
-      key={cat}
-      border="solid 3px"
-      borderRadius="5"
-      color="pink.500"
-      fontSize="24"
-      paddingX="2"
-      paddingY="1"
-      as={Link}
-      to={`/categories/${_.kebabCase(cat)}/`}
-      m="2"
-    >
-      {cat}
-    </Box>
+    <Link to={`/categories/${_.kebabCase(cat)}/`} key={cat}>
+      <Box
+        border="solid 3px"
+        borderRadius="5"
+        color="pink.600"
+        fontSize="24"
+        paddingX="2"
+        paddingY="1"
+        m="2"
+      >
+        {cat}
+      </Box>
+    </Link>
   ));
 
   return (
