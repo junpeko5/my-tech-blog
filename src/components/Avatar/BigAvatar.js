@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Image, Text } from '@chakra-ui/react';
 
 import { avatar } from '../../../data/SiteConfig';
 
@@ -7,7 +7,7 @@ const BigAvatar = () => {
   return (
     <>
       <Box>
-        <img src={avatar.photo} alt="profileImage" />
+        <Image src={avatar.photo} alt="profile image" />
         <Heading as="h2" color="pink.500" my="32px">
           Hello World!!
         </Heading>

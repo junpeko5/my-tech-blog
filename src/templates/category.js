@@ -10,13 +10,15 @@ const CategoryTemplate = (props) => {
   const { category } = props.pageContext;
   const postEdges = props.data.allMdx.edges;
   return (
-    <Layout>
-      <Helmet>
-        <title>{`Posts in category "${category}" | ${config.siteTitle}`}</title>
-      </Helmet>
-      <CatHeader category={category} />
-      <PostListing postEdges={postEdges} />
-    </Layout>
+    <>
+      <Layout>
+        <Helmet>
+          <title>{`Posts in category "${category}" | ${config.siteTitle}`}</title>
+        </Helmet>
+        <CatHeader category={category} />
+        <PostListing postEdges={postEdges} />
+      </Layout>
+    </>
   );
 };
 

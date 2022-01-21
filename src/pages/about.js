@@ -6,12 +6,14 @@ import config from '../../data/SiteConfig';
 
 const AboutPage = () => {
   return (
-    <Layout>
-      <Helmet>
-        <title>{`プロフィール | ${config.siteTitle}`}</title>
-      </Helmet>
-      <About />
-    </Layout>
+    <>
+      <Layout>
+        <Helmet>
+          <title>{`プロフィール | ${config.siteTitle}`}</title>
+        </Helmet>
+        <About />
+      </Layout>
+    </>
   );
 };
 

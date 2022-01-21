@@ -66,72 +66,74 @@ const Contact = (props) => {
   };
 
   return (
-    <Layout>
-      <Helmet>
-        <title>{`お問い合わせ | ${config.siteTitle}`}</title>
-      </Helmet>
-      <div>
-        <Heading as="h1" mb="8">
-          お問い合わせ
-        </Heading>
-        <Box
-          as="form"
-          name="contact"
-          method="post"
-          action="/thanks/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
-          onSubmit={handleSubmit}
-        >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
-          <noscript>
-            <p>This form won’t work with Javascript disabled</p>
-          </noscript>
-          <p hidden>
-            <label>
-              Don’t fill this out:{' '}
-              <input name="bot-field" onChange={handleChange} />
-            </label>
-          </p>
-          <Box fontWeight="bold" as="label" htmlFor="name">
-            お名前
+    <>
+      <Layout>
+        <Helmet>
+          <title>{`お問い合わせ | ${config.siteTitle}`}</title>
+        </Helmet>
+        <Box>
+          <Heading as="h1" mb="8">
+            お問い合わせ
+          </Heading>
+          <Box
+            as="form"
+            name="contact"
+            method="post"
+            action="/thanks/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
+            onSubmit={handleSubmit}
+          >
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <Input type="hidden" name="form-name" value="contact" />
+            <noscript>
+              <p>This form won’t work with Javascript disabled</p>
+            </noscript>
+            <Box hidden>
+              <label>
+                Don’t fill this out:{' '}
+                <Input name="bot-field" onChange={handleChange} />
+              </label>
+            </Box>
+            <Box fontWeight="bold" as="label" htmlFor="name">
+              お名前
+            </Box>
+            <Input
+              type="text"
+              name="name"
+              value={state.name}
+              onChange={handleChange}
+              mb="4"
+            />
+            <Box fontWeight="bold" as="label" htmlFor="email">
+              メールアドレス
+            </Box>
+            <Input
+              type="email"
+              name="email"
+              value={state.email}
+              onChange={handleChange}
+              mb="4"
+            />
+            <Box fontWeight="bold" as="label" htmlFor="message">
+              お問い合わせ内容
+            </Box>
+            <Textarea
+              name="message"
+              value={state.message}
+              onChange={handleChange}
+              rows="6"
+              mb="4"
+            />
+            <Recaptcha sitekey={RECAPTCHA_KEY} onChange={handleRecaptcha} />
+            <Button type="submit" colorScheme="blue" my="4">
+              送信
+            </Button>
           </Box>
-          <Input
-            type="text"
-            name="name"
-            value={state.name}
-            onChange={handleChange}
-            mb="4"
-          />
-          <Box fontWeight="bold" as="label" htmlFor="email">
-            メールアドレス
-          </Box>
-          <Input
-            type="email"
-            name="email"
-            value={state.email}
-            onChange={handleChange}
-            mb="4"
-          />
-          <Box fontWeight="bold" as="label" htmlFor="message">
-            お問い合わせ内容
-          </Box>
-          <Textarea
-            name="message"
-            value={state.message}
-            onChange={handleChange}
-            rows="6"
-            mb="4"
-          />
-          <Recaptcha sitekey={RECAPTCHA_KEY} onChange={handleRecaptcha} />
-          <Button type="submit" colorScheme="blue" my="4">
-            送信
-          </Button>
         </Box>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

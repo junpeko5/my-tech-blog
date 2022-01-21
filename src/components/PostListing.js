@@ -24,7 +24,7 @@ const PostListing = (props) => {
   const postList = getPostList();
 
   return (
-    <div>
+    <>
       {postList.map((post) => (
         <Box key={post.title} size="md" mt="30">
           <Link as={Link} to={post.path}>
@@ -38,7 +38,7 @@ const PostListing = (props) => {
           </Box>
         </Box>
       ))}
-    </div>
+    </>
   );
 };
 

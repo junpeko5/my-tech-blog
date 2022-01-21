@@ -9,7 +9,7 @@ const PostHeader = (props) => {
   const { post } = props;
 
   return (
-    <div>
+    <>
       <small>{post.date}</small>
       <Flex alignItems="center" mb="2">
         <Box
@@ -28,7 +28,7 @@ const PostHeader = (props) => {
         </Box>
         <PostTags tags={post.tags} />
       </Flex>
-    </div>
+    </>
   );
 };
 

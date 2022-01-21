@@ -6,12 +6,14 @@ import config from '../../data/SiteConfig';
 
 const ThanksPage = () => {
   return (
-    <Layout>
-      <Helmet>
-        <title>{`お問い合わせ完了 | ${config.siteTitle}`}</title>
-      </Helmet>
-      <Thanks />
-    </Layout>
+    <>
+      <Layout>
+        <Helmet>
+          <title>{`お問い合わせ完了 | ${config.siteTitle}`}</title>
+        </Helmet>
+        <Thanks />
+      </Layout>
+    </>
   );
 };
 

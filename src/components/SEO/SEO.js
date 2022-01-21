@@ -74,39 +74,41 @@ const SEO = (props) => {
     );
   }
   return (
-    <Helmet>
-      {/* General tags */}
-      <meta name="description" content={description} />
-      <meta name="image" content={image} />
+    <>
+      <Helmet>
+        {/* General tags */}
+        <meta name="description" content={description} />
+        <meta name="image" content={image} />
 
-      {/* Schema.org tags */}
-      <script type="application/ld+json">
-        {JSON.stringify(schemaOrgJSONLD)}
-      </script>
+        {/* Schema.org tags */}
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script>
 
-      {/* OpenGraph tags */}
-      <meta property="og:url" content={postSEO ? postURL : config.siteUrl} />
-      {postSEO ? <meta property="og:type" content="article" /> : null}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta
-        property="fb:app_id"
-        content={config.siteFBAppID ? config.siteFBAppID : ''}
-      />
+        {/* OpenGraph tags */}
+        <meta property="og:url" content={postSEO ? postURL : config.siteUrl} />
+        {postSEO ? <meta property="og:type" content="article" /> : null}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta
+          property="fb:app_id"
+          content={config.siteFBAppID ? config.siteFBAppID : ''}
+        />
 
-      {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:creator"
-        content={config.userTwitter ? config.userTwitter : ''}
-      />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:creator"
+          content={config.userTwitter ? config.userTwitter : ''}
+        />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
 
-      <link rel="icon" href="/images/favicon/favicon.ico" />
-    </Helmet>
+        <link rel="icon" href="/images/favicon/favicon.ico" />
+      </Helmet>
+    </>
   );
 };
 

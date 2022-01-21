@@ -17,8 +17,9 @@ const PostTags = ({ tags }) => {
             p="1"
             borderRadius="4px"
             mr="4px"
+            fontSize="sm"
           >
-            <small>{tag}</small>
+            {tag}
           </Box>
         ))}
     </div>

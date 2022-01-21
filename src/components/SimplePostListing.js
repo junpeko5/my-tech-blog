@@ -23,7 +23,7 @@ const PostListing = (props) => {
 
   const postList = getPostList();
   return (
-    <div>
+    <>
       {postList.map((post) => (
         <Fragment key={post.title}>
           <Box mb="6">
@@ -36,7 +36,7 @@ const PostListing = (props) => {
           </Box>
         </Fragment>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -9,13 +9,15 @@ import config from '../../data/SiteConfig';
 const Blog = (props) => {
   const postEdges = props.data.allMdx.edges;
   return (
-    <Layout>
-      <Helmet>
-        <title>{`記事一覧 | ${config.siteTitle}`}</title>
-      </Helmet>
-      <SEO />
-      <PostListing postEdges={postEdges} />
-    </Layout>
+    <>
+      <Layout>
+        <Helmet>
+          <title>{`記事一覧 | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO />
+        <PostListing postEdges={postEdges} />
+      </Layout>
+    </>
   );
 };
 

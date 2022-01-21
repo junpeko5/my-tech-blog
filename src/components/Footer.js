@@ -11,7 +11,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 
-const Footer = (props) => {
+const Footer = () => {
   const { avatar } = siteConfig;
   const { siteTitle, copyright } = siteConfig;
 

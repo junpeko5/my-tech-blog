@@ -1,38 +1,22 @@
 import React from 'react';
 import sun from '../images/sun.svg';
 import moon from '../images/moon.svg';
-import { useColorMode } from '@chakra-ui/react';
+import { Box, Image, useColorMode, Link } from '@chakra-ui/react';
 
 const ToggleMode = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDarkMode = colorMode === `dark`;
 
   const darkModeIcon = (
-    <img
-      alt="moon indicating dark mode"
-      src={moon}
-      width="20"
-      height="20"
-      role="presentation"
-      style={{
-        pointerEvents: `none`,
-        margin: 4,
-      }}
-    />
+    <Box boxSize="20px">
+      <Image alt="moon indicating dark mode" src={moon} role="presentation" />
+    </Box>
   );
 
   const lightModeIcon = (
-    <img
-      alt="sun indicating light mode"
-      src={sun}
-      width="20"
-      height="20"
-      role="presentation"
-      style={{
-        pointerEvents: `none`,
-        margin: 4,
-      }}
-    />
+    <Box boxSize="20px">
+      <Image alt="sun indicating light mode" src={sun} role="presentation" />
+    </Box>
   );
 
   let color = `#eee`;
@@ -41,9 +25,11 @@ const ToggleMode = () => {
   }
 
   return (
-    <button onClick={toggleColorMode} title="Toggle Dark Mode">
-      {isDarkMode ? <div>{darkModeIcon}</div> : <div>{lightModeIcon}</div>}
-    </button>
+    <>
+      <Link onClick={toggleColorMode} title="Toggle Dark Mode">
+        {isDarkMode ? <Box>{darkModeIcon}</Box> : <Box>{lightModeIcon}</Box>}
+      </Link>
+    </>
   );
 };
 

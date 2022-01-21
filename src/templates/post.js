@@ -37,24 +37,26 @@ const PostTemplate = (props) => {
   const MDXWrapper = (props) => <div className="mdx-prose" {...props} />;
 
   return (
-    <Layout>
-      <Helmet>
-        <title>{`${post.title} | ${config.siteTitle}`}</title>
-      </Helmet>
-      <SEO postPath={slug} postNode={postNode} postSEO />
-      <div>
-        <Heading mt="30" color="pink.600">
-          {post.title}
-        </Heading>
-        <PostHeader post={postWip[0]} />
-        <Box>
-          <Image src={post.cover} valiant="eyecatch" />
-        </Box>
-        <MDXWrapper>
-          <MDXRenderer>{postNode.body}</MDXRenderer>
-        </MDXWrapper>
-      </div>
-    </Layout>
+    <>
+      <Layout>
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO postPath={slug} postNode={postNode} postSEO />
+        <div>
+          <Heading mt="30" color="pink.600">
+            {post.title}
+          </Heading>
+          <PostHeader post={postWip[0]} />
+          <Box>
+            <Image src={post.cover} valiant="eyecatch" />
+          </Box>
+          <MDXWrapper>
+            <MDXRenderer>{postNode.body}</MDXRenderer>
+          </MDXWrapper>
+        </div>
+      </Layout>
+    </>
   );
 };
 

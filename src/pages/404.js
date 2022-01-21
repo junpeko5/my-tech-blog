@@ -7,17 +7,19 @@ import { Heading, Text } from '@chakra-ui/react';
 
 const default404 = () => {
   return (
-    <Layout>
-      <Helmet>
-        <title>{`ページが見つかりません | ${config.siteTitle}`}</title>
-      </Helmet>
-      <Heading as="h1" paddingY="20px" color="pink.600">
-        ページが見つかりません
-      </Heading>
-      <Text color="blue">
-        <Link to="/"> ← トップに戻る</Link>
-      </Text>
-    </Layout>
+    <>
+      <Layout>
+        <Helmet>
+          <title>{`ページが見つかりません | ${config.siteTitle}`}</title>
+        </Helmet>
+        <Heading as="h1" paddingY="20px" color="pink.600">
+          ページが見つかりません
+        </Heading>
+        <Text color="blue">
+          <Link to="/"> ← トップに戻る</Link>
+        </Text>
+      </Layout>
+    </>
   );
 };
 
