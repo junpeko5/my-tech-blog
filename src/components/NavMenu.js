@@ -10,7 +10,10 @@ const NavMenu = ({ menuLinks }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', navOnScroll);
-  });
+    return () => {
+      window.removeEventListener('scroll', navOnScroll);
+    };
+  }, []);
 
   const navOnScroll = () => {
     if (window.scrollY > 30) {
