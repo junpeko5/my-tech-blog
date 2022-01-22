@@ -38,11 +38,9 @@ const config = {
     },
   ],
   copyright: `Copyright © ${dateFullYear}. Junpeko5's Tech Blog`, // Copyright string for the footer of the website and RSS feed.
-  themeColor: '#D53F8C',
-  backgroundColor: '#e0e0e0',
+  themeColor: 'var(--chakra-colors-pink-600)',
+  backgroundColor: 'var(--chakra-colors-gray-100)',
 };
-
-// Validate
 
 // Make sure pathPrefix is empty if not needed
 if (config.pathPrefix === '/') {

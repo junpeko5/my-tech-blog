@@ -8,10 +8,11 @@ import BigAvatar from '../components/Avatar/BigAvatar.js';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
 import config from '../../data/SiteConfig';
 import AllCategories from '../components/AllCategories.js';
-import { Heading, Box } from '@chakra-ui/react';
+import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
 
 const Index = (props) => {
   const postEdges = props.data.allMdx.edges;
+  const color = useColorModeValue('light.primary', 'dark.primary');
 
   return (
     <>
@@ -28,12 +29,12 @@ const Index = (props) => {
           <AllCategories />
         </Box>
         <section>
-          <Heading as="h2" size="lg" my="30" color="pink.600">
+          <Heading as="h2" size="lg" my="30" color={color}>
             最近の投稿
           </Heading>
           <SimplePostListing postEdges={postEdges} />
         </section>
-        <Box size="md" color="pink.600" mt="30">
+        <Box size="md" color={color} mt="30">
           <Link to={'/blog'} margin="auto">
             記事をもっと見る →
           </Link>

@@ -19,11 +19,6 @@ const ToggleMode = () => {
     </Box>
   );
 
-  let color = `#eee`;
-  if (isDarkMode) {
-    color = `#282c35`;
-  }
-
   return (
     <>
       <Link onClick={toggleColorMode} title="Toggle Dark Mode">

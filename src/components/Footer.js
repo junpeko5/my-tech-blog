@@ -9,11 +9,13 @@ import {
   Text,
   Container,
   Center,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 const Footer = () => {
   const { avatar } = siteConfig;
   const { siteTitle, copyright } = siteConfig;
+  const color = useColorModeValue('light.primary', 'dark.primary');
 
   return (
     <>
@@ -23,7 +25,7 @@ const Footer = () => {
             as="h2"
             my="4"
             pt="4"
-            color="pink.600"
+            color={color}
             borderTop="1px solid"
             textAlign="center"
             size="md"
@@ -47,7 +49,7 @@ const Footer = () => {
           <Box my="4">
             <AvatarLinks />
           </Box>
-          <Center color="pink.600">{copyright}</Center>
+          <Center color={color}>{copyright}</Center>
         </Container>
       </Box>
     </>

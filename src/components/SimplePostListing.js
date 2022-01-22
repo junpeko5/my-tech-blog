@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PostHeader from './PostHeader.js';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
 
 const PostListing = (props) => {
+  const color = useColorModeValue('light.primary', 'dark.primary');
   const getPostList = () => {
     const postList = [];
     props.postEdges.forEach((postEdge) => {
@@ -27,7 +28,7 @@ const PostListing = (props) => {
       {postList.map((post) => (
         <>
           <Box mb="6" key={post.title}>
-            <Heading as="h3" size="md" color="pink.600">
+            <Heading as="h3" size="md" color={color}>
               <Link to={post.path}>{post.title}</Link>
             </Heading>
             <PostHeader post={post} />

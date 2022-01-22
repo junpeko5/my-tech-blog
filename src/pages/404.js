@@ -12,7 +12,7 @@ const default404 = () => {
         <Helmet>
           <title>{`ページが見つかりません | ${config.siteTitle}`}</title>
         </Helmet>
-        <Heading as="h1" size="xl" color={'pink.600'} my="32px">
+        <Heading as="h1" size="xl" color={'primary'} my="32px">
           ページが見つかりません。
         </Heading>
         <Text color="blue">

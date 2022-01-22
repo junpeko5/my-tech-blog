@@ -1,10 +1,12 @@
 import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
 
 const Thanks = () => {
+  const color = useColorModeValue('light.primary', 'dark.primary');
+
   return (
     <>
-      <Heading as="h1" size="xl" color={'pink.600'} my="32px">
+      <Heading as="h1" size="xl" color={color} my="32px">
         お問い合わせが送信されました。
       </Heading>
       <Box my={2}>お問い合わせ頂きありがとうございます。</Box>

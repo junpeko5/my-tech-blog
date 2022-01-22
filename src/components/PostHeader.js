@@ -1,13 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
 import { Link } from 'gatsby';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
 
 import PostTags from './PostTags';
 
 const PostHeader = (props) => {
   const { post } = props;
-
+  const color = useColorModeValue('light.primary', 'dark.primary');
   return (
     <>
       <Box fontSize="md" my="1">
@@ -16,7 +16,7 @@ const PostHeader = (props) => {
       <Flex alignItems="center" mb="2">
         <Link to={`/categories/${_.kebabCase(post.category)}/`}>
           <Box
-            color="pink.600"
+            color={color}
             py="1"
             px="2"
             mr="2"

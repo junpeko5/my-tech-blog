@@ -1,9 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
 import _ from 'lodash';
 
 const AllCategories = () => {
+  const color = useColorModeValue('light.primary', 'dark.primary');
   const { allMdx } = useStaticQuery(
     graphql`
       query AllSiteCategories {
@@ -40,7 +41,7 @@ const AllCategories = () => {
       <Box
         border="solid 3px"
         borderRadius="5"
-        color="pink.600"
+        color={color}
         fontSize="24"
         paddingX="2"
         paddingY="1"

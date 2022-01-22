@@ -4,7 +4,14 @@ import Recaptcha from 'react-google-recaptcha';
 import Helmet from 'react-helmet';
 import Layout from '../layout';
 import config from '../../data/SiteConfig';
-import { Box, Heading, Input, Textarea, Button } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Input,
+  Textarea,
+  Button,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
@@ -15,6 +22,8 @@ function encode(data) {
 }
 
 const Contact = (props) => {
+  const color = useColorModeValue('light.primary', 'dark.primary');
+
   const [state, setState] = useState({
     name: '',
     email: '',
@@ -72,7 +81,7 @@ const Contact = (props) => {
           <title>{`お問い合わせ | ${config.siteTitle}`}</title>
         </Helmet>
         <Box>
-          <Heading as="h1" size="xl" color={'pink.600'} my="32px">
+          <Heading as="h1" size="xl" color={color} my="32px">
             お問い合わせフォーム
           </Heading>
           <Box

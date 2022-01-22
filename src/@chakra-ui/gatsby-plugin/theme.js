@@ -2,17 +2,21 @@ import { extendTheme } from '@chakra-ui/react';
 
 const config = {
   colors: {
-    pink: {
-      50: '#FFF5F7',
-      600: '#B83280',
+    light: {
+      primary: 'var(--chakra-colors-pink-600)',
     },
+    dark: {
+      primary: 'var(--chakra-colors-pink-200)',
+    },
+    // primary: props.colorMode === 'dark' ? 'var(--chakra-colors-pink-600)' : 'var(--chakra-colors-pink-100)',
+    primary: 'var(--chakra-colors-pink-600)',
   },
   config: {
     initialColorMode: 'light',
     useSystemColorMode: false,
   },
   styles: {
-    global: {
+    global: ({ colorMode }) => ({
       '.mdx-prose': {
         h2: {
           fontSize: 'xl',
@@ -21,9 +25,11 @@ const config = {
           paddingY: 2,
           paddingX: 2,
           borderTopWidth: 5,
-          borderTopColor: 'pink.100',
+          borderTopColor:
+            colorMode === 'dark' ? 'dark.primary' : 'light.primary',
           borderBottomWidth: 5,
-          borderBottomColor: 'pink.100',
+          borderBottomColor:
+            colorMode === 'dark' ? 'dark.primary' : 'light.primary',
         },
         h3: {
           fontWeight: 'bold',
@@ -41,22 +47,24 @@ const config = {
           marginY: 4,
           paddingY: 2,
           paddingX: 4,
-          bg: 'orange.100',
+          bg: colorMode === 'dark' ? 'gray.600' : 'orange.100',
+          borderRightRadius: 'base',
           borderLeftWidth: 5,
-          borderLeftColor: 'orange.500',
+          borderLeftColor: colorMode === 'dark' ? 'orange.300' : 'orange.500',
         },
         p: {
           marginY: 2,
           code: {
-            borderRadius: 4,
-            color: 'pink.600',
+            borderRadius: 'base',
+            bgColor: colorMode === 'dark' ? 'gray.600' : 'gray.200',
+            color: colorMode === 'dark' ? 'white' : 'black',
             marginX: 1,
             paddingX: 1,
             paddingY: 1,
           },
         },
         a: {
-          color: 'blue',
+          color: colorMode === 'dark' ? 'blue.300' : 'blue',
         },
         code: {
           color: 'white',
@@ -65,7 +73,7 @@ const config = {
         },
         pre: {
           backgroundColor: 'black',
-          borderRadius: 4,
+          borderRadius: 'base',
           paddingY: 2,
           paddingX: 4,
           marginY: 2,
@@ -75,12 +83,12 @@ const config = {
           },
         },
       },
-      '.chakra-ui-dark': {
-        blockquote: {
-          color: 'black',
-        },
-      },
-    },
+      // '.chakra-ui-dark': {
+      //   blockquote: {
+      //     color: 'black',
+      //   },
+      // },
+    }),
   },
 };
 

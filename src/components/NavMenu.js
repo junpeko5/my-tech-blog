@@ -7,6 +7,7 @@ import { Flex, Text, Box, useColorModeValue } from '@chakra-ui/react';
 const NavMenu = ({ menuLinks }) => {
   const [isScroll, setIsScroll] = useState(false);
   const bg = useColorModeValue('gray.50', 'gray.700');
+  const color = useColorModeValue('light.primary', 'dark.primary');
 
   useEffect(() => {
     window.addEventListener('scroll', navOnScroll);
@@ -42,14 +43,14 @@ const NavMenu = ({ menuLinks }) => {
       >
         <Box>
           <Link to="/">
-            <Text color="pink.600">{siteTitle}</Text>
+            <Text color={color}>{siteTitle}</Text>
           </Link>
         </Box>
         <Flex alignItems="center">
           {menuLinks.map((link) => {
             return (
               <Link key={link.url} to={link.url}>
-                <Box mr="4" color="pink.600">
+                <Box mr="4" color={color}>
                   {link.name}
                 </Box>
               </Link>

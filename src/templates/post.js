@@ -6,9 +6,11 @@ import Layout from '../layout';
 import PostHeader from '../components/PostHeader.js';
 import SEO from '../components/SEO/SEO.js';
 import config from '../../data/SiteConfig';
-import { Heading, Box, Image } from '@chakra-ui/react';
+import { Heading, Box, Image, useColorModeValue } from '@chakra-ui/react';
 
 const PostTemplate = (props) => {
+  const color = useColorModeValue('light.primary', 'dark.primary');
+
   const { data, pageContext } = props;
   const { slug } = pageContext;
   const postNode = data.mdx;
@@ -44,12 +46,12 @@ const PostTemplate = (props) => {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Heading mt="30" color="pink.600">
+          <Heading mt="30" as="h2" color={color}>
             {post.title}
           </Heading>
           <PostHeader post={postWip[0]} />
           <Box>
-            <Image src={post.cover} valiant="eyecatch" />
+            <Image src={post.cover} />
           </Box>
           <MDXWrapper>
             <MDXRenderer>{postNode.body}</MDXRenderer>

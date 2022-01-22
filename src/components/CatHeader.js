@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
 
 const CatHeader = ({ category }) => {
+  const color = useColorModeValue('light.primary', 'dark.primary');
   return (
     <>
       <Flex textAlign="center" alignItems="baseline">
@@ -9,7 +10,7 @@ const CatHeader = ({ category }) => {
         <Box
           py="1px"
           px="2px"
-          color="pink.600"
+          color={color}
           borderRadius="4px"
           boxShadow="0px 1px 5px rgba(0, 0, 0, 0.5)"
           fontWeight="bold"
