@@ -1,5 +1,5 @@
-import React from 'react';
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
+import React from 'react';
 
 const CategoryHeader = ({ category }) => {
   const color = useColorModeValue('light.primary', 'dark.primary');

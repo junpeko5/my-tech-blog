@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import PostHeader from './PostHeader.js';
 import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Link } from 'gatsby';
+import React from 'react';
+
 import CategoryHeader from './CategoryHeader';
+import PostHeader from './PostHeader.js';
 import TagHeader from './TagHeader';
 
 const PostListing = (props) => {

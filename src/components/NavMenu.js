@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import ToggleMode from './ToggleMode';
-import { Link } from 'gatsby';
-import { siteTitle } from '../../data/SiteConfig';
 import { Flex, Text, Box, useColorModeValue } from '@chakra-ui/react';
+import { Link } from 'gatsby';
+import React, { useState, useEffect } from 'react';
+
+import { siteTitle } from '../../data/SiteConfig';
+import ToggleMode from './ToggleMode';
+
 
 const NavMenu = ({ menuLinks }) => {
   const [isScroll, setIsScroll] = useState(false);

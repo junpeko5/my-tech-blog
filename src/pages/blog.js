@@ -1,10 +1,11 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../layout';
+
+import config from '../../data/SiteConfig';
 import PostListing from '../components/PostListing';
 import SEO from '../components/SEO/SEO.js';
-import config from '../../data/SiteConfig';
+import Layout from '../layout';
 
 const Blog = (props) => {
   const postEdges = props.data.allMdx.edges;

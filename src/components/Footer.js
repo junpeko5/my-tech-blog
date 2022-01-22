@@ -1,6 +1,3 @@
-import React from 'react';
-import siteConfig from '../../data/SiteConfig';
-import AvatarLinks from './Avatar/AvatarLinks';
 import {
   Heading,
   Box,
@@ -11,6 +8,10 @@ import {
   Center,
   useColorModeValue,
 } from '@chakra-ui/react';
+import React from 'react';
+
+import siteConfig from '../../data/SiteConfig';
+import AvatarLinks from './Avatar/AvatarLinks';
 
 const Footer = () => {
   const { avatar } = siteConfig;

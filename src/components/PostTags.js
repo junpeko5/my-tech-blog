@@ -1,7 +1,7 @@
-import React from 'react';
-import _ from 'lodash';
-import { Link } from 'gatsby';
 import { Box } from '@chakra-ui/react';
+import { Link } from 'gatsby';
+import _ from 'lodash';
+import React from 'react';
 
 const PostTags = ({ tags }) => {
   return (

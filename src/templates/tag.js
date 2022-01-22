@@ -1,9 +1,10 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../layout';
-import PostListing from '../components/PostListing';
+
 import config from '../../data/SiteConfig';
+import PostListing from '../components/PostListing';
+import Layout from '../layout';
 
 const TagTemplate = (props) => {
   const { tag } = props.pageContext;

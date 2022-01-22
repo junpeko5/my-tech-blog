@@ -1,9 +1,11 @@
+import { Heading, Text } from '@chakra-ui/react';
+import { Link } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
-import Layout from '../layout';
-import { Link } from 'gatsby';
+
 import config from '../../data/SiteConfig';
-import { Heading, Text } from '@chakra-ui/react';
+import Layout from '../layout';
+
 
 const default404 = () => {
   return (

@@ -1,14 +1,16 @@
+import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
+import { graphql, Link } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql, Link } from 'gatsby';
-import Layout from '../layout';
-import SimplePostListing from '../components/SimplePostListing';
-import SEO from '../components/SEO/SEO.js';
-import BigAvatar from '../components/Avatar/BigAvatar.js';
-import AvatarLinks from '../components/Avatar/AvatarLinks';
+
 import config from '../../data/SiteConfig';
 import AllCategories from '../components/AllCategories.js';
-import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
+import AvatarLinks from '../components/Avatar/AvatarLinks';
+import BigAvatar from '../components/Avatar/BigAvatar.js';
+import SEO from '../components/SEO/SEO.js';
+import SimplePostListing from '../components/SimplePostListing';
+import Layout from '../layout';
+
 
 const Index = (props) => {
   const postEdges = props.data.allMdx.edges;

@@ -1,11 +1,10 @@
-/* eslint "no-console": "off" */
-
 const path = require('path');
-const _ = require('lodash');
-const moment = require('moment');
-const siteConfig = require('./data/SiteConfig');
 
 const { createFilePath } = require('gatsby-source-filesystem');
+const _ = require('lodash');
+const moment = require('moment');
+
+const siteConfig = require('./data/SiteConfig');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;

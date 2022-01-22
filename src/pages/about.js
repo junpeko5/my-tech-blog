@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
-import Layout from '../layout';
-import About from '../components/About.js';
+
 import config from '../../data/SiteConfig';
+import About from '../components/About.js';
+import Layout from '../layout';
 
 const AboutPage = () => {
   return (

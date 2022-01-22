@@ -1,9 +1,9 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
     "prettier"
   ],
   "plugins": ["react", "import", "jsx-a11y"],
@@ -16,7 +16,15 @@
     "react/prop-types": 0,
     "react/react-in-jsx-scope": "off",
     "lines-between-class-members": ["error", "always"],
-    "no-unused-vars": "off"
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+      }
+    ]
   },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
@@ -36,6 +44,7 @@
     "node": true
   },
   "globals": {
-    "graphql": false
+    "graphql": true,
+    "__PATH_PREFIX__": true
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';
+
 import config from '../../../data/SiteConfig';
 
 const SEO = (props) => {

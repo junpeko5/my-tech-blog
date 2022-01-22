@@ -1,7 +1,7 @@
-import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import _ from 'lodash';
+import React from 'react';
 
 const AllCategories = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');

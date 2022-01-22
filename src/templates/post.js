@@ -1,12 +1,14 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import { Heading, Box, Image, useColorModeValue } from '@chakra-ui/react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import Layout from '../layout';
+import React from 'react';
+import Helmet from 'react-helmet';
+
+import config from '../../data/SiteConfig';
 import PostHeader from '../components/PostHeader.js';
 import SEO from '../components/SEO/SEO.js';
-import config from '../../data/SiteConfig';
-import { Heading, Box, Image, useColorModeValue } from '@chakra-ui/react';
+import Layout from '../layout';
+
 
 const PostTemplate = (props) => {
   const color = useColorModeValue('light.primary', 'dark.primary');

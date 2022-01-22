@@ -1,7 +1,7 @@
-import React from 'react';
-import { FaSun } from '@react-icons/all-files/fa/FaSun';
-import { FaMoon } from '@react-icons/all-files/fa/FaMoon';
 import { Box, useColorMode, Link } from '@chakra-ui/react';
+import { FaMoon } from '@react-icons/all-files/fa/FaMoon';
+import { FaSun } from '@react-icons/all-files/fa/FaSun';
+import React from 'react';
 
 const ToggleMode = () => {
   const { colorMode, toggleColorMode } = useColorMode();

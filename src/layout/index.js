@@ -1,11 +1,12 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import config from '../../data/SiteConfig';
-import NavMenu from '../components/NavMenu';
 import { Container, useColorModeValue, Flex } from '@chakra-ui/react';
 import { ColorModeScript, Box } from '@chakra-ui/react';
-import theme from './../@chakra-ui/gatsby-plugin/theme';
+import React from 'react';
+import Helmet from 'react-helmet';
+
+import config from '../../data/SiteConfig';
 import Footer from '../components/Footer';
+import NavMenu from '../components/NavMenu';
+import theme from './../@chakra-ui/gatsby-plugin/theme';
 
 const MainLayout = (props) => {
   const { children } = props;

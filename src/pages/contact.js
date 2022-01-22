@@ -1,9 +1,3 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import Recaptcha from 'react-google-recaptcha';
-import Helmet from 'react-helmet';
-import Layout from '../layout';
-import config from '../../data/SiteConfig';
 import {
   Box,
   Heading,
@@ -12,6 +6,13 @@ import {
   Button,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { navigate } from 'gatsby';
+import React, { useState } from 'react';
+import Recaptcha from 'react-google-recaptcha';
+import Helmet from 'react-helmet';
+
+import config from '../../data/SiteConfig';
+import Layout from '../layout';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
@@ -21,7 +22,7 @@ function encode(data) {
     .join('&');
 }
 
-const Contact = (props) => {
+const Contact = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
 
   const [state, setState] = useState({

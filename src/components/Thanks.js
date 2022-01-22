@@ -1,5 +1,5 @@
-import React from 'react';
 import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
+import React from 'react';
 
 const Thanks = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
