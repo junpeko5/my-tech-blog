@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
 import PostListing from '../components/PostListing';
-import TagHeader from '../components/TagHeader';
 import config from '../../data/SiteConfig';
 
 const TagTemplate = (props) => {
@@ -15,8 +14,7 @@ const TagTemplate = (props) => {
         <Helmet>
           <title>{`Posts tagged as "${tag}" | ${config.siteTitle}`}</title>
         </Helmet>
-        <TagHeader tag={tag} />
-        <PostListing postEdges={postEdges} />
+        <PostListing postEdges={postEdges} tag={tag} />
       </Layout>
     </>
   );

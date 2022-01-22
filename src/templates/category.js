@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
 import PostListing from '../components/PostListing';
-import CatHeader from '../components/CatHeader';
 import config from '../../data/SiteConfig';
 
 const CategoryTemplate = (props) => {
@@ -15,8 +14,7 @@ const CategoryTemplate = (props) => {
         <Helmet>
           <title>{`Posts in category "${category}" | ${config.siteTitle}`}</title>
         </Helmet>
-        <CatHeader category={category} />
-        <PostListing postEdges={postEdges} />
+        <PostListing postEdges={postEdges} category={category} />
       </Layout>
     </>
   );

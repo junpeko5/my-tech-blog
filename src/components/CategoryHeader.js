@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
 
-const CatHeader = ({ category }) => {
+const CategoryHeader = ({ category }) => {
   const color = useColorModeValue('light.primary', 'dark.primary');
   return (
     <>
-      <Flex textAlign="center" alignItems="baseline">
-        <Box mr="1">Post(s) category as</Box>
+      <Flex textAlign="center" alignItems="center">
+        <Box mr="1">カテゴリー</Box>
         <Box
           py="1px"
           px="2px"
@@ -17,9 +17,10 @@ const CatHeader = ({ category }) => {
         >
           {category}
         </Box>
+        <Box>の記事一覧</Box>
       </Flex>
     </>
   );
 };
 
-export default CatHeader;
+export default CategoryHeader;

@@ -5,8 +5,8 @@ const TagHeader = ({ tag }) => {
   const color = useColorModeValue('light.primary', 'dark.primary');
   return (
     <>
-      <Flex textAlign="center" alignItems="baseline">
-        <Box mr="1">Post(s) tagged as</Box>
+      <Flex textAlign="center" alignItems="center">
+        <Box mr="1">タグ</Box>
         <Box
           py="1px"
           px="2px"
@@ -17,6 +17,7 @@ const TagHeader = ({ tag }) => {
         >
           {tag}
         </Box>
+        <Box>の記事一覧</Box>
       </Flex>
     </>
   );
