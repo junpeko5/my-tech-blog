@@ -1,12 +1,14 @@
 import React from 'react';
-import { IconContext } from 'react-icons';
+import { IconContext } from '@react-icons/all-files';
 import {
   Flex,
   Center,
   useColorModeValue,
   Link as ChakraLink,
 } from '@chakra-ui/react';
-import { AiFillGithub, AiFillTwitterCircle, AiFillMail } from 'react-icons/ai';
+import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
+import { AiFillTwitterCircle } from '@react-icons/all-files/ai/AiFillTwitterCircle';
+import { AiFillMail } from '@react-icons/all-files/ai/AiFillMail';
 import { Link } from 'gatsby';
 
 const AvatarLinks = () => {
