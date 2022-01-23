@@ -4,7 +4,6 @@ import React from 'react';
 
 import PostHeader from './PostHeader.js';
 
-
 const PostListing = (props) => {
   const color = useColorModeValue('light.primary', 'dark.primary');
   const getPostList = () => {
@@ -28,14 +27,12 @@ const PostListing = (props) => {
   return (
     <>
       {postList.map((post) => (
-        <>
-          <Box mb="6" key={post.title}>
-            <Heading as="h3" size="md" color={color}>
-              <Link to={post.path}>{post.title}</Link>
-            </Heading>
-            <PostHeader post={post} />
-          </Box>
-        </>
+        <Box mb="6" key={post.title}>
+          <Heading as="h3" size="md" color={color}>
+            <Link to={post.path}>{post.title}</Link>
+          </Heading>
+          <PostHeader post={post} />
+        </Box>
       ))}
     </>
   );
