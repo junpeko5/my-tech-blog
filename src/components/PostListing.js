@@ -39,16 +39,13 @@ const PostListing = (props) => {
         <TagHeader tag={tag} />
       )}
       {postList.map((post) => (
-        <Box key={post.title} size="md" mt="30">
+        <Box key={post.title} size="md" mt={'30'}>
           <Link to={post.path}>
             <Heading mb="-0.1px" fontSize="24px" color={color}>
               {post.title}
             </Heading>
           </Link>
           <PostHeader post={post} />
-          <Box as="p" mt="4">
-            {post.excerpt}
-          </Box>
         </Box>
       ))}
     </>
