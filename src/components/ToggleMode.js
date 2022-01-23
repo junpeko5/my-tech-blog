@@ -11,11 +11,11 @@ const ToggleMode = () => {
     <>
       <Link onClick={toggleColorMode} title="Toggle Dark Mode">
         {isDarkMode ? (
-          <Box>
+          <Box color={'gray.50'}>
             <FaMoon />
           </Box>
         ) : (
-          <Box>
+          <Box color={'gray.600'}>
             <FaSun />
           </Box>
         )}

@@ -12,12 +12,12 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 const AvatarLinks = () => {
-  const color = useColorModeValue('gray.700', 'gray.50');
+  const color = useColorModeValue('gray.600', 'gray.50');
   return (
     <>
       <Center>
         <IconContext.Provider value={{ color: color, size: '30px' }}>
-          <Flex mx="2" gap="6">
+          <Flex mx="2" gap="6" color={color}>
             <ChakraLink href={'https://github.com/junpeko5/'}>
               <AiFillGithub />
             </ChakraLink>
