@@ -23,12 +23,9 @@ const config = {
           fontWeight: 'bold',
           marginY: 6,
           paddingY: 2,
-          paddingX: 2,
-          borderTopWidth: 5,
-          borderTopColor:
-            colorMode === 'dark' ? 'dark.primary' : 'light.primary',
-          borderBottomWidth: 5,
-          borderBottomColor:
+          paddingLeft: 4,
+          borderLeftWidth: 5,
+          borderLeftColor:
             colorMode === 'dark' ? 'dark.primary' : 'light.primary',
         },
         h3: {
