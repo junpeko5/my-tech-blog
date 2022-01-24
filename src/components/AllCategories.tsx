@@ -1,9 +1,9 @@
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import _ from 'lodash';
-import React from 'react';
+import React, { FC } from 'react';
 
-const AllCategories = () => {
+const AllCategories: FC = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
   const { allMdx } = useStaticQuery<GatsbyTypes.AllSiteCategoriesQuery>(
     graphql`
@@ -27,12 +27,12 @@ const AllCategories = () => {
   // this erases the duplicates of categories that I have
   edges.forEach((element) => {
     const category = element.node.frontmatter;
-    if (category.category) {
+    if (category?.category) {
       categorySet.add(category.category);
     }
   });
   // this will pass that into an array so that I can loop
-  const array = [];
+  const array: unknown[] = [];
   categorySet.forEach((cat) => {
     array.push(cat);
   });

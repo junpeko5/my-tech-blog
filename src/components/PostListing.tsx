@@ -1,12 +1,12 @@
 import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 
 import CategoryHeader from './CategoryHeader';
-import PostHeader from './PostHeader.tsx';
+import PostHeader from './PostHeader';
 import TagHeader from './TagHeader';
 
-const PostListing = (props) => {
+const PostListing: FC = (props) => {
   const { category, tag } = props;
   const getPostList = () => {
     const postList = [];

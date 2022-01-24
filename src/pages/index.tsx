@@ -1,17 +1,19 @@
 import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
-import { graphql, Link } from 'gatsby';
-import React from 'react';
+import { graphql, Link, PageProps } from 'gatsby';
+import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import config from '../../data/SiteConfig';
 import AllCategories from '../components/AllCategories';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
 import BigAvatar from '../components/Avatar/BigAvatar';
-import SEO from '../components/SEO/SEO.js';
+import SEO from '../components/SEO/SEO';
 import SimplePostListing from '../components/SimplePostListing';
 import Layout from '../layout';
 
-const Index = (props) => {
+const Index: FC<PageProps<GatsbyTypes.IndexQueryQuery>> = (props) => {
   const postEdges = props.data.allMdx.edges;
   const color = useColorModeValue('light.primary', 'dark.primary');
 
@@ -36,9 +38,7 @@ const Index = (props) => {
           <SimplePostListing postEdges={postEdges} />
         </section>
         <Box size="md" color={color} mt="30">
-          <Link to={'/blog'} margin="auto">
-            記事をもっと見る →
-          </Link>
+          <Link to={'/blog'}>記事をもっと見る →</Link>
         </Box>
       </Layout>
     </>

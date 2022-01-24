@@ -1,9 +1,9 @@
 import { Heading, useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
+import React, { FC } from 'react';
 
 import BigAvatar from './Avatar/BigAvatar';
 
-const About = () => {
+const About: FC = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
 
   return (

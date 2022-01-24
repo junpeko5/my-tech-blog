@@ -8,12 +8,14 @@ import {
   Center,
   useColorModeValue,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { FC } from 'react';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import siteConfig from '../../data/SiteConfig';
 import AvatarLinks from './Avatar/AvatarLinks';
 
-const Footer = () => {
+const Footer: FC = () => {
   const { avatar } = siteConfig;
   const { siteTitle, copyright } = siteConfig;
   const color = useColorModeValue('light.primary', 'dark.primary');

@@ -1,7 +1,7 @@
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
+import React, { FC } from 'react';
 
-const TagHeader = ({ tag }) => {
+const TagHeader: FC = ({ tag }) => {
   const color = useColorModeValue('light.primary', 'dark.primary');
   return (
     <>

@@ -88,7 +88,9 @@ export const createPages: GatsbyNode['createPages'] = async ({
   const tagPage = path.resolve('src/templates/tag.tsx');
   const categoryPage = path.resolve('src/templates/category.tsx');
 
-  const markdownQueryResult = await graphql(
+  const markdownQueryResult = await graphql<{
+    allMdx: Pick<GatsbyTypes.Query['allMdx'], 'nodes'>;
+  }>(
     `
       {
         allMdx {
@@ -119,7 +121,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.allMdx.edges;
+  const postsEdges = markdownQueryResult.data?.allMdx.edges;
 
   postsEdges.sort((postA, postB) => {
     const dateA = moment(postA.node.frontmatter.date, config.dateFromFormat);

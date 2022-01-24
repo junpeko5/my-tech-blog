@@ -1,13 +1,14 @@
 import { Heading, Text } from '@chakra-ui/react';
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import config from '../../data/SiteConfig';
 import Layout from '../layout';
 
-
-const default404 = () => {
+const default404: FC = () => {
   return (
     <>
       <Layout>

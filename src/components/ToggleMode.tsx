@@ -1,9 +1,9 @@
 import { Box, useColorMode, Link } from '@chakra-ui/react';
 import { FaMoon } from '@react-icons/all-files/fa/FaMoon';
 import { FaSun } from '@react-icons/all-files/fa/FaSun';
-import React from 'react';
+import React, { FC } from 'react';
 
-const ToggleMode = () => {
+const ToggleMode: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDarkMode = colorMode === `dark`;
 

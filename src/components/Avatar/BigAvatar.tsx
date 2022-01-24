@@ -1,9 +1,11 @@
 import { Box, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
+import React, { FC } from 'react';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import config from '../../../data/SiteConfig';
 
-const BigAvatar = () => {
+const BigAvatar: FC = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
 
   return (

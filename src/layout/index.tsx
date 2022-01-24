@@ -1,6 +1,6 @@
 import { Container, useColorModeValue, Flex } from '@chakra-ui/react';
 import { ColorModeScript, Box } from '@chakra-ui/react';
-import React from 'react';
+import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
@@ -8,7 +8,7 @@ import theme from '../@chakra-ui/gatsby-plugin/theme';
 import Footer from '../components/Footer';
 import NavMenu from '../components/NavMenu';
 
-const MainLayout = (props) => {
+const MainLayout: FC = (props) => {
   const { children } = props;
   const bg = useColorModeValue('gray.50', 'gray.700');
   const color = useColorModeValue('gray.900', 'white');
