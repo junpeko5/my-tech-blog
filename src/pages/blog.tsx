@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
 import PostListing from '../components/PostListing';
-import SEO from '../components/SEO/SEO.js';
+import SEO from '../components/SEO/SEO';
 import Layout from '../layout';
 
 const Blog = (props) => {

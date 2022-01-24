@@ -5,10 +5,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
-import PostHeader from '../components/PostHeader.js';
+import PostHeader from '../components/PostHeader.tsx';
 import SEO from '../components/SEO/SEO.js';
 import Layout from '../layout';
-
 
 const PostTemplate = (props) => {
   const color = useColorModeValue('light.primary', 'dark.primary');

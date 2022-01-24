@@ -4,13 +4,12 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
-import AllCategories from '../components/AllCategories.js';
+import AllCategories from '../components/AllCategories';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
-import BigAvatar from '../components/Avatar/BigAvatar.js';
+import BigAvatar from '../components/Avatar/BigAvatar';
 import SEO from '../components/SEO/SEO.js';
 import SimplePostListing from '../components/SimplePostListing';
 import Layout from '../layout';
-
 
 const Index = (props) => {
   const postEdges = props.data.allMdx.edges;

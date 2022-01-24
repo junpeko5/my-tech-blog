@@ -2,9 +2,8 @@ import { Flex, Text, Box, useColorModeValue } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import React, { useState, useEffect } from 'react';
 
-import { siteTitle } from '../../data/SiteConfig';
+import config from '../../data/SiteConfig';
 import ToggleMode from './ToggleMode';
-
 
 const NavMenu = ({ menuLinks }) => {
   const [isScroll, setIsScroll] = useState(false);
@@ -45,7 +44,7 @@ const NavMenu = ({ menuLinks }) => {
       >
         <Box>
           <Link to="/">
-            <Text color={color}>{siteTitle}</Text>
+            <Text color={color}>{config.siteTitle}</Text>
           </Link>
         </Box>
         <Flex alignItems="center">

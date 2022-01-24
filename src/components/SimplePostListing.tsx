@@ -2,7 +2,7 @@ import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import React from 'react';
 
-import PostHeader from './PostHeader.js';
+import PostHeader from './PostHeader';
 
 const PostListing = (props) => {
   const color = useColorModeValue('light.primary', 'dark.primary');

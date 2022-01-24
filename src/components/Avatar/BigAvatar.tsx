@@ -1,7 +1,7 @@
 import { Box, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 
-import { avatar } from '../../../data/SiteConfig';
+import config from '../../../data/SiteConfig';
 
 const BigAvatar = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
@@ -9,12 +9,12 @@ const BigAvatar = () => {
   return (
     <>
       <Box>
-        <Image src={avatar.photo} alt="profile image" />
+        <Image src={config.avatar.photo} alt="profile image" />
         <Heading as="h2" color={color} my="32px">
           Hello World!!
         </Heading>
       </Box>
-      <Text my="16px">{avatar.description}</Text>
+      <Text my="16px">{config.avatar.description}</Text>
     </>
   );
 };

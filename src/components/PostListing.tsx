@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import CategoryHeader from './CategoryHeader';
-import PostHeader from './PostHeader.js';
+import PostHeader from './PostHeader.tsx';
 import TagHeader from './TagHeader';
 
 const PostListing = (props) => {

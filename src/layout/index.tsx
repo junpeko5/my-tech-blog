@@ -4,9 +4,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
+import theme from '../@chakra-ui/gatsby-plugin/theme';
 import Footer from '../components/Footer';
 import NavMenu from '../components/NavMenu';
-import theme from './../@chakra-ui/gatsby-plugin/theme';
 
 const MainLayout = (props) => {
   const { children } = props;

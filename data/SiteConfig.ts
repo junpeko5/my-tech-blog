@@ -58,4 +58,4 @@ if (config.siteUrl.substr(-1) === '/')
 if (config.siteRss && config.siteRss[0] !== '/')
   config.siteRss = `/${config.siteRss}`;
 
-module.exports = config;
+export default config;

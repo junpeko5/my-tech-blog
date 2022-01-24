@@ -5,7 +5,7 @@ import React from 'react';
 
 const AllCategories = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
-  const { allMdx } = useStaticQuery(
+  const { allMdx } = useStaticQuery<GatsbyTypes.AllSiteCategoriesQuery>(
     graphql`
       query AllSiteCategories {
         allMdx {

@@ -2,20 +2,20 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
-import About from '../components/About.js';
+import Thanks from '../components/Thanks';
 import Layout from '../layout';
 
-const AboutPage = () => {
+const ThanksPage = () => {
   return (
     <>
       <Layout>
         <Helmet>
-          <title>{`プロフィール | ${config.siteTitle}`}</title>
+          <title>{`お問い合わせ完了 | ${config.siteTitle}`}</title>
         </Helmet>
-        <About />
+        <Thanks />
       </Layout>
     </>
   );
 };
 
-export default AboutPage;
+export default ThanksPage;
