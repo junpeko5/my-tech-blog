@@ -4,16 +4,13 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import config from '../../data/SiteConfig';
 import PostHeader from '../components/PostHeader';
 import SEO from '../components/SEO/SEO';
 import Layout from '../layout';
 
-import BlogPostBySlugQuery = GatsbyTypes.BlogPostBySlugQuery;
-
-const PostTemplate: FC<PageProps<BlogPostBySlugQuery>> = (props) => {
+const PostTemplate: FC = (props) => {
   const color = useColorModeValue('light.primary', 'dark.primary');
 
   const { data, pageContext } = props;

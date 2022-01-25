@@ -2,3 +2,5 @@ public
 static
 .cache
 content
+node_modules/
+**/__generated__/

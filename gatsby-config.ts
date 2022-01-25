@@ -1,8 +1,13 @@
+import type { PluginOptions as TypegenPluginOptions } from 'gatsby-plugin-typegen/types';
 import SiteConfig from './data/SiteConfig';
+import { GatsbyConfig } from 'gatsby';
 
-import type { GatsbyConfig } from 'gatsby';
+type Plugin =
+  | string
+  | { resolve: string; options: object }
+  | { resolve: `gatsby-plugin-typegen`; options: TypegenPluginOptions };
 
-const plugins: GatsbyConfig['plugins'] = [
+const plugins: Plugin[] = [
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-lodash',
   '@chakra-ui/gatsby-plugin',
@@ -91,7 +96,12 @@ const plugins: GatsbyConfig['plugins'] = [
     },
   },
   'gatsby-plugin-offline',
-  'gatsby-plugin-typegen',
+  {
+    resolve: `gatsby-plugin-typegen`,
+    options: {
+      // ... customize options here
+    },
+  },
 ];
 const siteMetadata: GatsbyConfig['siteMetadata'] = {
   siteUrl: SiteConfig.siteUrl,
@@ -105,8 +115,7 @@ const siteMetadata: GatsbyConfig['siteMetadata'] = {
   },
 };
 
-const config: GatsbyConfig = {
-  siteMetadata,
+module.exports = {
   plugins,
+  siteMetadata,
 };
-export default config;

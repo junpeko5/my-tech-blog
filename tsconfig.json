@@ -1,5 +1,9 @@
 {
-  "include": ["./src/**/*"],
+  "include": [
+    "./src/**/*",
+    "./config/*.ts"
+  ],
+  "exclude": ["node_modules", "public", ".cache"],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -12,5 +16,10 @@
     "noEmit": true,
     "skipLibCheck": true,
     "moduleResolution": "node"
-  }
+  },
+  "typeRoots": [
+    "src/@types",
+    "node_modules/@types",
+    "src/__generated__" /*gatsby-plugin-typegen */,
+  ]
 }

@@ -8,9 +8,7 @@ import config from '../../data/SiteConfig';
 import PostListing from '../components/PostListing';
 import Layout from '../layout';
 
-import TagPageQuery = GatsbyTypes.TagPageQuery;
-
-const TagTemplate: FC<PageProps<TagPageQuery>> = (props) => {
+const TagTemplate: FC = (props) => {
   const { tag } = props.pageContext;
   const postEdges = props.data.allMdx.edges;
   return (

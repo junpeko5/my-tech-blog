@@ -38,8 +38,8 @@ const config = {
     },
   ],
   copyright: `Copyright © ${dateFullYear}. Junpeko5's Tech Blog`, // Copyright string for the footer of the website and RSS feed.
-  themeColor: 'var(--chakra-colors-pink-600)',
-  backgroundColor: 'var(--chakra-colors-gray-100)',
+  themeColor: '#FED7E2', // 'var(--chakra-colors-pink-600)',
+  backgroundColor: '#EDF2F7', // 'var(--chakra-colors-gray-100)',
 };
 
 // Make sure pathPrefix is empty if not needed
@@ -58,4 +58,4 @@ if (config.siteUrl.substr(-1) === '/')
 if (config.siteRss && config.siteRss[0] !== '/')
   config.siteRss = `/${config.siteRss}`;
 
-module.exports = config;
+export default config;

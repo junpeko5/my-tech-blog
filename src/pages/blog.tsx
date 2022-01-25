@@ -9,9 +9,7 @@ import PostListing from '../components/PostListing';
 import SEO from '../components/SEO/SEO';
 import Layout from '../layout';
 
-import BlogQueryQuery = GatsbyTypes.BlogQueryQuery;
-
-const Blog: FC<PageProps<BlogQueryQuery>> = (props) => {
+const Blog: FC = (props) => {
   const postEdges = props.data.allMdx.edges;
   return (
     <>
