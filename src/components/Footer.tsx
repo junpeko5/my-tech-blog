@@ -10,8 +10,6 @@ import {
 } from '@chakra-ui/react';
 import React, { FC } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import siteConfig from '../../data/SiteConfig';
 import AvatarLinks from './Avatar/AvatarLinks';
 

@@ -2,8 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import config from '../../../data/SiteConfig';
 
 const SEO = (props) => {

@@ -4,7 +4,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-// @ts-ignore
 import config from '../../data/SiteConfig';
 import PostHeader from '../components/PostHeader';
 import SEO from '../components/SEO/SEO';

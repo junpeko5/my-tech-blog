@@ -2,8 +2,6 @@ import { Flex, Text, Box, useColorModeValue } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import React, { useState, useEffect } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import config from '../../data/SiteConfig';
 import ToggleMode from './ToggleMode';
 

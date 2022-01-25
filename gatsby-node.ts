@@ -1,16 +1,15 @@
-const path = require('path');
+import path from 'path';
+import { createFilePath } from 'gatsby-source-filesystem';
+import _ from 'lodash';
+import moment from 'moment';
 
-const { createFilePath } = require('gatsby-source-filesystem');
-const _ = require('lodash');
-const moment = require('moment');
+import siteConfig from './data/SiteConfig';
 
-const siteConfig = require('./data/SiteConfig');
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
+// @ts-ignore
+export const onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'Mdx') {
     const value = createFilePath({ node, getNode });
-
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
@@ -74,7 +73,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+// @ts-ignore
+export const createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postPage = path.resolve('src/templates/post.tsx');
   const tagPage = path.resolve('src/templates/tag.tsx');
@@ -113,6 +113,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const postsEdges = markdownQueryResult.data.allMdx.edges;
 
+  // @ts-ignore
   postsEdges.sort((postA, postB) => {
     const dateA = moment(
       postA.node.frontmatter.date,
@@ -130,8 +131,10 @@ exports.createPages = async ({ graphql, actions }) => {
     return 0;
   });
 
+  // @ts-ignore
   postsEdges.forEach((edge, index) => {
     if (edge.node.frontmatter.tags) {
+      // @ts-ignore
       edge.node.frontmatter.tags.forEach((tag) => {
         tagSet.add(tag);
       });
@@ -161,6 +164,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   tagSet.forEach((tag) => {
     createPage({
+      // @ts-ignore
       path: `/tags/${_.kebabCase(tag)}/`,
       component: tagPage,
       context: {
@@ -170,6 +174,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
   categorySet.forEach((category) => {
     createPage({
+      // @ts-ignore
       path: `/categories/${_.kebabCase(category)}/`,
       component: categoryPage,
       context: {

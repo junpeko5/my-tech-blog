@@ -3,8 +3,6 @@ import { graphql, Link, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import config from '../../data/SiteConfig';
 import AllCategories from '../components/AllCategories';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
