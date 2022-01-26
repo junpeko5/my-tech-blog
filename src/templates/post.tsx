@@ -9,53 +9,53 @@ import PostHeader from '../components/PostHeader';
 import SEO from '../components/SEO/SEO';
 import Layout from '../layout';
 
-const PostTemplate: FC = (props) => {
+type Context = {
+  slug: string;
+  nexttitle: string;
+  nextslug: string;
+  prevtitle: string;
+  prevslug: string;
+};
+const MDXWrapper: FC = (props) => <div className="mdx-prose" {...props} />;
+
+const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
+  props
+) => {
+  const { pageContext, data } = props;
   const color = useColorModeValue('light.primary', 'dark.primary');
-
-  const { data, pageContext } = props;
-  const { slug } = pageContext;
+  const { slug } = pageContext as Context;
   const postNode = data.mdx;
-  const post = postNode.frontmatter;
-  if (!post.id) {
-    post.id = slug;
-  }
-  if (!post.category_id) {
-    post.category_id = config.postDefaultCategoryID;
-  }
+  const post = postNode?.frontmatter;
 
-  //transforming my data from post into and Array so that I can loop through it
   const postNodeWip = [];
   postNodeWip.push(postNode);
 
-  const postWip = [];
-  postNodeWip.forEach((post) => {
-    postWip.push({
-      category: post.frontmatter.category,
-      timeToRead: post.timeToRead,
-      tags: post.frontmatter.tags,
-      date: post.fields.date,
-    });
+  const postWip = postNodeWip.map((post) => {
+    return {
+      category: post?.frontmatter?.category,
+      timeToRead: post?.timeToRead,
+      tags: post?.frontmatter?.tags,
+      date: post?.fields?.date,
+    };
   });
-
-  const MDXWrapper = (props) => <div className="mdx-prose" {...props} />;
 
   return (
     <>
       <Layout>
         <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <title>{`${post?.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
           <Heading mt="30" as="h2" color={color}>
-            {post.title}
+            {post?.title}
           </Heading>
           <PostHeader post={postWip[0]} />
           <Box>
-            <Image src={post.cover} />
+            <Image src={post?.cover} />
           </Box>
           <MDXWrapper>
-            <MDXRenderer>{postNode.body}</MDXRenderer>
+            {postNode?.body && <MDXRenderer>{postNode.body}</MDXRenderer>}
           </MDXWrapper>
         </div>
       </Layout>

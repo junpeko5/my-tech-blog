@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
 import Thanks from '../components/Thanks';
 import Layout from '../layout';
 
-const ThanksPage = () => {
+const ThanksPage: FC = () => {
   return (
     <>
       <Layout>

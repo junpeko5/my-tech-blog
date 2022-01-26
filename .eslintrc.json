@@ -66,7 +66,6 @@
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "tsconfigRootDir": "__dirname",
         "ecmaFeatures": {
           "jsx": true
         },

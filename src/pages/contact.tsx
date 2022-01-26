@@ -7,14 +7,14 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { navigate } from 'gatsby';
-import React, { useState } from 'react';
+import React, { ChangeEvent, FC, SyntheticEvent, useState } from 'react';
 import Recaptcha from 'react-google-recaptcha';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
 import Layout from '../layout';
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY as string;
 
 function encode(data) {
   return Object.keys(data)
@@ -22,7 +22,7 @@ function encode(data) {
     .join('&');
 }
 
-const Contact = () => {
+const Contact: FC = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');
 
   const [state, setState] = useState({
@@ -31,17 +31,32 @@ const Contact = () => {
     message: '',
     'g-recaptcha-response': '',
   });
-  const handleChange = (e) => {
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  const handleRecaptcha = (value) => {
+  const handleRecaptcha = (value: string) => {
     setState({ ...state, 'g-recaptcha-response': value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    const form = e.target;
+
+    const target = e.target as typeof e.target & {
+      'form-name': { value: string };
+      action: { value: string };
+    };
+
+    if (target === null) {
+      return;
+    }
+
+    const formName = target['form-name'].value;
+    const action = target.action.value;
+
     if (state.name === '') {
       alert('お名前を入力してください。');
       return;
@@ -65,11 +80,11 @@ const Contact = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': form.getAttribute('name'),
+          'form-name': formName,
           ...state,
         }),
       });
-      await navigate(form.getAttribute('action'));
+      await navigate(action);
     } catch (e) {
       alert(e);
     }
@@ -133,7 +148,7 @@ const Contact = () => {
               name="message"
               value={state.message}
               onChange={handleChange}
-              rows="6"
+              rows={6}
               mb="4"
             />
             <Recaptcha sitekey={RECAPTCHA_KEY} onChange={handleRecaptcha} />

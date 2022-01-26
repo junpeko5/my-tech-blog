@@ -7,7 +7,7 @@ import PostListing from '../components/PostListing';
 import SEO from '../components/SEO/SEO';
 import Layout from '../layout';
 
-const Blog: FC = (props) => {
+const Blog: FC<PageProps<GatsbyTypes.BlogQueryQuery>> = (props) => {
   const postEdges = props.data.allMdx.edges;
   return (
     <>

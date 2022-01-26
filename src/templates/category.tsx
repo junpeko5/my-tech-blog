@@ -1,14 +1,21 @@
-import { graphql } from 'gatsby';
-import React from 'react';
+import { graphql, PageProps } from 'gatsby';
+import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
 import PostListing from '../components/PostListing';
 import Layout from '../layout';
 
-const CategoryTemplate = (props) => {
-  const { category } = props.pageContext;
-  const postEdges = props.data.allMdx.edges;
+type Category = {
+  category: string;
+};
+
+const CategoryTemplate: FC<PageProps<GatsbyTypes.CategoryPageQuery>> = ({
+  pageContext,
+  data,
+}) => {
+  const { category } = pageContext as Category;
+  const postEdges = data.allMdx.edges;
   return (
     <>
       <Layout>

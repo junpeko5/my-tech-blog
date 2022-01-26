@@ -22,20 +22,21 @@ const AllCategories: FC = () => {
   );
 
   const { edges } = allMdx;
+  const categorySet = new Set<string>();
 
-  const categorySet = new Set();
-  // this erases the duplicates of categories that I have
+  // 重複したカテゴリがある場合、重複を除くためにSetオブジェクトに追加する
   edges.forEach((element) => {
     const category = element.node.frontmatter;
     if (category?.category) {
       categorySet.add(category.category);
     }
   });
-  // this will pass that into an array so that I can loop
-  const array: unknown[] = [];
+
+  const array: string[] = [];
   categorySet.forEach((cat) => {
     array.push(cat);
   });
+
   const renderCategories = array.map((cat) => (
     <Link to={`/categories/${_.kebabCase(cat)}/`} key={cat}>
       <Box
