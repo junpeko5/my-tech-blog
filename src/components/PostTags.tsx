@@ -1,9 +1,13 @@
 import { Box } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import _ from 'lodash';
-import React from 'react';
+import React, { FC } from 'react';
 
-const PostTags = ({ tags }) => {
+type Props = {
+  tags: [];
+};
+
+const PostTags: FC<Props> = ({ tags }) => {
   return (
     <>
       {tags &&
