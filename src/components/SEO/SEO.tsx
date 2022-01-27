@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';
 
 import config from '../../../data/SiteConfig';
 
-const SEO = (props) => {
+type Props = {
+  postNode?: GatsbyTypes.BlogPostBySlugQuery['mdx'];
+  postPath?: string;
+  postSEO?: boolean;
+};
+
+const SEO: FC<Props> = (props) => {
   const { postNode, postPath, postSEO } = props;
   let title;
   let description;
@@ -12,13 +18,14 @@ const SEO = (props) => {
   let postURL;
 
   if (postSEO) {
-    const postMeta = postNode.frontmatter;
-    ({ title } = postMeta);
-    description = postMeta.description
-      ? postMeta.description
-      : postNode.excerpt;
-    image = postMeta.cover;
-    postURL = urljoin(config.siteUrl, postPath, '/');
+    const postMeta = postNode?.frontmatter;
+    title = postMeta?.title;
+    image = postMeta?.cover;
+    if (postPath) {
+      postURL = urljoin(config.siteUrl, postPath, '/');
+    } else {
+      postURL = urljoin(config.siteUrl, '/');
+    }
   } else {
     title = config.siteTitle;
     description = config.siteDescription;
@@ -26,65 +33,20 @@ const SEO = (props) => {
   }
 
   if (
-    !image.match(
+    !image?.match(
       `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
-    )
+    ) &&
+    image
   ) {
     image = urljoin(config.siteUrl, image);
   }
 
-  const schemaOrgJSONLD = [
-    {
-      '@context': 'http://schema.org',
-      '@type': 'WebSite',
-      url: config.siteUrl,
-      name: title,
-      alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-    },
-  ];
-  if (postSEO) {
-    schemaOrgJSONLD.push(
-      {
-        '@context': 'http://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            item: {
-              '@id': postURL,
-              name: title,
-              image,
-            },
-          },
-        ],
-      },
-      {
-        '@context': 'http://schema.org',
-        '@type': 'BlogPosting',
-        url: config.siteUrl,
-        name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-        headline: title,
-        image: {
-          '@type': 'ImageObject',
-          url: image,
-        },
-        description,
-      }
-    );
-  }
   return (
     <>
       <Helmet>
         {/* General tags */}
         <meta name="description" content={description} />
         <meta name="image" content={image} />
-
-        {/* Schema.org tags */}
-        <script type="application/ld+json">
-          {JSON.stringify(schemaOrgJSONLD)}
-        </script>
 
         {/* OpenGraph tags */}
         <meta property="og:url" content={postSEO ? postURL : config.siteUrl} />

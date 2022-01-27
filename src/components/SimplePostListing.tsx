@@ -12,14 +12,12 @@ const PostListing: FC<Props> = ({ postEdges }) => {
   const color = useColorModeValue('light.primary', 'dark.primary');
   const postList = postEdges.map((postEdge) => {
     return {
-      path: postEdge.node.fields?.slug,
-      tags: postEdge.node.frontmatter?.tags,
+      path: postEdge.node.fields?.slug as string,
+      tags: postEdge.node.frontmatter?.tags as [],
       cover: postEdge.node.frontmatter?.cover,
       title: postEdge.node.frontmatter?.title,
-      date: postEdge.node.fields?.date,
-      excerpt: postEdge.node.excerpt,
-      timeToRead: postEdge.node.timeToRead,
-      category: postEdge.node.frontmatter?.category,
+      date: postEdge.node.fields?.date as string,
+      category: postEdge.node.frontmatter?.category as string,
     };
   });
   return (

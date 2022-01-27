@@ -7,12 +7,8 @@ import PostTags from './PostTags';
 
 type Props = {
   post: {
-    path: string;
     tags: [];
-    cover: string;
-    title: string;
     date: string;
-    excerpt: string;
     category: string;
   };
 };

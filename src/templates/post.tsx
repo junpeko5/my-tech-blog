@@ -32,10 +32,9 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
 
   const postWip = postNodeWip.map((post) => {
     return {
-      category: post?.frontmatter?.category,
-      timeToRead: post?.timeToRead,
-      tags: post?.frontmatter?.tags,
-      date: post?.fields?.date,
+      category: post?.frontmatter?.category as string,
+      tags: post?.frontmatter?.tags as [],
+      date: post?.fields?.date as string,
     };
   });
 
