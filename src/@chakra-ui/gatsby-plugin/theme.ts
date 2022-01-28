@@ -1,4 +1,9 @@
-import { extendTheme } from '@chakra-ui/react';
+import { ColorMode, extendTheme, Theme } from '@chakra-ui/react';
+
+type Props = {
+  colorMode: ColorMode;
+  theme: Theme;
+};
 
 const config = {
   colors: {
@@ -16,7 +21,7 @@ const config = {
     useSystemColorMode: false,
   },
   styles: {
-    global: ({ colorMode }) => ({
+    global: (props: Props) => ({
       '.mdx-prose': {
         h2: {
           fontSize: 'xl',
@@ -26,7 +31,7 @@ const config = {
           paddingLeft: 4,
           borderLeftWidth: 5,
           borderLeftColor:
-            colorMode === 'dark' ? 'dark.primary' : 'light.primary',
+            props.colorMode === 'dark' ? 'dark.primary' : 'light.primary',
         },
         h3: {
           fontWeight: 'bold',
@@ -44,24 +49,25 @@ const config = {
           marginY: 4,
           paddingY: 2,
           paddingX: 4,
-          bg: colorMode === 'dark' ? 'gray.600' : 'orange.100',
+          bg: props.colorMode === 'dark' ? 'gray.600' : 'orange.100',
           borderRightRadius: 'base',
           borderLeftWidth: 5,
-          borderLeftColor: colorMode === 'dark' ? 'orange.300' : 'orange.500',
+          borderLeftColor:
+            props.colorMode === 'dark' ? 'orange.300' : 'orange.500',
         },
         p: {
           marginY: 2,
           code: {
             borderRadius: 'base',
-            bgColor: colorMode === 'dark' ? 'gray.600' : 'gray.200',
-            color: colorMode === 'dark' ? 'white' : 'black',
+            bgColor: props.colorMode === 'dark' ? 'gray.600' : 'gray.200',
+            color: props.colorMode === 'dark' ? 'white' : 'black',
             marginX: 1,
             paddingX: 1,
             paddingY: 1,
           },
         },
         a: {
-          color: colorMode === 'dark' ? 'blue.300' : 'blue',
+          color: props.colorMode === 'dark' ? 'blue.300' : 'blue',
         },
         code: {
           color: 'white',
