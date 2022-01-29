@@ -62,8 +62,6 @@ const config = {
             bgColor: props.colorMode === 'dark' ? 'gray.600' : 'gray.200',
             color: props.colorMode === 'dark' ? 'white' : 'black',
             marginX: 1,
-            paddingX: 1,
-            paddingY: 1,
           },
         },
         a: {
@@ -71,19 +69,11 @@ const config = {
         },
         code: {
           color: 'white',
-          fontFamily: 'font-family: Monaco, monospace',
           fontSize: 'sm',
         },
         pre: {
           backgroundColor: 'black',
           borderRadius: 'base',
-          paddingY: 2,
-          paddingX: 4,
-          marginY: 2,
-          overflow: 'auto',
-          code: {
-            boxSizing: 'border-box',
-          },
         },
       },
       // '.chakra-ui-dark': {
