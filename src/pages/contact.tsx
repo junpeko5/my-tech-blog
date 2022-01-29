@@ -16,8 +16,16 @@ import Layout from '../layout';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY as string;
 
-function encode(data) {
-  return Object.keys(data)
+type EncodeType = {
+  'form-name': string;
+  name: string;
+  email: string;
+  message: string;
+  'g-recaptcha-response': string;
+};
+
+function encode(data: EncodeType): string {
+  return (Object.keys(data) as (keyof EncodeType)[])
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 }
@@ -55,7 +63,7 @@ const Contact: FC = () => {
     }
 
     const formName = target['form-name'].value;
-    const action = target.action.value;
+    const action = target['action'].value;
 
     if (state.name === '') {
       alert('お名前を入力してください。');
@@ -112,6 +120,7 @@ const Contact: FC = () => {
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <Input type="hidden" name="form-name" value="contact" />
+            <Input type="hidden" name="action" value="/thanks/" />
             <noscript>
               <p>This form won’t work with Javascript disabled</p>
             </noscript>
