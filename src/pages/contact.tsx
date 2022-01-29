@@ -46,8 +46,11 @@ const Contact: FC = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  const handleRecaptcha = (value: string) => {
-    setState({ ...state, 'g-recaptcha-response': value });
+  const handleRecaptcha = (token: string | null) => {
+    if (token === null) {
+      return;
+    }
+    setState({ ...state, 'g-recaptcha-response': token });
   };
 
   const handleSubmit = async (e: SyntheticEvent) => {
