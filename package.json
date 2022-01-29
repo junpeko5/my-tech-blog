@@ -32,7 +32,6 @@
     "gatsby-remark-images": "^6.5.2",
     "gatsby-remark-responsive-iframe": "^5.5.0",
     "gatsby-source-filesystem": "^4.5.2",
-    "gatsby-transformer-remark": "^5.5.2",
     "gatsby-transformer-sharp": "^4.5.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
