@@ -75,6 +75,39 @@ const config = {
           backgroundColor: 'black',
           borderRadius: 'base',
         },
+        '.gatsby-highlight': {
+          "pre[class*='language-']": {
+            position: 'relative',
+            paddingY: 8,
+            '&::before': {
+              color: 'black',
+              bg: 'gray',
+              position: 'absolute',
+              borderBottomRadius: 4,
+              paddingX: 1,
+              paddingY: 0.5,
+              top: 0,
+              left: 4,
+              fontSize: 'sm',
+            },
+          },
+          " pre[class*='language-bash']::before": {
+            content: '"Bash"',
+            bg: 'gray.300',
+          },
+          " pre[class*='language-yaml']::before": {
+            content: '"yaml"',
+            bg: 'green.300',
+          },
+          " pre[class*='language-css']::before": {
+            content: '"CSS"',
+            bg: 'orange.300',
+          },
+          " pre[class*='language-js']::before": {
+            content: '"JavaScript"',
+            bg: 'yellow.300',
+          },
+        },
       },
       // '.chakra-ui-dark': {
       //   blockquote: {
