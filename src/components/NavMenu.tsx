@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import React, { useState, useEffect, FC } from 'react';
 
 import config from '../../data/SiteConfig';
+import DrawerMenu from './DrawerMenu';
 import ToggleMode from './ToggleMode';
 
 type Props = {
@@ -36,14 +37,15 @@ const NavMenu: FC<Props> = ({ menuLinks }) => {
   return (
     <>
       <Flex
-        px="8"
+        pl="4"
         justifyContent="space-between"
         alignItems="center"
         boxShadow={shadow}
-        position="sticky"
+        position="fixed"
         top="0"
         height="60px"
-        zIndex="10000"
+        width="100%"
+        zIndex="100"
         bg={bg}
       >
         <Box>
@@ -52,16 +54,8 @@ const NavMenu: FC<Props> = ({ menuLinks }) => {
           </Link>
         </Box>
         <Flex alignItems="center">
-          {menuLinks.map((link) => {
-            return (
-              <Link key={link.url} to={link.url}>
-                <Box mr="4" color={color}>
-                  {link.name}
-                </Box>
-              </Link>
-            );
-          })}
           <ToggleMode />
+          <DrawerMenu menuLinks={menuLinks} />
         </Flex>
       </Flex>
     </>

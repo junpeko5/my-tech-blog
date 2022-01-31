@@ -36,6 +36,10 @@ const config = {
       name: '記事一覧',
       url: '/blog',
     },
+    {
+      name: 'お問い合わせ',
+      url: '/contact',
+    },
   ],
   copyright: `Copyright © ${dateFullYear}. Junpeko5's Tech Blog`, // Copyright string for the footer of the website and RSS feed.
   themeColor: '#FED7E2', // 'var(--chakra-colors-pink-600)',
