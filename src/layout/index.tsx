@@ -22,7 +22,7 @@ const MainLayout: FC = (props) => {
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Flex flex="1" width="100vw" minH="100vh" flexDirection="column">
         <NavMenu menuLinks={config.menuLinks} />
-        <Container maxWidth="container.md" flex="1">
+        <Container maxWidth="container.md" flex="1" mt="60px">
           {children}
         </Container>
         <Footer />
