@@ -12,7 +12,7 @@ tags:
 slug: docker-schemaspy
 ---
 
-```sh
+```shell
 docker run \
 --rm \
 --net=host \

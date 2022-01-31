@@ -13,7 +13,7 @@ slug: ubuntu-php-install
 
 ## パッケージの更新
 
-```bash
+```shell
 sudo apt update
 apt list --upgradable
 sudo apt upgrade
@@ -25,7 +25,7 @@ sudo apt upgrade
 
 
 
-```bash
+```shell
 sudo apt -y install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
@@ -39,7 +39,7 @@ sudo apt upgrade
 また、`sudo add-apt-repository ppa:ondrej/php`で、
 `sources.list.d/`に`ondrej-ubuntu-php-focal.list`が追加される。
 
-```bash
+```shell
 ll /etc/apt/sources.list.d/
 -rw-r--r-- 1 root root  122 Feb 14 13:50 ondrej-ubuntu-php-focal.list
 ```
@@ -47,7 +47,7 @@ ll /etc/apt/sources.list.d/
 
 
 ## インストール
-```bash
+```shell
 sudo apt install -y php7.4-fpm php7.4-cli php7.4-dev \
        php7.4-sqlite3 php7.4-gd \
        php7.4-curl \
@@ -59,7 +59,7 @@ sudo apt install -y php7.4-fpm php7.4-cli php7.4-dev \
 
 ## 確認
 
-```bash
+```shell
 php -v
 PHP 7.4.15 (cli) (built: Feb 12 2021 10:46:57) ( NTS )
 Copyright (c) The PHP Group
@@ -67,7 +67,7 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
     with Zend OPcache v7.4.15, Copyright (c), by Zend Technologies
 ```
 
-```bash
+```shell
 php -m
 [PHP Modules]
 bcmath

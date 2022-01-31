@@ -26,7 +26,7 @@ Githubにも公開しているので、そちらも参考にしてみてくだ�
 
 ## `react-google-recaptcha`をインストール
 
-```bash
+```shell
 yarn add react-google-recaptcha
 ```
 
@@ -61,7 +61,7 @@ emailの設定方法は特に迷うことはないです。
 
 `.env.production`に以下を記述します。
 
-```dotenv
+```ini
 SITE_RECAPTCHA_KEY=<reCAPTCHAのサイトキー>
 ```
 

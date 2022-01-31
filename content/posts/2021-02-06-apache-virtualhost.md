@@ -91,6 +91,6 @@ IPを指定する場合は、`<VirtualHost 123.○○○.○○○.○○○:80>
 
 Apacheを再起動すると設定が反映されます。
 
-```bash
+```shell
 apachectl restart
 ```

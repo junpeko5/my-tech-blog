@@ -94,7 +94,7 @@ Git bashを管理者として実行します。
 
 デフォルトの挙動ではコマンドで`|`（パイプ）が使えないため、.bash_profileに以下を追記します。
 
-```bash
+```shell
 cd ~
 echo 'exec winpty bash' >> ~/.bash_profile
 ```
@@ -114,7 +114,7 @@ echo 'exec winpty bash' >> ~/.bash_profile
 
 ### xdebug拡張を設置する
 
-```bash
+```shell
 mv  ~/Downloads/php_xdebug-3.0.2-7.3-vc15-nts-x86_64.dll /c/tools/php73/ext/
 ```
 
@@ -122,11 +122,11 @@ mv  ~/Downloads/php_xdebug-3.0.2-7.3-vc15-nts-x86_64.dll /c/tools/php73/ext/
 
 eccube4に必要な拡張を追加していきます。
 
-```bash
+```shell
 vim /c/tools/php73/php.ini
 ```
 
-```php.ini
+```ini
 extension=curl
 extension=fileinfo
 extension=gd2
@@ -149,7 +149,7 @@ opcache.enable_cli=On
 
 #### MySQLの初期化
 
-```bash
+```shell
  /c/tools/mysql/current/bin/mysqld.exe --initialize --console --explicit_defaults_for_timestamp
 ```
 [Note] A temporary password is generated for root@localhost: *fWCWpKEj0ou
@@ -158,7 +158,7 @@ opcache.enable_cli=On
 
 #### MySQLのサービスを登録
 
-```bash
+```shell
 /c/tools/mysql/current/bin/mysqld.exe --install
 ```
 
@@ -167,7 +167,7 @@ GUI（サービス）でも確認できます。
 
 #### MySQLの起動・停止
 
-```bash
+```shell
 net start mysql
 net stop mysql
 ```
@@ -176,13 +176,13 @@ net stop mysql
 
 仮パスワードでログインします。
 
-```bash
+```shell
 mysql -u root -p
 ```
 
 パスワード設定と、DB作成です。
 
-```bash
+```shell
 mysql > ALTER USER 'root'@'localhost' IDENTIFIED BY 'fsd!fjgi9';
 mysql > CREATE DATABASE eccube4 DEFAULT CHARACTER SET utf8mb4;
 ```
@@ -196,7 +196,7 @@ MailHog_windows_amd64.exe
 
 デスクトップに保存した場合、以下で起動します。
 
-```bash
+```shell
 ~/Desktop/MailHog_windows_amd64.exe
 ```
 
@@ -212,7 +212,7 @@ Git bashを再起動するとsymfonyコマンドが実行できるようにな�
 
 ### httpsで接続できるように設定
 
-```bash
+```shell
 symfony server:ca:install
 ```
 
@@ -222,7 +222,7 @@ composerはデフォルトでは2系がインストールされますが、
 現時点でeccube4が対応していないため、
 バージョン指定を行っています。
 
-```bash
+```shell
 cd ~
 mkdir dev
 cd dev
@@ -247,8 +247,8 @@ Server起動後、`localhost:8000`にアクセスするとインストール画�
  
   参考: <https://qiita.com/nanasess/items/de9f5450717cc8ede51a>
 
-```index.php
-# index.phpに以下を追記
+```php
+// index.phpに以下を追記
 if (isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'], 'Symfony') !== false) {
     $_SERVER['SERVER_NAME'] = '127.0.0.1';
 }

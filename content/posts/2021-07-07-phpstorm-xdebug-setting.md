@@ -19,7 +19,7 @@ Xdebugを利用して、PhpStormでボタンをポチポチしてステップ実
 
 ## そもそもXdebugのモジュールが有効になっていない
 
-```bash
+```shell
 php -m | grep xdebug
 ```
 
@@ -27,7 +27,7 @@ php -m | grep xdebug
 
 コンテナ環境の場合はコンテナ内のphpで確認するように！
 
-```bash
+```shell
 docker exec -it <コンテナ名> bash
 
 php -m | grep xdebug # コンテナ内で
@@ -42,7 +42,7 @@ xdebug
 
 例えば、Docker環境の場合は、以下のように3系の設定にしましょう。
 
-```bash
+```shell
 [XDebug]
 xdebug.mode = debug
 xdebug.start_with_request = yes
@@ -57,7 +57,7 @@ Preferences > PHP > Debug
 
 Xdebugの設定と合わせるようにしましょう。
 
-```bash
+```shell
 php -i | grep xdebug.client_port
 xdebug.client_port => 9003 => 9003
 ```

@@ -20,30 +20,30 @@ slug: laravel-homestead
 
 ## HomesteadのVagrant Boxを追加
 
-```bash
+```shell
 vagrant box add laravel/homestead
 ```
 
 ## hostsの設定
 
-```bash
+```shell
 sudo vim /etc/hosts
 ```
 
 下記を追加
 
-```hosts
+```vim
 192.168.10.10  homestead.test
 ```
 
 ## homesteadをプロジェクトにインストール
 
-```bash
+```shell
 cd path/to/project
 composer require laravel/homestead --dev
 ```
 
-```bash
+```shell
 php vendor/bin/homestead make
 ```
 
@@ -52,20 +52,20 @@ php vendor/bin/homestead make
 
 （例）mysql8を有効にするとmysqlのversion8系がvagrant環境にインストールされる。
 
-```Homestead.yaml
+```yaml
 features:
     - mysql8: true
 ```
 
 ## vagrant環境を作成する
 
-```bash
+```shell
 vagrant up
 ```
 
 ## vagrant環境へログインする
 
-```bash
+```shell
 vagrant ssh
 ```
 
@@ -73,7 +73,7 @@ vagrant ssh
 
 コマンドでxdebugのエクステンションを有効、無効を切り替えることができます。
 
-```bash
+```shell
 # 有効
 sudo phpenmod xdebug
 # 無効

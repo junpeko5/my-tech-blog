@@ -12,20 +12,20 @@ tags:
 slug: ubuntu-nginx-install
 ---
 
-```bash
+```shell
 sudo apt install nginx
 ```
 
-```bash
+```shell
 nginx -v
 nginx version: nginx/1.18.0 (Ubuntu)
 ```
 
-```bash
+```shell
 sudo systemctl enable nginx
 ```
 
-```bash
+```shell
 sudo systemctl status nginx
 ```
 
@@ -33,7 +33,7 @@ sudo systemctl status nginx
 
 ## 動作確認
 
-```bash
+```shell
 curl -4 icanhazip.com
 ```
 
@@ -42,7 +42,7 @@ curl -4 icanhazip.com
 `Welcome to nginx!`の画面が表示されれば、OKです。
 
 ちなみに、ファイヤーウォールは無効化されている状態です。
-```bash
+```shell
 sudo ufw status verbose
 Status: inactive
 ```

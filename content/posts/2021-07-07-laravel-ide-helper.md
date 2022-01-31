@@ -28,7 +28,7 @@ ModelやFacadesの補完が効くようになるので、IDEで開発するな�
 
 Laravel Sailの環境であれば、以下の3コマンドでファイルがそれぞれ生成されます。
 
-```bash
+```shell
 php artisan ide-helper:generate
 php artisan ide-helper:meta
 sail artsan ide-helper:model --nowrite
@@ -44,7 +44,7 @@ sail artsan ide-helper:model --nowrite
 
 `.gitignore`に追加しておきましょう。
 
-```dotenv
+```ini
 # ide-helper
 _ide_helper.php
 _ide_helper_models.php

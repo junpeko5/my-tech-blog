@@ -44,13 +44,13 @@ cliで実行される`php.ini`とfpmで実行される`php.ini`の2種類ある�
 
 Nginxの場合は、以下のコマンドでサービスを再起動しましょう。
 
-```bash
+```shell
 sudo systemctl restart php7.4-fpm.service # サービス名は任意
 ```
 
 apacheの場合
 
-```bash
+```shell
 sudo systemctl restart httpd
 ```
 

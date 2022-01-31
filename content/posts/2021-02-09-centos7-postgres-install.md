@@ -19,7 +19,7 @@ slug: centos7-postgres-install
 
 以下は、CentOS7、PostgreSQL9.6の場合です。
 
-```bash
+```shell
 # Install the repository RPM:
 sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
@@ -32,7 +32,7 @@ sudo systemctl enable postgresql-9.6
 sudo systemctl start postgresql-9.6
 ```
 
-```bash
+```shell
 su - postgres
 psql -l
 ```
@@ -41,7 +41,7 @@ MySQLの特権ユーザーは`root`だが、PostgreSQLは`postgres`となって�
 
 ## postgresql.confの設定確認
 
-```bash
+```shell
 vim /var/lib/pgsql/9.6/data/postgresql.conf
 ```
 ```ini
@@ -57,7 +57,7 @@ vim /var/lib/pgsql/9.6/data/postgresql.conf
 
 `md5`にすることで、パスワードを必須としている。
 
-```pg_hba.conf
+```ini
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
 # "local" is for Unix domain socket connections only
@@ -80,6 +80,6 @@ host    all             all             127.0.0.1/32            md5
 
 ## ユーザーの作成
 
-```bash
+```shell
 postgres=# create user eccube3 with password 'jw8sffgc' createdb;
 ```

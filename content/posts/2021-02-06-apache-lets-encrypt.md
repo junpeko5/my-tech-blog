@@ -21,7 +21,7 @@ slug: centos7-apache-lets-encrypt
 - パケットフィルタ(さくら)、セキュリティグループ(AWS)などのセキュリティ設定で、443ポートを公開する。
 - 独自ドメインを取得している
 
-```bash
+```shell
 yum repolist all | grep -i epel
 ```
 ## ssl_moduleが有効になっているか確認
@@ -29,7 +29,7 @@ yum repolist all | grep -i epel
 Apache2.4をインストールした際に、デフォルトで有効になっているとは思いますが、
 Apacheの`ssl_module`が有効になっているか確認します。
 
-```bash
+```shell
 httpd -M | grep ssl_module
 ```
 
@@ -37,11 +37,11 @@ httpd -M | grep ssl_module
 
 ### python2-certbot-apacheのインストール
 
-```bash
+```shell
 yum install certbot python2-certbot-apache
 ```
 
-```bash
+```shell
 vim /etc/httpd/conf/httpd.conf
 ```
 

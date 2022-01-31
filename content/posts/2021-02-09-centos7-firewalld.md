@@ -15,36 +15,36 @@ slug: centos7-firewalld
 
 ### 現在のステータスを確認
 
-```bash
+```shell
 firewall-cmd --state
 ```
 
 ### ファイヤーウォールを起動
 
-```bash
+```shell
 systemctl start firewalld
 ```
 
 ### 設定値を確認
-```bash
+```shell
 firewall-cmd --list-all
 ```
 
 ### 再起動
 
-```bash
+```shell
 systemctl restart firewalld
 ```
 
 ### 停止
 
-```bash
+```shell
 systemctl stop firewalld
 ```
 
 ### 設定の追加
 
-```bash
+```shell
 firewall-cmd --add-service=http --zone=public --permanent
 firewall-cmd --add-service=https --zone=public --permanent
 firewall-cmd --permanent --zone=public --add-service=pop3
@@ -58,31 +58,31 @@ firewall-cmd --permanent --zone=public --add-service=pop3
 
 ### 設定の削除
 
-```bash
+```shell
 firewall-cmd --zone=public --remove-service=pop3
 ```
 
 ### 設定の反映
 
-```bash
+```shell
 firewall-cmd --reload
 ```
 
 ### サービスの一覧
 
-```bash
+```shell
 firewall-cmd --get-services
 ```
 
 ### サービスの詳細確認
 
-```bash
+```shell
 firewall-cmd --info-service=pop3
 ```
 
 ### プロトコルとポート番号を指定して許可するサービスを追加する
 
-```bash
+```shell
 firewall-cmd --add-port=10000/tcp --zone=public --permanent
 firewall-cmd --remove-port=10000/tcp --zone=public --permanent
 firewall-cmd --reload

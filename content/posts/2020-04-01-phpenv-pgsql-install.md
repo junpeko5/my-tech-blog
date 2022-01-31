@@ -19,20 +19,20 @@ phpenvでPHPをインストールする際には、プラグインとして内�
 
 ## default_configure_optionsを編集する
 
-```bash
+```shell
 vim ~/.anyenv/envs/phpenv/plugins/php-build/share/php-build/default_configure_options
 ```
 
 以下を追記すると、postgresqlが使えるようになります。
 
-```bash
+```shell
 --with-pgsql
 --with-pdo-pgsql
 ```
 
 インストール後に確認してみてください。
 
-```bash
+```shell
 $ php -m
 pdo_pgsql
 pgsql

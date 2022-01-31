@@ -51,7 +51,7 @@ Apacheをインストールした際のデフォルトの挙動として、
 
 Apacheを再起動して、ブラウザで確認します。
 
-```bash
+```shell
 systemctl restart httpd
 ```
 

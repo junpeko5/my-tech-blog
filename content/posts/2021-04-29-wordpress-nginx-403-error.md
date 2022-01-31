@@ -24,7 +24,7 @@ WordPressを別サーバーに移行した際に、色々問題が発生した�
 
 また、ハマリポイントなのですが、`wp-settings.php`の読み込みよりも前に設定する必要があります。
 
-```bash
+```shell
 define('FORCE_SSL_ADMIN', true);
 if ( ! empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
        $_SERVER['HTTPS']='on';
@@ -51,7 +51,7 @@ require_once(ABSPATH . 'wp-settings.php');
 `wp-config.php`で設定できるテーブルの接頭辞を変更した場合は、対応が必要なようです。
 （403エラーとなるかどうかは検証していません。）
 
-```bash
+```shell
 $table_prefix  = 'wp_';
 ```
 

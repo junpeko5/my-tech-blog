@@ -19,7 +19,7 @@ slug: ruby_install_for_mac
 
 なにはともあれ、anyenvをアップデートします。
 
-```bash
+```shell
 anyenv update
 ```
 
@@ -28,7 +28,7 @@ anyenv update
 
 ## rbenvがインストールされているか確認
 
-```bash
+```shell
 $ anyenv envs
 goenv
 jenv
@@ -40,14 +40,14 @@ phpenv
 
 rbenvはインストールされていなかったので、インストールします。
 
-```bash
+```shell
 anyenv install rbenv
 exec $SHELL -l
 ```
 
 ## インストールできるバージョンの確認
 
-```bash
+```shell
 rbenv install -l
 2.6.8
 2.7.4
@@ -61,7 +61,7 @@ truffleruby+graalvm-21.3.0
 
 ## インストール
 
-```bash
+```shell
 rbenv install 3.0.2
 ....省略
 ....省略
@@ -74,25 +74,25 @@ Installed ruby-3.0.2 to /Users/jun/.anyenv/envs/rbenv/versions/3.0.2
 
 ## 反映
 
-```bash
+```shell
 rbenv global 3.0.2
 exec $SHELL -l
 ```
 
 ## 確認
 
-```bash
+```shell
 rbenv versions
   system
 * 3.0.2 (set by /Users/jun/.anyenv/envs/rbenv/version)
 ```
 
-```bash
+```shell
 ruby -v
 ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-darwin20]
 ```
 
-```bash
+```shell
 which ruby
 /Users/jun/.anyenv/envs/rbenv/shims/ruby
 ```

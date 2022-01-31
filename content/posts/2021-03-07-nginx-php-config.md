@@ -18,7 +18,7 @@ PHP-FPMがインストールされている必要があります。
 
 今回の環境では、php7.4-fpmがインストールされています。
 
-```bash
+```shell
 sudo systemctl status php7.4-fpm
 ● php7.4-fpm.service - The PHP 7.4 FastCGI Process Manager
      Loaded: loaded (/lib/systemd/system/php7.4-fpm.service; enabled;>
@@ -29,7 +29,7 @@ sudo systemctl status php7.4-fpm
 
 ## PHP-FPMの設定
 
-```bash
+```shell
 server {
        server_name stg.kta1984.com;
        root /var/www/html/test.com/current/public;

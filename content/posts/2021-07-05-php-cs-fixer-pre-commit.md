@@ -11,11 +11,11 @@ tags:
 slug: php-cs-fixer-pre-commit
 ---
 
-```bash
+```shell
 vim .git/hooks/pre-commit
 ```
 
-```bash
+```shell
 #!/bin/bash
 ROOT_DIR=$(git rev-parse --show-toplevel)
 LIST=$(git status | grep -e '\(modified:\|new file:\)'| grep '\.php' | cut -d':' -f2 )
@@ -37,7 +37,7 @@ fi
 
 ## 実行権限を追加
 
-```bash
+```shell
 chmod u+x .git/hooks/pre-commit
 ```
 
@@ -47,7 +47,7 @@ composerのscriptに以下のように登録しておくと、
 
 別の作業者のリポジトリにも設定が反映することができる。
 
-```bash
+```shell
 ....省略
 "scripts": {
     ....省略

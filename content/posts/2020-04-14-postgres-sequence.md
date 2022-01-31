@@ -14,7 +14,7 @@ PostgreSQLでデータをCSVインポートを行う際、id列のデータ型�
 
 データを移行するだけたと、シーケンス番号が進まず、以下のようなエラーがでます。
 
-```sh
+```shell
 Unique violation: 7 ERROR: duplicate key value violates unique constraint
 ```
 

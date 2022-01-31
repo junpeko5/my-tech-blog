@@ -15,75 +15,75 @@ yumコマンドのまとめです。
 
 ## パッケージ一覧を表示する
 
-```bash
+```shell
 yum list
 ```
 
 ### インストール済みパッケージを表示する
 
-```bash
+```shell
 yum list installed
 yum list installed | grep php
 ```
 
 ## インストール
 
-```bash
+```shell
 yum install <packagename>
 ```
 
 ### リポジトリを有効化する（複数指定可能）
 
-```bash
+```shell
 yum install --enablerepo=epel,remi,remi-php73
 ```
 
 ### アップデート可能なパッケージ一覧を表示
 
-```bash
+```shell
 yum check-update
 ```
 
 ## アップデート
 
-```bash
+```shell
 yum update
 ```
 
 ### セキュリティアップデートがあるソフトウェアのみをアップデート
-```bash
+```shell
 yum --security update
 ```
 
 ## 取り消し
 
-```bash
+```shell
 yum downgrade <packagename>-<version>
 yum downgrade <packagename>
 ```
 
 ### 履歴の確認
 
-```bash
+```shell
 yum history list
 yum history list all
 ```
 
 ### 履歴IDを指定して取り消し
 
-```bash
+```shell
 yum history undo 19
 ```
 
 ## アンインストール
 
-```bash
+```shell
 yum remove <packagename>-<version>
 yum remove php-7.1.3
 ```
 
 ## リポジトリの確認
 
-```bash
+```shell
 yum repolist
 ```

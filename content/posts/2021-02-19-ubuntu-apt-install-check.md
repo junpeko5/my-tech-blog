@@ -17,7 +17,7 @@ mysql-serverのインストールされるバージョンを確認してみま�
 
 ## apt-cache
 
-```bash
+```shell
 apt-cache show mysql-server | grep Version
 Version: 8.0.23-0ubuntu0.20.04.1
 Version: 8.0.19-0ubuntu5
@@ -25,7 +25,7 @@ Version: 8.0.19-0ubuntu5
 
 ## apt-show-versions
 
-```bash
+```shell
 apt-show-versions
 
 Command 'apt-show-versions' not found, but can be installed with:
@@ -33,12 +33,12 @@ Command 'apt-show-versions' not found, but can be installed with:
 sudo apt install apt-show-versions
 ```
 
-```bash
+```shell
 sudo apt install apt-show-versions
 ```
 
 使い方は確認してください。
 
-```bash
+```shell
 apt-show-versions -h
 ```

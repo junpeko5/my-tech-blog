@@ -21,7 +21,7 @@ Homebrewがインストールされていること。
 
 以下の手順でMongoDBの起動までできます。
 
-```bash
+```shell
 brew update
 brew upgrade
 brew tap mongodb/brew
@@ -40,7 +40,7 @@ Catalinaでは、セキュリティの観点から、`/data/db`を`System/Volume
 
 そのため、以下の2コマンドとなっています。
 
-```bash
+```shell
 sudo mkdir -p /System/Volumes/Data/data/db
 sudo chown -R `id -un` /System/Volumes/Data/data/db
 ```
@@ -49,7 +49,7 @@ sudo chown -R `id -un` /System/Volumes/Data/data/db
 
 ## MongoDBの起動
 
-```bash
+```shell
 brew services run mongodb-community
 brew services list
 brew services stop mongodb-community
@@ -61,7 +61,7 @@ brew services stop mongodb-community
 
 ## Mongo Shellの実行
 
-```shell script
+```shellell script
 mongo
 > db
 test

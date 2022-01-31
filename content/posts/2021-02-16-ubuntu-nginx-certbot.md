@@ -19,7 +19,7 @@ slug: ubuntu-nginx-certbot
 - ポート番号の443が開放されている
 - test.example.com（ドメイン）のAレコードがサーバーのIPに設定されている
 
-```bash
+```shell
 dig test.example.com
 test.example.com.	3600	IN	A	xxx.xxx.xxx.xxx
 ```
@@ -37,13 +37,13 @@ snapdをインストールし、クラシックスナップサポートを有効
 
 > snapとは、Ubuntuではディストリビューションをまたいで利用できるユニバーサルパッケージシステム
 
-```bash
+```shell
 sudo apt update
 sudo apt install snapd
 ```
 
 ### snapdのバージョンが最新であることを確認
-```bash
+```shell
 sudo snap install core; sudo snap refresh core
 ```
 
@@ -55,23 +55,23 @@ sudo snap install core; sudo snap refresh core
 
 以下のコマンドで`Certbot`がインストールされます。
 
-```bash
+```shell
 sudo snap install --classic certbot
 ```
 
 ## certbotコマンドを利用しやすくするため、シンボリックリンクを作成
 
-```bash
+```shell
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
 ## Certbotの実行
 
-```bash
+```shell
 sudo certbot --nginx
 ```
 
-```bash
+```shell
    /etc/letsencrypt/live/junpeko.tech/fullchain.pem
    Your key file has been saved at:
    /etc/letsencrypt/live/junpeko.tech/privkey.pem
@@ -94,12 +94,12 @@ httpで接続したときに、httpsにリダイレクトする処理も入れ�
 
 ## 補足
 
-```bash
+```shell
 sudo vim /etc/nginx/sites-available/test.example.com
 ```
 
 Certbotにより、追加された行には、`# managed by Certbot`のコメントが追記されていました。
-```test
+```
 server {
        server_name test.example.com;
        root /var/www/html/test.example.com;

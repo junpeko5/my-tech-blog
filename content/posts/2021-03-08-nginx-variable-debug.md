@@ -14,7 +14,7 @@ slug: nginx-variable-debug
 
 例えば、`$document_root`という変数の値を確認する方法です。
 
-```bash
+```shell
 http {
   log_format debug_log_fmt "[DEBUG][$time_local] $document_root";
 }
@@ -24,7 +24,7 @@ http {
 
 ## access_logにlog_formatを指定する
 
-```bash
+```shell
 server {
   access_log /var/log/nginx/access.log debug_log_fmt;
 }
@@ -38,6 +38,6 @@ server {
 
 `/var/log/nginx/access.log`に以下の内容が出力されます。
 
-```bash
+```shell
 [DEBUG][07/Mar/2021:04:50:04 +0000] /var/www/html/path_to_document_root
 ```

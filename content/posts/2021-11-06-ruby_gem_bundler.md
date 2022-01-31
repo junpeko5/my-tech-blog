@@ -18,7 +18,7 @@ RubyGemsというRubyのパッケージマネージャーを扱うためのコ�
 
 Gemコマンドで、配布用のライブラリのパッケージングやRubyGemsに登録されているgemパッケージのインストール等が行えます。
 
-```bash
+```shell
 # help
 gem -h
 # gemコマンドでrailsをインストール
@@ -37,7 +37,7 @@ bundleコマンドもgemコマンドと同様、Rubyと一緒にインストー�
 
 開発中のプロジェクト内でどのgemパッケージを使っているのか、どのバージョンを利用しているのかを管理します。
 
-```bash
+```shell
 # Gemfileの雛形を作成
 bundle init # Gemfileを生成する
 bundle update [パッケージ名] # インストール済みのgemパッケージのバージョンを更新する

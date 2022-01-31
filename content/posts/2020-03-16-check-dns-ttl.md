@@ -19,7 +19,7 @@ TTL（Time to Live）という決められた秒数が過ぎるまで、フル�
 
 例えば、`junpeko.work`というドメインを取得して、`nslookup`コマンドを叩くと以下のようになります。
 
-```bash
+```shell
 $ nslookup junpeko.work
 Server:		2400:2650:7081:e800:1111:1111:1111:1111
 Address:	2400:2650:7081:e800:1111:1111:1111:1111#53
@@ -35,7 +35,7 @@ Non-authoritative answer:
 
 `nslookup`コマンドで`set debug`という値を設定して実行すると、ttlを確認できます。
 
-```bash
+```shell
 $ nslookup
 > set debug
 > junpeko.work

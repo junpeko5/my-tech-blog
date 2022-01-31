@@ -13,7 +13,7 @@ slug: xdebug3-setting
 
 ## Xdebug2の設定例
 
-```bash
+```shell
 zend_extension="path/to/xdebug/xdebug.so"
 html_errors=on
 xdebug.remote_enable=1
@@ -34,7 +34,7 @@ Xdebug3系でこの設定を利用していると警告メッセージが出る�
 
 ## Xdebug3の設定例
 
-```xdebug.ini
+```ini
 zend_extension="path/to/xdebug/xdebug.so"
 html_errors=on
 xdebug.mode=debug

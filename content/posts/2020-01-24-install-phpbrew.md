@@ -25,7 +25,7 @@ Homebrewでインストールするようにしてください。
 
 私の環境では以下のパッケージがインストールされていました。
 
-```sh
+```shell
 $ brew list
 anyenv		c-ares		glib		libevent	libtool		pcre		rtmpdump
 apr		composer	gmp		libffi		libxml2		pcre2		sqlite
@@ -43,7 +43,7 @@ bzip2		git		libev		libtiff		openssl@1.1	readline
 
 ダウンロードから初期化処理までです。
 
-```sh
+```shell
 $ curl -L -O https://github.com/phpbrew/phpbrew/releases/latest/download/phpbrew.phar
 # 権限変更
 $ chmod +x phpbrew.phar
@@ -55,13 +55,13 @@ $ phpbrew init
 
 その後、.zshrcに以下を追記します。
 
-```sh
+```shell
 source ~/.phpbrew/bashrc
 ```
 
 ターミナルを再起動しバージョンを確認します。
 
-```sh
+```shell
 $ phpbrew --version
 phpbrew - 1.25.3
 cliframework core: 2.5.4
@@ -73,7 +73,7 @@ cliframework core: 2.5.4
 
 `phpbrew known`でインストール可能なバージョンを確認できます。
 
-```sh
+```shell
 $ phpbrew known
 ```
 
@@ -83,17 +83,17 @@ $ phpbrew known
 他に`+dbs`を設定すると、mysql,sqlite,postgresの拡張を入れてくれるようです。
 確認方法は以下です。
 
-```sh
+```shell
 $ phpbrew variants
 ```
 
-```sh
+```shell
 $ phpbrew install 7.4 +default+dbs
 ```
 
 ## バージョンの切り替え方法
 
-```sh
+```shell
 $ phpbrew switch 7.4.2
 ```
 
@@ -101,7 +101,7 @@ $ phpbrew install 7.3 +default +dbs +debug +openssl=/usr/local/opt/openssl +bz2=
 
 ## 拡張モジュールインストール方法
 
-```sh
+```shell
 $ phpbrew ext install xdebug stable
 ```
 

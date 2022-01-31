@@ -19,7 +19,7 @@ slug: laravel-sail-xdebug
 ドキュメントにも書いている通りですが、
 Sailをカスタマイズするには、`sail:publish`コマンドを実行します。
 
-```bash
+```shell
 sail artisan sail:publish
 ```
 
@@ -51,7 +51,7 @@ services:
 
 `xdebug.mode`と`xdebug.client_host`は環境変数で設定可能なため、`docker-compose.yml`のenvironmentに設定します。
 
-```bash
+```shell
 # For more information: https://laravel.com/docs/sail
 version: '3'
 services:
@@ -113,7 +113,7 @@ volumes:
 
 `.env`に以下を追記します。
 
-```dotenv
+```ini
 SAIL_XDEBUG_MODE=develop,debug
 ```
 
@@ -132,7 +132,7 @@ SAIL_XDEBUG_MODE=develop,debug
 
 変更を反映させるため、コンテナを再構築します。
 
-```bash
+```shell
 sail down
 sail build --no-cache
 sail up -d
@@ -140,7 +140,7 @@ sail up -d
 
 ## 確認
 
-```bash
+```shell
 sail shell
 sail@414d0d2b4215:/var/www/html$ php -m | grep xdebug
 ```

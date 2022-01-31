@@ -22,7 +22,7 @@ asdfをhomebrewで入れる + zshの場合のインストール方法です。
 
 ## asdfのインストール
 
-```bash
+```shell
 ## インストール
 brew install asdf
 ## パスを通す
@@ -46,13 +46,13 @@ v0.8.1
 
 今回は<https://github.com/asdf-vm/asdf-nodejs>を確認する。
 
-```bash
+```shell
 brew install gpg gawk
 ```
 
 #### プラグイン`asdf-nodejs`を追加する
 
-```bash
+```shell
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 ```
 
@@ -60,26 +60,26 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 #### インストール
 
-```bash
+```shell
 asdf install nodejs latest
 ```
 
 #### 有効化
 
-```bash
+```shell
 asdf global nodejs latest
 ```
 
 `.tool-versions`というファイルにバージョンが記載されます。
 
-```bash
+```shell
 cat .tool-versions
 nodejs 17.1.0
 ```
 
 ターミナルを再起動すると。。
 
-```bash
+```shell
 node -v
 v17.1.0
 ```
@@ -88,7 +88,7 @@ v17.1.0
 
 #### 別のバージョンをインストール
 
-```bash
+```shell
 asdf list all nodejs
 ...省略
 16.10.0
@@ -103,11 +103,11 @@ lts
 17.1.0
 ```
 
-```bash
+```shell
 asdf install nodejs 16.11.0
 ```
 
-```bash
+```shell
 asdf list nodejs
   16.11.0
   17.1.0
@@ -115,14 +115,14 @@ asdf list nodejs
 
 ### Rubyのインストール
 
-```bash
+```shell
 ## プラグインをインストール
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 ## 依存パッケージをインストール
 brew install openssl readline
 ```
 
-```bash
+```shell
 # 最新のバージョンをインストール
 asdf install ruby latest
 asdf global ruby 3.0.2
@@ -143,7 +143,7 @@ PHPはApple Siliconの場合問題が残っているみたい。
 <https://github.com/asdf-community/asdf-php/issues/88>
 以下色々試しましたが、解決できず。。
 
-```bash
+```shell
 asdf plugin-add php https://github.com/asdf-community/asdf-php.git
 brew install autoconf automake bison freetype gd gettext icu4c krb5 libedit libiconv libjpeg libpng libxml2 libzip pkg-config re2c zlib
 brew install gmp libsodium imagemagick
@@ -161,13 +161,13 @@ PHP_WITHOUT_PDO_PGSQL=yes PGSQL_INCLUDE="/opt/homebrew/opt/postgres" PHP_CONFIGU
 
 ## グローバルにバージョン指定する
 
-```bash
+```shell
 asdf global nodejs 16.11.0
 ```
 
 ## プロジェクトごとにバージョン指定する
 
-```bash
+```shell
 asdf local nodejs 16.11.0
 ```
 

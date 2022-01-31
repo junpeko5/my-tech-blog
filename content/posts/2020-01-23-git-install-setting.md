@@ -17,31 +17,31 @@ gitをインストールしたときの初期設定のメモです。
 
 ## ユーザー情報の設定
 
-```sh
+```shell
 git config --global user.name "junpeko5"
 git config --global user.email "junpeko@example.com"
 ```
 
 ## 改行設定
 
-```bash
+```shell
 git config --global core.autocrlf input
 ```
 
 ## デフォルトのエディターはVim
 
-```sh
+```shell
 git config --global core.editor 'vim -c "set fenc=utf-8"'
 ```
 
 ## カラーを設定
-```sh
+```shell
 git config --global color.ui true
 ```
 
 ## エイリアス設定
 
-```sh
+```shell
 git config --global alias.st status
 git config --global alias.co commit
 git config --global alias.br branch
@@ -52,7 +52,7 @@ git config --global alias.lol "log --graph --decorate --pretty=oneline --all --a
 
 ## merge、pullの設定
 
-```bash
+```shell
 git config --global --add merge.ff false
 git config --global --add pull.ff only
 git config --global pull.rebase false
@@ -60,6 +60,6 @@ git config --global pull.rebase false
 
 ## 設定確認
 
-```sh
+```shell
 $ git config --list
 ```

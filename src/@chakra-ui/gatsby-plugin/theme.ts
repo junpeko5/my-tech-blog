@@ -91,17 +91,21 @@ const config = {
               fontSize: 'sm',
             },
           },
-          " pre[class*='language-bash']::before": {
-            content: '"Bash"',
+          "pre[class*='language-shell']::before": {
+            content: '"Zsh"',
             bg: 'gray.300',
           },
-          " pre[class*='language-yaml']::before": {
+          "pre[class*='language-yaml']::before": {
             content: '"yaml"',
             bg: 'green.300',
           },
-          " pre[class*='language-css']::before": {
+          "pre[class*='language-css']::before": {
             content: '"CSS"',
             bg: 'orange.300',
+          },
+          "pre[class*='language-php']::before": {
+            content: '"PHP"',
+            bg: 'blue.300',
           },
           " pre[class*='language-js']::before": {
             content: '"JavaScript"',

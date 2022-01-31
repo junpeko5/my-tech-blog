@@ -17,7 +17,7 @@ slug: php-cs-fixer-install
 
 グローバルのComposerにインストールするという方法があります。
 
-```bash
+```shell
 composer global require friendsofphp/php-cs-fixer
 ```
 
@@ -27,7 +27,7 @@ MacOSならHomebrewからでもインストール可能。
 
 個人で開発するならこれでもOK。
 
-```bash
+```shell
 brew upgrade php-cs-fixer
 ```
 
@@ -37,7 +37,7 @@ brew upgrade php-cs-fixer
 
 プロジェクトごとでバージョンをあわせられるので、複数人のプロジェクトの場合はこちらがよいと思います。
 
-```bash
+```shell
 cd path/to/project_root
 composer require friendsofphp/php-cs-fixer
 
@@ -56,7 +56,7 @@ composer require friendsofphp/php-cs-fixer
 
 例えば、`position_after_control_structures`を上書きしたい場合は以下のような感じにする。
 
-```bash
+```shell
 <?php
 
 $finder = PhpCsFixer\Finder::create()
@@ -80,7 +80,7 @@ return $config->setRules([
 
 ## 実行
 
-```bash
+```shell
 # dry-run
 ./vendor/bin/php-cs-fixer fix --dry-run
 
@@ -95,7 +95,7 @@ return $config->setRules([
 
 `.gitignore`に以下を追記する
 
-```bash
+```shell
 .php-cs-fixer.cache
 ```
 

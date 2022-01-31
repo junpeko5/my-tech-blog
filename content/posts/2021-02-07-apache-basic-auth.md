@@ -29,7 +29,7 @@ slug: apache-basic-auth
 
 `httpd.conf`に以下のような設定を追記します。
 
-```bash
+```shell
 vim /etc/httpd/conf/httpd.conf
 ```
 
@@ -50,7 +50,7 @@ vim /etc/httpd/conf/httpd.conf
 
 設定を反映させるため再起動しましょう。
 
-```bash
+```shell
 apachectl restart
 ```
 
@@ -58,13 +58,13 @@ apachectl restart
 
 `AuthUserFile`に設定したパスに`.passwds`ファイルを作成します。
 
-```bash
+```shell
 htpasswd -c /etc/httpd/.passwds junpeko
 ```
 
 `-c`は新規ファイル作成のオプションのため、 追加する場合は`-c`オプションは不要です。
 
-```bash
+```shell
 htpasswd /etc/httpd/.passwds takuya
 ```
 
@@ -108,7 +108,7 @@ htpasswd /etc/httpd/.passwds takuya
 
 また、`AuthGroupFile`で指定したパスにファイルを`.group`という名前でファイルを作成します。
 
-```bash
+```shell
 vim /etc/httpd/.groups
 ```
 

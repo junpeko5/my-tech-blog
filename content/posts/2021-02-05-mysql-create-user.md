@@ -14,7 +14,7 @@ slug: mysql-create-user
 
 アカウントは`CREATE USER`コマンドで作成できます。
 
-```bash
+```shell
 mysql> CREATE USER junpeko IDENTIFIED BY 'asdfghjk';
 ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
 ```
@@ -23,7 +23,7 @@ ERROR 1819 (HY000): Your password does not satisfy the current policy requiremen
 
 ### ポリシーの確認
 
-```bash
+```shell
 mysql> show variables like 'validate_password%'
 ```
 
@@ -39,7 +39,7 @@ mysql> show variables like 'validate_password%'
 
 デフォルトだと、8文字以上、大文字、小文字1文字以上、数値1文字以上、記号1文字以上という設定のよう。
 
-```bash
+```shell
 mysql> CREATE USER junpeko IDENTIFIED BY 'asdfghjkL1$';
 Query OK, 0 rows affected (0.03 sec)
 ```
@@ -52,13 +52,13 @@ OK!
 
 以下は、パスワードの認証方式とパスワードを変更する場合のSQLです。
 
-```bash
+```shell
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'fs3$******';
 ```
 
 ## アカウントの確認
 
-```bash
+```shell
 mysql> SELECT user, host FROM mysql.user;
 +------------------+-----------+
 | user             | host      |
@@ -84,7 +84,7 @@ mysql> SELECT user, host FROM mysql.user;
 
 アカウント作成時接続を指定する場合は以下となります。
 
-```bash
+```shell
 CREATE USER takuya@localhost IDENTIFIED BY 'asdfghjkL1$';
 ```
 
@@ -94,7 +94,7 @@ CREATE USER takuya@localhost IDENTIFIED BY 'asdfghjkL1$';
 
 削除したいアカウント名を指定します。
 
-```bash
+```shell
 mysql> DROP USER junpeko;
 mysql> DROP USER takuya@localhost;
 ```

@@ -22,7 +22,7 @@ Homebrewでanyenvをインストールしていない場合は、以下の記事
 
 ## goenvでGolangをインストール
 
-```sh
+```shell
 $ anyenv install goenv
 $ goenv install -l
 $ goenv install 1.13.6
@@ -31,7 +31,7 @@ $ goenv global 1.13.6
 
 インストールに成功したら、シェルを再起動します。
 
-```sh
+```shell
 $ exec $SHELL -l
 $ go version
 go version go1.13.6 darwin/amd64
@@ -41,7 +41,7 @@ go version go1.13.6 darwin/amd64
 
 デフォルトで$GOPATHは`userディレクトリ/go`になるようです。
 
-```sh
+```shell
 $ echo $GOPATH
 /Users/username/go/1.13.6
 ```
@@ -50,7 +50,7 @@ $ echo $GOPATH
 
 僕の場合は、~/dev以下にプロジェクトを置いてくというルールで運用していますが、ここは任意の場所で構いません。
 
-```sh
+```shell
 export GOPATH=$HOME/dev
 ```
 
@@ -58,7 +58,7 @@ export GOPATH=$HOME/dev
 
 シェルを再起動して、確認します。
 
-```sh
+```shell
 $ echo $GOPATH
 /Users/jun/dev
 ```

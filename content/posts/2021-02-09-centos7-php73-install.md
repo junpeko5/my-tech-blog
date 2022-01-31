@@ -14,19 +14,19 @@ slug: centos7-php73-install
 
 ## すでに別のバージョンのPHPがインストールされている場合はアンインストールする
 
-```bash
+```shell
 yum list installed | grep php
 yum remove php-7.1.33
 ```
 
 ## リポジトリがインストールされているか確認
-```bash
+```shell
 yum repolist
 ```
 
 ## EPELリポジトリを追加
 
-```bash
+```shell
 yum install epel-release
 ```
 
@@ -34,13 +34,13 @@ yum install epel-release
 
 <https://rpms.remirepo.net/>でOSごとのダウンロードリンクを確認します。
 
-```bash
+```shell
 yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 ```
 
 ### 更新する場合
 
-```bash
+```shell
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 ```
 
@@ -50,7 +50,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 - `-h`: パッケージをインストール時の進捗を`#`で表現します。
 
 ## インストール
-```bash
+```shell
 yum install --enablerepo=epel,remi,remi-php73 php php-cli php-common php-devel php-fpm php-gd php-mbstring php-mysqlnd php-pdo php-pear php-pecl-apcu php-soap php-xml php-xmlrpc php-intl php-pgsql php-zip
 ```
 
@@ -59,7 +59,7 @@ yum install --enablerepo=epel,remi,remi-php73 php php-cli php-common php-devel p
 
 ## php.iniを編集
 
-```bash
+```shell
 cd /etc
 cp php.ini php.ini.old
 vim /etc/php.ini

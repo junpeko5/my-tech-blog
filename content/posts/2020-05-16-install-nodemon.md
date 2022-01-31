@@ -16,7 +16,7 @@ Node.jsの開発環境で、ファイルに変更があったときに自動で�
 
 ## インストール
 
-```sh
+```shell
 npm install -g nodemon
 ```
 

@@ -13,14 +13,14 @@ slug: centos7-mysql8-install
 
 ## MariaDBをインストールしている場合は、削除しておく。
 
-```bash
+```shell
 yum remove mariadb-libs
 rm -rf /var/lib/mysql/
 ```
 
 ## MySQL8のインストール
 
-```bash
+```shell
 sudo rpm -ivh https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 sudo yum repolist all | grep mysql
 sudo yum install mysql-community-server
@@ -30,7 +30,7 @@ grep 'temporary password' /var/log/mysqld.log
 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: dfsdf****
 ```
 
-```bash
+```shell
 mysql> show databases;
 ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'f********';
@@ -44,10 +44,10 @@ Laravelを利用する場合は、MySQL8のデフォルトの認証方式（cach
 
 vim /etc/my.cnf
 
-```my.cnf
+```ini
 default-authentication-plugin=mysql_native_password
 ```
 
-```bash
+```shell
 sudo systemctl restart mysqld
 ```

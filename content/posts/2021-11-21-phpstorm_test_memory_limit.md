@@ -11,7 +11,7 @@ tags:
 slug: phpstorm_test_memory_limit
 ---
 
-```bash
+```shell
 PHP Fatal error: Allowed memory size of xxx  bytes exhausted
 ```
 

@@ -14,6 +14,6 @@ slug: systemctl-index
 
 以下のコマンドで一覧を取得できます。
 
-```bash
+```shell
 systemctl list-unit-files --type=service
 ```

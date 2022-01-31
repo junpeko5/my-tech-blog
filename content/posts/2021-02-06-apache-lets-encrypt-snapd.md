@@ -25,24 +25,24 @@ slug: centos7-apache-lets-encrypt-snapd
 
 EPELリポジトリがインストールされていれば、以下のコマンドでインストールできます。
 
-```bash
+```shell
 sudo yum install snapd
 ```
 インストールが完了したら、snapd.socketを有効化します。
 
-```bash
+```shell
 sudo systemctl enable --now snapd.socket
 ```
 
 シンボリックリンクを以下の様に設定します。
 
-```bash
+```shell
 sudo ln -s /var/lib/snapd/snap /snap
 ```
 
 ## snapdの更新
 
-```bash
+```shell
 sudo snap install core; sudo snap refresh core
 ```
 
@@ -50,20 +50,20 @@ sudo snap install core; sudo snap refresh core
 
 すでにpackageとしてcertbotをインストールしている場合は、削除します。
 
-```bash
+```shell
 sudo yum remove certbot
 ```
 ## certbotのインストール
 
 snapコマンドでcertbotをインストールします。
 
-```bash
+```shell
 sudo snap install --classic certbot
 ```
 
 シンボリックリンクを設定します。
 
-```bash
+```shell
 ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
@@ -71,7 +71,7 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 
 以下のコマンドで証明書がインストールされます。
 
-```bash
+```shell
 sudo certbot --apache
 ```
 

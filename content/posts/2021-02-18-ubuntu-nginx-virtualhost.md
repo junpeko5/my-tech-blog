@@ -30,7 +30,7 @@ Nginxのメイン設定ファイルは`/etc/nginx/nginx.conf`です。
 
 この`sitesenabled`は、`sites-available/default`のシンボリックリンクとなっています。
 
-```bash
+```shell
 ls -li /etc/nginx/sites-enabled/
 total 0
 773067 lrwxrwxrwx 1 root root 34 Feb 14 13:59 default -> /etc/nginx/sites-available/default
@@ -38,7 +38,7 @@ total 0
 
 `/etc/nginx/sites-available/default`内に`server`ブロックの設定が記載されています。
 
-```bash
+```shell
 sudo vim /etc/nginx/sites-available/default
 ```
 
@@ -59,7 +59,7 @@ serverディレクティブに記載する場合、
 
 `/var/www/html/`の下に公開するディレクトリを作成していきます。
 
-```bash
+```shell
 cd /var/www/html/
 sudo mkdir test.example.com
 sudo chown www-data:www-data test.example.com/
@@ -70,7 +70,7 @@ sudo vim index.html
 
 `index.html`には適当に文字を記述します。
 
-```bash
+```shell
 sudo chown www-data:www-data index.html
 ```
 
@@ -90,7 +90,7 @@ sudo chown www-data:www-data index.html
 `sites-available/`の下にサイトごとのファイルを設定ファイルを作成し、
 `sites-enabled/`の下にシンボリックリンクを作成しましょう。
 
-```bash
+```shell
 sudo vim /etc/nginx/sites-available/test.example.com
 ```
 
@@ -112,14 +112,14 @@ server {
 
 ## シンボリックリンクの作成
 
-```bash
+```shell
 cd /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/test.eexample.com test.eexample.com
 ```
 
 ## 確認と設定反映
 
-```bash
+```shell
 sudo nginx -t
 sudo systemctl restart nginx
 ```

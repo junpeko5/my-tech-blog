@@ -14,22 +14,22 @@ slug: install_git_lfs
 
 ## インストール
 
-```bash
+```shell
 brew install git-lfs
 ```
 
-```bash
+```shell
 git lfs install
 ```
 
-```bash
+```shell
 git lfs version
 git lfs help
 ```
 
 ## 設定
 
-```bash
+```shell
 git lfs track [ファイルパス]
 git lfs track "hoge/fuga/test.png"
 git lfs track "hoge/fuga/*"
@@ -38,7 +38,7 @@ git lfs track "*.png"
 
 ## 確認
 
-```bash
+```shell
 git lfs track
 ```
 

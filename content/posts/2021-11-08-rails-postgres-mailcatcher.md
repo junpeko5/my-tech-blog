@@ -17,7 +17,7 @@ MacOSにインストールしたRubyを利用してアプリケーションを�
 
 rbenvでruby 3.0.2が入っています。
 
-```bash
+```shell
 ruby -v
 ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-darwin20]
 ```
@@ -28,7 +28,7 @@ ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-darwin20]
 gem 'pg'
 ```
 
-```bash
+```shell
 bundle install
 ```
 

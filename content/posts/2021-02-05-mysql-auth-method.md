@@ -16,7 +16,7 @@ MySQLの認証方式を紹介していきます。
 
 8.0ではデフォルトの認証方式となります。
 
-```mysql
+```sql
 CREATE USER junpeko@localhost IDENTIFIED WITH cacheing_sha2_password BY 'abcdeF1$';
 ```
 
@@ -27,7 +27,7 @@ CREATE USER junpeko@localhost IDENTIFIED WITH cacheing_sha2_password BY 'abcdeF1
 
 5.7まではデフォルトの認証方式でした。
 
-```mysql
+```sql
 CREATE USER takuya@localhost IDENTIFIED WITH mysql_native_password BY 'abcdeF1$';
 ```
 
@@ -40,7 +40,7 @@ Laravelはこれにしないとマイグレーションで失敗しますね。
 
 例えば`vpsuser`というOSの一般ユーザーがある場合にMySQLで以下の様にユーザーを作成したとします。
 
-```mysql
+```sql
 INSTALL PLUGIN auth_socket SONAME 'auth_socket.so';
 CREATE USER vpsuser@localhost IDENTIFIED WITH auth_socket;
 ```
@@ -53,6 +53,6 @@ CREATE USER vpsuser@localhost IDENTIFIED WITH auth_socket;
 
 ## 設定の確認
 
-```mysql
+```sql
 SELECT user, host, plugin from mysql.user;
 ```

@@ -12,7 +12,7 @@ tags:
 slug: centos7-nginx-install
 ---
 
-```bash
+```shell
 sudo yum install yum-utils
 sudo vim /etc/yum.repos.d/nginx.repo
 ```
@@ -41,12 +41,12 @@ module_hotfixes=true
 
 `mainline`でインストールしたい場合は以下を実行します。
 
-```bash
+```shell
 sudo yum-config-manager --enable nginx-mainline
 ```
 
 
-```bash
+```shell
 sudo yum install nginx
 ```
 

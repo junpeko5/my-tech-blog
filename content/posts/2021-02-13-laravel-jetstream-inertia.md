@@ -14,7 +14,7 @@ tags:
 slug: laravel-jetstream-inertia
 ---
 
-```bash
+```shell
 sail composer require laravel/jetstream
 sail php artisan jetstream:install inertia
 git st

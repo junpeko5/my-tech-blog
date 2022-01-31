@@ -22,7 +22,7 @@ macOSをクリーンインストールした際のセットアップ手順メモ
 
 ### brew install
 
-```bash
+```shell
 brew
 ```
 
@@ -34,7 +34,7 @@ brew
 
 <https://github.com/asdf-vm/asdf>
 
-```bash
+```shell
 brew install asdf
 ```
 

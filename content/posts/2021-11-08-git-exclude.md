@@ -14,7 +14,7 @@ slug: git_exclude
 
 `.git/info/exclude`ファイルに記載することで無視出来ます。
 
-```bash
+```shell
 cd project_root
 vim .git/info/exclude
 ```
@@ -23,7 +23,7 @@ vim .git/info/exclude
 
 （.gitignoreの設定と同様の記述方法。）
 
-```dotenv
+```ini
 # 記述例
 .idea/
 .vscode/

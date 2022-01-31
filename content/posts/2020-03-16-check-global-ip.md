@@ -13,7 +13,7 @@ slug: check-global-ip
 
 curlコマンドでグローバルIPを確認することができます。
 
-```sh
+```shell
 $ curl httpbin.org/ip
 ```
 

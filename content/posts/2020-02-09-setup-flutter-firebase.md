@@ -38,7 +38,7 @@ dependencies:
 
 そして、以下コマンドで、Flutterのpackageを入れることができます。
 
-```sh
+```shell
 ~ flutter packages get
 ```
 
@@ -64,7 +64,7 @@ iOSの設定には、`iOS bundle ID`が必要です。
 
 以下コマンドで、xcodeを開いて確認しましょう。
 
-```sh
+```shell
 ~ open ios/Runner.xcworkspace
 ```
 
@@ -92,7 +92,7 @@ package nameは確認できます。
 
 以下を追記します。
 
-```gradle
+```vim
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services' // 追記
@@ -102,7 +102,7 @@ apply plugin: 'com.google.gms.google-services' // 追記
 
 `android/app/build.gradle`に追記します。
 
-```gradle
+```vim
   defaultConfig {
     applicationId "habit.com.junpeko.flutter_habit"
     minSdkVersion 16

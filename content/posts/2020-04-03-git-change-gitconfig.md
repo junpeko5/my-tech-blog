@@ -14,14 +14,14 @@ slug: git-change-gitconfig
 
 `~/.gitconfig`の末尾に以下を挿入すると、あるリポジトリのみは会社のアカウントの設定でgitを利用できます。
 
-```sh
+```shell
 [includeIf "gitdir:~/dev/src/bitbucket.org/company/"]
     path = ~/dev/src/bitbucket.org/company/.gitconfig
 ```
 
 そして、会社のリポジトリ（ここでいう`company/`以下）の配下に.gitconfigを作り、会社用のuser.nameとuser.emailを追記します。
 
-```sh
+```shell
 [user]
 	name = junpeko_company
 	email = junpeko_company@gmail.com

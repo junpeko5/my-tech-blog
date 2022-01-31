@@ -16,7 +16,7 @@ Ubuntuでは、adminというグループがそれにあたります。
 
 例えば、
 
-```bash
+```shell
 sudo usermod -a -G admin ubuntu
 ```
 

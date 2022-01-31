@@ -16,13 +16,13 @@ UbuntuでNginxの設定ファイルごと削除する方法です。
 
 以下では、設定ファイルがそのまま残ってしまいます。
 
-```bash
+```shell
 sudo apt remove nginx
 ```
 
 すべての関連ファイルを削除するコマンドは以下です。
 
-```bash
+```shell
 sudo apt purge nginx nginx-common nginx-full
 ```
 

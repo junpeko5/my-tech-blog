@@ -28,7 +28,7 @@ ToolboxアプリでコマンドラインからWebStormを開くためのスク�
 
 以下を`.zshrc`に追加しましょう。
 
-```bash
+```shell
 alias webstorm='open -na "WebStorm.app" --args "$@"'
 ```
 
@@ -44,7 +44,7 @@ alias webstorm='open -na "WebStorm.app" --args "$@"'
 
 現在のディレクトリでWebStormを開きたい場合は、
 
-```bash
+```shell
 webstorm .
 ```
 

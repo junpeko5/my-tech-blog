@@ -14,7 +14,7 @@ slug: phpenv-icu4c-error
 
 nodeを更新した場合に発生します。
 
-```bash
+```shell
 php -v
 dyld: Library not loaded: /usr/local/opt/icu4c/lib/libicuio.67.dylib
   Referenced from: /Users/jun/.anyenv/envs/phpenv/versions/7.4.8/bin/php
@@ -25,7 +25,7 @@ dyld: Library not loaded: /usr/local/opt/icu4c/lib/libicuio.67.dylib
 
 ## brewでパッケージをアップデート
 
-```bash
+```shell
 brew update
 brew upgrade
 brew cleanup
@@ -33,7 +33,7 @@ brew cleanup
 
 ## phpenvでPHPを再ビルドする
 
-```bash
+```shell
 CONFIGURE_OPTS="--with-zlib-dir=$(brew --prefix zlib) \
 --with-bz2=$(brew --prefix bzip2) \
 --with-curl=$(brew --prefix curl) \

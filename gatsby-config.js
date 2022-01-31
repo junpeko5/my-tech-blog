@@ -1,12 +1,12 @@
-"use strict"
+'use strict';
 
-require("ts-node").register({
+require('ts-node').register({
   compilerOptions: {
-    module: "commonjs",
-    target: "esnext",
+    module: 'commonjs',
+    target: 'esnext',
   },
-})
+});
 
-require("./src/__generated__/gatsby-types")
+require('./src/__generated__/gatsby-types');
 
-module.exports = require('./gatsby-config.ts')
+module.exports = require('./gatsby-config.ts');

@@ -18,13 +18,13 @@ slug: crontab-certbot
 
 ## crontabの編集
 
-```bash
+```shell
 sudo crontab -e
 ```
 
 ## crontab記述内容
 
-```bash
+```shell
 37      1,13    *       *       *       root    certbot renew
 ```
 
@@ -32,18 +32,18 @@ sudo crontab -e
 
 ## cronデーモンを再起動
 
-```bash
+```shell
 sudo systemctl restart cron
 ```
 
 ## 証明書の自動更新をテスト
 
-```bash
+```shell
 sudo certbot renew --dry-run
 ```
 
 問題なければ、
-```bash
+```shell
 Congratulations, all simulated renewals succeeded:
 ```
 
@@ -52,13 +52,13 @@ Congratulations, all simulated renewals succeeded:
 ## 動作確認
 
 ### crontabを閲覧する
-```bash
+```shell
 crontab -l 
 ```
 
 ### 実行されているか確認
 
-```bash
+```shell
 less /var/log/syslog | grep CRON
 ```
 

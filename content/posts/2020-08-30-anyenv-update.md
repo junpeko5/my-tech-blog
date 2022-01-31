@@ -16,7 +16,7 @@ Node.jsのLTS版である12.18.3を入れたかったのでanyenvをアップデ
 
 ## 現状のインストール可能なバージョンを確認
 
-```sh
+```shell
 nodenv install -l
 ...
 12.10.0
@@ -38,7 +38,7 @@ anyenvのプラグインである`anyenv update`を入れると`anyenv update`�
 
 ## anyenv updateをインストール
 
-```sh
+```shell
 mkdir -p ~/.anyenv/plugins
 git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
 ```
@@ -47,7 +47,7 @@ git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-upda
 
 `anyenv update`コマンドが利用できるようになったため早速実行。
 
-```sh
+```shell
 anyenv update
 
 ...
@@ -64,7 +64,7 @@ Updating 'phpenv/php-build'...
 
 `phpenv/php-build`をpgsqlのextensionを追加する際に変更していたようで、php-buildだけupdateされませんでした。
 
-```sh
+```shell
 cd ~/.anyenv/envs/phpenv/plugins/php-build
 git stash save
 anyenv update
@@ -75,7 +75,7 @@ git stash pop
 
 ## 確認
 
-```sh
+```shell
 nodenv install -l
 ...
 12.14.0
@@ -96,7 +96,7 @@ nodenv install -l
 12.18.3がインストール可能となりました。
 また、その他`.phpenv`なども更新されていますね。
 
-```sh
+```shell
 phpenv install -l
 ...
   7.3.16

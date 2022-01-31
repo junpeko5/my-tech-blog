@@ -23,13 +23,13 @@ VagrantとVirtualBoxのインストールが必要です。
 
 また、composerも事前にインストールしておきましょう。
 
-```sh
+```shell
 $ brew install composer
 ```
 
 バージョン確認します。
 
-```sh
+```shell
 $ vagrant -v
 Vagrant 2.2.6
 
@@ -39,7 +39,7 @@ $ VBoxManage -v
 
 ## Vagrant Boxのインストール
 
-```sh
+```shell
 $ vagrant box add laravel/homestead
 ```
 
@@ -50,7 +50,7 @@ $ vagrant box add laravel/homestead
 
 任意のディレクトリにクローンしてきます。
 
-```sh
+```shell
 $ ghq get https://github.com/laravel/homestead.git
 $ cd ~/Homesteadのディレクトリ
 $ git checkout release
@@ -62,7 +62,7 @@ $ git checkout release
 
 Homestead.yamlが以下のコマンドで作成されます。
 
-```sh
+```shell
 $ bash init.sh
 ```
 
@@ -70,13 +70,13 @@ $ bash init.sh
 
 インストーラーをComposerでインストールしておきます。
 
-```sh
+```shell
 $ composer global require laravel/installer
 ```
 
 Laravelをインストールしたいディレクトリで以下を実行します。
 
-```sh
+```shell
 $ laravel new blog
 ```
 
@@ -113,11 +113,11 @@ features:
 ## hostsに追記
 
 
-```sh
+```shell
 $ sudo vim /etc/hosts
 ```
 
-```sh
+```shell
 192.168.10.10  homestead.test
 ```
 
@@ -125,7 +125,7 @@ $ sudo vim /etc/hosts
 
 `vagrant up`コマンドで起動できます。
 
-```sh
+```shell
 $ vagrant up
 The provider 'virtualbox' that was requested to back the machine
 'homestead' is reporting that it isn't usable on this system. The
@@ -150,7 +150,7 @@ VirtualBoxのバージョンが新し過ぎたようです。
 
 <https://www.virtualbox.org/wiki/Download_Old_Builds>
 
-```sh
+```shell
 $ VBoxManage -v
 6.0.15r135660
 ```
@@ -163,14 +163,14 @@ $ VBoxManage -v
 
 ## 仮想環境に入ってみる
 
-```sh
+```shell
 $ vagrant ssh
 ```
 
 でログインできます。
 
 
-```sh
+```shell
 $ pwd
 /home/vagrant
 $ ll blog/
@@ -210,7 +210,7 @@ Laravelのプロジェクトが上手くマウントされています。
 
 Laravelのプロジェクトルートにある`.env`を編集します。
 
-```.env
+```vim
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -221,7 +221,7 @@ DB_PASSWORD=secret
 
 Laravelのマイグレーションを実行するとき(DBに対してコマンド実行するとき)は、仮想環境に入って実行します。
 
-```sh
+```shell
 $ vagrant ssh
 vagrant@homestead:~$ cd blog
 vagrant@homestead:~/blog$ pwd
@@ -240,7 +240,7 @@ Migrated:  2019_08_19_000000_create_failed_jobs_table (0.05 seconds)
 
 パスワードは`secret`です。
 
-```sh
+```shell
 vagrant@homestead:~/blog$ mysql -u homestead -p
 
 mysql> use homestead

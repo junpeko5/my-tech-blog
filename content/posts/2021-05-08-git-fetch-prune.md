@@ -23,7 +23,7 @@ slug: git-fetch-prune
 トラッキングされていないローカルの不要なブランチは`git fetch`の`prune`オプションで
 削除できます。
 
-```bash
+```shell
 git fetch --prune
 # or
 git fetch -p

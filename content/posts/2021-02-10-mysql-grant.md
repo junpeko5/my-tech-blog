@@ -13,27 +13,27 @@ slug: mysql-grant
 ## 権限の付与、確認、削除
 
 ### SELECT権限を与える
-```mysql
+```sql
 CREATE USER 'hoge'@'localhost' IDENTIFIED BY '12345qwE$';
 GRANT SELECT,UPDATE ON *.* TO 'hoge'@'localhost';
 ```
 
 ### アカウントの権限を確認する
 
-```mysql
+```sql
 SHOW GRANTS FOR hoge@localhost;
 ```
 
 ### 動作確認
 ログアウトして`hoge`アカウントでログインし直す。
 
-```bash
+```shell
 mysql -u hoge -p
 ```
 
 `SELECT`可能となっている。
 
-```mysql
+```sql
 SELECT user, host, plugin FROM mysql.user;
 +------------------+-----------+-----------------------+
 | user             | host      | plugin                |
@@ -48,14 +48,14 @@ SELECT user, host, plugin FROM mysql.user;
 
 `CREATE`はできないことを確認する。
 
-```mysql
+```sql
 CREATE USER 'junpeko'@'localhost' IDENTIFIED BY '12345qwE$';
 ERROR 1227 (42000): Access denied; you need (at least one of) the CREATE USER privilege(s) for this operation
 ```
 
 ### 権限の削除
 
-```mysql
+```sql
 REVOKE SELECT ON *.* FROM hoge@localhost;
 SHOW GRANTS FOR hoge@localhost;
 +------------------------------------------+
@@ -71,7 +71,7 @@ SHOW GRANTS FOR hoge@localhost;
 
 ### （例）すべての権限を与える
 
-```mysql
+```sql
 CREATE USER junpeko@localhost IDENTIFIED BY 'asdfghjkL1$';
 GRANT ALL ON *.* TO 'junpeko'@'localhost';
 ```

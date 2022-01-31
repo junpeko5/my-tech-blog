@@ -13,31 +13,31 @@ slug: change-mac-zsh
 
 Macはデフォルトでzshが入っているので、設定変更自体は簡単にできます。
 
-```sh
+```shell
 $ which zsh
 /bin/zsh
 ```
 
-```sh
+```shell
 $ /bin/zsh --version
 zsh 5.7.1 (x86_64-apple-darwin19.0)
 ```
 
 現在のシェルを確認するとbashでしたので、zshに切り替えます。
 
-```sh
+```shell
 echo $SHELL
 /bin/bash
 ```
 
 以下の１コマンドで切り替えることができます。
-```sh
+```shell
 chsh -s /bin/zsh
 ```
 
 シェルを再起動すると反映されます。
 
-```sh
+```shell
 echo $SHELL
 /bin/zsh
 ```

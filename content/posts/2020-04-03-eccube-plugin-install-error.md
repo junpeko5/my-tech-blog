@@ -16,12 +16,12 @@ EC-CUBE4のプラグインをインストールする際に、Xdebugをoffにし
 
 ## Xdebugをオフにする
 
-```bash
+```shell
 php --ini
 ```
 
 上記コマンドで、｀xdebug.ini`の場所を確認し、以下の様にコメントアウトしましょう。
 
-```xdebug.ini
+```ini
 ;zend_extension="/Users/username/.anyenv/envs/phpenv/versions/7.3.13/lib/php/extensions/no-debug-non-zts-20180731/xdebug.so"
 ```

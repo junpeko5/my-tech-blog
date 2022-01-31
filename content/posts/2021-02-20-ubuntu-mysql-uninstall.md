@@ -14,7 +14,7 @@ slug: ubuntu-mysql-uninstall
 
 UbuntuでMySQLの設定ファイルごと削除する方法です。
 
-```bash
+```shell
 sudo apt remove --purge mysql-server
 sudo apt purge mysql-server
 sudo apt autoremove

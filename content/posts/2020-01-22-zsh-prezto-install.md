@@ -22,7 +22,7 @@ Preztoは、zshの設定のためのフレームワークです。Preztoを利�
 
 デフォルトシェルを「zsh」であるか確認する方法は以下。
 
-```sh
+```shell
 $ echo $SHELL
 /bin/zsh
 ```
@@ -31,7 +31,7 @@ $ echo $SHELL
 
 デフォルトシェルをzshに変更するコマンドは以下。
 
-```sh
+```shell
 $ chsh -s /bin/zsh
 ```
 
@@ -46,7 +46,7 @@ https://github.com/sorin-ionescu/prezto
 
 ユーザーのホームディレクトリにクローンしてきます。
 
-```sh
+```shell
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ```
 
@@ -54,7 +54,7 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$H
 
 
 以下のコマンドをターミナルで実行します。
-```sh
+```shell
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
@@ -64,13 +64,13 @@ done
 > いくつか設定ファイルが作成されるのですが、`.zshrc`などのファイルが既に作成されていると上書きされてしまいますので、
 > すでに設定ファイルが有る場合は、バックアップしておき後ほど内容をマージする必要があります。
 
-```sh
+```shell
 $ mv ~/.zshrc ~/.zshrc.backup
 ```
 
 ただ、以下の設定を`.zshrc`に追加することでも対応可能とのことです。
 
-```sh
+```shell
 # Preztoの読み込み
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
@@ -83,7 +83,7 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 `prompt`コマンドが使えるようになってます。
 
 コマンドの確認をしてみます。
-```sh
+```shell
 $ prompt -h
 Usage: prompt <options>
 Options:
@@ -100,19 +100,19 @@ Use prompt -h <theme> for help on specific themes.
 ## テーマ設定
 
 ### テーマ一覧表示
-```sh
+```shell
 $ prompt -l
 ```
 
 ### テーマプレビュー
 
 すべてのテーマをプレビューできます。
-```sh
+```shell
 $ prompt -p
 ```
 -pのあとにテーマ名を設定すると指定したテーマがプレビューできます。
 
-```sh
+```shell
 $ prompt -p agnoster
 ```
 
@@ -120,7 +120,7 @@ $ prompt -p agnoster
 ### テーマ変更
 
 例
-```sh
+```shell
 $ prompt -s skwp
 Set and save not yet implemented.  Please ensure your ~/.zshrc
 contains something similar to the following:
@@ -132,7 +132,7 @@ contains something similar to the following:
 
 以下の設定を`.zshrc`に追加する必要があるとのことなので、.zshrcの上部に追記しました。
 
-```sh
+```shell
 # Preztoの読み込み
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
@@ -151,7 +151,7 @@ Preztoの読み込みのあとにテーマ設定を行わなければ、上手�
 例えば、`'git' \`という行を追加するとプロンプトにgitの情報が表示されるようになります。
 
 
-```sh
+```shell
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \

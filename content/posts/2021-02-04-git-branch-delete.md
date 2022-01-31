@@ -16,7 +16,7 @@ Github等に不要なブランチがあって、コマンドで削除したい�
 
 ### リモートブランチの削除
 
-```bash
+```shell
 git push --delete origin branch-name
 # or
 git push -d origin branch-name
@@ -28,13 +28,13 @@ git push -d origin branch-name
 
 ちなみに、ローカルのブランチを削除する場合は、以下の2種類のコマンドがある。
 
-```bash
+```shell
 git branch -D branch-name
 git branch -d branch-name # マージされていないブランチは削除できない
 ```
 
 ### ブランチが残っていないか確認
 
-```bash
+```shell
 git branch -a
 ```

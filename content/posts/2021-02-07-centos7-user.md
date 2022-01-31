@@ -14,19 +14,19 @@ slug: centos7-user
 
 `admin`というユーザーを作成します。
 
-```bash
+```shell
 adduser admin
 ```
 
 ## 確認
 
-```bash
+```shell
 cat /etc/passwd | grep admin
 ```
 
 ## 一般ユーザーのパスワードを設定する
 
-```bash
+```shell
 passwd admin
 ```
 
@@ -34,13 +34,13 @@ passwd admin
 
 `usermod`コマンドで編集可能。
 
-```bash
+```shell
 usermod -h
 ```
 
 ## 一般ユーザーの削除
 
-```bash
+```shell
 userdel -r admin
 ```
 

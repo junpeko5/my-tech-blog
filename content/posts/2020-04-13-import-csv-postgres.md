@@ -24,7 +24,7 @@ Postgresの、DBサーバはDockerコンテナで作成します。
 
 ### CSVファイルを作成する
 
-```bash
+```shell
 cat products.csv
 id,name,price
 1,cake,500
@@ -34,14 +34,14 @@ id,name,price
 
 ### CSVファイルの文字コードを確認する
 
-```bash
+```shell
 file --mime products.csv
 products.csv: text/plain; charset=us-ascii
 ```
 
 ### PostgreSQLのコンテナを立ち上げる
 
-```bash
+```shell
 docker run \
 --name my-postgres \
 -e POSTGRES_PASSWORD=secret \
@@ -57,7 +57,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 `\copy`コマンドはCSVファイルがホストマシンにある場合にリモートのDBサーバーに対して実行できます。
 
-```bash
+```shell
 psql -h localhost -p 5432 -U postgres -d postgres
 postgres=# create table products (id int, name varchar(255), price int);
 postgres=# \copy products from ~/Desktop/products.csv with csv header encoding 'UTF8'
@@ -71,7 +71,7 @@ postgres=# select * from products;
 (3 rows)
 ```
 
-```bash
+```shell
 postgres=# drop table products;
 ```
 
@@ -80,7 +80,7 @@ postgres=# drop table products;
 COPYコマンドは、DBサーバーにファイルが存在する場合に利用できるコマンドです。
 ホストマシンから、dockerコンテナに`cp`コマンドでcsvファイルをアップロードし、試してみました。
 
-```bash
+```shell
 docker cp products.csv my-postgres:/tmp/products.csv
 docker exec my-postgres cat /tmp/products.csv
 id,name,price
@@ -89,11 +89,11 @@ id,name,price
 3,cookie,100
 ```
 
-```bash
+```shell
 psql -h localhost -p 5432 -U postgres -d postgres
 ```
 
-```bash
+```shell
 postgres=# COPY products FROM '/tmp/products.csv' with csv header encoding 'UTF8';
 COPY 3
 postgres=# select * from products;

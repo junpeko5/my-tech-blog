@@ -16,18 +16,18 @@ Macにデフォルトでgitは入っていますが、最新のバージョン�
 Homebrewで導入します。
 
 
-```sh
+```shell
 $ brew install git
 ```
 
-```sh
+```shell
 $ brew list
 gettext	git	pcre2
 ```
 
 ターミナルを再起動するとパスが設定されます。
 
-```sh
+```shell
 $ which git
 /usr/local/bin/git
 ```

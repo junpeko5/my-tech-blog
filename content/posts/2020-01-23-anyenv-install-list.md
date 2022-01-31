@@ -15,12 +15,12 @@ slug: anyenv-install-list
 anyenvでインストールできる言語を調べてみました。
 anyenvのバージョンは1.1.1です。
 
-```sh
+```shell
 $ anyenv -v
 anyenv 1.1.1
 ```
 リストを表示すると以下となりました。18種類あるようです。
-```sh
+```shell
 anyenv install -l
   Renv
   crenv

@@ -15,14 +15,14 @@ slug: install-aws-cli-and-setting
 
 以下のコマンドでインストール、更新が可能です。
 
-```bash
+```shell
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
 ```
 
 ## インストール確認
 
-```bash
+```shell
 aws -v
 ```
 
@@ -30,20 +30,20 @@ aws -v
 aws configureのコマンドで初期設定を行うことができます。
 IAMユーザー作成時に取得したアクセスキーIDとシークレットアクセスキーが必要となります。
 また、リージョンとデフォルト出力フォーマットを入力します。
-```bash
+```shell
 aws configure
 ```
 
 ## 設定値の確認
 
 .awsのフォルダ内に設定ファイルが保存されます。
-```bash
+```shell
 cd ~/.aws
 ls
 config      credentials
 ```
 
-```bash
+```shell
 cat config
 [default]o
 
@@ -51,7 +51,7 @@ region = ap-northeast-1
 output = json
 ```
 
-```bash
+```shell
 cat credentials
 [default]
 aws_access_key_id = **************

@@ -24,7 +24,7 @@ ssh鍵をリモートサーバーに設置し、ローカルから作成した�
 
 ## 一般ユーザーの作成
 
-```bash
+```shell
 adduser vpsuser
 passwd vpsuser
 ```
@@ -35,7 +35,7 @@ passwd vpsuser
 
 `visudo`コマンドで`sudoers`というファイルを編集・内容の確認を行う。
 
-```bash
+```shell
 su -
 visudo
 ```
@@ -57,19 +57,19 @@ sudoの実行をパスワードなしで許可する設定となる。
 
 ### 一般ユーザーをwheelグループに追加する
 
-```bash
+```shell
 usermod -aG wheel vpsuser
 ```
 
 ### グループに追加されているか確認
 
-```bash
+```shell
 id vpsuser
 ```
 
 ### 再ログイン後に、wheelが追加されているか確認
 
-```bash
+```shell
 groups
 sudo su -
 ```
@@ -79,19 +79,19 @@ sudo su -
 ### 秘密鍵公開鍵の作成
 
 ローカルでssh用の秘密鍵と公開鍵を作成する。
-```bash
+```shell
 ssh-keygen -t rsa -C "junpeko5@example.com"
 chmod 600 test_vps_id_rsa
 ```
 
 ### 公開鍵をリモートサーバーに設置
 
-```bash
+```shell
 scp ~/.ssh/test_vps_rsa.pub vpsuser@example.com:~/
 ssh vpsuser@example.com
 ```
 
-```bash
+```shell
 mkdir .ssh
 chmod 700 .ssh/
 mv test_vps_id_rsa.pub .ssh/authorized_keys
@@ -100,7 +100,7 @@ chmod 600 .ssh/authorized_keys
 
 ### sshの設定変更
 
-```bash
+```shell
 sudo su
 vim /etc/ssh/sshd_config
 ```
@@ -116,12 +116,12 @@ PasswordAuthentication no
 
 設定を反映する。
 
-```bash
+```shell
 systemctl restart sshd
 ```
 ### .ssh/configの設定
 
-```.ssh/config
+```vim
  Host example.com
    HostName example.com
    User vpsuser
@@ -132,7 +132,7 @@ systemctl restart sshd
 
 ## ログイン
 
-```bash
+```shell
 ssh example.com
 ```
 

@@ -37,7 +37,7 @@ Javaのバージョンは8である必要があります。
 
 適当なディレクトリを作成し、その中にダウンロードしてきた`.jar`ファイルを移動しておきます。
 
-```bash
+```shell
 mkdir ~/schemaspy
 mv ~/Downloads/schemaspy-6.1.0.jar .
 ```
@@ -54,7 +54,7 @@ mv ~/Downloads/schemaspy-6.1.0.jar .
 
 その後、JavaのバージョンがJava8のものに変更されたことを確認してください。
 
-```bash
+```shell
 java -version
 openjdk version "1.8.0_242"
 ```
@@ -73,7 +73,7 @@ PostgreSQLであれば、<https://jdbc.postgresql.org/download.html>
 
 `schemaspy.properties`という名前で、SchemaSpyを実行する際に指定する設定ファイルを作成していきます。
 
-```bash
+```shell
 schemaspy.t=pgsql
 schemaspy.dp=postgresql-42.2.12.jar
 schemaspy.host=localhost
@@ -91,7 +91,7 @@ schemaspy.s=public
 > バージョン6.1.0以降、Graphvizは不要とのことです。
 > コマンドライン引数`-vizjs`を指定するとOKです。
 
-```bash
+```shell
 java -jar schemaspy-6.1.0.jar -configFile schemaspy.properties -vizjs
 ```
 
@@ -99,7 +99,7 @@ java -jar schemaspy-6.1.0.jar -configFile schemaspy.properties -vizjs
 
 `output/`にファイルが生成されます。
 
-```bash
+```shell
 open output/index.html
 ```
 

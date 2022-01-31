@@ -12,7 +12,7 @@ tags:
 slug: ubuntu-mysql8-install
 ---
 
-```bash
+```shell
 sudo apt update
 ```
 
@@ -22,7 +22,7 @@ sudo apt update
 
 > <https://dev.mysql.com/downloads/repo/apt/>
 
-```bash
+```shell
 cd ~
 sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb
 sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
@@ -32,11 +32,11 @@ sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
 
 ## MySQLのインストール
 
-```bash
+```shell
 sudo apt install mysql-server
 ```
 
-```bash
+```shell
 sudo systemctl status mysql
 sudo systemctl start mysql
 sudo systemctl enable mysql
@@ -44,7 +44,7 @@ sudo systemctl enable mysql
 
 ## 初期設定
 
-```bash
+```shell
 sudo su
 mysql_secure_installation
 ```
@@ -61,11 +61,11 @@ mysql_secure_installation
 
 設定したパスワードでログインしましょう。
 
-```bash
+```shell
 # mysql -u root -p
 ```
 
-```bash
+```shell
 mysql> show databases;
 +--------------------+
 | Database           |

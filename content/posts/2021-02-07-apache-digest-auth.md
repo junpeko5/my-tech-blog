@@ -33,7 +33,7 @@ Digest認証を設定するには、`.digest`というファイルにユーザ�
 
 `httpd.conf`に以下のような設定を追記します。
 
-```bash
+```shell
 vim /etc/httpd/conf/httpd.conf
 ```
 
@@ -56,7 +56,7 @@ vim /etc/httpd/conf/httpd.conf
 
 設定を反映させるため再起動しましょう。
 
-```bash
+```shell
 apachectl restart
 ```
 
@@ -64,14 +64,14 @@ apachectl restart
 
 `AuthUserFile`に設定したパスに`.digest`ファイルを作成します。
 
-```bash
+```shell
 htdigest -c /etc/httpd/.digest "digest test" junpeko
 ```
 第2引数にrealmを指定しています。
 
 `-c`は新規ファイル作成のオプションのため、 追加する場合は`-c`オプションは不要です。
 
-```bash
+```shell
 htdigest /etc/httpd/.digest "digest test" takuya
 ```
 
