@@ -90,7 +90,7 @@ security:
 あえてこちらに書かれているのは、動的に設定値を設定したい機能があるためと思われます。
 ↓`src/Eccube/DependencyInjection/EccubeExtension.php`
 
-```injectablephp
+```php
 $accessControl = [
     ['path' => '^/%eccube_admin_route%/login', 'roles' => 'IS_AUTHENTICATED_ANONYMOUSLY'],
     ['path' => '^/%eccube_admin_route%/', 'roles' => 'ROLE_ADMIN'],
@@ -168,7 +168,7 @@ eccube4の場合、`src/Eccube/DependencyInjection/EccubeExtension.php`の実装
 
 アクセスコントロールの実装をよくみると、
 
-```injectablephp
+```php
 $accessControl = [
     ['path' => '^/%eccube_admin_route%/login', 'roles' => 'IS_AUTHENTICATED_ANONYMOUSLY'],
     ['path' => '^/%eccube_admin_route%/', 'roles' => 'ROLE_ADMIN'],

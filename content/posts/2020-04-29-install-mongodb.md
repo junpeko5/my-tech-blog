@@ -61,7 +61,7 @@ brew services stop mongodb-community
 
 ## Mongo Shellの実行
 
-```shellell script
+```shell
 mongo
 > db
 test

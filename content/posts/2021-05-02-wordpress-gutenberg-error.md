@@ -33,7 +33,7 @@ WordPressのブロックエディタ(Gutenberg)で更新ができない（更新
 
 その場合は、参考URLの以下の設定を`wp-config.php`に追記しましょう。
 
-```injectablephp
+```php
 define('FORCE_SSL_ADMIN', true);
 if ( ! empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
        $_SERVER['HTTPS']='on';
