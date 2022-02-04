@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: PlantUMLをインストールする（MacOS）
 date: 2022-02-03
-description:
+description: MacOSでのPlantUMLのインストール方法をまとめました。
 cover: /images/webstorm.png
 category: PlantUML
 tags:
@@ -10,6 +10,8 @@ tags:
   - MacOS
 slug: install-plantuml
 ---
+
+MacOSでのPlantUMLのインストール方法をまとめました。
 
 ## 前提
 
