@@ -26,8 +26,7 @@ slug: install-homebrew
 
 App StoreでXcodeをインストールした後に以下を実行します。
 
-```shell
-$ xcode-select --install
+```shellxcode-select --install
 ```
 
 ## Homebrewをインストール
@@ -37,13 +36,13 @@ https://brew.sh/index_ja
 Homebrewの公式にあるインストールスクリプトを実行します。
 
 ```shell
-$ brew -v
+brew -v
 Homebrew 2.2.4
 ```
 
 
 ```
-$ brew -h
+brew -h
 Example usage:
   brew search [TEXT|/REGEX/]
   brew info [FORMULA...]
@@ -70,15 +69,15 @@ Further help:
 ```
 
 ```shell
-$ brew install git
+brew install git
 ```
 
 ```shell
-$ brew list
+brew list
 gettext	git	pcre2
 ```
 
 ```shell
-$ which git
+which git
 /usr/local/bin/git
 ```

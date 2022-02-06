@@ -33,7 +33,7 @@ vim ~/.anyenv/envs/phpenv/plugins/php-build/share/php-build/default_configure_op
 インストール後に確認してみてください。
 
 ```shell
-$ php -m
+php -m
 pdo_pgsql
 pgsql
 ```

@@ -24,23 +24,23 @@ VagrantとVirtualBoxのインストールが必要です。
 また、composerも事前にインストールしておきましょう。
 
 ```shell
-$ brew install composer
+brew install composer
 ```
 
 バージョン確認します。
 
 ```shell
-$ vagrant -v
+vagrant -v
 Vagrant 2.2.6
 
-$ VBoxManage -v
+VBoxManage -v
 6.1.2r135662
 ```
 
 ## Vagrant Boxのインストール
 
 ```shell
-$ vagrant box add laravel/homestead
+vagrant box add laravel/homestead
 ```
 
 コマンドを実行しますと利用するプロバイダの種類を聞かれるので、`virtualbox`を選択しましょう。
@@ -51,9 +51,9 @@ $ vagrant box add laravel/homestead
 任意のディレクトリにクローンしてきます。
 
 ```shell
-$ ghq get https://github.com/laravel/homestead.git
-$ cd ~/Homesteadのディレクトリ
-$ git checkout release
+ghq get https://github.com/laravel/homestead.git
+cd ~/Homesteadのディレクトリ
+git checkout release
 ```
 
 リリースブランチに切り替えておきます。
@@ -63,7 +63,7 @@ $ git checkout release
 Homestead.yamlが以下のコマンドで作成されます。
 
 ```shell
-$ bash init.sh
+bash init.sh
 ```
 
 ## LaravelインストーラーでLaravelをインストールする
@@ -71,13 +71,13 @@ $ bash init.sh
 インストーラーをComposerでインストールしておきます。
 
 ```shell
-$ composer global require laravel/installer
+composer global require laravel/installer
 ```
 
 Laravelをインストールしたいディレクトリで以下を実行します。
 
 ```shell
-$ laravel new blog
+laravel new blog
 ```
 
 以上でLaravel本体がblogディレクトリにインストールされます。
@@ -114,7 +114,7 @@ features:
 
 
 ```shell
-$ sudo vim /etc/hosts
+sudo vim /etc/hosts
 ```
 
 ```shell
@@ -126,7 +126,7 @@ $ sudo vim /etc/hosts
 `vagrant up`コマンドで起動できます。
 
 ```shell
-$ vagrant up
+vagrant up
 The provider 'virtualbox' that was requested to back the machine
 'homestead' is reporting that it isn't usable on this system. The
 reason is shown below:
@@ -151,7 +151,7 @@ VirtualBoxのバージョンが新し過ぎたようです。
 <https://www.virtualbox.org/wiki/Download_Old_Builds>
 
 ```shell
-$ VBoxManage -v
+VBoxManage -v
 6.0.15r135660
 ```
 
@@ -164,16 +164,16 @@ $ VBoxManage -v
 ## 仮想環境に入ってみる
 
 ```shell
-$ vagrant ssh
+vagrant ssh
 ```
 
 でログインできます。
 
 
 ```shell
-$ pwd
+pwd
 /home/vagrant
-$ ll blog/
+ll blog/
 total 680
 drwxr-xr-x  1 vagrant vagrant    864 Jan 24 12:54 ./
 drwxr-xr-x 12 vagrant vagrant   4096 Jan 24 13:16 ../
@@ -222,7 +222,7 @@ DB_PASSWORD=secret
 Laravelのマイグレーションを実行するとき(DBに対してコマンド実行するとき)は、仮想環境に入って実行します。
 
 ```shell
-$ vagrant ssh
+vagrant ssh
 vagrant@homestead:~$ cd blog
 vagrant@homestead:~/blog$ pwd
 /home/vagrant/blog

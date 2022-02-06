@@ -61,5 +61,5 @@ git config --global pull.rebase false
 ## 設定確認
 
 ```shell
-$ git config --list
+git config --list
 ```

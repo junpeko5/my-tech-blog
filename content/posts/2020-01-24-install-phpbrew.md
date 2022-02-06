@@ -26,7 +26,7 @@ Homebrewでインストールするようにしてください。
 私の環境では以下のパッケージがインストールされていました。
 
 ```shell
-$ brew list
+brew list
 anyenv		c-ares		glib		libevent	libtool		pcre		rtmpdump
 apr		composer	gmp		libffi		libxml2		pcre2		sqlite
 apr-util	curl		hub		libiconv	libzip		peco		tidy-html5
@@ -44,13 +44,13 @@ bzip2		git		libev		libtiff		openssl@1.1	readline
 ダウンロードから初期化処理までです。
 
 ```shell
-$ curl -L -O https://github.com/phpbrew/phpbrew/releases/latest/download/phpbrew.phar
+curl -L -O https://github.com/phpbrew/phpbrew/releases/latest/download/phpbrew.phar
 # 権限変更
-$ chmod +x phpbrew.phar
+chmod +x phpbrew.phar
 # PATHにファイルを移動
-$ sudo mv phpbrew.phar /usr/local/bin/phpbrew
+sudo mv phpbrew.phar /usr/local/bin/phpbrew
 # 初期化
-$ phpbrew init
+phpbrew init
 ```
 
 その後、.zshrcに以下を追記します。
@@ -62,7 +62,7 @@ source ~/.phpbrew/bashrc
 ターミナルを再起動しバージョンを確認します。
 
 ```shell
-$ phpbrew --version
+phpbrew --version
 phpbrew - 1.25.3
 cliframework core: 2.5.4
 ```
@@ -74,7 +74,7 @@ cliframework core: 2.5.4
 `phpbrew known`でインストール可能なバージョンを確認できます。
 
 ```shell
-$ phpbrew known
+phpbrew known
 ```
 
 ## PHP7.4をインストール
@@ -84,25 +84,25 @@ $ phpbrew known
 確認方法は以下です。
 
 ```shell
-$ phpbrew variants
+phpbrew variants
 ```
 
 ```shell
-$ phpbrew install 7.4 +default+dbs
+phpbrew install 7.4 +default+dbs
 ```
 
 ## バージョンの切り替え方法
 
 ```shell
-$ phpbrew switch 7.4.2
+phpbrew switch 7.4.2
 ```
 
-$ phpbrew install 7.3 +default +dbs +debug +openssl=/usr/local/opt/openssl +bz2="$(brew --prefix bzip2)" +zlib="$(brew -
+phpbrew install 7.3 +default +dbs +debug +openssl=/usr/local/opt/openssl +bz2="$(brew --prefix bzip2)" +zlib="$(brew -
 
 ## 拡張モジュールインストール方法
 
 ```shell
-$ phpbrew ext install xdebug stable
+phpbrew ext install xdebug stable
 ```
 
 ## 参考

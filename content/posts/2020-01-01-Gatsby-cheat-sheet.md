@@ -19,14 +19,14 @@ Gatsbyアプリケーションを新規作成、アプリケーションのビ�
 ## ヘルプを表示
 
 ```shell
-$ gatsby -h
-or
-$ gatsby --help
+gatsby -h
+# または
+gatsby --help
 ```
 でコマンドの一覧を表示できます。
 
 ```
-$ gatsby --help
+gatsby --help
 Usage: gatsby <command> [options]
 
 コマンド:
@@ -55,7 +55,7 @@ Usage: gatsby <command> [options]
 `gatsby new` コマンドはGatsbyアプリケーションを新規作成します。
 
 ```shell
-$ gatsby new [<site-name> [<starter-url>]]
+gatsby new [<site-name> [<starter-url>]]
 ```
 
 第1引数にサイト名、第2引数にスターターのURLを設定することも出来ます。
@@ -69,7 +69,7 @@ Gatsbyアプリケーションのルートで実行し、
 Gatsbyの開発用サーバーを起動します。
 
 ```shell
-$ gatsby develop
+gatsby develop
 ```
 また以下のオプションが指定できます。
 
@@ -88,7 +88,7 @@ Gatsbyアプリケーションのルートで実行し、
 プロダクション用のビルドを実行します。
 
 ```shell
-$ gatsby build
+gatsby build
 ```
 
 また以下のオプションが指定できます。
@@ -107,7 +107,7 @@ Gatsbyアプリケーションのルートで実行し、
 `gatsby build` ビルドしたサイトを起動します。
 
 ```shell
-$ gatsby serve
+gatsby serve
 ```
 
 また以下のオプションが指定できます。
@@ -124,7 +124,7 @@ $ gatsby serve
 開発サーバーで何期か問題が発生したときにリフレッシュするのに役立ちます。
 
 ```shell
-$ gatsby clean
+gatsby clean
 ```
 
 内部でエラーが発生し、ホットリロードが止まってしまったときに実行するとうまくいくことが多かったです。
@@ -134,7 +134,7 @@ $ gatsby clean
 ドキュメントを参照できます。
 
 ```shell
-$ gatsby plugin docs
+gatsby plugin docs
 
 Using a plugin:
 - What is a Plugin? (https://www.gatsbyjs.org/docs/what-is-a-plugin/)
@@ -162,7 +162,7 @@ Gatsbyアプリケーションのルートで実行し、
 `gatsby info` でバグレポートで必要とされるような、環境情報を表示することができます。
 
 ```shell
-$ gatsby info
+gatsby info
 
   System:
     OS: macOS 10.15.2

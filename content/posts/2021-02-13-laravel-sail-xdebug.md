@@ -142,7 +142,7 @@ sail up -d
 
 ```shell
 sail shell
-sail@414d0d2b4215:/var/www/html$ php -m | grep xdebug
+sail@414d0d2b4215:/var/www/htmlphp -m | grep xdebug
 ```
 
 ### ブラウザでデバッグする場合

@@ -25,8 +25,8 @@ JDKをインストールする必要があります。
 anyenvでjenvをインストールしましょう。
 
 ```shell
-$ anyenv install jenv
-$ exec $Shell -l
+anyenv install jenv
+exec $Shell -l
 ```
 
 ## jenvにJDKを追加する
@@ -34,30 +34,30 @@ $ exec $Shell -l
 jenvは`add`コマンドで追加することができます。
 
 ```shell
-$ jenv help add
+jenv help add
 Usage: jenv add /path/to/java_home
 ```
 
 java_homeのpathが必要なので、以下のコマンドで確認します。
 
 ```shell
-$ /usr/libexec/java_home -V
+/usr/libexec/java_home -V
 ```
 
 今回は11をインストールしてみます。
 
 ```shell
-$ jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 ```
 
 ```shell
-$ jenv versions
+jenv versions
 ```
 
 `jenv versions`で追加されていればOKです。
 
 ```shell
-$ jenv global 11.0.6
+jenv global 11.0.6
 $ java -version
 ```
 

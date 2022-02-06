@@ -16,7 +16,7 @@ slug: redux-fundamental
 Reduxに必要なライブラリのインストールを行います。
 
 ```shell
-$ yarn add redux react-redux
+yarn add redux react-redux
 ```
 
 ## Actionの設定

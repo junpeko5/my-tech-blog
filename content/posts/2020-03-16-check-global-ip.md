@@ -14,7 +14,7 @@ slug: check-global-ip
 curlコマンドでグローバルIPを確認することができます。
 
 ```shell
-$ curl httpbin.org/ip
+curl httpbin.org/ip
 ```
 
 で一発です。

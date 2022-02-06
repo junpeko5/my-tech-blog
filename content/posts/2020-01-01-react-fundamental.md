@@ -21,19 +21,19 @@ Reactの基礎をおさらいしていきます。
 Homebrewでyarnをインストールします。
 
 ```shell
-$ brew install yarn
+brew install yarn
 ```
 
 
 ```shell
-$ yarn -v
+yarn -v
 1.21.1
 ```
 
 また、Node.js環境が必要です。nodenvなどでインストールしておいてください。
 
 ```shell
-$ node -v
+node -v
 v13.5.0
 ```
 
@@ -47,7 +47,7 @@ yarn global add create-react-app
 create-react-appでReactアプリケーションを作成します。
 
 ```shell
-$ yarn create react-app react-sample-application
+yarn create react-app react-sample-application
 ```
 
 以上で環境構築は完了です。

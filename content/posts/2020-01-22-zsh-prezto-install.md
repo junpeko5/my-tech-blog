@@ -23,7 +23,7 @@ Preztoは、zshの設定のためのフレームワークです。Preztoを利�
 デフォルトシェルを「zsh」であるか確認する方法は以下。
 
 ```shell
-$ echo $SHELL
+echo $SHELL
 /bin/zsh
 ```
 
@@ -32,7 +32,7 @@ $ echo $SHELL
 デフォルトシェルをzshに変更するコマンドは以下。
 
 ```shell
-$ chsh -s /bin/zsh
+chsh -s /bin/zsh
 ```
 
 ## インストール方法
@@ -65,7 +65,7 @@ done
 > すでに設定ファイルが有る場合は、バックアップしておき後ほど内容をマージする必要があります。
 
 ```shell
-$ mv ~/.zshrc ~/.zshrc.backup
+mv ~/.zshrc ~/.zshrc.backup
 ```
 
 ただ、以下の設定を`.zshrc`に追加することでも対応可能とのことです。
@@ -84,7 +84,7 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 コマンドの確認をしてみます。
 ```shell
-$ prompt -h
+prompt -h
 Usage: prompt <options>
 Options:
     -c              Show currently selected theme and parameters
@@ -101,19 +101,19 @@ Use prompt -h <theme> for help on specific themes.
 
 ### テーマ一覧表示
 ```shell
-$ prompt -l
+prompt -l
 ```
 
 ### テーマプレビュー
 
 すべてのテーマをプレビューできます。
 ```shell
-$ prompt -p
+prompt -p
 ```
 -pのあとにテーマ名を設定すると指定したテーマがプレビューできます。
 
 ```shell
-$ prompt -p agnoster
+prompt -p agnoster
 ```
 
 
@@ -121,7 +121,7 @@ $ prompt -p agnoster
 
 例
 ```shell
-$ prompt -s skwp
+prompt -s skwp
 Set and save not yet implemented.  Please ensure your ~/.zshrc
 contains something similar to the following:
 

@@ -14,12 +14,12 @@ slug: change-mac-zsh
 Macはデフォルトでzshが入っているので、設定変更自体は簡単にできます。
 
 ```shell
-$ which zsh
+which zsh
 /bin/zsh
 ```
 
 ```shell
-$ /bin/zsh --version
+/bin/zsh --version
 zsh 5.7.1 (x86_64-apple-darwin19.0)
 ```
 

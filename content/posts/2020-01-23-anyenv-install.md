@@ -19,12 +19,12 @@ anyenvをインストールすると、.phpenv、.rbenv、.nodenvなど環境ご
 ## Homebrewでインストール
 
 ```shell
-$ brew install anyenv
+brew install anyenv
 ```
 
 ターミナルで以下コマンドを実行します。
 ```shell
-$ anyenv init
+anyenv init
 ```
 
 ターミナルを再起動すると、マニフェストディレクトリがないとの警告が出ます。
@@ -35,7 +35,7 @@ ANYENV_DEFINITION_ROOT(/Users/riywo/.config/anyenv/anyenv-install) doesn't exist
 
 言われた通り以下を実行します。
 ```shell
-$ anyenv install --init
+anyenv install --init
 Manifest directory doesn't exist: /Users/jun/.config/anyenv/anyenv-install
 Do you want to checkout ? [y/N]: y
 ```
@@ -44,16 +44,16 @@ yを選択。
 以上でインストール完了です。
 
 ```shell
-$ anyenv -v
+anyenv -v
 anyenv 1.1.1
 ```
 
 ## 使い方の例
 ```shell
-$ anyenv install nodenv
-$ exec $SHELL -l
-$ nodenv install 13.7.0
-$ exec $SHELL -l
-$ node -v
+anyenv install nodenv
+exec $SHELL -l
+nodenv install 13.7.0
+exec $SHELL -l
+node -v
 v13.7.0
 ```
