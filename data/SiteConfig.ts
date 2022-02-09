@@ -42,7 +42,7 @@ const config = {
     },
   ],
   copyright: `Copyright © ${dateFullYear}. Junpeko5's Tech Blog`, // Copyright string for the footer of the website and RSS feed.
-  themeColor: '#FED7E2', // 'var(--chakra-colors-pink-600)',
+  themeColor: '#FED7E2',
   backgroundColor: '#EDF2F7', // 'var(--chakra-colors-gray-100)',
 };
 
