@@ -1,4 +1,18 @@
-import { Heading, Box, Image, useColorModeValue } from '@chakra-ui/react';
+import {
+  Heading,
+  Box,
+  Image,
+  useColorModeValue,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  ListItem,
+  ListIcon,
+  List,
+} from '@chakra-ui/react';
+import { VscDebugBreakpointLogUnverified } from '@react-icons/all-files/vsc/VscDebugBreakpointLogUnverified';
 import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
@@ -25,6 +39,7 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
   const color = useColorModeValue('light.primary', 'dark.primary');
   const { slug } = pageContext as Context;
   const postNode = data.mdx;
+  const headings = postNode?.headings;
   const post = postNode?.frontmatter;
 
   const postNodeWip = [];
@@ -53,6 +68,40 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
           <Box>
             <Image src={post?.cover} />
           </Box>
+          <Box my={8}>
+            <Accordion
+              allowToggle
+              borderTopColor={color}
+              borderBottomColor={color}
+            >
+              <AccordionItem>
+                <Box>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      目次
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </Box>
+                <AccordionPanel pb={4}>
+                  <List>
+                    {headings &&
+                      headings?.map((heading) => {
+                        return (
+                          <ListItem key={heading?.value}>
+                            <ListIcon
+                              as={VscDebugBreakpointLogUnverified}
+                              color={color}
+                            />
+                            {heading?.value}
+                          </ListItem>
+                        );
+                      })}
+                  </List>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
           <MDXWrapper>
             {postNode?.body && <MDXRenderer>{postNode.body}</MDXRenderer>}
           </MDXWrapper>
@@ -77,6 +126,9 @@ export const pageQuery = graphql`
         date
         category
         tags
+      }
+      headings(depth: h2) {
+        value
       }
       fields {
         slug
