@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 const ToggleMode: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDarkMode = colorMode === `dark`;
-  const bg = useColorModeValue('gray.50', 'gray.700');
+  const bg = useColorModeValue('gray.50', 'gray.800');
 
   return (
     <>

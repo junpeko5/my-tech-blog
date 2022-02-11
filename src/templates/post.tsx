@@ -60,7 +60,7 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
           <title>{`${post?.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
+        <Box>
           <Heading mt="30" as="h2" color={color}>
             {post?.title}
           </Heading>
@@ -105,7 +105,7 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
           <MDXWrapper>
             {postNode?.body && <MDXRenderer>{postNode.body}</MDXRenderer>}
           </MDXWrapper>
-        </div>
+        </Box>
       </Layout>
     </>
   );

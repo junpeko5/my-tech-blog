@@ -12,7 +12,7 @@ type Props = {
 
 const NavMenu: FC<Props> = ({ menuLinks }) => {
   const [isScroll, setIsScroll] = useState(false);
-  const bg = useColorModeValue('gray.50', 'gray.700');
+  const bg = useColorModeValue('gray.50', 'gray.800');
   const color = useColorModeValue('light.primary', 'dark.primary');
 
   useEffect(() => {

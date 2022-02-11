@@ -23,7 +23,7 @@ const DrawerMenu: FC<Props> = ({ menuLinks }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
   const color = useColorModeValue('light.primary', 'dark.primary');
-  const bg = useColorModeValue('gray.50', 'gray.700');
+  const bg = useColorModeValue('gray.50', 'gray.800');
 
   return (
     <>

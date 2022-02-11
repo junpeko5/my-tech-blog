@@ -10,7 +10,7 @@ import NavMenu from '../components/NavMenu';
 
 const MainLayout: FC = (props) => {
   const { children } = props;
-  const bg = useColorModeValue('gray.50', 'gray.700');
+  const bg = useColorModeValue('gray.50', 'gray.800');
   const color = useColorModeValue('gray.900', 'white');
 
   return (
@@ -22,7 +22,7 @@ const MainLayout: FC = (props) => {
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Flex flex="1" width="100vw" minH="100vh" flexDirection="column">
         <NavMenu menuLinks={config.menuLinks} />
-        <Container maxWidth="container.md" flex="1" mt="60px">
+        <Container maxWidth="container.md" flex="1" mt="60px" px="8" py="8">
           {children}
         </Container>
         <Footer />
