@@ -3469,6 +3469,11 @@ type CategoryPageQuery = { readonly allMdx: (
       ) }> }
   ) };
 
+type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
 type BlogQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3484,11 +3489,6 @@ type IndexQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ read
         Pick<Mdx, 'excerpt' | 'timeToRead'>
         & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
       ) }> } };
-
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 type AllSiteCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
 

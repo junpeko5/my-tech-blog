@@ -26,12 +26,14 @@ const config = {
         h2: {
           fontSize: 'xl',
           fontWeight: 'bold',
-          marginTop: 8,
           marginBottom: 6,
           paddingY: 2,
           borderBottomWidth: 2,
           borderBottomColor:
             props.colorMode === 'dark' ? 'dark.primary' : 'light.primary',
+          paddingTop: '16',
+          // marginTop: 8,
+          marginTop: '-30',
         },
         h3: {
           marginTop: 6,
