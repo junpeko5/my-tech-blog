@@ -55,7 +55,7 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
           <Box>
             <Image src={post?.cover} />
           </Box>
-          <TableOfContents headings={headings} />
+          <TableOfContents slug={slug} headings={headings} />
           <MDXWrapper>
             {postNode?.body && <MDXRenderer>{postNode.body}</MDXRenderer>}
           </MDXWrapper>
