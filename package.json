@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
-  "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "name": "junpeko5-tech-blog",
+  "description": "Tech Blog.",
+  "version": "1.0.0",
+  "author": "Jumpei Konishi <junpeko5@gmail.com>",
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^2.0.2",
     "@chakra-ui/react": "^1.7.4",
