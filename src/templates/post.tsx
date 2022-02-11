@@ -1,18 +1,4 @@
-import {
-  Heading,
-  Box,
-  Image,
-  useColorModeValue,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  ListItem,
-  ListIcon,
-  List,
-} from '@chakra-ui/react';
-import { VscDebugBreakpointLogUnverified } from '@react-icons/all-files/vsc/VscDebugBreakpointLogUnverified';
+import { Heading, Box, Image, useColorModeValue } from '@chakra-ui/react';
 import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
@@ -21,6 +7,7 @@ import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 import PostHeader from '../components/PostHeader';
 import SEO from '../components/SEO/SEO';
+import TableOfContents from '../components/TableOfContents';
 import Layout from '../layout';
 
 type Context = {
@@ -68,40 +55,7 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
           <Box>
             <Image src={post?.cover} />
           </Box>
-          <Box my={8}>
-            <Accordion
-              allowToggle
-              borderTopColor={color}
-              borderBottomColor={color}
-            >
-              <AccordionItem>
-                <Box>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      目次
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </Box>
-                <AccordionPanel pb={4}>
-                  <List>
-                    {headings &&
-                      headings?.map((heading) => {
-                        return (
-                          <ListItem key={heading?.value}>
-                            <ListIcon
-                              as={VscDebugBreakpointLogUnverified}
-                              color={color}
-                            />
-                            {heading?.value}
-                          </ListItem>
-                        );
-                      })}
-                  </List>
-                </AccordionPanel>
-              </AccordionItem>
-            </Accordion>
-          </Box>
+          <TableOfContents headings={headings} />
           <MDXWrapper>
             {postNode?.body && <MDXRenderer>{postNode.body}</MDXRenderer>}
           </MDXWrapper>
