@@ -121,6 +121,9 @@ const config = {
           },
         },
       },
+      '.anchor_link': {
+        marginLeft: 2,
+      },
       // '.chakra-ui-dark': {
       //   blockquote: {
       //     color: 'black',
