@@ -23,28 +23,6 @@ const config = {
   styles: {
     global: (props: Props) => ({
       '.mdx-prose': {
-        h2: {
-          fontSize: 'xl',
-          fontWeight: 'bold',
-          marginBottom: 6,
-          paddingY: 2,
-          borderBottomWidth: 2,
-          borderBottomColor:
-            props.colorMode === 'dark' ? 'dark.primary' : 'light.primary',
-          paddingTop: '16',
-          // marginTop: 8,
-          marginTop: '-30',
-        },
-        h3: {
-          marginTop: 6,
-          marginBottom: 4,
-          paddingLeft: 4,
-          borderLeftWidth: 5,
-          borderLeftColor:
-            props.colorMode === 'dark' ? 'dark.primary' : 'light.primary',
-          fontWeight: 'bold',
-          fontSize: 'lg',
-        },
         h4: {
           fontWeight: 'bold',
           fontSize: 'md',
@@ -121,9 +99,9 @@ const config = {
           },
         },
       },
-      '.anchor_link': {
-        marginLeft: 2,
-      },
+      // '.anchor_link': {
+      //   marginLeft: 2,
+      // },
       // '.chakra-ui-dark': {
       //   blockquote: {
       //     color: 'black',
