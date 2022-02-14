@@ -42,7 +42,6 @@ const config = {
             props.colorMode === 'dark' ? 'orange.300' : 'orange.500',
         },
         p: {
-          marginY: 2,
           code: {
             borderRadius: 'base',
             bgColor: props.colorMode === 'dark' ? 'gray.600' : 'gray.200',
@@ -52,51 +51,6 @@ const config = {
         },
         a: {
           color: props.colorMode === 'dark' ? 'blue.300' : 'blue',
-        },
-        code: {
-          color: 'white',
-          fontSize: 'sm',
-        },
-        pre: {
-          backgroundColor: 'black',
-          borderRadius: 'base',
-        },
-        '.gatsby-highlight': {
-          "pre[class*='language-']": {
-            position: 'relative',
-            paddingY: 8,
-            '&::before': {
-              color: 'black',
-              bg: 'gray',
-              position: 'absolute',
-              borderBottomRadius: 4,
-              paddingX: 1,
-              paddingY: 0.5,
-              top: 0,
-              left: 4,
-              fontSize: 'sm',
-            },
-          },
-          "pre[class*='language-shell']::before": {
-            content: '"Zsh"',
-            bg: 'gray.300',
-          },
-          "pre[class*='language-yaml']::before": {
-            content: '"yaml"',
-            bg: 'green.300',
-          },
-          "pre[class*='language-css']::before": {
-            content: '"CSS"',
-            bg: 'orange.300',
-          },
-          "pre[class*='language-php']::before": {
-            content: '"PHP"',
-            bg: 'blue.300',
-          },
-          " pre[class*='language-js']::before": {
-            content: '"JavaScript"',
-            bg: 'yellow.300',
-          },
         },
       },
       // '.anchor_link': {

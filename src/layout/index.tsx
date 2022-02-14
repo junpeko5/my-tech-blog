@@ -7,8 +7,11 @@ import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 import theme from '../@chakra-ui/gatsby-plugin/theme';
 import Footer from '../components/Footer';
+import CodeBlock from '../components/mdx/CodeBlock';
+import Paragraph from '../components/mdx/Paragraph';
 import PostHeader2 from '../components/mdx/PostHeader2';
 import PostHeader3 from '../components/mdx/PostHeader3';
+import Pre from '../components/mdx/Pre';
 import NavMenu from '../components/NavMenu';
 
 const MainLayout: FC = (props) => {
@@ -18,11 +21,9 @@ const MainLayout: FC = (props) => {
   const components: MDXProviderComponents = {
     h2: PostHeader2,
     h3: PostHeader3,
-    // code: (props) => (
-    //   <Code colorScheme="twitter" fontSize="sm">
-    //     {props.children}
-    //   </Code>
-    // ),
+    pre: (props) => <Pre {...props} />,
+    code: CodeBlock,
+    p: Paragraph,
   };
 
   return (
