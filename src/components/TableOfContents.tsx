@@ -11,8 +11,8 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { VscDebugBreakpointLogUnverified } from '@react-icons/all-files/vsc/VscDebugBreakpointLogUnverified';
-import { Link } from 'gatsby';
 import React, { FC } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 type Props = {
   headings: GatsbyTypes.Maybe<
@@ -21,9 +21,8 @@ type Props = {
   slug: string;
 };
 
-const TableOfContents: FC<Props> = ({ headings, slug }) => {
+const TableOfContents: FC<Props> = ({ headings }) => {
   const color = useColorModeValue('light.primary', 'dark.primary');
-  const regex = /[()（）[\]]+/gi;
   return (
     <>
       <Box my={8}>
@@ -43,15 +42,17 @@ const TableOfContents: FC<Props> = ({ headings, slug }) => {
                   headings?.map((heading) => {
                     return (
                       <ListItem key={heading?.value}>
-                        <Link
-                          to={`${slug}/#${heading?.value?.replace(regex, '')}`}
+                        <AnchorLink
+                          href={`#${heading?.value
+                            ?.toLowerCase()
+                            .replace(/[ ]/g, '-')}`}
                         >
                           <ListIcon
                             as={VscDebugBreakpointLogUnverified}
                             color={color}
                           />
                           {heading?.value}
-                        </Link>
+                        </AnchorLink>
                       </ListItem>
                     );
                   })}
