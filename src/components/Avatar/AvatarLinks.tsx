@@ -21,16 +21,18 @@ const AvatarLinks = () => {
             <ChakraLink
               href={'https://github.com/junpeko5/'}
               title="Github icon"
+              area-label="Github icon"
             >
               <AiFillGithub />
             </ChakraLink>
             <ChakraLink
               href={'https://twitter.com/junpeko516/'}
               title="Twitter icon"
+              area-label="Twitter icon"
             >
               <AiFillTwitterCircle />
             </ChakraLink>
-            <Link to={'/contact'} title="Mail icon">
+            <Link to={'/contact'} title="Mail icon" area-label="Mail icon">
               <AiFillMail />
             </Link>
           </Flex>

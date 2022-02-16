@@ -5,9 +5,9 @@ import {
   DrawerOverlay,
   DrawerContent,
   useDisclosure,
-  Button,
   Box,
   useColorModeValue,
+  IconButton,
 } from '@chakra-ui/react';
 import { AiOutlineClose } from '@react-icons/all-files/ai/AiOutlineClose';
 import { BiMenuAltRight } from '@react-icons/all-files/bi/BiMenuAltRight';
@@ -28,13 +28,13 @@ const DrawerMenu: FC<Props> = ({ menuLinks }) => {
   return (
     <>
       <Box ml={1}>
-        <Button ref={btnRef} bg={bg} aria-label="open or close drawer menu">
+        <IconButton ref={btnRef} bg={bg} aria-label="open or close drawer menu">
           {isOpen ? (
             <AiOutlineClose onClick={onClose} size={30} />
           ) : (
             <BiMenuAltRight onClick={onOpen} size={30} />
           )}
-        </Button>
+        </IconButton>
       </Box>
       <Drawer
         isOpen={isOpen}
