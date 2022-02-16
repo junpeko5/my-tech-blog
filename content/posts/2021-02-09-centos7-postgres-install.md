@@ -12,9 +12,6 @@ tags:
 slug: centos7-postgres-install
 ---
 
-
-## 
-
 <https://www.postgresql.org/download/>よりOSごとにインストール方法を教えてくれます。
 
 以下は、CentOS7、PostgreSQL9.6の場合です。
@@ -74,8 +71,6 @@ host    all             all             127.0.0.1/32            md5
 
 `host    all             all             127.0.0.1/32            md5`
 はローカルでのホスト接続でパスワードを必要とする設定。同じサーバー内のアプリケーションからの接続を行う場合はこのような設定となる。
-
-
 
 
 ## ユーザーの作成

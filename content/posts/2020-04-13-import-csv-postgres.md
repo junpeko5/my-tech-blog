@@ -53,7 +53,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 72c628ab5d8f        postgres            "docker-entrypoint.s…"   About a minute ago   Up About a minute   5432/tcp            some-postgres
 ```
 
-## `\copy`コマンドでCSVファイルのインポートを行う
+## \copyコマンドでCSVファイルのインポートを行う
 
 `\copy`コマンドはCSVファイルがホストマシンにある場合にリモートのDBサーバーに対して実行できます。
 

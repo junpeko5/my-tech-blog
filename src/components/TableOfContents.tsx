@@ -43,6 +43,7 @@ const TableOfContents: FC<Props> = ({ headings }) => {
                     return (
                       <ListItem key={heading?.value}>
                         <AnchorLink
+                          offset="100"
                           href={`#${heading?.value
                             ?.toLowerCase()
                             .replace(/[ ]/g, '-')}`}

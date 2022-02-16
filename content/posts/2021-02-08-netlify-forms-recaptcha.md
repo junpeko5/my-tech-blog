@@ -24,15 +24,17 @@ Githubにも公開しているので、そちらも参考にしてみてくだ�
 - Netlifyでのフォーム通知設定
 - Gatsbyのソースコードを修正
 
-## `react-google-recaptcha`をインストール
+## react-google-recaptchaをインストール
 
 ```shell
 yarn add react-google-recaptcha
 ```
 
-## <https://www.google.com/recaptcha>で新しいサイトを登録
+## 新しいサイトを登録
 
 Admin Consoleにログインして、新しいサイトを登録します。
+
+<https://www.google.com/recaptcha>
 
 注意点として、reCAPTCHAタイプはv2を指定する必要があります。
 

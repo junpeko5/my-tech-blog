@@ -164,7 +164,7 @@ eccube4の場合、`src/Eccube/DependencyInjection/EccubeExtension.php`の実装
 
 参考: <https://symfony.com/doc/3.4/security.html#add-code-to-deny-access>
 
-## `IS_AUTHENTICATED_FULLY`とは
+## IS_AUTHENTICATED_FULLY とは
 
 アクセスコントロールの実装をよくみると、
 
