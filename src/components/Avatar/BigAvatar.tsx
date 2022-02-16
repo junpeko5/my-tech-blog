@@ -1,4 +1,5 @@
-import { Box, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { StaticImage } from 'gatsby-plugin-image';
 import React, { FC } from 'react';
 
 import config from '../../../data/SiteConfig';
@@ -9,7 +10,10 @@ const BigAvatar: FC = () => {
   return (
     <>
       <Box>
-        <Image src={config.avatar.photo} alt="profile image" />
+        <StaticImage
+          src="../../../static/images/profileIcon.jpg"
+          alt="profile image"
+        />
         <Heading as="h2" color={color} my="32px">
           Hello World!!
         </Heading>

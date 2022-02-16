@@ -18,13 +18,19 @@ const AvatarLinks = () => {
       <Center>
         <IconContext.Provider value={{ color: color, size: '30px' }}>
           <Flex mx="2" gap="6" color={color}>
-            <ChakraLink href={'https://github.com/junpeko5/'}>
+            <ChakraLink
+              href={'https://github.com/junpeko5/'}
+              title="Github icon"
+            >
               <AiFillGithub />
             </ChakraLink>
-            <ChakraLink href={'https://twitter.com/junpeko516/'}>
+            <ChakraLink
+              href={'https://twitter.com/junpeko516/'}
+              title="Twitter icon"
+            >
               <AiFillTwitterCircle />
             </ChakraLink>
-            <Link to={'/contact'}>
+            <Link to={'/contact'} title="Mail icon">
               <AiFillMail />
             </Link>
           </Flex>

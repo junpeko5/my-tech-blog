@@ -28,7 +28,7 @@ const DrawerMenu: FC<Props> = ({ menuLinks }) => {
   return (
     <>
       <Box ml={1}>
-        <Button ref={btnRef} bg={bg}>
+        <Button ref={btnRef} bg={bg} aria-label="open or close drawer menu">
           {isOpen ? (
             <AiOutlineClose onClick={onClose} size={30} />
           ) : (
