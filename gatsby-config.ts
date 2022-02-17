@@ -100,6 +100,7 @@ const plugins: Plugin[] = [
       // ... customize options here
     },
   },
+  `gatsby-plugin-webpack-bundle-analyser-v2`,
 ];
 const siteMetadata: GatsbyConfig['siteMetadata'] = {
   siteUrl: SiteConfig.siteUrl,
