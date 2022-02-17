@@ -2,12 +2,12 @@ import {
   Heading,
   Box,
   Flex,
-  Image,
   Text,
   Container,
   Center,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { StaticImage } from 'gatsby-plugin-image';
 import React, { FC } from 'react';
 
 import siteConfig from '../../data/SiteConfig';
@@ -36,11 +36,10 @@ const Footer: FC = () => {
 
           <Flex alignItems="center" my="4">
             <Box mr="4">
-              <Image
+              <StaticImage
                 alt="avatar"
-                src={avatar.photo}
-                width="140px"
-                borderRadius="50%"
+                src="../../static/images/profileIcon.jpg"
+                imgStyle={{ borderRadius: '50%' }}
               />
             </Box>
             <Text as="p" fontSize="xs">
