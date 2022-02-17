@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';
 
+import SiteConfig from '../../../data/SiteConfig';
 import config from '../../../data/SiteConfig';
 
 type Props = {
@@ -70,6 +71,7 @@ const SEO: FC<Props> = (props) => {
         <meta name="twitter:image" content={image} />
 
         <link rel="icon" href="/images/favicon/favicon.ico" />
+        <link rel="canonical" href={SiteConfig.siteUrl} />
       </Helmet>
     </>
   );
