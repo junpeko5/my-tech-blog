@@ -3,7 +3,7 @@ import { createFilePath } from 'gatsby-source-filesystem';
 import _ from 'lodash';
 import moment from 'moment';
 import { GatsbyNode } from 'gatsby';
-import siteConfig from './data/SiteConfig';
+import siteConfig from './src/data/SiteConfig';
 import './src/__generated__/gatsby-types';
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({

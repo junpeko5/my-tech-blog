@@ -4,10 +4,10 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
 import PostHeader from '../components/PostHeader';
 import SEO from '../components/SEO/SEO';
 import TableOfContents from '../components/TableOfContents';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 type Context = {

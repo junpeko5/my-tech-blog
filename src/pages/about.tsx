@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
 import About from '../components/About';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 const AboutPage: FC = () => {

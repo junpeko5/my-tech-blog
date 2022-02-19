@@ -2,9 +2,9 @@ import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
 import PostListing from '../components/PostListing';
 import SEO from '../components/SEO/SEO';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 const Blog: FC<PageProps<GatsbyTypes.BlogQueryQuery>> = (props) => {

@@ -11,7 +11,7 @@ import React, { ChangeEvent, FC, SyntheticEvent, useState } from 'react';
 import Recaptcha from 'react-google-recaptcha';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY as string;

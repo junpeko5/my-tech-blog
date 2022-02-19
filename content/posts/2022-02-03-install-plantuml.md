@@ -57,7 +57,7 @@ PlantUML integrationというプラグインをインストールしましょう
 
 インストールすると、New > PlantUML File が表示されているはずです。
 
-![plantuml_new_file](../../static/images/posts/plantuml_new_file.png)
+![plantuml_new_file](../assets/plantuml_new_file.png)
 
 ### プラグインの設定
 
@@ -65,7 +65,7 @@ PlantUMLのプラグインを動作させるには、`dot`へのパスを追加�
 
 `/opt/homebrew/bin/dot` Graphviz dot executable: に設定します。
 
-![plantuml_preference](../../static/images/posts/plantuml_preference.png)
+![plantuml_preference](../assets/plantuml_preference.png)
 
 ## 使い方（vscode）
 

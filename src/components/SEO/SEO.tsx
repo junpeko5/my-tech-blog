@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 import urljoin from 'url-join';
 
-import SiteConfig from '../../../data/SiteConfig';
-import config from '../../../data/SiteConfig';
+import SiteConfig from '../../data/SiteConfig';
+import config from '../../data/SiteConfig';
 
 type Props = {
   postNode?: GatsbyTypes.BlogPostBySlugQuery['mdx'];

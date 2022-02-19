@@ -4,7 +4,6 @@ import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
 import theme from '../@chakra-ui/gatsby-plugin/theme';
 import Footer from '../components/Footer';
 import CodeBlock from '../components/mdx/CodeBlock';
@@ -13,6 +12,7 @@ import PostHeader2 from '../components/mdx/PostHeader2';
 import PostHeader3 from '../components/mdx/PostHeader3';
 import Pre from '../components/mdx/Pre';
 import NavMenu from '../components/NavMenu';
+import config from '../data/SiteConfig';
 
 const MainLayout: FC = (props) => {
   const { children } = props;

@@ -3,12 +3,12 @@ import { graphql, Link, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
 import AllCategories from '../components/AllCategories';
 import AvatarLinks from '../components/Avatar/AvatarLinks';
 import BigAvatar from '../components/Avatar/BigAvatar';
 import SEO from '../components/SEO/SEO';
 import SimplePostListing from '../components/SimplePostListing';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 const Index: FC<PageProps<GatsbyTypes.IndexQueryQuery>> = (props) => {

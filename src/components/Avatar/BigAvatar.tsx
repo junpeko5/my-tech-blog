@@ -2,7 +2,7 @@ import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { FC } from 'react';
 
-import config from '../../../data/SiteConfig';
+import config from '../../data/SiteConfig';
 
 const BigAvatar: FC = () => {
   const color = useColorModeValue('light.primary', 'dark.primary');

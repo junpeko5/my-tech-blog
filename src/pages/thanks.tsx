@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
 import Thanks from '../components/Thanks';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 const ThanksPage: FC = () => {

@@ -2,8 +2,8 @@ import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
 import PostListing from '../components/PostListing';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 type Context = {

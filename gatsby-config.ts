@@ -1,5 +1,5 @@
 import type { PluginOptions as TypegenPluginOptions } from 'gatsby-plugin-typegen/types';
-import SiteConfig from './data/SiteConfig';
+import SiteConfig from './src/data/SiteConfig';
 import { GatsbyConfig } from 'gatsby';
 
 type Plugin =
@@ -47,7 +47,7 @@ const plugins: Plugin[] = [
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      name: 'posts',
+      name: 'assets',
       path: `${__dirname}/content/`,
     },
   },

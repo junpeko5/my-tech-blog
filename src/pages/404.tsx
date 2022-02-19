@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
+import config from '../data/SiteConfig';
 import Layout from '../layout';
 
 const default404: FC = () => {

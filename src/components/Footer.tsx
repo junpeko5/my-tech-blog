@@ -10,7 +10,7 @@ import {
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { FC } from 'react';
 
-import siteConfig from '../../data/SiteConfig';
+import siteConfig from '../data/SiteConfig';
 import AvatarLinks from './Avatar/AvatarLinks';
 
 const Footer: FC = () => {
