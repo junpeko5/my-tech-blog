@@ -27,7 +27,7 @@ fi
   echo -e "category: "
   echo -e "tags:"
   echo -e "  - "
-  echo -e "slug: "
+  echo -e "slug: ""$SLUG"
   echo -e "---"
 } >> "$FILE"
 

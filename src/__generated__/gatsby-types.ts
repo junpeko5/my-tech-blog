@@ -3867,19 +3867,6 @@ type BlogQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ reado
         & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
       ) }> } };
 
-type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type IndexQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<Mdx, 'excerpt' | 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
-      ) }> } };
-
-type AllSiteCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type AllSiteCategoriesQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category'>> } }> } };
-
 type CategoryPageQueryVariables = Exact<{
   category: Maybe<Scalars['String']>;
 }>;
@@ -3892,6 +3879,19 @@ type CategoryPageQuery = { readonly allMdx: (
         & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
       ) }> }
   ) };
+
+type AllSiteCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AllSiteCategoriesQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category'>> } }> } };
+
+type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type IndexQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<Mdx, 'excerpt' | 'timeToRead'>
+        & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
+      ) }> } };
 
 type BlogPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
