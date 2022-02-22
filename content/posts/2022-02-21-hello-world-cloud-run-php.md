@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: Cloud RunでPHPサービスをデプロイする
 date: 2022-02-21
-description:
-cover: /images/apple-logo.png
+description: GCPのCloud Runというサービスのチュートリアルをやってみたので、メモを残します。
+cover: /images/php.png
 category: PHP
 tags:
   - PHP
@@ -117,3 +117,4 @@ gcloud run deploy
 ```
 
 権限の有効化等を聞かれますのですべて`yes`で答える必要がありました。
+
