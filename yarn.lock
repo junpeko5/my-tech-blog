@@ -1863,6 +1863,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/noto-sans-jp@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans-jp/-/noto-sans-jp-4.5.4.tgz#31f0bf4190425c6c557cac4764a1cf79646f9977"
+  integrity sha512-kGOvRKEuNKr7cPuFM66k96n/KQjca21fojOVfVIQlt8oNIx4Ey6QHhd2lBsfdfHzdgDv6RNnt/ESrywQApasaw==
+
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

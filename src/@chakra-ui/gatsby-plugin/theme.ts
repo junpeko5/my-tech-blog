@@ -1,4 +1,5 @@
 import { ColorMode, extendTheme, Theme } from '@chakra-ui/react';
+import '@fontsource/noto-sans-jp';
 
 type Props = {
   colorMode: ColorMode;
@@ -15,6 +16,9 @@ const config = {
     },
     // primary: props.colorMode === 'dark' ? 'var(--chakra-colors-pink-600)' : 'var(--chakra-colors-pink-100)',
     primary: 'var(--chakra-colors-pink-600)',
+  },
+  fonts: {
+    body: 'Noto Sans JP, sans-serif',
   },
   config: {
     initialColorMode: 'light',
