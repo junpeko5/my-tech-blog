@@ -2,14 +2,14 @@
 templateKey: blog-post
 title: jqコマンドをインストールする
 date: 2022-02-22
-description: 
+description:
 cover: /images/bash.png
 category: ShellScript
 tags:
   - ShellScript
-slug: 
+slug: jq-command
 ---
-  
+
 ## インストール
 
 ```shell
@@ -35,12 +35,15 @@ jq -h
 ```shell
 echo '{"foo": 0}' | jq .
 ```
+
 とすると
+
 ```json
 {
   "foo": 0
 }
 ```
+
 上記のように整形されて出力されます。
 
 ## 参考
