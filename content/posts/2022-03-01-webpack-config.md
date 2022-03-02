@@ -64,4 +64,29 @@ module.exports = {
 
 ## その他
 
+以下は例ですが、`package.json`にwebpackの実行コマンドを設定しておくと、ビルドコマンドを簡略化できます。
+
+```json
+{
+  "name": "get-started-firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.6.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
+```
+
 webpackの知見が溜まり次第、追記していきます。Comming Soon!!
