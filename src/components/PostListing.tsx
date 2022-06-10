@@ -34,7 +34,7 @@ const PostListing: FC<Props> = ({ category, tag, postEdges }) => {
       {category && <CategoryHeader category={category} />}
       {tag && <TagHeader tag={tag} />}
       {postList.map((post) => (
-        <Box key={post.title}  mt={'30'}>
+        <Box key={post.title} mt={'30'}>
           <Link to={post.path ?? '/'}>
             <Heading mb="-0.1px" fontSize="24px" color={color}>
               {post.title}
