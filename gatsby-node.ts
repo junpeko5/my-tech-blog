@@ -1,6 +1,6 @@
-import path from 'path';
+import * as path from 'path';
 import { createFilePath } from 'gatsby-source-filesystem';
-import _ from 'lodash';
+import * as _ from 'lodash';
 import moment from 'moment';
 import { GatsbyNode } from 'gatsby';
 import siteConfig from './src/data/SiteConfig';
