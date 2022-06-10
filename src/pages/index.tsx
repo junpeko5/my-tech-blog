@@ -35,7 +35,7 @@ const Index: FC<PageProps<GatsbyTypes.IndexQueryQuery>> = (props) => {
           </Heading>
           <SimplePostListing postEdges={postEdges} />
         </section>
-        <Box size="md" color={color} mt="30">
+        <Box color={color} mt="30">
           <Link to={'/blog'}>記事をもっと見る →</Link>
         </Box>
       </Layout>
