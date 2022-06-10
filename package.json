@@ -88,10 +88,10 @@
     "serve": "gatsby serve",
     "build": "gatsby build",
     "clean": "rm -rf public && rm -rf .cache",
-    "lint:js": "eslint --fix .",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:md": "remark content/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "format": "prettier '**/*.{js,jsx,ts,tsx}' --write",
     "typecheck": "tsc"
   },
   "remarkConfig": {
