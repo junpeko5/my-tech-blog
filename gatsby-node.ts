@@ -1,9 +1,10 @@
 import * as path from 'path';
 import { createFilePath } from 'gatsby-source-filesystem';
 import * as _ from 'lodash';
-import moment from 'moment';
 import { GatsbyNode } from 'gatsby';
 import siteConfig from './src/data/SiteConfig';
+import { format, isBefore, isValid } from 'date-fns';
+import { utcToZonedTime } from 'date-fns-tz';
 import './src/__generated__/gatsby-types';
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({
@@ -76,17 +77,19 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({
         )}`;
       }
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'date')) {
-        const date = moment(
-          (node.frontmatter as Record<string, string>).date,
+        const dateString = (node.frontmatter as Record<string, string>).date;
+        const modZonedTimeDateString = format(
+          utcToZonedTime(new Date(dateString), 'Asia/Tokyo'),
           siteConfig.dateFromFormat
         );
-        if (!date.isValid)
+        if (!isValid(new Date(modZonedTimeDateString))) {
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
+        }
 
         createNodeField({
           node,
           name: 'date',
-          value: date.toISOString(),
+          value: modZonedTimeDateString,
         });
       }
     }
@@ -136,19 +139,20 @@ export const createPages: GatsbyNode['createPages'] = async ({
   // graphqlの取得時にソートすべき？
   // @ts-ignore
   postsEdges?.sort((postA, postB) => {
-    const dateA = moment(
-      postA.node.frontmatter.date,
-      siteConfig.dateFromFormat
+    const dateA = utcToZonedTime(
+      new Date(postA.node.frontmatter.date),
+      'Asia/Tokyo'
     );
-
-    const dateB = moment(
-      postB.node.frontmatter.date,
-      siteConfig.dateFromFormat
+    const dateB = utcToZonedTime(
+      new Date(postB.node.frontmatter.date),
+      'Asia/Tokyo'
     );
-
-    if (dateA.isBefore(dateB)) return 1;
-    if (dateB.isBefore(dateA)) return -1;
-
+    if (isBefore(dateA, dateB)) {
+      return 1;
+    }
+    if (isBefore(dateB, dateA)) {
+      return -1;
+    }
     return 0;
   });
 

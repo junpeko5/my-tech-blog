@@ -13,7 +13,7 @@ const config = {
   siteFBAppID: '1825356251115265', // FB Application ID for using app insights
   siteGTMID: 'GTM-MVZ85MD', // GA tracking ID.
   postDefaultCategoryID: '未分類', // Default category for assets.
-  dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
+  dateFromFormat: 'yyyy-MM-dd', // Date format used in the frontmatter.
   dateFormat: 'DD/MM/YYYY', // Date format for display.
   userName: 'Jumpei Konishi', // Username to display in the author segment.
   userEmail: 'junpeko5@gmail.com', // Email used for RSS feed's author segment
