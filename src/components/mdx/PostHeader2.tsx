@@ -36,6 +36,8 @@ const PostHeader2: FC<Props> = (props) => {
       >
         <Flex alignItems="center">
           <Box mr={2}>{props.children}</Box>
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/* @ts-ignore*/}
           <AnchorLink
             offset="100"
             href={anchorLink}

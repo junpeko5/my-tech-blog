@@ -8,7 +8,7 @@ import PostHeader from '../components/PostHeader';
 import SEO from '../components/SEO/SEO';
 import TableOfContents from '../components/TableOfContents';
 import config from '../data/SiteConfig';
-import Layout from '../layout';
+import MainLayout from '../layout';
 
 type Context = {
   slug: string;
@@ -42,7 +42,9 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
 
   return (
     <>
-      <Layout>
+      <MainLayout>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore*/}
         <Helmet>
           <title>{`${post?.title} | ${config.siteTitle}`}</title>
         </Helmet>
@@ -56,11 +58,13 @@ const PostTemplate: FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> = (
             <Image src={post?.cover} />
           </Box>
           <TableOfContents slug={slug} headings={headings} />
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/* @ts-ignore*/}
           <MDXWrapper>
             {postNode?.body && <MDXRenderer>{postNode.body}</MDXRenderer>}
           </MDXWrapper>
         </Box>
-      </Layout>
+      </MainLayout>
     </>
   );
 };

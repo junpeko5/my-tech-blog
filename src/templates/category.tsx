@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import PostListing from '../components/PostListing';
 import config from '../data/SiteConfig';
-import Layout from '../layout';
+import MainLayout from '../layout';
 
 type Category = {
   category: string;
@@ -18,12 +18,14 @@ const CategoryTemplate: FC<PageProps<GatsbyTypes.CategoryPageQuery>> = ({
   const postEdges = data.allMdx.edges;
   return (
     <>
-      <Layout>
+      <MainLayout>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore*/}
         <Helmet>
           <title>{`Posts in category "${category}" | ${config.siteTitle}`}</title>
         </Helmet>
         <PostListing postEdges={postEdges} category={category} />
-      </Layout>
+      </MainLayout>
     </>
   );
 };

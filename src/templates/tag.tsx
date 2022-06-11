@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import PostListing from '../components/PostListing';
 import config from '../data/SiteConfig';
-import Layout from '../layout';
+import MainLayout from '../layout';
 
 type Context = {
   tag: string;
@@ -18,12 +18,14 @@ const TagTemplate: FC<PageProps<GatsbyTypes.TagPageQuery>> = ({
   const { tag } = pageContext as Context;
   return (
     <>
-      <Layout>
+      <MainLayout>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore*/}
         <Helmet>
           <title>{`Posts tagged as "${tag}" | ${config.siteTitle}`}</title>
         </Helmet>
         <PostListing postEdges={postEdges} tag={tag} />
-      </Layout>
+      </MainLayout>
     </>
   );
 };
