@@ -8,11 +8,11 @@ import {
 } from '@chakra-ui/react';
 import { navigate } from 'gatsby';
 import React, { ChangeEvent, FC, SyntheticEvent, useState } from 'react';
-import Recaptcha from 'react-google-recaptcha';
+import { ReCAPTCHA } from 'react-google-recaptcha';
 import Helmet from 'react-helmet';
 
 import config from '../data/SiteConfig';
-import Layout from '../layout';
+import MainLayout from '../layout';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY as string;
 
@@ -103,7 +103,9 @@ const Contact: FC = () => {
 
   return (
     <>
-      <Layout>
+      <MainLayout>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore*/}
         <Helmet>
           <title>{`お問い合わせ | ${config.siteTitle}`}</title>
         </Helmet>
@@ -163,13 +165,15 @@ const Contact: FC = () => {
               rows={6}
               mb="4"
             />
-            <Recaptcha sitekey={RECAPTCHA_KEY} onChange={handleRecaptcha} />
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/* @ts-ignore*/}
+            <ReCAPTCHA sitekey={RECAPTCHA_KEY} onChange={handleRecaptcha} />
             <Button type="submit" colorScheme="blue" my="4">
               送信
             </Button>
           </Box>
         </Box>
-      </Layout>
+      </MainLayout>
     </>
   );
 };

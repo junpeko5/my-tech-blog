@@ -4,12 +4,14 @@ import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../data/SiteConfig';
-import Layout from '../layout';
+import MainLayout from '../layout';
 
 const default404: FC = () => {
   return (
     <>
-      <Layout>
+      <MainLayout>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore*/}
         <Helmet>
           <title>{`ページが見つかりません | ${config.siteTitle}`}</title>
         </Helmet>
@@ -19,7 +21,7 @@ const default404: FC = () => {
         <Text color="blue">
           <Link to="/"> ← トップに戻る</Link>
         </Text>
-      </Layout>
+      </MainLayout>
     </>
   );
 };

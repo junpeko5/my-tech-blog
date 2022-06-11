@@ -5,19 +5,21 @@ import Helmet from 'react-helmet';
 import PostListing from '../components/PostListing';
 import SEO from '../components/SEO/SEO';
 import config from '../data/SiteConfig';
-import Layout from '../layout';
+import MainLayout from '../layout';
 
 const Blog: FC<PageProps<GatsbyTypes.BlogQueryQuery>> = (props) => {
   const postEdges = props.data.allMdx.edges;
   return (
     <>
-      <Layout>
+      <MainLayout>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore*/}
         <Helmet>
           <title>{`記事一覧 | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO />
         <PostListing postEdges={postEdges} />
-      </Layout>
+      </MainLayout>
     </>
   );
 };

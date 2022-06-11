@@ -9,7 +9,7 @@ import BigAvatar from '../components/Avatar/BigAvatar';
 import SEO from '../components/SEO/SEO';
 import SimplePostListing from '../components/SimplePostListing';
 import config from '../data/SiteConfig';
-import Layout from '../layout';
+import MainLayout from '../layout';
 
 const Index: FC<PageProps<GatsbyTypes.IndexQueryQuery>> = (props) => {
   const postEdges = props.data.allMdx.edges;
@@ -17,7 +17,9 @@ const Index: FC<PageProps<GatsbyTypes.IndexQueryQuery>> = (props) => {
 
   return (
     <>
-      <Layout>
+      <MainLayout>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore*/}
         <Helmet>
           <title>{config.siteTitle}</title>
         </Helmet>
@@ -38,7 +40,7 @@ const Index: FC<PageProps<GatsbyTypes.IndexQueryQuery>> = (props) => {
         <Box color={color} mt="30">
           <Link to={'/blog'}>記事をもっと見る →</Link>
         </Box>
-      </Layout>
+      </MainLayout>
     </>
   );
 };

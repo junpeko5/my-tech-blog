@@ -42,6 +42,8 @@ const TableOfContents: FC<Props> = ({ headings }) => {
                   headings?.map((heading) => {
                     return (
                       <ListItem key={heading?.value}>
+                        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                        {/* @ts-ignore*/}
                         <AnchorLink
                           offset="100"
                           href={`#${heading?.value
