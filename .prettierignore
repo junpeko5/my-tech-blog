@@ -1,4 +1,6 @@
+package.json
 public
 static
 .cache
 content
+**/__generated__/
