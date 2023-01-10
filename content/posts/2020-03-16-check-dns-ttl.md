@@ -1,13 +1,12 @@
 ---
 templateKey: blog-post
-title: dig、nslookupコマンドでDNSのTTLを確認する
+title: nslookupコマンドでDNSのTTLを確認する
 date: 2020-03-16
 description: 例えば、お名前ドットコムなどで新しくドメインを取得して、お名前ドットコムのNS（ネームサーバー）にRoute53などで作成したNSレコードを登録してもすぐには反映されません。
 cover: /images/java.png
 category: DNS
 tags: 
   - DNS
-  - dig
   - nslookup
 slug: check-dns-ttl
 ---
@@ -62,4 +61,4 @@ Non-authoritative answer:
 *** Can't find junpeko.work: No answer
 ```
 
-`ttl = 900`、つまり、15分でお名前ドットコムのデフォルトのNSレコードから、Route53のNSレコード反映されることが分かりました。
+`ttl = 900`、つまり、15分でお名前ドットコムのデフォルトのNSレコードから、Route53のNSレコードに反映されることが分かりました。
