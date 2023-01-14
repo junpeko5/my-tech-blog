@@ -5,7 +5,7 @@ date: 2020-03-16
 description: 例えば、お名前ドットコムなどで新しくドメインを取得して、お名前ドットコムのNS（ネームサーバー）にRoute53などで作成したNSレコードを登録してもすぐには反映されません。
 cover: /images/java.png
 category: DNS
-tags: 
+tags:
   - DNS
   - nslookup
 slug: check-dns-ttl
@@ -16,16 +16,19 @@ slug: check-dns-ttl
 
 TTL（Time to Live）という決められた秒数が過ぎるまで、フルリゾルバにキャッシュとして残っているためです。
 
+ドメイン情報を操作するコマンドとしてはdigが有名ですが、今回はnslookupコマンドで行いました。
+
 例えば、`junpeko.work`というドメインを取得して、`nslookup`コマンドを叩くと以下のようになります。
 
 ```shell
 nslookup junpeko.work
-Server:		2400:2650:7081:e800:1111:1111:1111:1111
-Address:	2400:2650:7081:e800:1111:1111:1111:1111#53
+Server:  2400:2650:7081:e800:1111:1111:1111:1111
+Address: 2400:2650:7081:e800:1111:1111:1111:1111#53
 
 Non-authoritative answer:
 *** Can't find junpeko.work: No answer
 ```
+
 `junpeko.work`は見つからないよと言われました。
 
 こういった場合は、TTLを確認していつ反映されるのかをチェックします。
@@ -38,23 +41,23 @@ Non-authoritative answer:
 nslookup
 > set debug
 > junpeko.work
-Server:		2400:2650:7081:e800:1111:1111:1111:1111
-Address:	2400:2650:7081:e800:1111:1111:1111:1111#53
+Server:  2400:2650:7081:e800:1111:1111:1111:1111
+Address: 2400:2650:7081:e800:1111:1111:1111:1111#53
 
 ------------
     QUESTIONS:
-	junpeko.work, type = A, class = IN
+ junpeko.work, type = A, class = IN
     ANSWERS:
     AUTHORITY RECORDS:
     ->  junpeko.work
-	origin = ns-1371.awsdns-43.org
-	mail addr = awsdns-hostmaster.amazon.com
-	serial = 1
-	refresh = 7200
-	retry = 900
-	expire = 1209600
-	minimum = 86400
-	ttl = 900
+ origin = ns-1371.awsdns-43.org
+ mail addr = awsdns-hostmaster.amazon.com
+ serial = 1
+ refresh = 7200
+ retry = 900
+ expire = 1209600
+ minimum = 86400
+ ttl = 900
     ADDITIONAL RECORDS:
 ------------
 Non-authoritative answer:
