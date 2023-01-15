@@ -3546,6 +3546,14 @@ type AllSiteCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
 
 type AllSiteCategoriesQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category'>> } }> } };
 
+type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type IndexQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<Mdx, 'excerpt' | 'timeToRead'>
+        & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
+      ) }> } };
+
 type BlogPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
@@ -3556,28 +3564,12 @@ type BlogPostBySlugQuery = { readonly mdx: Maybe<(
     & { readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'title' | 'cover' | 'date' | 'category' | 'tags'>>, readonly headings: Maybe<ReadonlyArray<Maybe<Pick<MdxHeadingMdx, 'value'>>>>, readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>> }
   )> };
 
-type BlogQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type BlogQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<Mdx, 'excerpt' | 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
-      ) }> } };
-
-type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type IndexQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<Mdx, 'excerpt' | 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
-      ) }> } };
-
-type CategoryPageQueryVariables = Exact<{
-  category: Maybe<Scalars['String']>;
+type TagPageQueryVariables = Exact<{
+  tag: Maybe<Scalars['String']>;
 }>;
 
 
-type CategoryPageQuery = { readonly allMdx: (
+type TagPageQuery = { readonly allMdx: (
     Pick<MdxConnection, 'totalCount'>
     & { readonly edges: ReadonlyArray<{ readonly node: (
         Pick<Mdx, 'excerpt' | 'timeToRead'>
@@ -3585,12 +3577,12 @@ type CategoryPageQuery = { readonly allMdx: (
       ) }> }
   ) };
 
-type TagPageQueryVariables = Exact<{
-  tag: Maybe<Scalars['String']>;
+type CategoryPageQueryVariables = Exact<{
+  category: Maybe<Scalars['String']>;
 }>;
 
 
-type TagPageQuery = { readonly allMdx: (
+type CategoryPageQuery = { readonly allMdx: (
     Pick<MdxConnection, 'totalCount'>
     & { readonly edges: ReadonlyArray<{ readonly node: (
         Pick<Mdx, 'excerpt' | 'timeToRead'>
@@ -3623,5 +3615,13 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type BlogQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type BlogQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<Mdx, 'excerpt' | 'timeToRead'>
+        & { readonly fields: Maybe<Pick<MdxFields, 'slug' | 'date'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'category' | 'title' | 'tags' | 'cover' | 'date'>> }
+      ) }> } };
 
 }

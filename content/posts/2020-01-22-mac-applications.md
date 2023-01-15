@@ -74,7 +74,6 @@ Google翻訳の拡張機能にはいつもお世話になっています。
 
 Webブラウザ。開発用途でつかう時があります。
 
-
 ## エディタ・IDE
 
 ### Visual Studio Code
@@ -131,12 +130,6 @@ AppStoreから購入できます。
 
 ## クラウドストレージ
 
-### Dropbox
-
-2ギガまでの無用枠で利用しています。
-
-<https://www.dropbox.com/>
-
 ### GoogleDrive
 
 <https://www.google.com/intl/ja_jp/drive/download/>
@@ -167,11 +160,13 @@ AppStoreから購入できます。
 
 日本語対応されていないけど全然イケる。多機能で使いやすい。
 
-### Focus To-Do
+### Toggl Track
 
-ポモドーロテクニックを使うならこちらが良さげ。（有料）
+ポモドーロタイマーも使えるし、通常のタイムトラッカーとしても優秀です。
 
-### Trello
+### Notion
+
+最近個人のタスク管理はTrelloではなくNotionで行っています。
 
 ## FTP
 
@@ -193,7 +188,6 @@ FTPクライアントツールの中では一番使いやすい印象です。
 
 AppStoreから入手できます。
 
-
 ### ImageOptim
 
 画質を劣化させずにファイルサイズを最適化してくれる神ツール（無料）です。
@@ -203,6 +197,7 @@ AppStoreから入手できます。
 <https://imageoptim.com/mac>
 
 ## 開発用途
+
 ## Docker Desktop for Mac
 
 dockerをmacOSで使うときに必須です。
@@ -227,12 +222,11 @@ UIが良い感じです。
 
 ドキュメント作成に便利
 
-
 ### Figma
 
 使えるようになりたい。
 
-##その他
+## その他
 
 ### Kindle
 
