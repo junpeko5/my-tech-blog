@@ -4,9 +4,9 @@ title: Docker Network で複数の Docker Compose 環境を共有する
 date: 2023-01-29
 description:
 cover: /images/docker.png
-category:
+category: Docker
 tags:
-  -
+  - Docker
 slug: docker_network
 ---
 
