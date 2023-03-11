@@ -182,3 +182,9 @@ kubectl port-forward [Pod Name] 8080:80
 curl -s http://127.0.0.1:8080/
 Hello kubernetes
 ```
+
+## クラスタの削除
+
+```shell
+kind delete cluster
+```
