@@ -48,7 +48,12 @@ const MainLayout: FC<Props> = (props) => {
           <Footer />
         </Flex>
       </Box>
-      <script id="CookieDeclaration" src="https://consent.cookiebot.com/7aa8c6b4-8c16-4bbc-b2dd-774c27304e44/cd.js" type="text/javascript" async></script>
+      <script
+        id="CookieDeclaration"
+        src="https://consent.cookiebot.com/7aa8c6b4-8c16-4bbc-b2dd-774c27304e44/cd.js"
+        type="text/javascript"
+        async
+      ></script>
     </MDXProvider>
   );
 };

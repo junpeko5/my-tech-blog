@@ -2,9 +2,9 @@ import { Flex, Text, Box, useColorModeValue } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import React, { useState, useEffect, FC } from 'react';
 
-import config from '../data/SiteConfig';
 import DrawerMenu from './DrawerMenu';
 import ToggleMode from './ToggleMode';
+import config from '../data/SiteConfig';
 
 type Props = {
   menuLinks: { name: string; url: string }[];
