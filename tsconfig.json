@@ -1,7 +1,8 @@
 {
   "include": [
     "./src/**/*",
-    "./config/*.ts"
+    "./config/*.ts",
+    "./gatsby-config.ts"
   ],
   "exclude": ["node_modules", "public", ".cache"],
   "compilerOptions": {

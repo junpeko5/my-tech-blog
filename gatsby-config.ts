@@ -1,13 +1,27 @@
-import type { PluginOptions as TypegenPluginOptions } from 'gatsby-plugin-typegen/types';
+import { GatsbyConfig, PluginRef } from 'gatsby';
+
 import SiteConfig from './src/data/SiteConfig';
-import { GatsbyConfig } from 'gatsby';
+
+import type { PluginOptions as TypegenPluginOptions } from 'gatsby-plugin-typegen/types';
 
 type Plugin =
   | string
   | { resolve: string; options: object }
   | { resolve: `gatsby-plugin-typegen`; options: TypegenPluginOptions };
 
-const plugins: Plugin[] = [
+const siteMetadata: GatsbyConfig['siteMetadata'] = {
+  siteUrl: SiteConfig.siteUrl,
+  rssMetadata: {
+    site_url: SiteConfig.siteUrl,
+    feed_url: SiteConfig.siteUrl,
+    title: SiteConfig.siteTitle,
+    description: SiteConfig.siteDescription,
+    image_url: SiteConfig.siteUrl + `/logos/logo-512.png`,
+    copyright: SiteConfig.copyright,
+  },
+};
+
+const plugins: Array<PluginRef> & Plugin[] = [
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-lodash',
   '@chakra-ui/gatsby-plugin',
@@ -102,19 +116,11 @@ const plugins: Plugin[] = [
   },
   `gatsby-plugin-webpack-bundle-analyser-v2`,
 ];
-const siteMetadata: GatsbyConfig['siteMetadata'] = {
-  siteUrl: SiteConfig.siteUrl,
-  rssMetadata: {
-    site_url: SiteConfig.siteUrl,
-    feed_url: SiteConfig.siteUrl,
-    title: SiteConfig.siteTitle,
-    description: SiteConfig.siteDescription,
-    image_url: SiteConfig.siteUrl + `/logos/logo-512.png`,
-    copyright: SiteConfig.copyright,
-  },
+
+const config: GatsbyConfig = {
+  siteMetadata,
+  graphqlTypegen: true,
+  plugins: plugins,
 };
 
-module.exports = {
-  plugins,
-  siteMetadata,
-};
+export default config;
