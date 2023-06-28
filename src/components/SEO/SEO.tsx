@@ -74,13 +74,6 @@ const SEO: FC<Props> = (props) => {
 
         <link rel="icon" href="/images/favicon/favicon.ico" />
         <link rel="canonical" href={SiteConfig.siteUrl} />
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="7aa8c6b4-8c16-4bbc-b2dd-774c27304e44"
-          data-blockingmode="auto"
-          type="text/javascript"
-        ></script>
       </Helmet>
     </>
   );
